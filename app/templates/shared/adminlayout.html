@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMS - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='appstyle.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+  </head>
+  <body>
+
+    <div class="sidebar offcanvas-md offcanvas-end bg-body-tertiary border-end mb-5"  tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="sidebarMenuLabel"><strong style="color: #ee2737;">Money Tracker</strong></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
+      </div>
+      <div class="logo text-center pt-3 mb-3">
+          <img src="{{url_for('static', filename='images/icon.png')}}" class="img-fluid">
+      </div>
+      <hr>
+      <ul class="nav flex-column gap-1 mb-5">
+        <li class="nav-item">
+          <a class="nav-link {% if DASHBOARD %}active{% endif %}" href="{{ url_for ('base.dashboard') }}">
+            <i class="bi bi-speedometer2"></i>&nbsp;
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link dropdown-toggle {% if ORGANIZATION %}active{% endif %}" data-bs-toggle="collapse" href="#orgSubmenu" role="button" aria-expanded="false" aria-controls="orgSubmenu">
+            <i class="bi bi-buildings"></i>&nbsp;
+            Oganization
+          </a>
+          <div class="collapse {% if COUNTRY or REGION or CENTER or DEPARTMENT or EMPLOYEE %}show{% endif %}" id="orgSubmenu">
+              <ul class="nav flex-column gap-1 pt-1">
+                <li class="nav-item">
+                  <a class="nav-link {% if COUNTRY %}active{% endif %}" href="{{ url_for ('country.index') }}"><span class="ps-4"><i class="bi bi-globe-europe-africa"></i></span>&nbsp;Countries</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {% if REGION %}active{% endif %}" href="{{ url_for ('region.index') }}"><span class="ps-4"><i class="bi bi-map"></i></span>&nbsp;Regions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if CENTER %}active{% endif %}" href="{{ url_for ('center.index') }}"><span class="ps-4"><i class="bi bi-geo"></i></span>&nbsp;Centers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if DEPARTMENT %}active{% endif %}" href="{{ url_for ('department.index') }}"><span class="ps-4"><i class="bi bi-columns-gap"></i></span>&nbsp;Departments</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {% if EMPLOYEE %}active{% endif %}" href="{{ url_for ('employee.index') }}"><span class="ps-4"><i class="bi bi-people"></i></span>&nbsp;Employees</a>
+              </li>
+              </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link dropdown-toggle {% if ASSETS %}active{% endif %}" data-bs-toggle="collapse" href="#assetSubmenu" role="button" aria-expanded="false" aria-controls="assetSubmenu">
+            <i class="bi bi-bezier2"></i>&nbsp;
+            Asset Register
+          </a>
+          <div class="collapse {% if CATEGORY or BRANDS or VENDORS or ALL_ASSETS or ASSIGNED or TRANSFERS or MAINTENANCE or DEPRECIATIONS or DISPOSALS %}show{% endif %}" id="assetSubmenu">
+              <ul class="nav flex-column gap-1 pt-1">
+                <li class="nav-item">
+                  <a class="nav-link {% if CATEGORY %}active{% endif %}" href="{{ url_for ('asset_category.index') }}"><span class="ps-4"><i class="bi bi-columns-gap"></i></span>&nbsp;Categories</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {% if BRANDS %}active{% endif %}" href="{{ url_for ('asset_brand.index') }}"><span class="ps-4"><i class="bi bi-columns-gap"></i></span>&nbsp;Brands</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {% if VENDORS %}active{% endif %}" href="{{ url_for ('vendor.index') }}"><span class="ps-4"><i class="bi bi-person-lines-fill"></i></span>&nbsp;Vendors</a>
+                </li>
+                <hr>
+                <li class="nav-item">
+                    <a class="nav-link {% if ALL_ASSETS %}active{% endif %}" href="{{ url_for ('asset.index') }}"><span class="ps-4"><i class="bi bi-columns-gap"></i></span>&nbsp;Assets</a>
+                </li>
+                <hr>
+                <li class="nav-item">
+                    <a class="nav-link {% if ASSIGNED %}active{% endif %}" href="{{ url_for ('asset_assignment.index') }}"><span class="ps-4"><i class="bi bi-columns-gap"></i></span>&nbsp;Assigned</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if TRANSFERS %}active{% endif %}" href="{{ url_for ('asset_transfer.index') }}"><span class="ps-4"><i class="bi bi-columns-gap"></i></span>&nbsp;Transfer</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {% if MAINTENANCE %}active{% endif %}" href="{{ url_for ('asset_maintenance.index') }}"><span class="ps-4"><i class="bi bi-columns-gap"></i></span>&nbsp;Maintenance</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {% if DEPRECIATIONS %}active{% endif %}" href="{{ url_for ('depreciation.index') }}"><span class="ps-4"><i class="bi bi-columns-gap"></i></span>&nbsp;Depreciation</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {% if DISPOSALS %}active{% endif %}" href="{{ url_for ('disposal.index') }}"><span class="ps-4"><i class="bi bi-columns-gap"></i></span>&nbsp;Disposal</a>
+                </li>
+              </ul>
+          </div>
+        </li>
+        <hr>
+        <li class="nav-item">
+          <a class="nav-link {% if REPORTS %}active{% endif %}" href="#">
+            <i class="bi bi-files"></i>&nbsp;
+            Reports
+          </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+          <a class="nav-link dropdown-toggle {% if SETTINGS %}active{% endif %}" data-bs-toggle="collapse" href="#settingsSubmenu" role="button" aria-expanded="false" aria-controls="settingsSubmenu">
+            <i class="bi bi-gear"></i>&nbsp;
+            Settings
+          </a>
+          <div class="collapse {% if ROLES or ROLE_PERMISSIONS or PERMISSIONS or USERS or USER_ROLES or AUDIT_LOGS %}show{% endif %}" id="settingsSubmenu">
+              <ul class="nav flex-column gap-1 pt-1">
+                <li class="nav-item">
+                  <a class="nav-link {% if ROLES %}active{% endif %}" href="{{ url_for ('role.index') }}"><span class="ps-4"><i class="bi bi-person-gear"></i></span>&nbsp;Roles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if PERMISSIONS %}active{% endif %}" href="{{ url_for ('permission.index') }}"><span class="ps-4"><i class="bi bi-lock"></i></span>&nbsp;Permissions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if USERS %}active{% endif %}" href="{{ url_for ('user.index') }}"><span class="ps-4"><i class="bi bi-person-lines-fill"></i></span>&nbsp;Users</a>
+                </li>
+                <hr>
+                <li class="nav-item">
+                  <a class="nav-link {% if USER_ROLES %}active{% endif %}" href="{{ url_for ('user_role.index') }}"><span class="ps-4"><i class="bi bi-person-lock"></i></span>&nbsp;User Roles</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {% if ROLE_PERMISSIONS %}active{% endif %}" href="{{ url_for ('role_permission.index') }}"><span class="ps-4"><i class="bi bi-key"></i></span>&nbsp;Role Permissions</a>
+                </li>
+                <hr>
+                <li class="nav-item">
+                  <a class="nav-link {% if AUDIT_LOGS %}active{% endif %}" href="#"><span class="ps-4"><i class="bi bi-list-columns"></i></span>&nbsp;Audit Logs</a>
+                </li>
+              </ul>
+          </div>
+        </li>
+      </ul>
+      <hr>
+      <ul class="nav flex-column mb-5 text-center">
+      {% if current_user.is_authenticated %}
+        <li>
+          <a class="btn btn-outline-dark rounded-5" href="{{ url_for ('auth.logout') }}"><i class="bi bi-box-arrow-right"></i>Logout</a>
+        </li>
+      {% endif %}
+      </ul>
+    </div>
+
+    <main class="main-content">
+      <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top border-body border-bottom">
+          <div class="container-fluid align-content-between">
+            <a class="navbar-brand text-uppercase fw-bold" style="color: #ee2737;" href="#"><i class="bi bi-columns-gap"></i>&nbsp;{{ title }}</a>
+            <ul class="navbar-nav justify-content-end ms-auto align-items-center">
+              {% if current_user.is_authenticated %}
+              <li class="nav-item">
+                <small>
+                  <span class="fw-bold">Welcome,
+                  {{ current_user.username }}
+                  &nbsp;</span>
+                </small>
+              </li>
+              {% endif %}
+            </ul>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon border-0"></span>
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      <div class="mt-3 mb-5">
+        <div class="container-fluid">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                  {% for category, message in messages %}
+                  <div class="position-fixed top-1 end-0 me-3" style="z-index: 1050;">
+                      <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                          <strong>{{ message }}</strong>
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
+                  </div>
+                  {% endfor %}
+              {% endif %}
+          {% endwith %}
+
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+    </main>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='site.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>

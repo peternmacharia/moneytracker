@@ -2,40 +2,20 @@
 Initial system launch configuration file
 """
 
-import logging
-import uuid
-import time
-from logging.handlers import RotatingFileHandler
-from logging.handlers import SMTPHandler
-import os
-import json
-from functools import wraps
-from datetime import datetime
-
-import importlib
-from sqlalchemy import inspect
-from sqlalchemy.ext.declarative import declarative_base
-
-from flask import Flask, redirect, url_for, current_app, request, g, abort
+from flask import Flask, render_template
 from flask_login import current_user
 from app.extensions import db, login_manager, migrate
 from app.utils.logging import setup_logger, setup_audit_logger
-from app.models.auditlog import Auditlog
-from app.models.permission import Permission
 from app.models.user import User
 from app.models import init_default_data
-from app.views.audit import auditlog_bp
-from app.views.role import role_bp
-from app.views.permission import permission_bp
-from app.views.user import user_bp
-from app.views.role_permission import role_permission_bp
-from app.views.user_role import user_role_bp
+from app.views.admin.audit import auditlog_bp
+from app.views.admin.role import role_bp
+from app.views.admin.user import user_bp
 from app.views.auth import auth_bp
 from app.views.base import base_bp
-from app.views.category import category_bp
-from app.views.transaction import transaction_bp
+from app.views.user.category import category_bp
+from app.views.user.transaction import transaction_bp
 from config import config
-# from dbsetup import db_initialize
 # from views.errors import register_error_handlers
 
 # Application factory function that created the app
@@ -62,38 +42,29 @@ def create_app(config_class='default'):
 
     # Registration of the App Blueprint View Routes
     app.register_blueprint(auditlog_bp)
-    app.register_blueprint(permission_bp)
     app.register_blueprint(role_bp)
     app.register_blueprint(user_bp)
-    app.register_blueprint(role_permission_bp)
-    app.register_blueprint(user_role_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(base_bp)
-    app.register_blueprint(country_bp)
-    app.register_blueprint(region_bp)
-    app.register_blueprint(center_bp)
-    app.register_blueprint(department_bp)
-    app.register_blueprint(employee_bp)
-    app.register_blueprint(asset_category_bp)
-    app.register_blueprint(asset_brand_bp)
-    app.register_blueprint(vendor_bp)
-    app.register_blueprint(asset_bp)
-    app.register_blueprint(asset_assignment_bp)
-    app.register_blueprint(asset_transfer_bp)
-    app.register_blueprint(asset_maintenance_bp)
-    app.register_blueprint(depreciation_bp)
-    app.register_blueprint(disposal_bp)
+    app.register_blueprint(category_bp)
+    app.register_blueprint(transaction_bp)
 
 
 
-    # Default app route redirect to app login page
+    # Default app route redirect to landing page
     @app.route('/')
     def index():
         """
-        Redirect default landing page to login page
+        The default index page to redirect to landing page
         """
-        app.logger.info('User accessed Dashboard')
-        return redirect(url_for('auth.login'))
+        if current_user.is_authenticated:
+            app.logger.info('User accessed Dashboard')
+            return render_template('index.html',
+                                   title='Home')
+        else:
+            return render_template('index.html',
+                                   title='Home')
+        # return redirect(url_for('auth.login'))
 
 
 

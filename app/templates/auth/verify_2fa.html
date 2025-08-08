@@ -1,0 +1,38 @@
+{% extends "shared/loginlayout.html" %}
+{% block title %} {{ title }} {% endblock %}
+{% block content %}
+
+<div class="container text-center">
+
+    <div class="row justify-content-center align-content-center">
+        <h1>Two-Factor Authentication Required</h1>
+    
+        <p>Please enter the verification code from your authenticator app</p>
+        
+        <div class="col-md-3">
+            <div class="card shadow rounded-5">
+                <div class="card-body">
+                    <img src="{{url_for('static', filename='images/icon.png')}}" class="img-fluid card-img-top" style="max-width: 200px; max-height: 200px;" alt="icon">
+                    <h4 class="card-title text-uppercase mb-3">Verify 2FA</h4>
+                    <hr>
+                    <section class="loginform mb-3" name="loginform">
+                        <form id="account" method="POST">
+                            <div class="form-floating mb-3">
+                                {{ form.verification_code }}
+                                {{ form.verification_code.label }}
+                            </div>
+                            <div class="form-group">
+                                <input type="hidden" name="next" value="/" />
+                                <button type="submit" class="btn btn-success block-button rounded-5">Verify Code</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+
+{% endblock%}

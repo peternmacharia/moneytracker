@@ -1,0 +1,237 @@
+/* ----------------------------------------------------------------------------*/
+/* General Page Setup Settings                                                 */
+/*-----------------------------------------------------------------------------*/
+/* sidebar:hover: #006890 */
+/* sidebar:active: #006890 */
+
+/* Default: ##013278 */
+/* Other Default: #008ea2 */
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Ubuntu", sans-serif !important;
+    /* display: flex; */
+    /* min-height: 100vh; */
+  }
+  
+  .loginbg {
+    background: linear-gradient(135deg, #013278, #008ea2);
+  }
+  
+  .loginitem{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  /*-----------General Page Settings Ends Here--------------------------------- */
+
+  .block-button {
+    display: block;
+    width: 100%;
+  }
+  
+  
+  /* ------------Sidebar styling-------------- */
+  /* Sidebar Styles */
+  .sidebar {
+    position: fixed;
+    overflow-y: auto;
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 20%;
+    min-width: 20%;
+    /* background-color: #022F56 !important; */
+  }
+
+  /* .offcanvas-md.offcanvas-end {
+    background-color: #022F56 !important;
+  } */
+  
+  /* Or even more specific */
+  /* #sidebarMenu.offcanvas-md {
+    background-color: #022F56 !important;
+  } */
+  
+  .logo {
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
+    background-color: #fff !important;
+  }
+  
+  .sidebar a {
+    padding: 15px;
+    padding-left: 30px;
+    color:#000;
+    font-size: 18px;
+  }
+  
+  .sidebar a:hover {
+    background-color: #022F56;
+    color: #fff;
+    transition: background 0.3s;
+  
+    /* members sidebar icons */
+    .allmemicon {
+      color: #fff;
+    }
+    .pendingmemicon {
+      color: #fff;
+    }
+    .activememicon {
+      color: #fff;
+    }
+    .inactivememicon {
+      color: #fff;
+    }
+    .suspendedmemicon {
+      color: #fff;
+    }
+  
+    /* loan sidebar icons */
+    .allloanicon {
+      color: #fff;
+    }
+    .pendingloanicon {
+      color: #fff
+    }
+    .activeloanicon {
+      color: #fff
+    }
+    .completedloanicon {
+      color: #fff;
+    }
+    .defaultedloanicon {
+      color: #fff
+    }
+  }
+  
+  .sidebar a.active {
+    background-color: #022F56;
+    color:#fff;
+  }
+  
+  .sidebar i {
+    margin-right: 10px;
+  }
+  
+  /* Main Body Content */
+  /* main {
+    margin-left: 20%;
+    flex-direction: column;
+    height: 100vh;
+    height: -webkit-fill-available;
+    min-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-image: url(images/tapwall.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    background-color: rgba(234, 234, 234, 1.0); 
+    background-blend-mode: overlay; 
+} */
+  .main-content {
+    margin-left: 20%;
+    width: calc(100% - 20%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/tapwall.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    /* background-color: #EAEAEA; */
+  }
+  /* ------------End of sidebar styling------- */
+  
+  
+  
+  /* Cards Styling */
+  .cardtitle {
+    color: #022F56;
+  }
+  .cardicon {
+    color: #022F56;
+    align-items: center;
+  }
+  .dashcard {
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  /* End of Cards Styling */
+    
+  
+  /* Cards Hovering Styling */
+  .dashcard:hover {
+    background-color:#022F56;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    transition: all 0.2s ease-in-out;
+    color: #ffffff;
+  
+    .cardtitle {
+      color: #fff;
+    }
+    .cardicon {
+      color: #fff;
+    }
+  }
+  
+  /* Chart Styling */
+  
+  .chart-container {
+    font-family: Arial, sans-serif;
+    max-width: 680px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .clickable-row {
+    cursor: pointer;
+  }
+  /* End of Cards Hovering Styling */
+  
+  
+  
+  /* Loading spinner */
+  .loading-spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    border-top: 3px solid transparent;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading .loading-spinner {
+    display: inline-block;
+  }
+  /* End of Loading spinner */
+  
+  
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+  
+    .main-content {
+      margin-left: 0; /* Remove left margin */
+      width: 100%; /* Full width */
+    }
+  }
+  /* End of Media Queries */
+  
