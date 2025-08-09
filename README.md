@@ -1,6 +1,6 @@
 # WELCOME TO MONEY TRACKER GITHUB REPO
 -----------------------------------
-![WebApp Screenshot](/static/images/loginpage.png)
+![WebApp Screenshot](/app/static/images/loginpage.png)
 
 ## TECHSTACK
 - Flask
