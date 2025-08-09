@@ -2,10 +2,10 @@
 Login and New User registration forms
 """
 
-from flask_wtf import FlaskForm
-from wtforms import StringField, SelectField, BooleanField
+from wtforms import StringField, SelectField
 from wtforms.validators import DataRequired, Length, EqualTo
 from app.forms.shared import BaseForm
+from app.models.user import UserStatus
 
 
 class LoginForm(BaseForm):
@@ -20,7 +20,7 @@ class LoginForm(BaseForm):
                            render_kw={"placeholder":"Password",
                                       "type":"password", "class":"form-control",
                                       "required":"required"})
-    
+
 
 class AdminRegistrationForm(BaseForm):
     """
@@ -54,6 +54,11 @@ class AdminRegistrationForm(BaseForm):
                        render_kw={"placeholder":"Department",
                                   "class":"form-control form-select",
                                   "required":"required"})
+    status = SelectField("User Status",
+                         choices=[(model.name, model.value) for model in UserStatus],
+                         render_kw={"placeholder":"Status",
+                                    "class":"form-control fw-bold",
+                                    "readonly":"readonly", "disabled":"True"})
 
 
 class TwoFactorForm(BaseForm):

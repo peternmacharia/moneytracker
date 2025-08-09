@@ -4,7 +4,6 @@ User model class defination file
 
 from enum import Enum
 from flask_login import UserMixin
-from flask import abort
 from werkzeug.security import check_password_hash, generate_password_hash
 from app.extensions import db
 from app.models.shared import generate_uuid, TimeStampMixin
@@ -35,8 +34,8 @@ class User(db.Model, UserMixin, TimeStampMixin):
     is_2fa_enabled = db.Column(db.Boolean, default=False)
     two_factor_secret = db.Column(db.String(36), unique=True, nullable=True)
     last_login = db.Column(db.DateTime, nullable=True)
-    # Relationships
-    role = db.relationship('Role', back_populates='users')
+    # Relationship
+    role = db.relationship('Role', backref='users')
 
     def __repr__(self):
         return f'<User {self.username}>'

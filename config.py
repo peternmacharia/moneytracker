@@ -24,7 +24,7 @@ class AppConfig:
     # Asset Image and Invoice Document upload directory configuration folders
     UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads')
     MAX_CONTENT_SIZE = 5 * 1024 * 1024  # 5MB maximum size
-    
+
     # File upload restrictions
     # Image restrictions
     ALLOWED_IMAGE_EXTENSIONS = {'png'}  # Only allow PNG files
@@ -42,14 +42,14 @@ class TestingConfig(AppConfig):
     Testing Configuration
     """
     TESTING = True
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///MTrackerDB.db'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///MTDB.db'
 
 class DevelopmentConfig(AppConfig):
     """
     Development configuration
     """
     # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///MtracketDB.db'
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///MTrackerDevDB.db'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///MTDevDB.db'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DEBUG = True
     LOG_LEVEL = 'DEBUG'
@@ -60,7 +60,7 @@ class ProductionConfig(AppConfig):
     """
     DEBUG = False
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL',
-                                             'postgresql://user:password@localhost/mtrackerprodb')
+                                             'postgresql://user:password@localhost/mtprodb')
 
     # Consider adding SMTP handler settings for error notifications
     MAIL_SERVER = 'smtp.example.com'

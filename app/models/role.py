@@ -16,11 +16,4 @@ class Role(db.Model, TimeStampMixin):
     def __repr__(self):
         return f'<Role {self.name}>'
 
-    @property
-    def user_list(self):
-        """
-        Property to get all users with this role
-        """
-        return [ur.user for ur in self.users]
-
 # End of file

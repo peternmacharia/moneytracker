@@ -8,13 +8,14 @@ from app.extensions import db, login_manager, migrate
 from app.utils.logging import setup_logger, setup_audit_logger
 from app.models.user import User
 from app.models import init_default_data
-from app.views.admin.audit import auditlog_bp
-from app.views.admin.role import role_bp
-from app.views.admin.user import user_bp
+from app.views.audit import auditlog_bp
+from app.views.role import role_bp
+from app.views.adminuser import admin_bp
+from app.views.user import user_bp
 from app.views.auth import auth_bp
 from app.views.base import base_bp
-from app.views.user.category import category_bp
-from app.views.user.transaction import transaction_bp
+from app.views.category import category_bp
+from app.views.transaction import transaction_bp
 from config import config
 # from views.errors import register_error_handlers
 

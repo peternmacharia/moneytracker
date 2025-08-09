@@ -6,13 +6,11 @@ from flask import (Blueprint, current_app, flash, redirect, render_template, req
 from flask_login import login_required, current_user
 from sqlalchemy.sql import desc, asc
 from app.extensions import db
-# from app.models.role import Role
 from app.models.user import User
-from app.models.country import Country
-from app.models.department import Department
-# from app.views.auth import permission_required, role_required
-from app.forms.user import UserForm, UserDetailsForm, UserUpdateForm, ChangePasswordForm
-# from app.decorators.auth import require_permission
+from app.models.role import Role
+from app.forms.user import UserForm, UserDetailsForm, UserUpdateForm
+from app.forms.auth import ChangePasswordForm
+
 
 user_bp = Blueprint('user', __name__, url_prefix='/users')
 
@@ -48,10 +46,9 @@ def index():
     if search:
         search_filter = (
             User.username.ilike(f'%{search}%') |
-            Country.name.ilike(f'%{search}%') |
-            Department.name.ilike(f'%{search}%')
+            Role.name.ilike(f'%{search}%')
         )
-        query = query.join(Country).join(Department).filter(search_filter)
+        query = query.join(Role).filter(search_filter)
 
     # Sorting
     sort_column = allowed_sort_fields[sort_by]
@@ -86,10 +83,8 @@ def details(user_id):
     """
     item = User.query.get_or_404(user_id)
     form = UserDetailsForm(obj=item)
-    form.country.choices = [(c.id, c.name)
-                            for c in Country.query.filter(Country.id == item.country_id)]
-    form.department.choices = [(d.id, d.name)
-                               for d in Department.query.filter(Department.id == item.department_id)]
+    form.role.choices = [(r.id, r.name)
+                         for r in Role.query.filter(Role.id == item.role_id)]
 
     if not item:
         flash('No user details added yet!', 'warning')
@@ -109,19 +104,17 @@ def create():
     Add New User View
     """
     form = UserForm()
-    form.country.choices = [('', 'Select Country')] + [(c.id, c.name)
-                                                   for c in Country.query.all()]
-    form.department.choices = [('', 'Select Department')] + [(d.id, d.name)
-                                                         for d in Department.query.all()]
+    user_role = Role.query.filter_by(name="USER").first()
 
     if request.method == 'POST':
+        firstname = form.firstname.data
+        lastname = form.lastname.data
+        fullname = firstname + " " + lastname
         username = form.username.data
         phone = form.phone.data
         email = form.email.data
         password = form.password.data
-        country = form.country.data
-        department = form.department.data
-        is_2fa_enabled = form.is_2fa_enabled.data
+        role = user_role
 
         error = None
 
@@ -135,14 +128,15 @@ def create():
             return redirect(url_for('user.index'))
         else:
             try:
-                new_user = User(username=username,
+                new_user = User(firstname=firstname,
+                                lastname=lastname,
+                                fullname=fullname,
+                                username=username,
                                 phone=phone,
                                 email=email,
-                                country_id=country,
-                                department_id=department,
-                                is_2fa_enabled=is_2fa_enabled,
-                                created_by=current_user.id,
-                                updated_by=current_user.id)
+                                role_id=role,
+                                created_by='self',
+                                updated_by='self')
                 new_user.set_password(password)
                 db.session.add(new_user)
                 db.session.commit()
@@ -169,20 +163,17 @@ def update(user_id):
     """
     item = User.query.get_or_404(user_id)
     form = UserUpdateForm(obj=item)
-    form.country.choices = [(c.id, c.name)
-                            for c in Country.query.all()]
-    form.department.choices = [(d.id, d.name)
-                               for d in Department.query.all()]
 
     if item.username == 'SUPERADMIN':
         flash('The Super User cannot be edited!', 'danger')
         return redirect(url_for('user.index'))
 
     if request.method == 'POST':
+        item.firstname = form.firstname.data
+        item.lastname = form.lastname.data
+        item.fullname = form.firstname.data + " " + form.lastname.data
         item.phone = form.phone.data
         item.email = form.email.data
-        item.country_id = form.country.data
-        item.department_id = form.department.data
         item.updated_by = current_user.id
 
         error = None
@@ -224,21 +215,6 @@ def changepassword(user_id):
         flash('The super user password cannot be edited!', 'danger')
         return redirect(url_for('user.index'))
 
-    # if request.method == 'POST':
-        # item.password = form.new_password.data
-        # item.set_password(form.new_password.data)
-
-        # if error:
-        #     flash(error)
-        # else:
-        #     try:
-        #         db.session.commit()
-        #         flash('User password is updated successfully!', 'success')
-        #         return redirect(url_for('user.index'))
-        #     except ImportError:
-        #         flash('There was an error during the update!', 'danger')
-        #         db.session.rollback()
-        #         return redirect(url_for('user.index'))
     if request.method == 'POST':
         if form.new_password.data != form.confirm_password.data:
             flash('Password and confirmation do not match!', 'danger')
@@ -284,10 +260,8 @@ def delete(user_id):
     """
     item = User.query.get_or_404(user_id)
     form = UserDetailsForm(obj=item)
-    form.country.choices = [(c.id, c.name)
-                            for c in Country.query.all()]
-    form.department.choices = [(d.id, d.name)
-                               for d in Department.query.all()]
+    form.role.choices = [(r.id, r.name)
+                         for r in Role.query.filter(Role.id == item.role_id).first()]
 
     if item.username == 'SUPERADMIN':
         flash('The super user cannot be deleted!', 'danger')

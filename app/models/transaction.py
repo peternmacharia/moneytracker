@@ -3,7 +3,6 @@ Transaction model class defination file
 """
 
 from enum import Enum
-from datetime import datetime
 from app.extensions import db
 from app.models.shared import generate_uuid, TimeStampMixin
 
@@ -29,5 +28,5 @@ class Transaction(db.Model, TimeStampMixin):
 
     def __repr__(self):
         return f'<Transaction {self.category_id}>'
-    
+
 # End of file

@@ -15,8 +15,6 @@ from werkzeug.security import check_password_hash
 from app.models.user import User
 from app.forms.auth import LoginForm, TwoFactorForm
 from app.extensions import db
-from app.utils.decorators import require_permission
-
 
 auth_bp = Blueprint('auth', __name__, url_prefix='/auth')
 
@@ -57,7 +55,6 @@ def generate_2fa_qrcode(username, secret):
 # Route to enable 2FA
 @auth_bp.route('/enable_2fa/', methods=['GET', 'POST'])
 @login_required
-@require_permission('activate')
 def enable_2fa():
     """
     Enable 2FA for the current user
@@ -116,7 +113,6 @@ def enable_2fa():
 # Route to disable 2FA
 @auth_bp.route('/disable_2fa/', methods=['POST'])
 @login_required
-@require_permission('deactivate')
 def disable_2fa():
     """
     Disable 2FA for the current user
@@ -159,9 +155,14 @@ def login():
                     user.last_login = datetime.now()
                     db.session.commit()
                     # app.logger.info('Logged in Successfully!')
-                    app.logger.info('%s logged in successfully', current_user.username)
-                    flash("Logged in successfully!", "success")
-                    return redirect(url_for('base.dashboard'))
+                    if user.role.name == 'ADMIN':
+                        app.logger.info('%s admin login successfully', current_user.username)
+                        flash("Admin Logged in successfully!", "success")
+                        return redirect(url_for('base.admin'))
+                    elif user.role.name == 'USER':
+                        app.logger.info('%s user login successfully', current_user.username)
+                        flash("User Logged in successfully!", "success")
+                        return redirect(url_for('base.user'))
 
             app.logger.warning('Login attempt Failed!')
             flash("Login Unsuccessful. Please check email and password", "danger")
@@ -172,7 +173,6 @@ def login():
 
 # Route for 2FA verification
 @auth_bp.route('/verify_2fa/', methods=['GET', 'POST'])
-@require_permission('verify')
 def verify_2fa():
     """
     The 2FA Verification View

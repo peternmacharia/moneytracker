@@ -1,0 +1,778 @@
+2025-08-09 10:56:05,627 - app - INFO - [f6b34c47-193b-4999-ab30-0237321a1673] GET / started
+2025-08-09 10:56:05,654 - app - INFO - [f6b34c47-193b-4999-ab30-0237321a1673] GET / completed with status 200 in 0.0270s
+2025-08-09 10:56:05,681 - app - INFO - [b863e548-b74d-4a87-8bcb-11435a1f2d5b] GET /static/webstyle.css started
+2025-08-09 10:56:05,682 - app - INFO - [0ac1ddff-4360-4ecc-b841-851e086f5152] GET /static/images/icon.png started
+2025-08-09 10:56:05,682 - app - ERROR - [b863e548-b74d-4a87-8bcb-11435a1f2d5b] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-09 10:56:05,695 - app - INFO - [60a85e37-829b-43e2-9f99-d81cdded26fb] GET /static/site.js started
+2025-08-09 10:56:05,701 - app - INFO - [60a85e37-829b-43e2-9f99-d81cdded26fb] GET /static/site.js completed with status 200 in 0.0062s
+2025-08-09 10:56:05,701 - app - INFO - [0ac1ddff-4360-4ecc-b841-851e086f5152] GET /static/images/icon.png completed with status 200 in 0.0195s
+2025-08-09 10:56:06,417 - app - INFO - [6dd80f6b-8383-4d5f-b6a1-e90119628d26] GET /static/images/favicon.ico started
+2025-08-09 10:56:06,417 - app - INFO - [6dd80f6b-8383-4d5f-b6a1-e90119628d26] GET /static/images/favicon.ico completed with status 200 in 0.0006s
+2025-08-09 10:56:41,762 - app - INFO - [61a1c02e-7984-465e-a5ed-4f1fdd463f54] GET / started
+2025-08-09 10:56:41,778 - app - INFO - [61a1c02e-7984-465e-a5ed-4f1fdd463f54] GET / completed with status 200 in 0.0162s
+2025-08-09 10:56:41,849 - app - INFO - [42375dea-e21e-40e4-9502-ff3ecf170bf5] GET /static/webstyle.css started
+2025-08-09 10:56:41,850 - app - ERROR - [42375dea-e21e-40e4-9502-ff3ecf170bf5] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-09 10:56:41,863 - app - INFO - [3d0d5f03-2712-4d74-ad36-1c2a69f26f3f] GET /static/images/icon.png started
+2025-08-09 10:56:41,864 - app - INFO - [3d0d5f03-2712-4d74-ad36-1c2a69f26f3f] GET /static/images/icon.png completed with status 304 in 0.0012s
+2025-08-09 10:56:41,868 - app - INFO - [3cda7fa8-527e-4fc5-b0ad-41f9ec779473] GET /static/site.js started
+2025-08-09 10:56:41,872 - app - INFO - [3cda7fa8-527e-4fc5-b0ad-41f9ec779473] GET /static/site.js completed with status 304 in 0.0038s
+2025-08-09 10:56:41,964 - app - INFO - [77f3197d-ac52-4290-8010-a7a9ebb5e6dc] GET /static/images/favicon.ico started
+2025-08-09 10:56:41,965 - app - INFO - [77f3197d-ac52-4290-8010-a7a9ebb5e6dc] GET /static/images/favicon.ico completed with status 304 in 0.0011s
+2025-08-09 10:56:48,167 - app - INFO - [dacf6fbc-a9d5-4a13-8773-0908569e8610] GET /auth/login/ started
+2025-08-09 10:56:48,168 - app - INFO - Login page accessed
+2025-08-09 10:56:48,202 - app - INFO - [dacf6fbc-a9d5-4a13-8773-0908569e8610] GET /auth/login/ completed with status 200 in 0.0350s
+2025-08-09 10:56:48,277 - app - INFO - [61ed2d8a-f902-411f-804b-50a8a7ad4f97] GET /static/appstyle.css started
+2025-08-09 10:56:48,280 - app - INFO - [5963224a-eca7-481b-a3d7-30dffd02795a] GET /static/images/icon.png started
+2025-08-09 10:56:48,282 - app - INFO - [61ed2d8a-f902-411f-804b-50a8a7ad4f97] GET /static/appstyle.css completed with status 200 in 0.0049s
+2025-08-09 10:56:48,285 - app - INFO - [7834476f-877e-44d6-abdc-c65942947abc] GET /static/site.js started
+2025-08-09 10:56:48,287 - app - INFO - [5963224a-eca7-481b-a3d7-30dffd02795a] GET /static/images/icon.png completed with status 304 in 0.0078s
+2025-08-09 10:56:48,291 - app - INFO - [7834476f-877e-44d6-abdc-c65942947abc] GET /static/site.js completed with status 304 in 0.0058s
+2025-08-09 10:57:56,183 - app - INFO - [b4359cae-5947-4b09-a76e-4d81355fc71c] GET /auth/login/ started
+2025-08-09 10:57:56,184 - app - INFO - Login page accessed
+2025-08-09 10:57:56,200 - app - INFO - [b4359cae-5947-4b09-a76e-4d81355fc71c] GET /auth/login/ completed with status 200 in 0.0166s
+2025-08-09 10:57:56,272 - app - INFO - [7b7c40ec-e3fd-49ec-b207-f69ace9c6ecb] GET /static/appstyle.css started
+2025-08-09 10:57:56,274 - app - INFO - [7b7c40ec-e3fd-49ec-b207-f69ace9c6ecb] GET /static/appstyle.css completed with status 304 in 0.0023s
+2025-08-09 10:57:56,278 - app - INFO - [c5937e68-529f-4df8-8eff-1748d43a825e] GET /static/images/icon.png started
+2025-08-09 10:57:56,281 - app - INFO - [c5937e68-529f-4df8-8eff-1748d43a825e] GET /static/images/icon.png completed with status 304 in 0.0025s
+2025-08-09 10:57:56,283 - app - INFO - [817b0991-4d56-41f2-8aad-5a728c675413] GET /static/site.js started
+2025-08-09 10:57:56,286 - app - INFO - [817b0991-4d56-41f2-8aad-5a728c675413] GET /static/site.js completed with status 304 in 0.0034s
+2025-08-09 10:57:56,393 - app - INFO - [2de82520-f31e-42e5-bb8b-6128ca99b32b] GET /static/images/favicon.ico started
+2025-08-09 10:57:56,394 - app - INFO - [2de82520-f31e-42e5-bb8b-6128ca99b32b] GET /static/images/favicon.ico completed with status 304 in 0.0009s
+2025-08-09 11:10:51,466 - app - INFO - [b8591ab4-01b0-44b0-9fb3-2f38550279ad] GET / started
+2025-08-09 11:10:51,486 - app - INFO - [b8591ab4-01b0-44b0-9fb3-2f38550279ad] GET / completed with status 200 in 0.0205s
+2025-08-09 11:10:51,520 - app - INFO - [3f6a069f-2c12-4118-9024-20c218453cc5] GET /static/webstyle.css started
+2025-08-09 11:10:51,520 - app - ERROR - [3f6a069f-2c12-4118-9024-20c218453cc5] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-09 11:10:51,522 - app - INFO - [9ad9b668-b55d-4142-86d7-b90dc8eb6325] GET /static/images/icon.png started
+2025-08-09 11:10:51,527 - app - INFO - [bc13f37d-0f52-4b97-9b5c-1b46f86d39d9] GET /static/site.js started
+2025-08-09 11:10:51,543 - app - INFO - [bc13f37d-0f52-4b97-9b5c-1b46f86d39d9] GET /static/site.js completed with status 304 in 0.0162s
+2025-08-09 11:10:51,544 - app - INFO - [9ad9b668-b55d-4142-86d7-b90dc8eb6325] GET /static/images/icon.png completed with status 304 in 0.0227s
+2025-08-09 11:10:54,793 - app - INFO - [dac7f11e-60fa-4410-ba1d-5942f679e7b9] GET /auth/login/ started
+2025-08-09 11:10:54,793 - app - INFO - Login page accessed
+2025-08-09 11:10:54,819 - app - INFO - [dac7f11e-60fa-4410-ba1d-5942f679e7b9] GET /auth/login/ completed with status 200 in 0.0261s
+2025-08-09 11:10:54,896 - app - INFO - [cc50e4e1-3161-405e-95bd-18a15262aee8] GET /static/appstyle.css started
+2025-08-09 11:10:54,898 - app - INFO - [cc50e4e1-3161-405e-95bd-18a15262aee8] GET /static/appstyle.css completed with status 304 in 0.0024s
+2025-08-09 11:10:54,901 - app - INFO - [faf6ba9f-c6d8-4bc1-9773-7fe0697223ab] GET /static/images/icon.png started
+2025-08-09 11:10:54,906 - app - INFO - [731d4759-250c-46a4-b0cf-717d550f3eb5] GET /static/site.js started
+2025-08-09 11:10:54,910 - app - INFO - [faf6ba9f-c6d8-4bc1-9773-7fe0697223ab] GET /static/images/icon.png completed with status 304 in 0.0084s
+2025-08-09 11:10:54,912 - app - INFO - [731d4759-250c-46a4-b0cf-717d550f3eb5] GET /static/site.js completed with status 304 in 0.0064s
+2025-08-09 11:11:51,302 - app - INFO - [0fbd7492-81e3-4955-9314-1e4230a02fed] GET / started
+2025-08-09 11:11:51,359 - app - INFO - [0fbd7492-81e3-4955-9314-1e4230a02fed] GET / completed with status 200 in 0.0566s
+2025-08-09 11:11:51,430 - app - INFO - [96a2f4d4-696d-4532-a3a7-a9dd578fab57] GET /static/webstyle.css started
+2025-08-09 11:11:51,431 - app - ERROR - [96a2f4d4-696d-4532-a3a7-a9dd578fab57] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-09 11:11:51,437 - app - INFO - [d035bace-bae6-4779-b0c8-33bce713cd20] GET /static/images/icon.png started
+2025-08-09 11:11:51,451 - app - INFO - [d035bace-bae6-4779-b0c8-33bce713cd20] GET /static/images/icon.png completed with status 304 in 0.0137s
+2025-08-09 11:11:51,454 - app - INFO - [30291d3e-b8fa-4a55-95c2-bc17be1310c0] GET /static/site.js started
+2025-08-09 11:11:51,456 - app - INFO - [30291d3e-b8fa-4a55-95c2-bc17be1310c0] GET /static/site.js completed with status 304 in 0.0024s
+2025-08-09 11:11:55,070 - app - INFO - [08117ff8-c215-4532-9dc1-d40d1a64a740] GET /auth/login/ started
+2025-08-09 11:11:55,071 - app - INFO - Login page accessed
+2025-08-09 11:11:55,098 - app - INFO - [08117ff8-c215-4532-9dc1-d40d1a64a740] GET /auth/login/ completed with status 200 in 0.0276s
+2025-08-09 11:11:55,175 - app - INFO - [346bc071-4e2f-48d2-af9d-80bfb58406e1] GET /static/appstyle.css started
+2025-08-09 11:11:55,177 - app - INFO - [346bc071-4e2f-48d2-af9d-80bfb58406e1] GET /static/appstyle.css completed with status 304 in 0.0023s
+2025-08-09 11:11:55,182 - app - INFO - [5e0f07f3-801a-48dc-93a0-d1ecbe6d74a5] GET /static/images/icon.png started
+2025-08-09 11:11:55,186 - app - INFO - [1116f864-7532-4dd2-8bd2-bd9939ce9c02] GET /static/site.js started
+2025-08-09 11:11:55,188 - app - INFO - [5e0f07f3-801a-48dc-93a0-d1ecbe6d74a5] GET /static/images/icon.png completed with status 304 in 0.0053s
+2025-08-09 11:11:55,191 - app - INFO - [1116f864-7532-4dd2-8bd2-bd9939ce9c02] GET /static/site.js completed with status 304 in 0.0056s
+2025-08-09 11:12:08,170 - app - INFO - [ef7e847d-a87e-4e0f-a3a8-9c0b247e26b5] POST /auth/login/ started
+2025-08-09 11:12:08,171 - app - INFO - Login page accessed
+2025-08-09 11:12:08,389 - app - INFO - superadmin logged in successfully
+2025-08-09 11:12:08,391 - app - ERROR - [ef7e847d-a87e-4e0f-a3a8-9c0b247e26b5] Unhandled exception: Could not build url for endpoint 'base.dashboard'. Did you mean 'base.index' instead?
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/auth.py", line 160, in login
+    return redirect(url_for('base.dashboard'))
+                    ~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 232, in url_for
+    return current_app.url_for(
+           ~~~~~~~~~~~~~~~~~~~^
+        endpoint,
+        ^^^^^^^^^
+    ...<4 lines>...
+        **values,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'base.dashboard'. Did you mean 'base.index' instead?
+2025-08-09 11:23:10,645 - app - INFO - [8910f04f-266d-48e6-a3dc-6582a6939a37] POST /auth/login/ started
+2025-08-09 11:23:10,646 - app - INFO - Login page accessed
+2025-08-09 11:23:10,860 - app - INFO - superadmin admin login successfully
+2025-08-09 11:23:10,860 - app - INFO - [8910f04f-266d-48e6-a3dc-6582a6939a37] POST /auth/login/ completed with status 302 in 0.2154s
+2025-08-09 11:23:10,866 - app - INFO - [c0421b9c-b0f8-4b8a-bb8e-0c07de36fb58] GET /app/admin/ started
+2025-08-09 11:23:10,898 - app - ERROR - [c0421b9c-b0f8-4b8a-bb8e-0c07de36fb58] Unhandled exception: Could not build url for endpoint 'base.dashboard'. Did you mean 'base.user' instead?
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/base.py", line 29, in admin
+    return render_template('admin/dashboard.html',
+                           title='Dashboard',
+                           DASHBOARD=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/admin/dashboard.html", line 1, in top-level template code
+    {% extends "shared/adminlayout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/adminlayout.html", line 25, in top-level template code
+    <a class="nav-link {% if DASHBOARD %}active{% endif %}" href="{{ url_for ('base.dashboard') }}">
+    ^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'base.dashboard'. Did you mean 'base.user' instead?
+2025-08-09 11:25:24,135 - app - INFO - [be0624d1-a355-4784-a336-a849940a552b] GET /app/admin/ started
+2025-08-09 11:25:24,137 - app - INFO - [be0624d1-a355-4784-a336-a849940a552b] GET /app/admin/ completed with status 302 in 0.0025s
+2025-08-09 11:25:24,154 - app - INFO - [794f74b1-9f7a-4e7f-bf4a-712bcf452185] GET /auth/login/ started
+2025-08-09 11:25:24,169 - app - INFO - Login page accessed
+2025-08-09 11:25:24,199 - app - INFO - [794f74b1-9f7a-4e7f-bf4a-712bcf452185] GET /auth/login/ completed with status 200 in 0.0453s
+2025-08-09 11:25:24,281 - app - INFO - [8b9c202b-4ecb-4557-8946-44e3a19d9bc1] GET /static/appstyle.css started
+2025-08-09 11:25:24,285 - app - INFO - [3c342ee6-ed5f-4b06-9f21-e347b5ddfaa7] GET /static/images/icon.png started
+2025-08-09 11:25:24,318 - app - INFO - [ecaaf6c5-1bc5-489d-89bb-0e4f1d7934b4] GET /static/site.js started
+2025-08-09 11:25:24,320 - app - INFO - [3c342ee6-ed5f-4b06-9f21-e347b5ddfaa7] GET /static/images/icon.png completed with status 304 in 0.0348s
+2025-08-09 11:25:24,322 - app - INFO - [ecaaf6c5-1bc5-489d-89bb-0e4f1d7934b4] GET /static/site.js completed with status 304 in 0.0045s
+2025-08-09 11:25:24,323 - app - INFO - [8b9c202b-4ecb-4557-8946-44e3a19d9bc1] GET /static/appstyle.css completed with status 304 in 0.0422s
+2025-08-09 11:25:33,100 - app - INFO - [a0c7cb4c-8ee2-4591-b754-a5fcbcde3530] POST /auth/login/ started
+2025-08-09 11:25:33,100 - app - INFO - Login page accessed
+2025-08-09 11:25:33,320 - app - INFO - superadmin admin login successfully
+2025-08-09 11:25:33,320 - app - INFO - [a0c7cb4c-8ee2-4591-b754-a5fcbcde3530] POST /auth/login/ completed with status 302 in 0.2206s
+2025-08-09 11:25:33,325 - app - INFO - [3b018150-57ef-40af-847d-3468e1a9d792] GET /app/admin/ started
+2025-08-09 11:25:33,353 - app - ERROR - [3b018150-57ef-40af-847d-3468e1a9d792] Unhandled exception: Could not build url for endpoint 'base.dashboard'. Did you mean 'base.user' instead?
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/base.py", line 29, in admin
+    return render_template('admin/dashboard.html',
+                           title='Dashboard',
+                           DASHBOARD=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/admin/dashboard.html", line 1, in top-level template code
+    {% extends "shared/adminlayout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/adminlayout.html", line 25, in top-level template code
+    <a class="nav-link {% if DASHBOARD %}active{% endif %}" href="{{ url_for ('base.dashboard') }}">
+    ^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'base.dashboard'. Did you mean 'base.user' instead?
+2025-08-09 11:28:34,033 - app - INFO - [d452fa5a-27e1-4af2-a807-d8a53ed2fefa] GET /app/admin/ started
+2025-08-09 11:28:34,068 - app - INFO - [d452fa5a-27e1-4af2-a807-d8a53ed2fefa] GET /app/admin/ completed with status 200 in 0.0356s
+2025-08-09 11:28:34,143 - app - INFO - [fc527727-bf26-47d2-8682-795831ce67f4] GET /static/appstyle.css started
+2025-08-09 11:28:34,146 - app - INFO - [bfdabec8-683f-4505-88b8-d0abdcb2db41] GET /static/images/icon.png started
+2025-08-09 11:28:34,148 - app - INFO - [fc527727-bf26-47d2-8682-795831ce67f4] GET /static/appstyle.css completed with status 304 in 0.0051s
+2025-08-09 11:28:34,152 - app - INFO - [bfdabec8-683f-4505-88b8-d0abdcb2db41] GET /static/images/icon.png completed with status 304 in 0.0054s
+2025-08-09 11:28:34,163 - app - INFO - [ffa62ca3-13d5-49b8-9911-c8b03edbb734] GET /static/site.js started
+2025-08-09 11:28:34,165 - app - INFO - [ffa62ca3-13d5-49b8-9911-c8b03edbb734] GET /static/site.js completed with status 304 in 0.0027s
+2025-08-09 11:28:34,186 - app - INFO - [d56ac1d7-e7e5-4910-b48c-c142a55bb88a] GET /static/images/tapwall.png started
+2025-08-09 11:28:34,187 - app - ERROR - [d56ac1d7-e7e5-4910-b48c-c142a55bb88a] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-09 11:28:35,010 - app - INFO - [38185579-70eb-442b-bf23-7e7e87d37721] GET /static/images/favicon.ico started
+2025-08-09 11:28:35,012 - app - INFO - [38185579-70eb-442b-bf23-7e7e87d37721] GET /static/images/favicon.ico completed with status 304 in 0.0023s
+2025-08-09 11:28:44,391 - app - INFO - [b45fbfc1-1947-4b19-8d79-e3ae1c4da632] GET /auth/logout/ started
+2025-08-09 11:28:44,395 - app - INFO - superadmin logged out successfully!
+2025-08-09 11:28:44,406 - app - INFO - [b45fbfc1-1947-4b19-8d79-e3ae1c4da632] GET /auth/logout/ completed with status 200 in 0.0143s
+2025-08-09 11:28:44,483 - app - INFO - [7f19479a-895d-43f0-a8b7-9194a38db5f0] GET /static/appstyle.css started
+2025-08-09 11:28:44,487 - app - INFO - [da9638f0-e44f-41ee-8910-3bf1a0e00c3c] GET /static/images/icon.png started
+2025-08-09 11:28:44,488 - app - INFO - [7f19479a-895d-43f0-a8b7-9194a38db5f0] GET /static/appstyle.css completed with status 304 in 0.0054s
+2025-08-09 11:28:44,492 - app - INFO - [f0420ea6-d35c-49ff-a2e5-19d5ac17e9c9] GET /static/site.js started
+2025-08-09 11:28:44,494 - app - INFO - [da9638f0-e44f-41ee-8910-3bf1a0e00c3c] GET /static/images/icon.png completed with status 304 in 0.0072s
+2025-08-09 11:28:44,497 - app - INFO - [f0420ea6-d35c-49ff-a2e5-19d5ac17e9c9] GET /static/site.js completed with status 304 in 0.0051s
+2025-08-09 11:28:48,956 - app - INFO - [63e15070-db9d-4338-8d72-693063f85410] GET /auth/login/ started
+2025-08-09 11:28:48,956 - app - INFO - Login page accessed
+2025-08-09 11:28:48,959 - app - INFO - [63e15070-db9d-4338-8d72-693063f85410] GET /auth/login/ completed with status 200 in 0.0036s
+2025-08-09 11:28:49,038 - app - INFO - [1ebf950b-41da-47b5-bed9-6f3adc6ef338] GET /static/appstyle.css started
+2025-08-09 11:28:49,040 - app - INFO - [1ebf950b-41da-47b5-bed9-6f3adc6ef338] GET /static/appstyle.css completed with status 304 in 0.0023s
+2025-08-09 11:28:49,045 - app - INFO - [1ee45c71-a752-4272-a03d-ca3ee22ea260] GET /static/images/icon.png started
+2025-08-09 11:28:49,047 - app - INFO - [1ee45c71-a752-4272-a03d-ca3ee22ea260] GET /static/images/icon.png completed with status 304 in 0.0023s
+2025-08-09 11:28:49,052 - app - INFO - [7b2be83a-6659-4d10-b481-ee7eb0d0e5bb] GET /static/site.js started
+2025-08-09 11:28:49,054 - app - INFO - [7b2be83a-6659-4d10-b481-ee7eb0d0e5bb] GET /static/site.js completed with status 304 in 0.0024s
+2025-08-09 11:28:49,173 - app - INFO - [e1bb1261-88d5-41ba-bc23-c5d5f54e1ba0] GET /static/images/favicon.ico started
+2025-08-09 11:28:49,175 - app - INFO - [e1bb1261-88d5-41ba-bc23-c5d5f54e1ba0] GET /static/images/favicon.ico completed with status 304 in 0.0021s
+2025-08-09 11:33:24,089 - app - INFO - [4d2f76eb-0a73-4421-9ea8-7b359e089639] GET /auth/login/ started
+2025-08-09 11:33:24,089 - app - INFO - Login page accessed
+2025-08-09 11:33:24,137 - app - INFO - [4d2f76eb-0a73-4421-9ea8-7b359e089639] GET /auth/login/ completed with status 200 in 0.0480s
+2025-08-09 11:33:24,212 - app - INFO - [d1cab1ed-ac73-4ff5-9c8a-805110bb9fe1] GET /static/appstyle.css started
+2025-08-09 11:33:24,227 - app - INFO - [0f136a50-8ac2-4234-9a21-f77063219958] GET /static/images/icon.png started
+2025-08-09 11:33:24,242 - app - INFO - [cd056041-5a70-48c5-9181-8b958807b48b] GET /static/site.js started
+2025-08-09 11:33:24,254 - app - INFO - [0f136a50-8ac2-4234-9a21-f77063219958] GET /static/images/icon.png completed with status 304 in 0.0265s
+2025-08-09 11:33:24,256 - app - INFO - [d1cab1ed-ac73-4ff5-9c8a-805110bb9fe1] GET /static/appstyle.css completed with status 304 in 0.0442s
+2025-08-09 11:33:24,260 - app - INFO - [cd056041-5a70-48c5-9181-8b958807b48b] GET /static/site.js completed with status 304 in 0.0183s
+2025-08-09 11:33:24,365 - app - INFO - [aca853a2-8ad8-4fb0-8090-cc6fccf04c2a] GET /static/images/favicon.ico started
+2025-08-09 11:33:24,365 - app - INFO - [aca853a2-8ad8-4fb0-8090-cc6fccf04c2a] GET /static/images/favicon.ico completed with status 304 in 0.0007s
+2025-08-09 11:33:38,272 - app - INFO - [186bc14d-6876-486a-88d3-7ce2b67525dc] GET /auth/login/ started
+2025-08-09 11:33:38,272 - app - INFO - Login page accessed
+2025-08-09 11:33:38,321 - app - INFO - [186bc14d-6876-486a-88d3-7ce2b67525dc] GET /auth/login/ completed with status 200 in 0.0498s
+2025-08-09 11:33:38,387 - app - INFO - [713b2c2b-3487-4d13-ae33-d267db801a4c] GET /static/appstyle.css started
+2025-08-09 11:33:38,402 - app - INFO - [4dfa8f2f-d4e6-491d-954c-64c27d706a9e] GET /static/images/icon.png started
+2025-08-09 11:33:38,415 - app - INFO - [713b2c2b-3487-4d13-ae33-d267db801a4c] GET /static/appstyle.css completed with status 304 in 0.0279s
+2025-08-09 11:33:38,419 - app - INFO - [7e409493-633e-4eaf-9e5f-3788a3184f62] GET /static/site.js started
+2025-08-09 11:33:38,421 - app - INFO - [4dfa8f2f-d4e6-491d-954c-64c27d706a9e] GET /static/images/icon.png completed with status 304 in 0.0195s
+2025-08-09 11:33:38,423 - app - INFO - [7e409493-633e-4eaf-9e5f-3788a3184f62] GET /static/site.js completed with status 304 in 0.0043s
+2025-08-09 11:33:38,519 - app - INFO - [f4ecb24e-e422-47dd-93de-5556c153befe] GET /static/images/favicon.ico started
+2025-08-09 11:33:38,521 - app - INFO - [f4ecb24e-e422-47dd-93de-5556c153befe] GET /static/images/favicon.ico completed with status 304 in 0.0017s
+2025-08-09 11:33:47,855 - app - INFO - [3af39ad1-dfac-40dd-8a7f-bc1504bc4270] POST /auth/login/ started
+2025-08-09 11:33:47,855 - app - INFO - Login page accessed
+2025-08-09 11:33:47,868 - app - WARNING - Login attempt Failed!
+2025-08-09 11:33:47,869 - app - INFO - [3af39ad1-dfac-40dd-8a7f-bc1504bc4270] POST /auth/login/ completed with status 302 in 0.0142s
+2025-08-09 11:33:47,881 - app - INFO - [406eb8b7-2f57-48ce-a5b4-77841961f286] GET /auth/login/ started
+2025-08-09 11:33:47,882 - app - INFO - Login page accessed
+2025-08-09 11:33:47,884 - app - INFO - [406eb8b7-2f57-48ce-a5b4-77841961f286] GET /auth/login/ completed with status 200 in 0.0032s
+2025-08-09 11:33:47,955 - app - INFO - [9531668f-b35c-4a73-b96e-89f139a9e4be] GET /static/site.js started
+2025-08-09 11:33:47,956 - app - INFO - [9531668f-b35c-4a73-b96e-89f139a9e4be] GET /static/site.js completed with status 304 in 0.0016s
+2025-08-09 11:33:47,959 - app - INFO - [e6a3a5ea-88ce-4ee2-b550-ac7c44c036a6] GET /static/images/icon.png started
+2025-08-09 11:33:47,962 - app - INFO - [0f6ad14c-278d-49a8-85ab-fc9f93df7c51] GET /static/appstyle.css started
+2025-08-09 11:33:47,964 - app - INFO - [e6a3a5ea-88ce-4ee2-b550-ac7c44c036a6] GET /static/images/icon.png completed with status 304 in 0.0047s
+2025-08-09 11:33:47,966 - app - INFO - [0f6ad14c-278d-49a8-85ab-fc9f93df7c51] GET /static/appstyle.css completed with status 304 in 0.0047s
+2025-08-09 11:35:31,686 - app - INFO - [8a545505-84b2-46c5-a996-d1d58e88da65] GET / started
+2025-08-09 11:35:31,737 - app - INFO - [8a545505-84b2-46c5-a996-d1d58e88da65] GET / completed with status 200 in 0.0515s
+2025-08-09 11:35:31,815 - app - INFO - [a306b28b-cba3-4f09-a608-6e478f1fdfea] GET /static/webstyle.css started
+2025-08-09 11:35:31,816 - app - ERROR - [a306b28b-cba3-4f09-a608-6e478f1fdfea] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-09 11:35:31,827 - app - INFO - [283ab046-d039-407a-9764-f81f78751daa] GET /static/images/icon.png started
+2025-08-09 11:35:31,847 - app - INFO - [283ab046-d039-407a-9764-f81f78751daa] GET /static/images/icon.png completed with status 304 in 0.0205s
+2025-08-09 11:35:31,850 - app - INFO - [2f806770-d273-4450-ae4c-694bc54db467] GET /static/site.js started
+2025-08-09 11:35:31,860 - app - INFO - [2f806770-d273-4450-ae4c-694bc54db467] GET /static/site.js completed with status 304 in 0.0099s
+2025-08-09 11:35:36,975 - app - INFO - [51ea4261-b3b5-45eb-8c63-be77e61d74ef] GET /auth/login/ started
+2025-08-09 11:35:36,975 - app - INFO - Login page accessed
+2025-08-09 11:35:37,002 - app - INFO - [51ea4261-b3b5-45eb-8c63-be77e61d74ef] GET /auth/login/ completed with status 200 in 0.0281s
+2025-08-09 11:35:37,079 - app - INFO - [d6658d31-15b4-4ae7-8a96-b4df9c7cce7c] GET /static/appstyle.css started
+2025-08-09 11:35:37,083 - app - INFO - [9f831ae9-d03f-4b22-9e0f-3b13fdc6c5f8] GET /static/images/icon.png started
+2025-08-09 11:35:37,085 - app - INFO - [9f831ae9-d03f-4b22-9e0f-3b13fdc6c5f8] GET /static/images/icon.png completed with status 304 in 0.0018s
+2025-08-09 11:35:37,088 - app - INFO - [d6658d31-15b4-4ae7-8a96-b4df9c7cce7c] GET /static/appstyle.css completed with status 304 in 0.0086s
+2025-08-09 11:35:37,092 - app - INFO - [48b0d344-023f-4561-b878-8e54dc5d466c] GET /static/site.js started
+2025-08-09 11:35:37,095 - app - INFO - [48b0d344-023f-4561-b878-8e54dc5d466c] GET /static/site.js completed with status 304 in 0.0032s
+2025-08-09 11:35:45,178 - app - INFO - [aa34a6a2-4f85-4881-a0f7-a4d623e3decc] POST /auth/login/ started
+2025-08-09 11:35:45,179 - app - INFO - Login page accessed
+2025-08-09 11:35:45,395 - app - INFO - devthunder user login successfully
+2025-08-09 11:35:45,395 - app - INFO - [aa34a6a2-4f85-4881-a0f7-a4d623e3decc] POST /auth/login/ completed with status 302 in 0.2166s
+2025-08-09 11:35:45,401 - app - INFO - [06140339-0da0-462f-b39a-aebf98ba02db] GET /app/user/ started
+2025-08-09 11:35:45,406 - app - ERROR - [06140339-0da0-462f-b39a-aebf98ba02db] Unhandled exception: shared/userlayout.html
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/base.py", line 19, in user
+    return render_template('user/dashboard.html',
+                           title='Dashboard',
+                           DASHBOARD=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/user/dashboard.html", line 1, in top-level template code
+    {% extends "shared/userlayout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: shared/userlayout.html
+2025-08-09 11:36:11,885 - app - INFO - [264945e8-1788-41cd-bcb4-2740871d5afc] GET /app/user/ started
+2025-08-09 11:36:11,897 - app - INFO - [264945e8-1788-41cd-bcb4-2740871d5afc] GET /app/user/ completed with status 200 in 0.0124s
+2025-08-09 11:36:11,967 - app - INFO - [9add0315-37cb-45d1-a4d2-23604ba2e701] GET /static/webstyle.css started
+2025-08-09 11:36:11,968 - app - ERROR - [9add0315-37cb-45d1-a4d2-23604ba2e701] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-09 11:36:11,986 - app - INFO - [51aa97dc-b3a3-4ffa-9955-b0887a307428] GET /static/images/icon.png started
+2025-08-09 11:36:11,988 - app - INFO - [51aa97dc-b3a3-4ffa-9955-b0887a307428] GET /static/images/icon.png completed with status 304 in 0.0022s
+2025-08-09 11:36:11,993 - app - INFO - [b92da40a-4075-4f9c-921e-734ded6d2697] GET /static/site.js started
+2025-08-09 11:36:11,996 - app - INFO - [b92da40a-4075-4f9c-921e-734ded6d2697] GET /static/site.js completed with status 304 in 0.0034s
+2025-08-09 11:36:12,169 - app - INFO - [01a70f08-ac0f-42fa-94bb-db3d53df77f1] GET /static/images/favicon.ico started
+2025-08-09 11:36:12,170 - app - INFO - [01a70f08-ac0f-42fa-94bb-db3d53df77f1] GET /static/images/favicon.ico completed with status 304 in 0.0008s
+2025-08-09 11:36:18,910 - app - INFO - [571ff8c2-24d2-4590-90fc-fa0f539c9c90] GET /auth/logout/ started
+2025-08-09 11:36:18,913 - app - INFO - devthunder logged out successfully!
+2025-08-09 11:36:18,925 - app - INFO - [571ff8c2-24d2-4590-90fc-fa0f539c9c90] GET /auth/logout/ completed with status 200 in 0.0160s
+2025-08-09 11:36:19,001 - app - INFO - [b7aeb60e-0e05-4a11-98db-cf5bbbf82ec6] GET /static/appstyle.css started
+2025-08-09 11:36:19,003 - app - INFO - [b7aeb60e-0e05-4a11-98db-cf5bbbf82ec6] GET /static/appstyle.css completed with status 304 in 0.0025s
+2025-08-09 11:36:19,007 - app - INFO - [d6657a2c-4e00-448c-95b2-cf90be029164] GET /static/images/icon.png started
+2025-08-09 11:36:19,011 - app - INFO - [1aec71bc-8bac-4904-8b49-98ac1b2db7f3] GET /static/site.js started
+2025-08-09 11:36:19,014 - app - INFO - [1aec71bc-8bac-4904-8b49-98ac1b2db7f3] GET /static/site.js completed with status 304 in 0.0030s
+2025-08-09 11:36:19,017 - app - INFO - [d6657a2c-4e00-448c-95b2-cf90be029164] GET /static/images/icon.png completed with status 304 in 0.0099s
+2025-08-09 11:36:29,040 - app - INFO - [b3b03e5a-aa14-4877-ad31-f2eadc98305c] GET / started
+2025-08-09 11:36:29,040 - app - INFO - [b3b03e5a-aa14-4877-ad31-f2eadc98305c] GET / completed with status 200 in 0.0009s
+2025-08-09 11:36:29,074 - app - INFO - [d99f48e8-0695-40b7-9296-5aa034bd1c5f] GET /static/webstyle.css started
+2025-08-09 11:36:29,076 - app - INFO - [ee2e025b-9bc4-4c33-9e5c-e93bfe3412d7] GET /static/images/icon.png started
+2025-08-09 11:36:29,078 - app - INFO - [7d42900d-4bfe-4b04-810c-66fb25e0a7f0] GET /static/site.js started
+2025-08-09 11:36:29,078 - app - ERROR - [d99f48e8-0695-40b7-9296-5aa034bd1c5f] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-09 11:36:29,082 - app - INFO - [ee2e025b-9bc4-4c33-9e5c-e93bfe3412d7] GET /static/images/icon.png completed with status 304 in 0.0057s
+2025-08-09 11:36:29,082 - app - INFO - [7d42900d-4bfe-4b04-810c-66fb25e0a7f0] GET /static/site.js completed with status 304 in 0.0045s
+2025-08-09 11:38:36,198 - app - INFO - [1fc56bbf-a83c-49e5-891d-c0c785ed98fc] GET / started
+2025-08-09 11:38:36,218 - app - INFO - [1fc56bbf-a83c-49e5-891d-c0c785ed98fc] GET / completed with status 200 in 0.0207s
+2025-08-09 11:38:36,293 - app - INFO - [82c6a086-c32e-402f-bb1f-6f5ab9bbb86e] GET /static/webstyle.css started
+2025-08-09 11:38:36,294 - app - ERROR - [82c6a086-c32e-402f-bb1f-6f5ab9bbb86e] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-09 11:38:36,297 - app - INFO - [10f2e975-1ad2-47ed-af3e-11e21064a519] GET /static/images/icon.png started
+2025-08-09 11:38:36,313 - app - INFO - [f14e31f9-107c-4ade-a16a-b28164a07841] GET /static/site.js started
+2025-08-09 11:38:36,315 - app - INFO - [10f2e975-1ad2-47ed-af3e-11e21064a519] GET /static/images/icon.png completed with status 304 in 0.0179s
+2025-08-09 11:38:36,320 - app - INFO - [f14e31f9-107c-4ade-a16a-b28164a07841] GET /static/site.js completed with status 304 in 0.0078s
+2025-08-09 11:38:36,414 - app - INFO - [ade37ed0-e733-4287-910e-0d9480cf5142] GET /static/images/favicon.ico started
+2025-08-09 11:38:36,415 - app - INFO - [ade37ed0-e733-4287-910e-0d9480cf5142] GET /static/images/favicon.ico completed with status 304 in 0.0009s
+2025-08-09 11:38:37,534 - app - INFO - [df3af057-2ac7-489d-8fd3-5664670ae527] GET /auth/login/ started
+2025-08-09 11:38:37,534 - app - INFO - Login page accessed
+2025-08-09 11:38:37,538 - app - INFO - [df3af057-2ac7-489d-8fd3-5664670ae527] GET /auth/login/ completed with status 200 in 0.0049s
+2025-08-09 11:38:37,613 - app - INFO - [3349bec5-75ea-475d-be47-0937863538b9] GET /static/appstyle.css started
+2025-08-09 11:38:37,615 - app - INFO - [3349bec5-75ea-475d-be47-0937863538b9] GET /static/appstyle.css completed with status 304 in 0.0021s
+2025-08-09 11:38:37,619 - app - INFO - [d6943522-36b7-4000-853c-dc6366e8b262] GET /static/images/icon.png started
+2025-08-09 11:38:37,623 - app - INFO - [6719691b-cac2-427a-8d43-bc851d7037bf] GET /static/site.js started
+2025-08-09 11:38:37,624 - app - INFO - [d6943522-36b7-4000-853c-dc6366e8b262] GET /static/images/icon.png completed with status 304 in 0.0058s
+2025-08-09 11:38:37,627 - app - INFO - [6719691b-cac2-427a-8d43-bc851d7037bf] GET /static/site.js completed with status 304 in 0.0044s
+2025-08-09 11:38:43,938 - app - INFO - [7934c4bf-1027-47ac-86f4-385b5548970c] POST /auth/login/ started
+2025-08-09 11:38:43,939 - app - INFO - Login page accessed
+2025-08-09 11:38:44,146 - app - WARNING - Login attempt Failed!
+2025-08-09 11:38:44,146 - app - INFO - [7934c4bf-1027-47ac-86f4-385b5548970c] POST /auth/login/ completed with status 302 in 0.2083s
+2025-08-09 11:38:44,151 - app - INFO - [4eaf4d46-0d05-4b9b-8381-07f05373bcb1] GET /auth/login/ started
+2025-08-09 11:38:44,151 - app - INFO - Login page accessed
+2025-08-09 11:38:44,152 - app - INFO - [4eaf4d46-0d05-4b9b-8381-07f05373bcb1] GET /auth/login/ completed with status 200 in 0.0011s
+2025-08-09 11:38:44,178 - app - INFO - [9ad4969c-7ea6-44b6-9cbc-cd5a21314d08] GET /static/appstyle.css started
+2025-08-09 11:38:44,179 - app - INFO - [dbc80cd6-aaaf-4415-a3e5-62192520e4f0] GET /static/images/icon.png started
+2025-08-09 11:38:44,180 - app - INFO - [9ad4969c-7ea6-44b6-9cbc-cd5a21314d08] GET /static/appstyle.css completed with status 304 in 0.0020s
+2025-08-09 11:38:44,181 - app - INFO - [dbc80cd6-aaaf-4415-a3e5-62192520e4f0] GET /static/images/icon.png completed with status 304 in 0.0012s
+2025-08-09 11:38:44,182 - app - INFO - [3db8812b-1edb-430e-954d-7026c83efe1f] GET /static/site.js started
+2025-08-09 11:38:44,183 - app - INFO - [3db8812b-1edb-430e-954d-7026c83efe1f] GET /static/site.js completed with status 304 in 0.0018s
+2025-08-09 11:38:52,105 - app - INFO - [0144bf8b-1ca5-4a91-9478-00db52ff1ee5] POST /auth/login/ started
+2025-08-09 11:38:52,106 - app - INFO - Login page accessed
+2025-08-09 11:38:52,315 - app - INFO - devthunder user login successfully
+2025-08-09 11:38:52,315 - app - INFO - [0144bf8b-1ca5-4a91-9478-00db52ff1ee5] POST /auth/login/ completed with status 302 in 0.2101s
+2025-08-09 11:38:52,320 - app - INFO - [3c376476-1c03-432b-8c43-dcf895855404] GET /app/user/ started
+2025-08-09 11:38:52,322 - app - INFO - [3c376476-1c03-432b-8c43-dcf895855404] GET /app/user/ completed with status 200 in 0.0015s
+2025-08-09 11:38:52,352 - app - INFO - [c5e01ed6-bcb4-49bf-95ec-77b60ef36f54] GET /static/webstyle.css started
+2025-08-09 11:38:52,354 - app - ERROR - [c5e01ed6-bcb4-49bf-95ec-77b60ef36f54] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-09 11:38:52,355 - app - INFO - [b7ff34e0-1d57-42c3-b345-8d7e1f832423] GET /static/site.js started
+2025-08-09 11:38:52,357 - app - INFO - [7950275a-dbb1-4b28-a041-833da51dc267] GET /static/images/icon.png started
+2025-08-09 11:38:52,362 - app - INFO - [b7ff34e0-1d57-42c3-b345-8d7e1f832423] GET /static/site.js completed with status 304 in 0.0074s
+2025-08-09 11:38:52,365 - app - INFO - [7950275a-dbb1-4b28-a041-833da51dc267] GET /static/images/icon.png completed with status 304 in 0.0082s
+2025-08-09 11:39:16,258 - app - INFO - [8e0a013b-f1d2-43dc-919a-b93dce94e7cd] GET /auth/logout/ started
+2025-08-09 11:39:16,264 - app - INFO - devthunder logged out successfully!
+2025-08-09 11:39:16,265 - app - INFO - [8e0a013b-f1d2-43dc-919a-b93dce94e7cd] GET /auth/logout/ completed with status 200 in 0.0079s
+2025-08-09 11:39:16,352 - app - INFO - [fce577b1-200f-4a2d-a99e-4e6831217196] GET /static/appstyle.css started
+2025-08-09 11:39:16,353 - app - INFO - [fce577b1-200f-4a2d-a99e-4e6831217196] GET /static/appstyle.css completed with status 304 in 0.0019s
+2025-08-09 11:39:16,357 - app - INFO - [e7959481-a77d-45d4-994e-c5bf9b4b0963] GET /static/images/icon.png started
+2025-08-09 11:39:16,360 - app - INFO - [e7959481-a77d-45d4-994e-c5bf9b4b0963] GET /static/images/icon.png completed with status 304 in 0.0027s
+2025-08-09 11:39:16,364 - app - INFO - [b2157edc-3221-45b7-a125-44832d1fd645] GET /static/site.js started
+2025-08-09 11:39:16,366 - app - INFO - [b2157edc-3221-45b7-a125-44832d1fd645] GET /static/site.js completed with status 304 in 0.0021s
+2025-08-09 11:39:18,955 - app - INFO - [a8e74d27-6095-4084-8b0f-34d25738380a] GET /auth/login/ started
+2025-08-09 11:39:18,955 - app - INFO - Login page accessed
+2025-08-09 11:39:18,959 - app - INFO - [a8e74d27-6095-4084-8b0f-34d25738380a] GET /auth/login/ completed with status 200 in 0.0042s
+2025-08-09 11:39:19,056 - app - INFO - [68203b06-4d06-4c97-af06-9ae0d8609d08] GET /static/appstyle.css started
+2025-08-09 11:39:19,060 - app - INFO - [3289e281-0f7e-4f60-815e-4435a0c68e7e] GET /static/images/icon.png started
+2025-08-09 11:39:19,061 - app - INFO - [68203b06-4d06-4c97-af06-9ae0d8609d08] GET /static/appstyle.css completed with status 304 in 0.0050s
+2025-08-09 11:39:19,066 - app - INFO - [48afb94c-6f2d-443f-b390-bdb9f8c50925] GET /static/site.js started
+2025-08-09 11:39:19,069 - app - INFO - [3289e281-0f7e-4f60-815e-4435a0c68e7e] GET /static/images/icon.png completed with status 304 in 0.0091s
+2025-08-09 11:39:19,072 - app - INFO - [48afb94c-6f2d-443f-b390-bdb9f8c50925] GET /static/site.js completed with status 304 in 0.0053s
+2025-08-09 11:39:27,223 - app - INFO - [dfda35f4-2720-4811-a216-acf2f816f2e2] POST /auth/login/ started
+2025-08-09 11:39:27,224 - app - INFO - Login page accessed
+2025-08-09 11:39:27,441 - app - INFO - superadmin admin login successfully
+2025-08-09 11:39:27,441 - app - INFO - [dfda35f4-2720-4811-a216-acf2f816f2e2] POST /auth/login/ completed with status 302 in 0.2185s
+2025-08-09 11:39:27,446 - app - INFO - [03788b0d-8f82-4077-9b4d-cb7a21921b51] GET /app/admin/ started
+2025-08-09 11:39:27,460 - app - INFO - [03788b0d-8f82-4077-9b4d-cb7a21921b51] GET /app/admin/ completed with status 200 in 0.0131s
+2025-08-09 11:39:27,495 - app - INFO - [8a7d9f48-b2f5-40d2-87bd-08080397101f] GET /static/appstyle.css started
+2025-08-09 11:39:27,495 - app - INFO - [8a7d9f48-b2f5-40d2-87bd-08080397101f] GET /static/appstyle.css completed with status 304 in 0.0006s
+2025-08-09 11:39:27,500 - app - INFO - [c881bc4b-a914-4a9c-9db5-a7a0963875d7] GET /static/images/icon.png started
+2025-08-09 11:39:27,500 - app - INFO - [c881bc4b-a914-4a9c-9db5-a7a0963875d7] GET /static/images/icon.png completed with status 304 in 0.0008s
+2025-08-09 11:39:27,502 - app - INFO - [3ef3c70a-a06a-46d4-a5b2-c62b3fea3a73] GET /static/site.js started
+2025-08-09 11:39:27,503 - app - INFO - [3ef3c70a-a06a-46d4-a5b2-c62b3fea3a73] GET /static/site.js completed with status 304 in 0.0009s
+2025-08-09 11:39:27,519 - app - INFO - [633708e2-29ef-4c3b-a996-196c76ed8f8c] GET /static/images/tapwall.png started
+2025-08-09 11:39:27,520 - app - ERROR - [633708e2-29ef-4c3b-a996-196c76ed8f8c] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-09 11:39:30,196 - app - INFO - [383496ce-8719-4685-98b4-7c7e3cc5c27b] GET /auth/logout/ started
+2025-08-09 11:39:30,200 - app - INFO - superadmin logged out successfully!
+2025-08-09 11:39:30,202 - app - INFO - [383496ce-8719-4685-98b4-7c7e3cc5c27b] GET /auth/logout/ completed with status 200 in 0.0062s
+2025-08-09 11:39:30,287 - app - INFO - [91ed9b49-374e-46cd-9ced-25d33e745cf7] GET /static/appstyle.css started
+2025-08-09 11:39:30,289 - app - INFO - [91ed9b49-374e-46cd-9ced-25d33e745cf7] GET /static/appstyle.css completed with status 304 in 0.0022s
+2025-08-09 11:39:30,294 - app - INFO - [5d80026b-6959-4c3c-8a40-14537b20a829] GET /static/images/icon.png started
+2025-08-09 11:39:30,297 - app - INFO - [5d80026b-6959-4c3c-8a40-14537b20a829] GET /static/images/icon.png completed with status 304 in 0.0025s
+2025-08-09 11:39:30,302 - app - INFO - [a40a52cc-9ebe-4150-9d84-c0b955726f78] GET /static/site.js started
+2025-08-09 11:39:30,304 - app - INFO - [a40a52cc-9ebe-4150-9d84-c0b955726f78] GET /static/site.js completed with status 304 in 0.0023s
+2025-08-09 11:40:00,693 - app - INFO - [87bbaea1-6528-4d66-8cbc-250d0103ddab] GET / started
+2025-08-09 11:40:00,719 - app - INFO - [87bbaea1-6528-4d66-8cbc-250d0103ddab] GET / completed with status 200 in 0.0265s
+2025-08-09 11:40:01,367 - app - INFO - [42039966-6e1c-434e-8df8-f2bd379db999] GET /static/webstyle.css started
+2025-08-09 11:40:01,368 - app - ERROR - [42039966-6e1c-434e-8df8-f2bd379db999] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-09 11:40:01,372 - app - INFO - [5c496aec-a81a-40df-a25f-bf0d189bfc60] GET /static/images/icon.png started
+2025-08-09 11:40:01,383 - app - INFO - [5c496aec-a81a-40df-a25f-bf0d189bfc60] GET /static/images/icon.png completed with status 304 in 0.0111s
+2025-08-09 11:40:01,391 - app - INFO - [18a09b28-a2d0-4f50-b527-4bb3860dce6e] GET /static/site.js started
+2025-08-09 11:40:01,393 - app - INFO - [18a09b28-a2d0-4f50-b527-4bb3860dce6e] GET /static/site.js completed with status 304 in 0.0014s
+2025-08-09 11:40:08,343 - app - INFO - [66af1b50-0891-47ae-b09d-21648f51f7b8] GET /auth/login/ started
+2025-08-09 11:40:08,344 - app - INFO - Login page accessed
+2025-08-09 11:40:08,371 - app - INFO - [66af1b50-0891-47ae-b09d-21648f51f7b8] GET /auth/login/ completed with status 200 in 0.0280s
+2025-08-09 11:40:08,464 - app - INFO - [d443f218-ae06-4943-8710-ffcf13ffc14a] GET /static/appstyle.css started
+2025-08-09 11:40:08,466 - app - INFO - [d443f218-ae06-4943-8710-ffcf13ffc14a] GET /static/appstyle.css completed with status 304 in 0.0020s
+2025-08-09 11:40:08,470 - app - INFO - [498c97d3-e0af-4f1e-ad80-604dd5f72b41] GET /static/images/icon.png started
+2025-08-09 11:40:08,474 - app - INFO - [4f26b2aa-ee29-49f2-a572-48d53e9b20d7] GET /static/site.js started
+2025-08-09 11:40:08,476 - app - INFO - [498c97d3-e0af-4f1e-ad80-604dd5f72b41] GET /static/images/icon.png completed with status 304 in 0.0055s
+2025-08-09 11:40:08,478 - app - INFO - [4f26b2aa-ee29-49f2-a572-48d53e9b20d7] GET /static/site.js completed with status 304 in 0.0041s
+2025-08-09 11:40:27,708 - app - INFO - [109e7322-33e9-4049-86cc-8adff54aaaac] GET / started
+2025-08-09 11:40:27,733 - app - INFO - [109e7322-33e9-4049-86cc-8adff54aaaac] GET / completed with status 200 in 0.0258s
+2025-08-09 11:40:28,361 - app - INFO - [ad4f4e61-d726-4f89-ab07-09f18fe1998d] GET /static/webstyle.css started
+2025-08-09 11:40:28,361 - app - ERROR - [ad4f4e61-d726-4f89-ab07-09f18fe1998d] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-09 11:40:28,363 - app - INFO - [014077fa-0a03-40b4-ba54-394c6c58d6e2] GET /static/images/icon.png started
+2025-08-09 11:40:28,377 - app - INFO - [014077fa-0a03-40b4-ba54-394c6c58d6e2] GET /static/images/icon.png completed with status 304 in 0.0147s
+2025-08-09 11:40:28,388 - app - INFO - [058ce694-7630-48a5-8d7a-a4866203195f] GET /static/site.js started
+2025-08-09 11:40:28,389 - app - INFO - [058ce694-7630-48a5-8d7a-a4866203195f] GET /static/site.js completed with status 304 in 0.0007s
+2025-08-09 11:40:31,486 - app - INFO - [8daaaf5d-df7f-48bf-8c3b-86526b8cbe13] GET /auth/login/ started
+2025-08-09 11:40:31,486 - app - INFO - Login page accessed
+2025-08-09 11:40:31,513 - app - INFO - [8daaaf5d-df7f-48bf-8c3b-86526b8cbe13] GET /auth/login/ completed with status 200 in 0.0273s
+2025-08-09 11:40:31,604 - app - INFO - [1a436757-fa90-4bd7-9290-9072ce99796d] GET /static/appstyle.css started
+2025-08-09 11:40:31,605 - app - INFO - [1a436757-fa90-4bd7-9290-9072ce99796d] GET /static/appstyle.css completed with status 304 in 0.0017s
+2025-08-09 11:40:31,608 - app - INFO - [2ef42b90-cf0b-4ee0-826a-d5e9f0aeb725] GET /static/images/icon.png started
+2025-08-09 11:40:31,613 - app - INFO - [432d9a74-ade8-4a09-8fcc-8aa749144112] GET /static/site.js started
+2025-08-09 11:40:31,615 - app - INFO - [432d9a74-ade8-4a09-8fcc-8aa749144112] GET /static/site.js completed with status 304 in 0.0021s
+2025-08-09 11:40:31,618 - app - INFO - [2ef42b90-cf0b-4ee0-826a-d5e9f0aeb725] GET /static/images/icon.png completed with status 304 in 0.0100s

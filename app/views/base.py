@@ -4,26 +4,30 @@ Admin configuration file that contains admin views and routes.
 
 from flask import Blueprint, render_template
 from flask_login import login_required
-from app.extensions import db
-from app.models.category import Category
-from app.models.transaction import Transaction
+# from app.models.category import Category
+# from app.models.transaction import Transaction
 
 base_bp = Blueprint('base', __name__, url_prefix='/app')
 
 
-@base_bp.route('/index/')
+@base_bp.route('/user/')
 @login_required
-def index():
+def user():
     """
-    landing page view
+    User landing page view
     """
-    total_categories = Category.query.count() or 0
-    total_transactions = Transaction.query.count() or 0
+    return render_template('user/dashboard.html',
+                           title='Dashboard',
+                           DASHBOARD=True)
 
-    return render_template('index.html', title='Home',
-                        # Organization
-                        total_categories=total_categories,
-                        total_transactions=total_transactions,
-                        DASHBOARD=True)
+@base_bp.route('/admin/')
+@login_required
+def admin():
+    """
+    Admin landing page view
+    """
+    return render_template('admin/dashboard.html',
+                           title='Dashboard',
+                           DASHBOARD=True)
 
 # End of file

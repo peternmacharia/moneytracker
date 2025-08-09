@@ -17,5 +17,5 @@ class Category(db.Model, TimeStampMixin):
 
     def __repr__(self):
         return f'<Category {self.name}>'
-    
+
 # End of file
