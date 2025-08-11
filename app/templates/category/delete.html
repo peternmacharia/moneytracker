@@ -1,0 +1,45 @@
+{% extends "shared/layout.html" %}
+{% block title %} {{ title }} {% endblock %}
+{% block content %}
+
+<div class="container">
+
+    <div class="card shadow-lg mt-4">
+        <div class="card-header text-center align-content-center text-danger fw-bold">
+            <i class="bi bi-columns-gap"></i>&nbsp;{{ title }} Form          
+        </div>
+        <form method="POST">
+            <div class="card-body">
+                <p class="text-center text-danger">
+                    <strong>
+                        You are about to Delete this Record, and you won't be able to recover it again!<br>
+                        Are you sure you want to Delete?
+                    </strong>
+                </p>
+                <hr>
+                <section id="deleteForm" name="deleteForm" class="mb-3">
+                    <div class="form-floating mb-3">
+                        {{ form.name }}
+                        {{ form.name.label }}
+                    </div>
+                    <div class="form-floating mb-3">
+                        {{ form.description }}
+                        {{ form.description.label }}
+                    </div>
+                    <div class="form-floating mb-3">
+                        {{ form.icon }}
+                        {{ form.icon.label }}
+                    </div>
+                </section>
+            </div>
+            <div class="card-footer text-center">
+                <a href="{{ url_for('category.index') }}" class="btn btn-secondary"><i class="bi bi-x-lg"></i>&nbsp;Cancel</a>
+                {% if current_user.is_authenticated %}
+                    &nbsp; <button type="submit" class="btn btn-outline-danger"><i class="bi bi-trash"></i>&nbsp;Delete</button>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

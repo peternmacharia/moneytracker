@@ -126,8 +126,8 @@ def update(role_id):
     item = Role.query.get_or_404(role_id)
     form = RoleForm(obj=item)
 
-    if item.name == 'SUPER':
-        flash('The Super role cannot be edited!', 'danger')
+    if item.name == 'ADMIN':
+        flash('The admin role cannot be edited!', 'danger')
         return redirect(url_for('role.index'))
 
     if request.method == 'POST':
@@ -172,8 +172,8 @@ def delete(role_id):
     item = Role.query.get_or_404(role_id)
     form = RoleForm(obj=item)
 
-    if item.name == 'SUPER':
-        flash('The super role cannot be deleted!', 'danger')
+    if item.name == 'ADMIN':
+        flash('The admin role cannot be deleted!', 'danger')
         return redirect(url_for('role.index'))
 
     if request.method == 'POST':

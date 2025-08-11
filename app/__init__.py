@@ -59,13 +59,27 @@ def create_app(config_class='default'):
         The default index page to redirect to landing page
         """
         if current_user.is_authenticated:
-            app.logger.info('User accessed Dashboard')
+            app.logger.info('User accessed Index page')
             return render_template('index.html',
                                    title='Home')
         else:
             return render_template('index.html',
                                    title='Home')
-        # return redirect(url_for('auth.login'))
+    
+    @app.route('/contact/')
+    def contact():
+        """
+        Contact page
+        """
+        if current_user.is_authenticated:
+            app.logger.info('User accessed ContactUs Page')
+            return render_template('contact.html',
+                                   title='Contact',
+                                   CONTACT=True)
+        else:
+            return render_template('contact.html',
+                                   title='Contact Us',
+                                   CONTACT=True)
 
 
 

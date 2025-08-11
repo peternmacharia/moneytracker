@@ -1,0 +1,111 @@
+{% extends "shared/layout.html" %}
+{% block title %} {{ title }} {% endblock %}
+{% block content %}
+
+<div class="container">
+    <section id="searchSection" name="searchSection" class="mb-5 mt-4">
+        <div class="text-center">
+            <form method="GET" action="{{url_for('role.index')}}">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" name="search" placeholder="Search..." value="{{ request.args.get('search', '') }}">
+                            <label id="search" for="search">Search Role:</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                <a type="button" class="btn btn-secondary" href="{{ url_for('role.index') }}"><i class="bi bi-arrow-clockwise"></i>&nbsp;Refresh</a> &nbsp;
+                <button id="search" type="submit" class="btn btn-success"><i class="bi bi-search"></i>&nbsp;Search</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="dataSection" name="dataSection" class="mb-3">
+        <div class="d-flex justify-content-between align-items-center border-bottom">
+            <legend><h2>List of {{ title }}</h2></legend>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newModal">New</button>
+        </div>
+
+        <div class="card shadow-lg mb-3">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover align-content-center">
+                        <thead class="text-uppercase">
+                            <tr class="align-middle">
+                                <th scope="col">Name&nbsp;<a href="{{ url_for('role.index', sort_by='name', sort_order='desc' if sort_order == 'asc' else 'asc') }}"><i class="bi {{'bi-sort-down-alt' if sort_order == 'asc' else 'bi-sort-up-alt'}}"></i></a></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider align-content-center">
+                            {% for role in roles %}
+                                <tr class="align-middle">
+                                    <td scope="row">{{ role.name }}</td>
+                                    <td scope="row">
+                                    {% if current_user.is_authenticated %}
+                                        <a class="btn btn-outline-primary" href="{{ url_for('role.update', role_id=role.id) }}"><i class="bi bi-pencil-square"></i></a>
+                                        &nbsp; <a class="btn btn-outline-danger" href="{{ url_for('role.delete', role_id=role.id) }}"><i class="bi bi-trash"></i></a>
+                                    {% endif %}
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col">
+                <div class="text-center" id="pagination_section">
+                    {% if roles.has_prev %}
+                    <a class="btn btn-secondary" href="{{ url_for('role.index', page=roles.prev_num, sort_by=sort_by, sort_order=sort_order, page_size=page_size) }}">Previous</a>
+                    {% endif %}
+                
+                    {% for number in roles.iter_pages() %}
+                    {% if roles.page != number %}
+                        <a class="page-number btn btn-secondary" href="{{ url_for('role.index', page=number, sort_by=sort_by, sort_order=sort_order, page_size=page_size) }}">{{ number }}</a>
+                    {% else %}
+                        <span class='current-page-number'>{{ number }}</span>
+                    {% endif %}
+                    {% endfor %}
+                
+                    {% if roles.has_next %}
+                    <a class="btn btn-secondary" href="{{ url_for('role.index', page=roles.next_num, sort_by=sort_by, sort_order=sort_order, page_size=page_size) }}">Next</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Create New Role Modal -->
+    <section id="newRoleForm" name="newRoleForm">
+        <div class="modal fade" id="newModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="newModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="newModalLabel"><i class="bi bi-columns-gap"></i>&nbsp;{{title}}</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form class="form" id="newForm" method="POST" action="{{ url_for('role.create') }}">
+                        <div class="modal-body">
+                            <div class="form-floating mb-3">
+                                {{ form.name }}
+                                {{ form.name.label }}
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-x-lg"></i>&nbsp;Close</button>&nbsp;
+                            {% if current_user.is_authenticated %}
+                            <button type="submit" class="btn btn-outline-success"><i class="bi bi-floppy"></i>&nbsp;Save</button>
+                            {% endif %}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

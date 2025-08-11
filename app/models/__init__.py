@@ -18,35 +18,6 @@ def init_default_data():
     """
     A function to setup database and initialize table with default data
     """
-
-    # Check if categories already exist if not create defaults
-    if not Category.query.first():
-        default_categories = [
-            Category(name='Food & Dining', color='#ef4444', icon='🍽️',
-                     created_by='superadmin', updated_by='superadmin'),
-            Category(name='Transportation', color='#3b82f6', icon='🚗',
-                     created_by='superadmin', updated_by='superadmin'),
-            Category(name='Shopping', color='#8b5cf6', icon='🛍️',
-                     created_by='superadmin', updated_by='superadmin'),
-            Category(name='Entertainment', color='#f59e0b', icon='🎬',
-                     created_by='superadmin', updated_by='superadmin'),
-            Category(name='Bills & Utilities', color='#6b7280', icon='💡',
-                     created_by='superadmin', updated_by='superadmin'),
-            Category(name='Healthcare', color='#10b981', icon='🏥',
-                     created_by='superadmin', updated_by='superadmin'),
-            Category(name='Salary', color='#22c55e', icon='💼',
-                     created_by='superadmin', updated_by='superadmin'),
-            Category(name='Other Income', color='#06b6d4', icon='💰',
-                     created_by='superadmin', updated_by='superadmin'),
-        ]
-
-        for category in default_categories:
-            db.session.add(category)
-        db.session.commit()
-
-        print('Categories created successfully!')
-
-
     # Check if roles already exist if not create role ADMIN and USER
     if not Role.query.first():
         admin_role = Role(name='ADMIN', created_by='superadmin', updated_by='superadmin')
@@ -72,23 +43,50 @@ def init_default_data():
                           updated_by='superadmin')
         admin_user.set_password('SuperMan@123.?')
 
-        new_user = User(firstname='Dev',
-                        lastname='Thunder',
-                        fullname='Dev Thunder',
-                        username='devthunder',
+        new_user = User(firstname='Guest',
+                        lastname='User',
+                        fullname='Guest User',
+                        username='guestuser',
                         phone='+254700112233',
-                        email='devpthunder@gmail.com',
+                        email='guestuser@mail.com',
                         role_id=user_role.id,
                         status=UserStatus.ACTIVE,
                         created_by='superadmin',
                         updated_by='superadmin')
-        new_user.set_password('SuperMan@123.?')
+        new_user.set_password('GuestMan@123.?')
 
         db.session.add(admin_user)
         db.session.add(new_user)
 
         db.session.commit()
-        print('Admin User is created successfully!')
+        print('System Users is created successfully!')
+
+    # Check if categories already exist if not create defaults
+    if not Category.query.first():
+        default_categories = [
+            Category(name='Food & Dining', description='Food Stuff', icon='🍽️',
+                     user_id=admin_user.id),
+            Category(name='Transportation', description='Transport Stuff', icon='🚗',
+                     user_id=admin_user.id),
+            Category(name='Shopping', description='Shopping Stuff', icon='🛍️',
+                     user_id=admin_user.id),
+            Category(name='Entertainment', description='Entertainment Stuff', icon='🎬',
+                     user_id=admin_user.id),
+            Category(name='Bills & Utilities', description='Bills & Utility', icon='💡',
+                     user_id=admin_user.id),
+            Category(name='Healthcare', description='Healthcare & Wellbeing', icon='🏥',
+                     user_id=admin_user.id),
+            Category(name='Salary', description='Salary Stuff', icon='💼',
+                     user_id=admin_user.id),
+            Category(name='Other Income', description='Side Hustle Stuff', icon='💰',
+                     user_id=admin_user.id),
+        ]
+
+        for category in default_categories:
+            db.session.add(category)
+        db.session.commit()
+
+        print('Categories created successfully!')
 
     print('Database is initialized successfully!')
 

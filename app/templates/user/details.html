@@ -1,0 +1,141 @@
+
+{% extends "shared/layout.html" %}
+{% block title %} {{ title }} {% endblock %}
+{% block content %}
+
+<h5 class="fw-bold">Status:&nbsp;
+    {% if item.status.value == 'active' %}
+    <span class="text-success fw-bold text-uppercase">{{ item.status.value }}</span>
+    {% elif item.status.value == 'inactive' %}
+    <span class="text-warning fw-bold text-uppercase">{{ item.status.value }}</span>
+    {% elif item.status.value == 'suspended' %}
+    <span class="text-danger fw-bold text-uppercase">{{ item.status.value }}</span>
+    {% endif %}
+</h5>
+<hr>
+
+<div class="row row-cols-1 row-cols-md-2 g-4 align-content-center justify-content-center">
+    <div class="col-md-3">
+        <div class="card shadow align-content-center rounded-5 mb-3 bg-info-subtle">
+            <div class="card-body align-content-center text-center">
+                <img src="{{url_for('static', filename='images/user.png')}}" class="img-fluid mb-3 card-img-top" style="width: 250px; height: 250px;">
+                <p class="card-text mb-3">
+                    <button type="button" class="btn btn-outline-secondary rounded-5">Upload New Photo</button>
+                </p>
+                <hr>
+                <p class="mb-3">
+                    <h5 class="fw-bold">Username: {{ item.username }}</h5>
+                    <h5 class="fw-bold">Country: {{ item.country.code }}</h5>
+                    <h5 class="fw-bold">Depart: {{ item.department.name }}</h5>
+                </p>
+                <p class="mb-3">
+                    <button type="button" class="btn btn-primary rounded-5">Change Password</button>
+                </p>
+                <hr>
+                <p class=" text-muted">
+                    Date Created: <span class="fw-bold">{{ item.created_at.date() }}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-9">
+        <div class="card shadow mb-3">
+            <div class="card-body">
+                <div class="row align-content-center justify-content-center card-title">
+                    <div class="col">
+                        <legend class="text-start">
+                            <h5 class="card-title">Details</h5>
+                        </legend>
+                    </div>
+            
+                    <div class="col">
+                        <div class="text-end">
+                            {% if current_user.is_authenticated %}
+                                {% if current_user.has_permission('user_update', 'user', 'update') %}
+                                <a href="{{ url_for('user.update', user_id=item.id) }}" class="btn btn-sm btn-primary"><i class="bi bi-pencil-square"></i></a>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <form method="GET">
+                    <div class="card-body">
+                        <section id="systeminfo" name="systeminfo" class="mb-3">
+                            <div class="form-floating mb-3">
+                                {{ form.username(disabled=true) }}
+                                {{ form.username.label }}
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-2 g-4 align-content-center">
+                                <div class="col">
+                                    <div class="form-floating mb-3">
+                                        {{ form.phone(disabled=true) }}
+                                        {{ form.phone.label }}
+                                    </div>
+                                </div>
+        
+                                <div class="col">
+                                    <div class="form-floating mb-3">
+                                        {{ form.email(disabled=true) }}
+                                        {{ form.email.label }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 align-content-center align-items-center">
+                                <div class="col">
+                                    <div class="form-floating mb-3">
+                                        {{ form.country(disabled=true) }}
+                                        {{ form.country.label }}
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="form-floating mb-3">
+                                        {{ form.department(disabled=true) }}
+                                        {{ form.department.label }}
+                                    </div>
+                                </div>
+        
+                                <div class="col">
+                                    <div class="form-check form-switch mb-3">
+                                        {{ form.is_2fa_enabled(disabled=true) }}
+                                        {{ form.is_2fa_enabled.label }}
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card shadow mb-5">
+            <div class="card-body">
+                <h5 class="card-title">Two-Factor Authentication</h5>
+                <hr>
+                <div class="section">
+                    {% if current_user.is_authenticated %}
+                        {% if current_user.is_2fa_enabled %}
+                            <p class="text-success">Two-factor authentication is currently enabled for your account.</p>
+                            
+                            <form method="POST" action="{{ url_for('auth.disable_2fa') }}">
+                                <p class="text-center">
+                                    <button type="submit" class="btn btn-danger"><i class="bi bi-exclamation-circle"></i>&nbsp; Disable Two-Factor Authentication</button>
+                                </p>
+                            </form>
+                        {% else %}
+                            <p class="text-danger">Two-factor authentication is currently disabled. Enable it to add an extra layer of security to your account.</p>
+                            <p class="text-center">
+                                <a href="{{ url_for('auth.enable_2fa') }}" class="btn btn-success"><i class="bi bi-qr-code-scan"></i>&nbsp; Enable Two-Factor Authentication</a>
+                            </p>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock%}

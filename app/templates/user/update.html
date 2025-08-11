@@ -1,0 +1,55 @@
+{% extends "shared/layout.html" %}
+{% block title %} {{ title }} {% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="card shadow-lg mt-4">
+        <div class="card-header text-center align-content-center fw-bold">
+            <i class="bi bi-columns-gap"></i>&nbsp;{{ title }} Form            
+        </div>
+        <form method="POST">
+            <div class="card-body">
+                <section id="updateForm" name="updateForm" class="mb-3">
+                    <div class="row row-cols-1 row-cols-md-2 g-4 align-content-center">
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                {{ form.firstname }}
+                                {{ form.firstname.label }}
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                {{ form.lastname }}
+                                {{ form.lastname.label }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 g-4 align-content-center">
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                {{ form.phone }}
+                                {{ form.phone.label }}
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                {{ form.email }}
+                                {{ form.email.label }}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="card-footer text-center">
+                <a href="{{ url_for('user.index') }}" class="btn btn-secondary"><i class="bi bi-x-lg"></i>&nbsp;Cancel</a>
+                {% if current_user.is_authenticated %}
+                    &nbsp; <button type="submit" class="btn btn-outline-success"><i class="bi bi-floppy"></i>&nbsp;Save</button>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

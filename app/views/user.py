@@ -164,8 +164,8 @@ def update(user_id):
     item = User.query.get_or_404(user_id)
     form = UserUpdateForm(obj=item)
 
-    if item.username == 'SUPERADMIN':
-        flash('The Super User cannot be edited!', 'danger')
+    if item.username == 'ADMIN':
+        flash('The admin user cannot be edited!', 'danger')
         return redirect(url_for('user.index'))
 
     if request.method == 'POST':
@@ -260,10 +260,10 @@ def delete(user_id):
     """
     item = User.query.get_or_404(user_id)
     form = UserDetailsForm(obj=item)
-    form.role.choices = [(r.id, r.name)
-                         for r in Role.query.filter(Role.id == item.role_id).first()]
+    form.role.choices = [(r.id, r.name) for r in Role.query.all()]
+    form.role.data = item.role_id
 
-    if item.username == 'SUPERADMIN':
+    if item.username == 'ADMIN':
         flash('The super user cannot be deleted!', 'danger')
         return redirect(url_for('user.index'))
 

@@ -3,7 +3,6 @@ Shared clasess and functions
 """
 
 import uuid
-from enum import Enum
 from datetime import datetime
 from app.extensions import db
 

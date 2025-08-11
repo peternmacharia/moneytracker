@@ -456,3 +456,2230 @@ Traceback (most recent call last):
   File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
     raise NotFound()
 werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:12:28,712 - app - ERROR - [66e0b477-76d8-4d97-814e-651a0875f166] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:13:04,745 - app - ERROR - [b160a55e-8a58-4b74-93ab-a1fadea12aa7] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:13:33,114 - app - ERROR - [5b0f25a0-53c7-4c92-baa9-5596041c0f9a] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:14:03,919 - app - ERROR - [e200ad9c-1678-49e8-b0cd-9e1c10f46818] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:14:58,031 - app - ERROR - [9d744f55-c502-407c-827e-0c1263cd15c5] Unhandled exception: Could not build url for endpoint 'base.index'. Did you mean 'user.index' instead?
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/__init__.py", line 66, in index
+    return render_template('index.html',
+                           title='Home')
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 17, in top-level template code
+    <a class="navbar-brand p-3" href="{{ url_for ('base.index') }}"><img src="{{url_for('static', filename='images/icon.png')}}" class="img-fluid" style="max-width: 100px; max-height: 100px;"></a>
+    ^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'base.index'. Did you mean 'user.index' instead?
+2025-08-10 21:15:10,982 - app - ERROR - [e5a49145-8050-4fd3-92a5-da5833e18885] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:15:50,163 - app - ERROR - [9e997894-f557-4448-8329-f4769313b9de] Unhandled exception: Could not build url for endpoint '/'. Did you mean 'static' instead?
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/__init__.py", line 66, in index
+    return render_template('index.html',
+                           title='Home')
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 17, in top-level template code
+    <a class="navbar-brand p-3" href="{{ url_for ('/') }}"><img src="{{url_for('static', filename='images/icon.png')}}" class="img-fluid" style="max-width: 100px; max-height: 100px;"></a>
+    ^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint '/'. Did you mean 'static' instead?
+2025-08-10 21:15:51,517 - app - ERROR - [d7acbfa1-8f7d-4109-b35f-b56926b6573e] Unhandled exception: Could not build url for endpoint '/'. Did you mean 'static' instead?
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/__init__.py", line 66, in index
+    return render_template('index.html',
+                           title='Home')
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 17, in top-level template code
+    <a class="navbar-brand p-3" href="{{ url_for ('/') }}"><img src="{{url_for('static', filename='images/icon.png')}}" class="img-fluid" style="max-width: 100px; max-height: 100px;"></a>
+    ^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint '/'. Did you mean 'static' instead?
+2025-08-10 21:16:07,483 - app - ERROR - [54b8a4a6-b4c0-4b38-96b6-a8500032b831] Unhandled exception: Could not build url for endpoint 'index.html'. Did you mean 'index' instead?
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/__init__.py", line 66, in index
+    return render_template('index.html',
+                           title='Home')
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 17, in top-level template code
+    <a class="navbar-brand p-3" href="{{ url_for ('index.html') }}"><img src="{{url_for('static', filename='images/icon.png')}}" class="img-fluid" style="max-width: 100px; max-height: 100px;"></a>
+    ^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index.html'. Did you mean 'index' instead?
+2025-08-10 21:16:08,356 - app - ERROR - [76240533-5d8d-4abd-8e98-b94d25729788] Unhandled exception: Could not build url for endpoint 'index.html'. Did you mean 'index' instead?
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/__init__.py", line 66, in index
+    return render_template('index.html',
+                           title='Home')
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 17, in top-level template code
+    <a class="navbar-brand p-3" href="{{ url_for ('index.html') }}"><img src="{{url_for('static', filename='images/icon.png')}}" class="img-fluid" style="max-width: 100px; max-height: 100px;"></a>
+    ^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index.html'. Did you mean 'index' instead?
+2025-08-10 21:16:28,634 - app - ERROR - [e9080d41-8137-4c1a-82d8-e6e109ceea0e] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:16:30,769 - app - ERROR - [73f60ad6-6589-4cb8-b925-31780744260e] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:16:31,579 - app - ERROR - [8b7aa069-453b-4472-970f-2902b50951f0] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:16:47,251 - app - ERROR - [9e5dcbf3-024d-4aae-941e-5b7124cf81e1] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:16:50,910 - app - ERROR - [16a39d9f-5eda-458a-b9f6-f66c13299d32] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:17:12,230 - app - ERROR - [d1e75dce-f969-4d90-8a8a-41f53dda37a1] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:17:36,159 - app - ERROR - [51d9ecdf-c6e4-4ee3-a874-aca4241afafb] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:17:52,351 - app - ERROR - [e30bd74f-ed49-42e2-bc30-43c9e7a95275] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:23:07,612 - app - ERROR - [28b13b24-762a-41de-ba16-d7cbae5c2b46] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:23:08,728 - app - ERROR - [455f0dcb-3312-4d3f-988d-89698097d90e] Unhandled exception: contact.html
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/__init__.py", line 79, in contact
+    return render_template('contact.html',
+                           title='Contact')
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: contact.html
+2025-08-10 21:23:27,903 - app - ERROR - [ad34a858-1b8b-4824-9b73-7630fea68cd2] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:23:31,564 - app - ERROR - [550450f9-5d53-4494-9f41-79ec9e2e3e3a] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:23:49,775 - app - ERROR - [9f366faa-84bd-4ad5-9d42-bf28533cd8ef] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:23:50,712 - app - ERROR - [14e3e914-9799-4978-b862-391c0e68c79c] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:23:51,871 - app - ERROR - [26bd69f1-2c7d-407c-82a2-4968749ad808] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:23:53,265 - app - ERROR - [cae72f4c-1858-4f7f-8d79-d954e4eecf90] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:23:54,639 - app - ERROR - [07b03174-5364-4ba4-bbfb-ab520f7d34f0] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:39:25,758 - app - ERROR - [2f42e2db-bf6a-4a16-923f-2c50fb830c61] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-10 21:51:26,779 - app - ERROR - [dfac1703-4244-4176-abff-ccfcf20e47ca] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-11 01:57:45,374 - app - ERROR - [c59651bc-e4d0-4fca-a069-750695f7daa4] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-11 02:00:11,698 - app - ERROR - [b2b48e0b-aee3-4737-b92a-9033c000b1ed] Unhandled exception: type object 'Transaction' has no attribute 'date'
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/base.py", line 24, in user
+    recent_transactions = Transaction.query.order_by(Transaction.date.desc()).limit(5).all()
+                                                     ^^^^^^^^^^^^^^^^
+AttributeError: type object 'Transaction' has no attribute 'date'
+2025-08-11 02:08:31,805 - app - ERROR - [3eb4c0cd-ec96-461d-8aa7-cf032f91184a] Unhandled exception: Could not build url for endpoint 'add_transaction'. Did you mean 'transaction.index' instead?
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/base.py", line 45, in user
+    return render_template('user/dashboard.html',
+                           title='Dashboard',
+    ...<4 lines>...
+                           current_month=calendar.month_name[current_month],
+                           DASHBOARD=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/user/dashboard.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 60, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/user/dashboard.html", line 38, in block 'content'
+    <a href="{{ url_for('add_transaction') }}?type=expense" class="btn btn-danger">
+    ^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'add_transaction'. Did you mean 'transaction.index' instead?
+2025-08-11 02:09:40,307 - app - ERROR - [a74b14bb-894f-4a50-b7f7-58c1e4ba0a33] Unhandled exception: Could not build url for endpoint 'transactions'. Did you mean 'transaction.index' instead?
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/base.py", line 45, in user
+    return render_template('user/dashboard.html',
+                           title='Dashboard',
+    ...<4 lines>...
+                           current_month=calendar.month_name[current_month],
+                           DASHBOARD=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/user/dashboard.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 60, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/user/dashboard.html", line 52, in block 'content'
+    <a href="{{ url_for('transactions') }}" class="btn btn-primary">View All</a>
+    ^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'transactions'. Did you mean 'transaction.index' instead?
+2025-08-11 02:12:08,998 - app - ERROR - [1e0763a7-472d-43f4-bf32-b17dff4ea64a] Unhandled exception: shared/userlayout.html
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/transaction.py", line 71, in index
+    return render_template('user/transaction/index.html',
+                           title='Transactions',
+    ...<5 lines>...
+                           transactions=transactions,
+                           TRANSACTION=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/user/transaction/index.html", line 1, in top-level template code
+    {% extends "shared/userlayout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: shared/userlayout.html
+2025-08-11 02:12:22,866 - app - ERROR - [0038f3c2-671b-4d5d-a37b-ff694fc10fc4] Unhandled exception: shared/userlayout.html
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/transaction.py", line 71, in index
+    return render_template('user/transaction/index.html',
+                           title='Transactions',
+    ...<5 lines>...
+                           transactions=transactions,
+                           TRANSACTION=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/user/transaction/index.html", line 1, in top-level template code
+    {% extends "shared/userlayout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: shared/userlayout.html
+2025-08-11 02:21:08,457 - app - ERROR - [12cdcdf6-b174-48da-81d3-562eb401bdb0] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-11 02:22:13,416 - app - ERROR - [cd58a216-21d6-42ee-90fb-51796f84d530] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-11 02:22:21,301 - app - ERROR - [388262c3-6633-4ed8-bf39-1bb93b087ef3] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-11 02:22:22,262 - app - ERROR - [6fc3142a-f648-40d9-94f5-6708bc9d332d] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 278, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 326, in send_static_file
+    return send_from_directory(
+        t.cast(str, self.static_folder), filename, max_age=max_age
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/helpers.py", line 565, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        directory, path, **_prepare_send_file_kwargs(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/utils.py", line 575, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-11 02:33:02,493 - app - ERROR - [a52cd87f-74e8-4d5c-b0d1-0ad7cb1a4ee6] Unhandled exception: user/catgory/index.html
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/category.py", line 64, in index
+    return render_template('user/catgory/index.html',
+                           title='Catgories',
+    ...<5 lines>...
+                           categories=categories,
+                           CATEGORIES=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: user/catgory/index.html
+2025-08-11 02:33:08,994 - app - ERROR - [ecf90a1c-b5e1-4440-8812-cbe87ae70f84] Unhandled exception: user/catgory/index.html
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/category.py", line 64, in index
+    return render_template('user/catgory/index.html',
+                           title='Catgories',
+    ...<5 lines>...
+                           categories=categories,
+                           CATEGORIES=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: user/catgory/index.html
+2025-08-11 04:10:24,410 - app - ERROR - [802b9bd9-44f1-4c0c-a228-b28bd70b994d] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-11 04:11:24,853 - app - ERROR - [dccbe15d-aec6-4557-aa4d-20498de889b5] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-11 04:12:23,036 - app - ERROR - [8be138a9-b227-4dc7-a0d9-db84704fad77] Unhandled exception: user/category/index.html
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/category.py", line 64, in index
+    return render_template('user/category/index.html',
+                           title='Catgories',
+    ...<5 lines>...
+                           categories=categories,
+                           CATEGORY=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: user/category/index.html
+2025-08-11 04:12:23,140 - app - ERROR - [530e804b-857a-4a6d-89f6-de3f744411ff] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-11 04:12:26,084 - app - ERROR - [eab756e2-421a-49cc-981f-8014b2a23b82] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-11 04:12:26,140 - app - ERROR - [a5dfd97f-88f3-4f90-a788-806afd7afa33] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-08-11 04:58:18,958 - app - ERROR - [451999fb-202a-4bb6-a16f-4d34196dfb37] Unhandled exception: expected token 'end of statement block', got '='
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/__init__.py", line 66, in index
+    return render_template('index.html',
+                           title='Home')
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 30, in template
+    {% if current_user.role.name = 'ADMIN' %}
+    ^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got '='
+2025-08-11 04:58:20,434 - app - ERROR - [82891b66-24bc-4a4a-a129-b8fd9163431c] Unhandled exception: expected token 'end of statement block', got '='
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/__init__.py", line 66, in index
+    return render_template('index.html',
+                           title='Home')
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 30, in template
+    {% if current_user.role.name = 'ADMIN' %}
+    ^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got '='
+2025-08-11 04:58:21,288 - app - ERROR - [9f0bdbae-ec28-4f04-8be7-393f98eca6d1] Unhandled exception: expected token 'end of statement block', got '='
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/__init__.py", line 66, in index
+    return render_template('index.html',
+                           title='Home')
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 30, in template
+    {% if current_user.role.name = 'ADMIN' %}
+    ^^^^^^^^^^^
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got '='
+2025-08-11 04:58:50,413 - app - ERROR - [f436382e-e932-420c-8627-1d4f3131dc8d] Unhandled exception: user/dashboard.html
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/base.py", line 47, in dashboard
+    return render_template('user/dashboard.html',
+                           title='Dashboard',
+    ...<4 lines>...
+                           current_month=calendar.month_name[current_month],
+                           DASHBOARD=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: user/dashboard.html
+2025-08-11 05:50:04,052 - app - ERROR - [7cbd75df-f36c-4a56-9454-c6aa4853dc03] Unhandled exception: 'transaction' is undefined
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/category.py", line 64, in index
+    return render_template('category/index.html',
+                           title='Categories',
+    ...<5 lines>...
+                           categories=categories,
+                           CATEGORY=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/category/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/category/index.html", line 39, in block 'content'
+    <p>{{ transaction.date.strftime('%B %d, %Y') }} • {{ transaction.category.name }}</p>
+    
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'transaction' is undefined
+2025-08-11 06:10:52,745 - app - ERROR - [e733f434-9b50-48ba-bdd4-76840996139b] Unhandled exception: 'categories' is undefined
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/category.py", line 111, in create
+    return render_template('category/index.html',
+                           title='New Role',
+                           form=form,
+                           CATEGORY=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/category/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/category/index.html", line 66, in block 'content'
+    {% if categories.has_prev %}
+    ^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'categories' is undefined
+2025-08-11 06:23:06,643 - app - ERROR - [e66b399e-5952-46a3-9afd-1c55605fd66b] Unhandled exception: 'role' is undefined
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/category.py", line 64, in index
+    return render_template('category/index.html',
+                           title='Categories',
+    ...<5 lines>...
+                           categories=categories,
+                           CATEGORY=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/category/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/category/index.html", line 46, in block 'content'
+    <td scope="row">{{ role.icon }}</td>
+    
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'role' is undefined
+2025-08-11 06:23:56,992 - app - ERROR - [33924e32-7ecd-46e9-b70f-0a27552b4836] Unhandled exception: 'role' is undefined
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/category.py", line 64, in index
+    return render_template('category/index.html',
+                           title='Categories',
+    ...<5 lines>...
+                           categories=categories,
+                           CATEGORY=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/category/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/category/index.html", line 51, in block 'content'
+    <a class="btn btn-outline-primary" href="{{ url_for('category.update', role_id=role.id) }}"><i class="bi bi-pencil-square"></i></a>
+    
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'role' is undefined
+2025-08-11 06:24:49,232 - app - ERROR - [fe5317c8-b4f6-467e-a859-2cd94d60d9df] Unhandled exception: 'categories' is undefined
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/category.py", line 111, in create
+    return render_template('category/index.html',
+                           title='New Role',
+                           form=form,
+                           CATEGORY=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/category/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/category/index.html", line 66, in block 'content'
+    {% if categories.has_prev %}
+    ^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'categories' is undefined
+2025-08-11 06:25:02,407 - app - ERROR - [512d96fb-4907-4559-a3d9-76cfcb40912c] Unhandled exception: 'categories' is undefined
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/category.py", line 111, in create
+    return render_template('category/index.html',
+                           title='New Role',
+                           form=form,
+                           CATEGORY=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/category/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/category/index.html", line 66, in block 'content'
+    {% if categories.has_prev %}
+    ^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'categories' is undefined
+2025-08-11 06:25:46,826 - app - ERROR - [edb0a132-c914-483d-bcf2-621b859df07a] Unhandled exception: 'categories' is undefined
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/category.py", line 111, in create
+    return render_template('category/index.html',
+                           title='New Role',
+                           form=form,
+                           CATEGORY=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/category/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/category/index.html", line 66, in block 'content'
+    {% if categories.has_prev %}
+    ^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'categories' is undefined
+2025-08-11 06:29:50,583 - app - ERROR - [61f6f232-6ced-40ab-836e-59335061cc5b] Unhandled exception: 'categories' is undefined
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/category.py", line 111, in create
+    return render_template('category/index.html',
+                           title='New Role',
+                           form=form,
+                           CATEGORY=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/category/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/category/index.html", line 66, in block 'content'
+    {% if categories.has_prev %}
+    ^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'categories' is undefined
+2025-08-11 07:07:48,121 - app - ERROR - [196d2b07-b52e-4930-9f54-96e7bd9814c1] Unhandled exception: 'created_by' is an invalid keyword argument for Transaction
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/transaction.py", line 101, in create
+    new_transaction = Transaction(category_id=category,
+                                  amount=amount,
+    ...<2 lines>...
+                                  created_by=current_user.id,
+                                  updated_by=current_user.id)
+  File "<string>", line 4, in __init__
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/decl_base.py", line 2179, in _declarative_constructor
+    raise TypeError(
+        "%r is an invalid keyword argument for %s" % (k, cls_.__name__)
+    )
+TypeError: 'created_by' is an invalid keyword argument for Transaction
+2025-08-11 07:09:45,129 - app - ERROR - [7c3e28da-7eb6-40dc-8a05-a459a9576222] Unhandled exception: (sqlite3.IntegrityError) NOT NULL constraint failed: categories.user_id
+[SQL: INSERT INTO categories (id, name, description, icon, user_id, created_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('4b5858c2-7403-4be0-b0e1-c26fbb8add89', 'Selling Cars', 'Selling of New and Used Cars', '', None, '2025-08-11 07:09:06.824449')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/engine/default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: categories.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/category.py", line 101, in create
+    db.session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/scoping.py", line 599, in commit
+    return self._proxied.commit()
+           ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 4345, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 4480, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 4441, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+        statement,
+        params,
+        execution_options=execution_options,
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/engine/default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) NOT NULL constraint failed: categories.user_id
+[SQL: INSERT INTO categories (id, name, description, icon, user_id, created_at) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('4b5858c2-7403-4be0-b0e1-c26fbb8add89', 'Selling Cars', 'Selling of New and Used Cars', '', None, '2025-08-11 07:09:06.824449')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-11 07:13:02,324 - app - ERROR - [51b8cc46-6500-4e00-9e50-cced74b23088] Unhandled exception: 'Category' object is not iterable
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/transaction.py", line 170, in delete
+    for c in Category.query.filter(Category.id == item.category_id).first()]
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: 'Category' object is not iterable
+2025-08-11 07:14:20,405 - app - ERROR - [2afd2017-e57f-461a-80e8-8594cbd22306] Unhandled exception: 'Category' object is not iterable
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/transaction.py", line 170, in delete
+    for c in Category.query.filter(Category.id == item.category_id).first()]
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: 'Category' object is not iterable
+2025-08-11 07:15:45,988 - app - ERROR - [4e12280f-2e72-49af-8312-5fef208d62f8] Unhandled exception: Query.filter_by() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/transaction.py", line 170, in delete
+    for c in Category.query.filter_by(Category.id == item.category_id).first()]
+             ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Query.filter_by() takes 1 positional argument but 2 were given
+2025-08-11 07:29:51,945 - app - ERROR - [fc41b21d-6a2c-448d-a574-a48adcf03dda] Unhandled exception: Query.filter_by() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/base.py", line 24, in dashboard
+    recent_transactions = Transaction.query.order_by(Transaction.date.desc()).limit(5).filter_by(Transaction.id == current_user.id).all()
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Query.filter_by() takes 1 positional argument but 2 were given
+2025-08-11 07:30:09,600 - app - ERROR - [2b74f7d4-ab18-4934-988f-53ce1b570e30] Unhandled exception: Query.filter() being called on a Query which already has LIMIT or OFFSET applied.  Call filter() before limit() or offset() are applied.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/base.py", line 24, in dashboard
+    recent_transactions = Transaction.query.order_by(Transaction.date.desc()).limit(5).filter(Transaction.id == current_user.id).all()
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in filter
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/sql/base.py", line 284, in _generative
+    x = fn(self, *args, **kw)
+  File "<string>", line 2, in filter
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/base.py", line 303, in generate
+    assertion(self, fn.__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/query.py", line 443, in _no_limit_offset
+    raise sa_exc.InvalidRequestError(
+    ...<3 lines>...
+    )
+sqlalchemy.exc.InvalidRequestError: Query.filter() being called on a Query which already has LIMIT or OFFSET applied.  Call filter() before limit() or offset() are applied.
+2025-08-11 07:30:31,020 - app - ERROR - [7edea961-c120-45f1-b8dc-177fcfa72528] Unhandled exception: Query.filter() being called on a Query which already has LIMIT or OFFSET applied.  Call filter() before limit() or offset() are applied.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/base.py", line 24, in dashboard
+    recent_transactions = Transaction.query.order_by(Transaction.date.desc()).limit(5).filter(Transaction.id == current_user.id).first()
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in filter
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/sql/base.py", line 284, in _generative
+    x = fn(self, *args, **kw)
+  File "<string>", line 2, in filter
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/base.py", line 303, in generate
+    assertion(self, fn.__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/query.py", line 443, in _no_limit_offset
+    raise sa_exc.InvalidRequestError(
+    ...<3 lines>...
+    )
+sqlalchemy.exc.InvalidRequestError: Query.filter() being called on a Query which already has LIMIT or OFFSET applied.  Call filter() before limit() or offset() are applied.
+2025-08-11 07:30:33,149 - app - ERROR - [f6949d1f-14f5-46a7-a97c-e803d02ef5fd] Unhandled exception: Query.filter() being called on a Query which already has LIMIT or OFFSET applied.  Call filter() before limit() or offset() are applied.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/base.py", line 24, in dashboard
+    recent_transactions = Transaction.query.order_by(Transaction.date.desc()).limit(5).filter(Transaction.id == current_user.id).first()
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in filter
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/sql/base.py", line 284, in _generative
+    x = fn(self, *args, **kw)
+  File "<string>", line 2, in filter
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/base.py", line 303, in generate
+    assertion(self, fn.__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/query.py", line 443, in _no_limit_offset
+    raise sa_exc.InvalidRequestError(
+    ...<3 lines>...
+    )
+sqlalchemy.exc.InvalidRequestError: Query.filter() being called on a Query which already has LIMIT or OFFSET applied.  Call filter() before limit() or offset() are applied.
+2025-08-11 07:30:33,674 - app - ERROR - [de6193a8-0a07-471e-ba25-057e7fc32088] Unhandled exception: Query.filter() being called on a Query which already has LIMIT or OFFSET applied.  Call filter() before limit() or offset() are applied.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/base.py", line 24, in dashboard
+    recent_transactions = Transaction.query.order_by(Transaction.date.desc()).limit(5).filter(Transaction.id == current_user.id).first()
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in filter
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/sql/base.py", line 284, in _generative
+    x = fn(self, *args, **kw)
+  File "<string>", line 2, in filter
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/base.py", line 303, in generate
+    assertion(self, fn.__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/query.py", line 443, in _no_limit_offset
+    raise sa_exc.InvalidRequestError(
+    ...<3 lines>...
+    )
+sqlalchemy.exc.InvalidRequestError: Query.filter() being called on a Query which already has LIMIT or OFFSET applied.  Call filter() before limit() or offset() are applied.
+2025-08-11 07:30:33,923 - app - ERROR - [63e14bda-659d-424b-af5e-1e3667b4468d] Unhandled exception: Query.filter() being called on a Query which already has LIMIT or OFFSET applied.  Call filter() before limit() or offset() are applied.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/base.py", line 24, in dashboard
+    recent_transactions = Transaction.query.order_by(Transaction.date.desc()).limit(5).filter(Transaction.id == current_user.id).first()
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in filter
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/sql/base.py", line 284, in _generative
+    x = fn(self, *args, **kw)
+  File "<string>", line 2, in filter
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/base.py", line 303, in generate
+    assertion(self, fn.__name__)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/sqlalchemy/orm/query.py", line 443, in _no_limit_offset
+    raise sa_exc.InvalidRequestError(
+    ...<3 lines>...
+    )
+sqlalchemy.exc.InvalidRequestError: Query.filter() being called on a Query which already has LIMIT or OFFSET applied.  Call filter() before limit() or offset() are applied.
+2025-08-11 08:00:33,738 - app - ERROR - [d78fffd1-6d5c-4179-93c0-876401cf0792] Unhandled exception: 'app.models.user.User object' has no attribute 'has_permission'
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/user.py", line 66, in index
+    return render_template('user/index.html',
+                           title='Users',
+    ...<6 lines>...
+                           SETTINGS=True,
+                           USERS=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/user/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/user/index.html", line 30, in block 'content'
+    {% if current_user.has_permission('user_create', 'user', 'create') %}
+    ^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/utils.py", line 92, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'app.models.user.User object' has no attribute 'has_permission'
+2025-08-11 08:01:01,959 - app - ERROR - [62a14ccd-f300-4cd5-b397-1e467c75efe8] Unhandled exception: 'app.forms.user.UserUpdateForm object' has no attribute 'country'
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/user.py", line 193, in update
+    return render_template('user/update.html',
+                           title='Update User',
+                           form=form,
+                           SETTINGS=True,
+                           USERS=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/user/update.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/user/update.html", line 33, in block 'content'
+    {{ form.country.label }}
+    
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.user.UserUpdateForm object' has no attribute 'country'
+2025-08-11 08:01:05,916 - app - ERROR - [681deb44-3223-405d-af7c-81be88cd26d2] Unhandled exception: 'Role' object is not iterable
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/user.py", line 264, in delete
+    for r in Role.query.filter(Role.id == item.role_id).first()]
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: 'Role' object is not iterable
+2025-08-11 08:02:28,170 - app - ERROR - [89b0e510-f5c2-4c26-a8f0-abf8cb964034] Unhandled exception: 'app.forms.user.UserUpdateForm object' has no attribute 'username'
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/user.py", line 193, in update
+    return render_template('user/update.html',
+                           title='Update User',
+                           form=form,
+                           SETTINGS=True,
+                           USERS=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/user/update.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/user/update.html", line 31, in block 'content'
+    {{ form.username.label }}
+    
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.user.UserUpdateForm object' has no attribute 'username'
+2025-08-11 08:03:06,924 - app - ERROR - [fd5379a9-f362-4aeb-b24c-e1c5de2c4a46] Unhandled exception: 'Role' object is not iterable
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/user.py", line 264, in delete
+    for r in Role.query.filter(Role.id == item.role_id).first()]
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TypeError: 'Role' object is not iterable
+2025-08-11 08:04:47,248 - app - ERROR - [656519e6-8c04-4b54-adfb-257ae8b0038d] Unhandled exception: 'app.forms.user.UserDetailsForm object' has no attribute 'country'
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/user.py", line 281, in delete
+    return render_template('user/delete.html',
+                           title='Delete User',
+                           form=form,
+                           SETTINGS=True,
+                           USERS=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/user/delete.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/user/delete.html", line 43, in block 'content'
+    {{ form.country(disabled=true) }}
+    
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/utils.py", line 92, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'app.forms.user.UserDetailsForm object' has no attribute 'country'
+2025-08-11 08:05:22,152 - app - ERROR - [0cd59b1a-efe2-417c-8d69-3082d89a4f24] Unhandled exception: 'app.forms.user.UserDetailsForm object' has no attribute 'password'
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/user.py", line 281, in delete
+    return render_template('user/delete.html',
+                           title='Delete User',
+                           form=form,
+                           SETTINGS=True,
+                           USERS=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/user/delete.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/user/delete.html", line 69, in block 'content'
+    {{ form.password.label }}
+    
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.user.UserDetailsForm object' has no attribute 'password'
+2025-08-11 08:05:24,142 - app - ERROR - [ded58201-5918-4752-9937-2df08b6a7268] Unhandled exception: 'app.forms.user.UserDetailsForm object' has no attribute 'password'
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/user.py", line 281, in delete
+    return render_template('user/delete.html',
+                           title='Delete User',
+                           form=form,
+                           SETTINGS=True,
+                           USERS=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/user/delete.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/user/delete.html", line 69, in block 'content'
+    {{ form.password.label }}
+    
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.user.UserDetailsForm object' has no attribute 'password'

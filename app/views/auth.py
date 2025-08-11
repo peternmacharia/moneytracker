@@ -154,15 +154,10 @@ def login():
                     login_user(user)
                     user.last_login = datetime.now()
                     db.session.commit()
-                    # app.logger.info('Logged in Successfully!')
-                    if user.role.name == 'ADMIN':
-                        app.logger.info('%s admin login successfully', current_user.username)
-                        flash("Admin Logged in successfully!", "success")
-                        return redirect(url_for('base.admin'))
-                    elif user.role.name == 'USER':
-                        app.logger.info('%s user login successfully', current_user.username)
-                        flash("User Logged in successfully!", "success")
-                        return redirect(url_for('base.user'))
+
+                    app.logger.info('%s login successful', current_user.username)
+                    flash("Login successful!", "success")
+                    return redirect(url_for('base.dashboard'))
 
             app.logger.warning('Login attempt Failed!')
             flash("Login Unsuccessful. Please check email and password", "danger")

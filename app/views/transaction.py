@@ -8,7 +8,7 @@ from sqlalchemy.sql import desc, asc
 from app.extensions import db
 from app.models.category import Category
 from app.models.transaction import Transaction
-from app.forms.transaction import TransactionForm
+from app.forms.transaction import TransactionForm, TransactionDetailsForm
 
 transaction_bp = Blueprint('transaction', __name__, url_prefix='/transactions')
 
@@ -68,7 +68,7 @@ def index():
     if not transactions.items:
         flash('No transaction records added Yet!', 'warning')
 
-    return render_template('user/transaction/index.html',
+    return render_template('transaction/index.html',
                            title='Transactions',
                            form=form, search=search,
                            sort_by=sort_by,
@@ -102,8 +102,7 @@ def create():
                                           amount=amount,
                                           description=description,
                                           transaction_type=transaction_type,
-                                          created_by=current_user.id,
-                                          updated_by=current_user.id)
+                                          user_id=current_user.id)
             db.session.add(new_transaction)
             db.session.commit()
             flash('Transaction is created successfully!', 'success')
@@ -113,7 +112,7 @@ def create():
             db.session.rollback()
             return redirect(url_for('transaction.index'))
 
-    return render_template('user/transaction/index.html',
+    return render_template('transaction/index.html',
                            title='New Transaction',
                            form=form,
                            TRANSACTION=True)
@@ -136,7 +135,6 @@ def update(transaction_id):
         item.amount = form.amount.data
         item.description = form.description.data
         item.transaction_type = form.transaction_type.data
-        item.updated_by = current_user.id
 
         error = None
 
@@ -152,7 +150,7 @@ def update(transaction_id):
                 db.session.rollback()
             return redirect(url_for('transaction.index'))
 
-    return render_template('user/transaction/update.html',
+    return render_template('transaction/update.html',
                            title='Update Transaction',
                            form=form,
                            TRANSACTION=True)
@@ -167,9 +165,9 @@ def delete(transaction_id):
     Delete Transaction View or 404 if record id not found
     """
     item = Transaction.query.get_or_404(transaction_id)
-    form = TransactionForm(obj=item)
-    form.category.choices = [(c.id, c.name)
-                             for c in Category.query.filter(Category.id == item.category_id).first()]
+    form = TransactionDetailsForm(obj=item)
+    form.category.choices = [(c.id, c.name) for c in Category.query.all()]
+    form.category.data = item.category_id
 
     if request.method == 'POST':
         try:
@@ -182,7 +180,7 @@ def delete(transaction_id):
             db.session.rollback()
             return redirect(url_for('transaction.index'))
 
-    return render_template('user/transaction/delete.html',
+    return render_template('transaction/delete.html',
                            title='Delete Transaction',
                            form=form,
                            TRANSACTION=True)

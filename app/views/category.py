@@ -7,7 +7,7 @@ from flask_login import login_required, current_user
 from sqlalchemy.sql import desc, asc
 from app.extensions import db
 from app.models.category import Category
-from app.forms.category import CatgoryForm
+from app.forms.category import CatgoryForm, CatgoryDetailsForm
 
 category_bp = Blueprint('category', __name__, url_prefix='/categories')
 
@@ -61,15 +61,15 @@ def index():
     if not categories.items:
         flash('No category records added Yet!', 'warning')
 
-    return render_template('user/catgory/index.html',
-                           title='Catgories',
+    return render_template('category/index.html',
+                           title='Categories',
                            form=form, search=search,
                            sort_by=sort_by,
                            sort_order=sort_order,
                            page_size=page_size,
                            count_categories=count_categories,
                            categories=categories,
-                           CATEGORIES=True)
+                           CATEGORY=True)
 
 
 
@@ -84,21 +84,20 @@ def create():
 
     if request.method == 'POST':
         name = form.name.data
-        color = form.color.data
+        description = form.description.data
         icon = form.icon.data
 
         test = Category.query.filter_by(name=name).first()
 
         if test:
-            flash(f'{name} role already exists!', 'warning')
+            flash(f'{name} already exists!', 'warning')
             return redirect(url_for('category.index'))
         else:
             try:
                 new_category = Category(name=name,
-                                        color=color,
+                                        description=description,
                                         icon=icon,
-                                        created_by=current_user.id,
-                                        updated_by=current_user.id)
+                                        user_id=current_user.id)
                 db.session.add(new_category)
                 db.session.commit()
                 flash(f'{name} is created successfully!', 'success')
@@ -108,7 +107,7 @@ def create():
                 db.session.rollback()
                 return redirect(url_for('category.index'))
 
-    return render_template('user/category/index.html',
+    return render_template('category/index.html',
                            title='New Role',
                            form=form,
                            CATEGORY=True)
@@ -133,9 +132,8 @@ def update(category_id):
             return redirect(url_for('category.index'))
 
         item.name = form.name.data
-        item.color = form.color.data
+        item.description = form.description.data
         item.icon = form.icon.data
-        item.updated_by = current_user.id
 
         error = None
 
@@ -151,7 +149,7 @@ def update(category_id):
                 db.session.rollback()
             return redirect(url_for('category.index'))
 
-    return render_template('user/category/update.html',
+    return render_template('category/update.html',
                            title='Update Category',
                            form=form,
                            CATEGORY=True)
@@ -166,7 +164,7 @@ def delete(category_id):
     Delete Category View or 404 if record id not found
     """
     item = Category.query.get_or_404(category_id)
-    form = CatgoryForm(obj=item)
+    form = CatgoryDetailsForm(obj=item)
 
     if request.method == 'POST':
         try:
@@ -179,7 +177,7 @@ def delete(category_id):
             db.session.rollback()
             return redirect(url_for('category.index'))
 
-    return render_template('user/category/delete.html',
+    return render_template('category/delete.html',
                            title='Delete Category',
                            form=form,
                            CATEGORY=True)
