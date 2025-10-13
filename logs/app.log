@@ -9353,3 +9353,832 @@ jinja2.exceptions.UndefinedError: 'app.forms.user.UserDetailsForm object' has no
 2025-08-11 08:05:38,149 - app - INFO - [cd984642-6874-4b25-a771-c2badfc28466] GET /static/site.js started
 2025-08-11 08:05:38,150 - app - INFO - [f7350e0f-b400-4dc3-ac49-ef6c0d695cd7] GET /static/images/icon.png completed with status 304 in 0.0021s
 2025-08-11 08:05:38,150 - app - INFO - [cd984642-6874-4b25-a771-c2badfc28466] GET /static/site.js completed with status 304 in 0.0012s
+2025-09-10 19:58:28,692 - app - INFO - [6b995e0e-1de1-4156-b342-ea81ccab1b52] GET / started
+2025-09-10 19:58:28,706 - app - INFO - [6b995e0e-1de1-4156-b342-ea81ccab1b52] GET / completed with status 200 in 0.0141s
+2025-09-10 19:58:28,715 - app - INFO - [5ec55e4a-e36b-49f5-8f95-d6df4f8a4d8b] GET /static/style.css started
+2025-09-10 19:58:28,720 - app - INFO - [f4215444-321c-4514-afc2-3f6105045808] GET /static/images/icon.png started
+2025-09-10 19:58:28,720 - app - INFO - [5ec55e4a-e36b-49f5-8f95-d6df4f8a4d8b] GET /static/style.css completed with status 200 in 0.0057s
+2025-09-10 19:58:28,721 - app - INFO - [365e95e9-2483-4466-ac6b-a0da268a226e] GET /static/site.js started
+2025-09-10 19:58:28,721 - app - INFO - [f4215444-321c-4514-afc2-3f6105045808] GET /static/images/icon.png completed with status 200 in 0.0016s
+2025-09-10 19:58:28,722 - app - INFO - [365e95e9-2483-4466-ac6b-a0da268a226e] GET /static/site.js completed with status 200 in 0.0014s
+2025-09-10 19:58:28,732 - app - INFO - [1b6f092f-7d5d-42c0-8d5c-3e80a8608ce1] GET /static/images/headerwall.jpg started
+2025-09-10 19:58:28,732 - app - INFO - [1b6f092f-7d5d-42c0-8d5c-3e80a8608ce1] GET /static/images/headerwall.jpg completed with status 200 in 0.0004s
+2025-09-10 19:58:34,755 - app - INFO - [4aeb153e-ced3-42fa-a35c-49155df3efaa] GET /auth/login/ started
+2025-09-10 19:58:34,756 - app - INFO - Login page accessed
+2025-09-10 19:58:34,769 - app - INFO - [4aeb153e-ced3-42fa-a35c-49155df3efaa] GET /auth/login/ completed with status 200 in 0.0135s
+2025-09-10 19:58:34,776 - app - INFO - [af3ed6d0-4e88-4ac9-8d33-fca2e2eac4f2] GET /static/style.css started
+2025-09-10 19:58:34,777 - app - INFO - [791f5fad-e815-445d-85b5-089ef5a9d704] GET /static/images/icon.png started
+2025-09-10 19:58:34,778 - app - INFO - [23caa1ea-33f7-4302-b1aa-e25d38cc0dfd] GET /static/site.js started
+2025-09-10 19:58:34,779 - app - INFO - [791f5fad-e815-445d-85b5-089ef5a9d704] GET /static/images/icon.png completed with status 304 in 0.0019s
+2025-09-10 19:58:34,780 - app - INFO - [af3ed6d0-4e88-4ac9-8d33-fca2e2eac4f2] GET /static/style.css completed with status 304 in 0.0038s
+2025-09-10 19:58:34,781 - app - INFO - [23caa1ea-33f7-4302-b1aa-e25d38cc0dfd] GET /static/site.js completed with status 304 in 0.0025s
+2025-09-10 19:58:42,290 - app - INFO - [66744470-1c11-466c-ac9d-1e21b18e2e16] POST /auth/login/ started
+2025-09-10 19:58:42,290 - app - INFO - Login page accessed
+2025-09-10 19:58:42,302 - app - WARNING - Login attempt Failed!
+2025-09-10 19:58:42,303 - app - INFO - [66744470-1c11-466c-ac9d-1e21b18e2e16] POST /auth/login/ completed with status 302 in 0.0130s
+2025-09-10 19:58:42,310 - app - INFO - [d4a29f9c-2ffe-48f8-9c76-89d11942aac3] GET /auth/login/ started
+2025-09-10 19:58:42,310 - app - INFO - Login page accessed
+2025-09-10 19:58:42,312 - app - INFO - [d4a29f9c-2ffe-48f8-9c76-89d11942aac3] GET /auth/login/ completed with status 200 in 0.0021s
+2025-09-10 19:58:42,326 - app - INFO - [4e629eaf-8ad2-4066-a923-1a8d55fdf190] GET /static/style.css started
+2025-09-10 19:58:42,328 - app - INFO - [8a8ca81d-c7d2-4007-a7f8-763505dc2f2b] GET /static/images/icon.png started
+2025-09-10 19:58:42,328 - app - INFO - [4e629eaf-8ad2-4066-a923-1a8d55fdf190] GET /static/style.css completed with status 304 in 0.0019s
+2025-09-10 19:58:42,330 - app - INFO - [75da12df-857f-4221-9705-d6bdd1124b2d] GET /static/site.js started
+2025-09-10 19:58:42,331 - app - INFO - [75da12df-857f-4221-9705-d6bdd1124b2d] GET /static/site.js completed with status 304 in 0.0009s
+2025-09-10 19:58:42,332 - app - INFO - [8a8ca81d-c7d2-4007-a7f8-763505dc2f2b] GET /static/images/icon.png completed with status 304 in 0.0040s
+2025-09-10 19:58:51,437 - app - INFO - [658d295c-d045-40e6-9617-ecf865d66748] POST /auth/login/ started
+2025-09-10 19:58:51,437 - app - INFO - Login page accessed
+2025-09-10 19:58:51,441 - app - WARNING - Login attempt Failed!
+2025-09-10 19:58:51,442 - app - INFO - [658d295c-d045-40e6-9617-ecf865d66748] POST /auth/login/ completed with status 302 in 0.0057s
+2025-09-10 19:58:51,455 - app - INFO - [078b02d2-cdec-4434-9cbf-b420ea1a6fd7] GET /auth/login/ started
+2025-09-10 19:58:51,456 - app - INFO - Login page accessed
+2025-09-10 19:58:51,460 - app - INFO - [078b02d2-cdec-4434-9cbf-b420ea1a6fd7] GET /auth/login/ completed with status 200 in 0.0046s
+2025-09-10 19:58:51,473 - app - INFO - [8184b10b-e67d-4586-93af-71d0d2088573] GET /static/style.css started
+2025-09-10 19:58:51,474 - app - INFO - [1f28ce96-1292-43b0-8150-1a48c0d127b7] GET /static/images/icon.png started
+2025-09-10 19:58:51,475 - app - INFO - [8184b10b-e67d-4586-93af-71d0d2088573] GET /static/style.css completed with status 304 in 0.0021s
+2025-09-10 19:58:51,477 - app - INFO - [c222f954-590b-4873-8743-38f4bdbc4986] GET /static/site.js started
+2025-09-10 19:58:51,478 - app - INFO - [1f28ce96-1292-43b0-8150-1a48c0d127b7] GET /static/images/icon.png completed with status 304 in 0.0035s
+2025-09-10 19:58:51,478 - app - INFO - [c222f954-590b-4873-8743-38f4bdbc4986] GET /static/site.js completed with status 304 in 0.0019s
+2025-09-10 20:00:26,717 - app - INFO - [8b9dd68e-94cf-4659-acd6-b1501f3dc3a1] POST /auth/login/ started
+2025-09-10 20:00:26,717 - app - INFO - Login page accessed
+2025-09-10 20:00:26,821 - app - INFO - superadmin login successful
+2025-09-10 20:00:26,821 - app - INFO - [8b9dd68e-94cf-4659-acd6-b1501f3dc3a1] POST /auth/login/ completed with status 302 in 0.1045s
+2025-09-10 20:00:26,824 - app - INFO - [09cfe0f4-d0f3-4b14-a31d-d87aa2e9474b] GET /app/dashboard/ started
+2025-09-10 20:00:26,833 - app - INFO - [09cfe0f4-d0f3-4b14-a31d-d87aa2e9474b] GET /app/dashboard/ completed with status 200 in 0.0091s
+2025-09-10 20:00:26,839 - app - INFO - [9998b5d8-c114-4f97-ad35-4ec1faf938cf] GET /static/style.css started
+2025-09-10 20:00:26,840 - app - INFO - [66d0fbcf-0fa3-4f51-9631-6be87ea6e61b] GET /static/images/icon.png started
+2025-09-10 20:00:26,841 - app - INFO - [9998b5d8-c114-4f97-ad35-4ec1faf938cf] GET /static/style.css completed with status 304 in 0.0020s
+2025-09-10 20:00:26,842 - app - INFO - [ed2d2f02-ce90-4a57-97b1-956d158c68a0] GET /static/site.js started
+2025-09-10 20:00:26,842 - app - INFO - [66d0fbcf-0fa3-4f51-9631-6be87ea6e61b] GET /static/images/icon.png completed with status 304 in 0.0020s
+2025-09-10 20:00:26,843 - app - INFO - [ed2d2f02-ce90-4a57-97b1-956d158c68a0] GET /static/site.js completed with status 304 in 0.0016s
+2025-09-10 20:00:35,312 - app - INFO - [8340f628-5cb2-4356-9332-b64a98b1bcf8] GET /categories/index/ started
+2025-09-10 20:00:35,357 - app - INFO - [8340f628-5cb2-4356-9332-b64a98b1bcf8] GET /categories/index/ completed with status 200 in 0.0452s
+2025-09-10 20:00:35,364 - app - INFO - [266ae389-7cad-4456-88f2-8b2562091262] GET /static/style.css started
+2025-09-10 20:00:35,364 - app - INFO - [266ae389-7cad-4456-88f2-8b2562091262] GET /static/style.css completed with status 304 in 0.0006s
+2025-09-10 20:00:35,365 - app - INFO - [0151abf5-f1ec-4319-9d04-8abc33663df3] GET /static/images/icon.png started
+2025-09-10 20:00:35,366 - app - INFO - [d78f2feb-845b-4e20-99ec-8cfc22b343ce] GET /static/site.js started
+2025-09-10 20:00:35,367 - app - INFO - [0151abf5-f1ec-4319-9d04-8abc33663df3] GET /static/images/icon.png completed with status 304 in 0.0018s
+2025-09-10 20:00:35,368 - app - INFO - [d78f2feb-845b-4e20-99ec-8cfc22b343ce] GET /static/site.js completed with status 304 in 0.0016s
+2025-09-10 20:00:37,897 - app - INFO - [7ad68c96-1253-4a6c-a6c2-51ce0c543839] GET /categories/update/5d84f1cc-a558-4f7a-9348-a913721b1fbb/ started
+2025-09-10 20:00:37,907 - app - INFO - [7ad68c96-1253-4a6c-a6c2-51ce0c543839] GET /categories/update/5d84f1cc-a558-4f7a-9348-a913721b1fbb/ completed with status 200 in 0.0098s
+2025-09-10 20:00:37,917 - app - INFO - [4f4e5dd5-9e7c-4d64-8853-f51794878e21] GET /static/style.css started
+2025-09-10 20:00:37,918 - app - INFO - [74c71d0d-16d4-4d5f-b2bd-90dceff71a09] GET /static/images/icon.png started
+2025-09-10 20:00:37,919 - app - INFO - [4f4e5dd5-9e7c-4d64-8853-f51794878e21] GET /static/style.css completed with status 304 in 0.0021s
+2025-09-10 20:00:37,920 - app - INFO - [68547a89-7302-41a0-b3bd-4daa08ff16a0] GET /static/site.js started
+2025-09-10 20:00:37,921 - app - INFO - [74c71d0d-16d4-4d5f-b2bd-90dceff71a09] GET /static/images/icon.png completed with status 304 in 0.0029s
+2025-09-10 20:00:37,921 - app - INFO - [68547a89-7302-41a0-b3bd-4daa08ff16a0] GET /static/site.js completed with status 304 in 0.0011s
+2025-09-10 20:00:39,220 - app - INFO - [d97e6e08-ee39-4322-8c05-dd5da718ddb1] GET /categories/index/ started
+2025-09-10 20:00:39,231 - app - INFO - [d97e6e08-ee39-4322-8c05-dd5da718ddb1] GET /categories/index/ completed with status 200 in 0.0109s
+2025-09-10 20:00:39,241 - app - INFO - [23bab6a6-b40c-4ae5-8ae0-b034fa2e1d0c] GET /static/style.css started
+2025-09-10 20:00:39,243 - app - INFO - [2861e2fa-5fc7-47f8-bb9a-674e51e213ab] GET /static/site.js started
+2025-09-10 20:00:39,244 - app - INFO - [23bab6a6-b40c-4ae5-8ae0-b034fa2e1d0c] GET /static/style.css completed with status 304 in 0.0027s
+2025-09-10 20:00:39,244 - app - INFO - [6d696d2b-effd-4cbc-a9b9-945fd59adcee] GET /static/images/icon.png started
+2025-09-10 20:00:39,245 - app - INFO - [2861e2fa-5fc7-47f8-bb9a-674e51e213ab] GET /static/site.js completed with status 304 in 0.0013s
+2025-09-10 20:00:39,246 - app - INFO - [6d696d2b-effd-4cbc-a9b9-945fd59adcee] GET /static/images/icon.png completed with status 304 in 0.0018s
+2025-09-10 20:00:40,533 - app - INFO - [e8c872fb-66d3-4a1c-8d64-4e3e336d809a] GET /categories/delete/5d84f1cc-a558-4f7a-9348-a913721b1fbb/ started
+2025-09-10 20:00:40,552 - app - INFO - [e8c872fb-66d3-4a1c-8d64-4e3e336d809a] GET /categories/delete/5d84f1cc-a558-4f7a-9348-a913721b1fbb/ completed with status 200 in 0.0188s
+2025-09-10 20:00:40,561 - app - INFO - [27238acf-b1a5-4000-a459-c66701fb15a5] GET /static/style.css started
+2025-09-10 20:00:40,562 - app - INFO - [e7c446bb-defb-46ad-9cf9-0a4f19bb7707] GET /static/images/icon.png started
+2025-09-10 20:00:40,562 - app - INFO - [27238acf-b1a5-4000-a459-c66701fb15a5] GET /static/style.css completed with status 304 in 0.0015s
+2025-09-10 20:00:40,563 - app - INFO - [9ee07e02-8427-4966-a7c3-a70776a39caf] GET /static/site.js started
+2025-09-10 20:00:40,563 - app - INFO - [e7c446bb-defb-46ad-9cf9-0a4f19bb7707] GET /static/images/icon.png completed with status 304 in 0.0017s
+2025-09-10 20:00:40,565 - app - INFO - [9ee07e02-8427-4966-a7c3-a70776a39caf] GET /static/site.js completed with status 304 in 0.0019s
+2025-09-10 20:00:41,775 - app - INFO - [220ba80d-b017-47b4-8eb5-553df9916157] GET /categories/index/ started
+2025-09-10 20:00:41,789 - app - INFO - [220ba80d-b017-47b4-8eb5-553df9916157] GET /categories/index/ completed with status 200 in 0.0149s
+2025-09-10 20:00:41,802 - app - INFO - [15d3b7e6-9087-4098-9345-aa722424c0de] GET /static/style.css started
+2025-09-10 20:00:41,803 - app - INFO - [f93bf4ea-e2e0-4d46-8459-6534a23348f9] GET /static/images/icon.png started
+2025-09-10 20:00:41,804 - app - INFO - [2f72a035-e3a3-415e-994f-9bf759135b9b] GET /static/site.js started
+2025-09-10 20:00:41,805 - app - INFO - [f93bf4ea-e2e0-4d46-8459-6534a23348f9] GET /static/images/icon.png completed with status 304 in 0.0018s
+2025-09-10 20:00:41,806 - app - INFO - [2f72a035-e3a3-415e-994f-9bf759135b9b] GET /static/site.js completed with status 304 in 0.0015s
+2025-09-10 20:00:41,806 - app - INFO - [15d3b7e6-9087-4098-9345-aa722424c0de] GET /static/style.css completed with status 304 in 0.0041s
+2025-09-10 20:00:52,986 - app - INFO - [2eed3648-151c-4c05-8e9f-6b3710e1aef6] GET /transactions/index/ started
+2025-09-10 20:00:53,033 - app - INFO - [2eed3648-151c-4c05-8e9f-6b3710e1aef6] GET /transactions/index/ completed with status 200 in 0.0467s
+2025-09-10 20:00:53,040 - app - INFO - [e68ea168-a644-4591-a26a-6246374f084c] GET /static/style.css started
+2025-09-10 20:00:53,042 - app - INFO - [ca23d8c2-3492-41a1-a78b-310b7a06d0bd] GET /static/images/icon.png started
+2025-09-10 20:00:53,042 - app - INFO - [730c8088-7ed3-4a56-a118-11e821c6397d] GET /static/site.js started
+2025-09-10 20:00:53,043 - app - INFO - [ca23d8c2-3492-41a1-a78b-310b7a06d0bd] GET /static/images/icon.png completed with status 304 in 0.0014s
+2025-09-10 20:00:53,044 - app - INFO - [730c8088-7ed3-4a56-a118-11e821c6397d] GET /static/site.js completed with status 304 in 0.0014s
+2025-09-10 20:00:53,044 - app - INFO - [e68ea168-a644-4591-a26a-6246374f084c] GET /static/style.css completed with status 304 in 0.0041s
+2025-09-10 20:02:02,657 - app - INFO - [dda1f2cc-8f1b-4831-a3a3-65439ce96431] POST /transactions/create/ started
+2025-09-10 20:02:02,675 - app - INFO - [dda1f2cc-8f1b-4831-a3a3-65439ce96431] POST /transactions/create/ completed with status 302 in 0.0175s
+2025-09-10 20:02:02,679 - app - INFO - [153fd16b-120b-4ab0-8cf4-8e6bdc39c5d0] GET /transactions/index/ started
+2025-09-10 20:02:02,685 - app - INFO - [153fd16b-120b-4ab0-8cf4-8e6bdc39c5d0] GET /transactions/index/ completed with status 200 in 0.0063s
+2025-09-10 20:02:02,695 - app - INFO - [dc6bf6e8-ece3-4e56-a011-6643012cdcb9] GET /static/style.css started
+2025-09-10 20:02:02,696 - app - INFO - [0834a04a-5f8d-4d57-bbbf-ad8eb2e2802b] GET /static/images/icon.png started
+2025-09-10 20:02:02,697 - app - INFO - [2cc2fcce-1cf6-4bd3-931b-c272add65068] GET /static/site.js started
+2025-09-10 20:02:02,698 - app - INFO - [0834a04a-5f8d-4d57-bbbf-ad8eb2e2802b] GET /static/images/icon.png completed with status 304 in 0.0017s
+2025-09-10 20:02:02,698 - app - INFO - [dc6bf6e8-ece3-4e56-a011-6643012cdcb9] GET /static/style.css completed with status 304 in 0.0030s
+2025-09-10 20:02:02,699 - app - INFO - [2cc2fcce-1cf6-4bd3-931b-c272add65068] GET /static/site.js completed with status 304 in 0.0017s
+2025-09-10 20:02:05,237 - app - INFO - [3777c7c1-2035-4f4d-9cd5-b9c1846d466c] GET /transactions/update/140f9419-4e54-407c-b9d3-f460a3c42907/ started
+2025-09-10 20:02:05,264 - app - INFO - [3777c7c1-2035-4f4d-9cd5-b9c1846d466c] GET /transactions/update/140f9419-4e54-407c-b9d3-f460a3c42907/ completed with status 200 in 0.0281s
+2025-09-10 20:02:05,281 - app - INFO - [b7f3da7a-ae9f-4e38-9060-a0e51d6d1b81] GET /static/style.css started
+2025-09-10 20:02:05,282 - app - INFO - [6bf50496-7ff7-4830-a623-a9c5fb2271e7] GET /static/images/icon.png started
+2025-09-10 20:02:05,283 - app - INFO - [6bf50496-7ff7-4830-a623-a9c5fb2271e7] GET /static/images/icon.png completed with status 304 in 0.0010s
+2025-09-10 20:02:05,284 - app - INFO - [b7f3da7a-ae9f-4e38-9060-a0e51d6d1b81] GET /static/style.css completed with status 304 in 0.0037s
+2025-09-10 20:02:05,286 - app - INFO - [f624ec8a-f179-4efa-ad11-2fc719004911] GET /static/site.js started
+2025-09-10 20:02:05,287 - app - INFO - [f624ec8a-f179-4efa-ad11-2fc719004911] GET /static/site.js completed with status 304 in 0.0012s
+2025-09-10 20:02:06,267 - app - INFO - [cd496b55-1407-4568-a3a8-1def59b1cfb8] GET /transactions/index/ started
+2025-09-10 20:02:06,281 - app - INFO - [cd496b55-1407-4568-a3a8-1def59b1cfb8] GET /transactions/index/ completed with status 200 in 0.0149s
+2025-09-10 20:02:06,292 - app - INFO - [e24dbd1a-7e4e-4152-906c-989159668508] GET /static/images/icon.png started
+2025-09-10 20:02:06,293 - app - INFO - [4fdcbcf4-9a38-4b1f-bd7d-22dcf7a66315] GET /static/style.css started
+2025-09-10 20:02:06,294 - app - INFO - [8e041a9c-7031-489d-b18b-fda5c4bd1b89] GET /static/site.js started
+2025-09-10 20:02:06,295 - app - INFO - [8e041a9c-7031-489d-b18b-fda5c4bd1b89] GET /static/site.js completed with status 304 in 0.0010s
+2025-09-10 20:02:06,295 - app - INFO - [4fdcbcf4-9a38-4b1f-bd7d-22dcf7a66315] GET /static/style.css completed with status 304 in 0.0016s
+2025-09-10 20:02:06,296 - app - INFO - [e24dbd1a-7e4e-4152-906c-989159668508] GET /static/images/icon.png completed with status 304 in 0.0043s
+2025-09-10 20:02:08,205 - app - INFO - [228ce94d-ab93-4fd2-976d-12edf35a0bec] GET /transactions/delete/140f9419-4e54-407c-b9d3-f460a3c42907/ started
+2025-09-10 20:02:08,224 - app - INFO - [228ce94d-ab93-4fd2-976d-12edf35a0bec] GET /transactions/delete/140f9419-4e54-407c-b9d3-f460a3c42907/ completed with status 200 in 0.0192s
+2025-09-10 20:02:08,233 - app - INFO - [abaa012d-f59e-47d3-a2ee-e98471baf688] GET /static/style.css started
+2025-09-10 20:02:08,234 - app - INFO - [83bc3068-b8bc-4638-b0c2-badd917d75a8] GET /static/images/icon.png started
+2025-09-10 20:02:08,235 - app - INFO - [8b275b3b-8e56-4fc6-8839-1792421ffa47] GET /static/site.js started
+2025-09-10 20:02:08,236 - app - INFO - [abaa012d-f59e-47d3-a2ee-e98471baf688] GET /static/style.css completed with status 304 in 0.0027s
+2025-09-10 20:02:08,236 - app - INFO - [83bc3068-b8bc-4638-b0c2-badd917d75a8] GET /static/images/icon.png completed with status 304 in 0.0023s
+2025-09-10 20:02:08,237 - app - INFO - [8b275b3b-8e56-4fc6-8839-1792421ffa47] GET /static/site.js completed with status 304 in 0.0024s
+2025-09-10 20:02:09,428 - app - INFO - [968e818f-9d9e-4a6c-9da7-d8eb3f613da1] GET /transactions/index/ started
+2025-09-10 20:02:09,444 - app - INFO - [968e818f-9d9e-4a6c-9da7-d8eb3f613da1] GET /transactions/index/ completed with status 200 in 0.0161s
+2025-09-10 20:02:09,456 - app - INFO - [23386bd5-9341-4a98-ac87-98e56cf93596] GET /static/style.css started
+2025-09-10 20:02:09,457 - app - INFO - [ae585bed-c05b-48bb-8f6a-b02f48fd3989] GET /static/images/icon.png started
+2025-09-10 20:02:09,458 - app - INFO - [23386bd5-9341-4a98-ac87-98e56cf93596] GET /static/style.css completed with status 304 in 0.0022s
+2025-09-10 20:02:09,459 - app - INFO - [b8d4e16a-1ceb-4a4c-b635-e98f0dd2f2f3] GET /static/site.js started
+2025-09-10 20:02:09,460 - app - INFO - [ae585bed-c05b-48bb-8f6a-b02f48fd3989] GET /static/images/icon.png completed with status 304 in 0.0032s
+2025-09-10 20:02:09,461 - app - INFO - [b8d4e16a-1ceb-4a4c-b635-e98f0dd2f2f3] GET /static/site.js completed with status 304 in 0.0015s
+2025-09-10 20:02:30,379 - app - INFO - [083b2c2c-ffe0-4c37-a7f9-3c8b48e92877] POST /transactions/create/ started
+2025-09-10 20:02:30,387 - app - INFO - [083b2c2c-ffe0-4c37-a7f9-3c8b48e92877] POST /transactions/create/ completed with status 302 in 0.0087s
+2025-09-10 20:02:30,391 - app - INFO - [4e90dd58-b5b6-42a9-81a4-b18634a851c7] GET /transactions/index/ started
+2025-09-10 20:02:30,396 - app - INFO - [4e90dd58-b5b6-42a9-81a4-b18634a851c7] GET /transactions/index/ completed with status 200 in 0.0054s
+2025-09-10 20:02:30,406 - app - INFO - [d6f3f75a-0113-45ed-8f94-4585ec154950] GET /static/style.css started
+2025-09-10 20:02:30,407 - app - INFO - [a621db96-2b89-4962-a0d5-817a5cd3c443] GET /static/images/icon.png started
+2025-09-10 20:02:30,408 - app - INFO - [a621db96-2b89-4962-a0d5-817a5cd3c443] GET /static/images/icon.png completed with status 304 in 0.0014s
+2025-09-10 20:02:30,409 - app - INFO - [20474d8b-3f8b-4469-9c45-eb94e258c7c8] GET /static/site.js started
+2025-09-10 20:02:30,409 - app - INFO - [d6f3f75a-0113-45ed-8f94-4585ec154950] GET /static/style.css completed with status 304 in 0.0035s
+2025-09-10 20:02:30,410 - app - INFO - [20474d8b-3f8b-4469-9c45-eb94e258c7c8] GET /static/site.js completed with status 304 in 0.0014s
+2025-09-10 20:02:33,053 - app - INFO - [1ebdf11b-3f2c-44e8-ba8f-38362be4cecd] GET /transactions/index/ started
+2025-09-10 20:02:33,073 - app - INFO - [1ebdf11b-3f2c-44e8-ba8f-38362be4cecd] GET /transactions/index/ completed with status 200 in 0.0199s
+2025-09-10 20:02:33,086 - app - INFO - [c9a4440f-812d-4355-a911-6a4d68f4b81c] GET /static/style.css started
+2025-09-10 20:02:33,088 - app - INFO - [c9a4440f-812d-4355-a911-6a4d68f4b81c] GET /static/style.css completed with status 304 in 0.0017s
+2025-09-10 20:02:33,088 - app - INFO - [6dcb6879-1639-4124-8f43-df09e231d42e] GET /static/images/icon.png started
+2025-09-10 20:02:33,090 - app - INFO - [1008062c-a3e9-4c5c-b786-0da1890ed50f] GET /static/site.js started
+2025-09-10 20:02:33,091 - app - INFO - [6dcb6879-1639-4124-8f43-df09e231d42e] GET /static/images/icon.png completed with status 304 in 0.0026s
+2025-09-10 20:02:33,091 - app - INFO - [1008062c-a3e9-4c5c-b786-0da1890ed50f] GET /static/site.js completed with status 304 in 0.0013s
+2025-09-10 20:02:37,343 - app - INFO - [6a3af4d5-4c00-4ad1-b3cb-4d73e0cada06] GET /app/dashboard/ started
+2025-09-10 20:02:37,360 - app - INFO - [6a3af4d5-4c00-4ad1-b3cb-4d73e0cada06] GET /app/dashboard/ completed with status 200 in 0.0172s
+2025-09-10 20:02:37,374 - app - INFO - [8f18b0b6-3c1a-4142-b1ff-3d43410b1a86] GET /static/style.css started
+2025-09-10 20:02:37,375 - app - INFO - [17ecc42f-373c-4cee-b52d-9072d09ef0df] GET /static/images/icon.png started
+2025-09-10 20:02:37,376 - app - INFO - [bb7bf6a3-b257-477c-b416-3a9f2809eea4] GET /static/site.js started
+2025-09-10 20:02:37,377 - app - INFO - [8f18b0b6-3c1a-4142-b1ff-3d43410b1a86] GET /static/style.css completed with status 304 in 0.0034s
+2025-09-10 20:02:37,378 - app - INFO - [17ecc42f-373c-4cee-b52d-9072d09ef0df] GET /static/images/icon.png completed with status 304 in 0.0031s
+2025-09-10 20:02:37,379 - app - INFO - [bb7bf6a3-b257-477c-b416-3a9f2809eea4] GET /static/site.js completed with status 304 in 0.0029s
+2025-09-10 20:02:48,146 - app - INFO - [3a2f2c34-fbe2-43e2-8b17-9240ab1af3da] GET /transactions/create/ started
+2025-09-10 20:02:48,160 - app - ERROR - [3a2f2c34-fbe2-43e2-8b17-9240ab1af3da] Unhandled exception: 'transactions' is undefined
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/transaction.py", line 115, in create
+    return render_template('transaction/index.html',
+                           title='New Transaction',
+                           form=form,
+                           TRANSACTION=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/transaction/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/transaction/index.html", line 70, in block 'content'
+    {% if transactions.has_prev %}
+    ^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'transactions' is undefined
+2025-09-10 20:02:51,552 - app - INFO - [ed445041-a07f-439b-a777-4cba1427515e] GET /transactions/create/ started
+2025-09-10 20:02:51,561 - app - ERROR - [ed445041-a07f-439b-a777-4cba1427515e] Unhandled exception: 'transactions' is undefined
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/transaction.py", line 115, in create
+    return render_template('transaction/index.html',
+                           title='New Transaction',
+                           form=form,
+                           TRANSACTION=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/transaction/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/transaction/index.html", line 70, in block 'content'
+    {% if transactions.has_prev %}
+    ^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'transactions' is undefined
+2025-09-10 20:02:54,865 - app - INFO - [cd2e50b7-6a21-4feb-a73b-63a98557c01b] GET /categories/index/ started
+2025-09-10 20:02:54,880 - app - INFO - [cd2e50b7-6a21-4feb-a73b-63a98557c01b] GET /categories/index/ completed with status 200 in 0.0157s
+2025-09-10 20:02:54,897 - app - INFO - [e8a93128-2c3e-427a-9f15-a7b71d7d6ebe] GET /static/style.css started
+2025-09-10 20:02:54,898 - app - INFO - [e8a93128-2c3e-427a-9f15-a7b71d7d6ebe] GET /static/style.css completed with status 304 in 0.0009s
+2025-09-10 20:02:54,901 - app - INFO - [5aa085cc-0279-4d70-a420-5e661ddad141] GET /static/images/icon.png started
+2025-09-10 20:02:54,902 - app - INFO - [d43cb40b-2b4b-46cc-b1b5-2cb1bf73c320] GET /static/site.js started
+2025-09-10 20:02:54,903 - app - INFO - [5aa085cc-0279-4d70-a420-5e661ddad141] GET /static/images/icon.png completed with status 304 in 0.0015s
+2025-09-10 20:02:54,903 - app - INFO - [d43cb40b-2b4b-46cc-b1b5-2cb1bf73c320] GET /static/site.js completed with status 304 in 0.0018s
+2025-09-10 20:03:07,058 - app - INFO - [4d5b1c3e-7c68-437c-9e47-36c3daa8af56] GET /transactions/index/ started
+2025-09-10 20:03:07,077 - app - INFO - [4d5b1c3e-7c68-437c-9e47-36c3daa8af56] GET /transactions/index/ completed with status 200 in 0.0194s
+2025-09-10 20:03:07,091 - app - INFO - [0e1a4582-ff18-4865-9dd4-ec66ab034113] GET /static/style.css started
+2025-09-10 20:03:07,092 - app - INFO - [6ce54e5f-991f-4d0b-9b12-f30e2b1a0f43] GET /static/images/icon.png started
+2025-09-10 20:03:07,093 - app - INFO - [0e1a4582-ff18-4865-9dd4-ec66ab034113] GET /static/style.css completed with status 304 in 0.0026s
+2025-09-10 20:03:07,094 - app - INFO - [efb639e8-46f0-4b80-80b9-e17ac4c0e02e] GET /static/site.js started
+2025-09-10 20:03:07,095 - app - INFO - [6ce54e5f-991f-4d0b-9b12-f30e2b1a0f43] GET /static/images/icon.png completed with status 304 in 0.0034s
+2025-09-10 20:03:07,096 - app - INFO - [efb639e8-46f0-4b80-80b9-e17ac4c0e02e] GET /static/site.js completed with status 304 in 0.0025s
+2025-09-10 20:03:13,996 - app - INFO - [a8340014-1f59-41a4-ac72-8330cb4d3774] GET /roles/index/ started
+2025-09-10 20:03:14,029 - app - INFO - [a8340014-1f59-41a4-ac72-8330cb4d3774] GET /roles/index/ completed with status 200 in 0.0334s
+2025-09-10 20:03:14,036 - app - INFO - [79809528-47b4-44f0-bb4b-1caf5f6d2233] GET /static/style.css started
+2025-09-10 20:03:14,037 - app - INFO - [b014edd5-f07c-4ab1-a572-9a001187b1e8] GET /static/images/icon.png started
+2025-09-10 20:03:14,037 - app - INFO - [79809528-47b4-44f0-bb4b-1caf5f6d2233] GET /static/style.css completed with status 304 in 0.0017s
+2025-09-10 20:03:14,038 - app - INFO - [6fb6594c-2ff9-4205-8ea3-d338131569ec] GET /static/site.js started
+2025-09-10 20:03:14,039 - app - INFO - [b014edd5-f07c-4ab1-a572-9a001187b1e8] GET /static/images/icon.png completed with status 304 in 0.0023s
+2025-09-10 20:03:14,040 - app - INFO - [6fb6594c-2ff9-4205-8ea3-d338131569ec] GET /static/site.js completed with status 304 in 0.0017s
+2025-09-10 20:03:33,089 - app - INFO - [2a1b4d04-7c39-415f-916e-48aa30f800b0] GET /users/index/ started
+2025-09-10 20:03:33,131 - app - INFO - [2a1b4d04-7c39-415f-916e-48aa30f800b0] GET /users/index/ completed with status 200 in 0.0419s
+2025-09-10 20:03:33,138 - app - INFO - [721673e6-ccad-44f2-bb42-a338821b7622] GET /static/style.css started
+2025-09-10 20:03:33,139 - app - INFO - [5c68a47b-6078-45f2-a808-ff3235e2528b] GET /static/images/icon.png started
+2025-09-10 20:03:33,140 - app - INFO - [4fee0b72-0baf-4903-9faa-8989ae36bdbf] GET /static/site.js started
+2025-09-10 20:03:33,141 - app - INFO - [721673e6-ccad-44f2-bb42-a338821b7622] GET /static/style.css completed with status 304 in 0.0025s
+2025-09-10 20:03:33,141 - app - INFO - [5c68a47b-6078-45f2-a808-ff3235e2528b] GET /static/images/icon.png completed with status 304 in 0.0019s
+2025-09-10 20:03:33,142 - app - INFO - [4fee0b72-0baf-4903-9faa-8989ae36bdbf] GET /static/site.js completed with status 304 in 0.0020s
+2025-09-10 20:03:39,866 - app - INFO - [6bad06db-4087-4c62-90f9-1dccce4aed82] GET /auth/logout/ started
+2025-09-10 20:03:39,870 - app - INFO - superadmin logged out successfully!
+2025-09-10 20:03:39,882 - app - INFO - [6bad06db-4087-4c62-90f9-1dccce4aed82] GET /auth/logout/ completed with status 200 in 0.0160s
+2025-09-10 20:03:39,897 - app - INFO - [ffa6313a-4730-424c-8a85-c20327f6ccf1] GET /static/style.css started
+2025-09-10 20:03:39,898 - app - INFO - [e975fe88-76d3-44c4-a25f-e15b74d74428] GET /static/images/icon.png started
+2025-09-10 20:03:39,899 - app - INFO - [e975fe88-76d3-44c4-a25f-e15b74d74428] GET /static/images/icon.png completed with status 304 in 0.0008s
+2025-09-10 20:03:39,900 - app - INFO - [ffa6313a-4730-424c-8a85-c20327f6ccf1] GET /static/style.css completed with status 304 in 0.0033s
+2025-09-10 20:03:39,901 - app - INFO - [a9ec9744-e153-49f9-8a88-08e67c058198] GET /static/site.js started
+2025-09-10 20:03:39,903 - app - INFO - [a9ec9744-e153-49f9-8a88-08e67c058198] GET /static/site.js completed with status 304 in 0.0017s
+2025-09-10 20:03:41,742 - app - INFO - [5b24bb34-39ce-4b96-a6be-dbdba4365c42] GET /auth/login/ started
+2025-09-10 20:03:41,742 - app - INFO - Login page accessed
+2025-09-10 20:03:41,746 - app - INFO - [5b24bb34-39ce-4b96-a6be-dbdba4365c42] GET /auth/login/ completed with status 200 in 0.0042s
+2025-09-10 20:03:41,763 - app - INFO - [1d5c4a99-3764-4d97-b84e-cf5d6373cd6e] GET /static/style.css started
+2025-09-10 20:03:41,764 - app - INFO - [1d5c4a99-3764-4d97-b84e-cf5d6373cd6e] GET /static/style.css completed with status 304 in 0.0009s
+2025-09-10 20:03:41,765 - app - INFO - [fbe9fe55-7e32-4d06-91b1-8168bbd62177] GET /static/images/icon.png started
+2025-09-10 20:03:41,767 - app - INFO - [b4cfebe8-143f-47a1-8823-b2b7e7501a65] GET /static/site.js started
+2025-09-10 20:03:41,768 - app - INFO - [fbe9fe55-7e32-4d06-91b1-8168bbd62177] GET /static/images/icon.png completed with status 304 in 0.0029s
+2025-09-10 20:03:41,769 - app - INFO - [b4cfebe8-143f-47a1-8823-b2b7e7501a65] GET /static/site.js completed with status 304 in 0.0019s
+2025-09-10 20:04:02,944 - app - INFO - [f05cef31-662f-40f9-bda6-0146f914e0f0] POST /auth/login/ started
+2025-09-10 20:04:02,944 - app - INFO - Login page accessed
+2025-09-10 20:04:03,051 - app - WARNING - Login attempt Failed!
+2025-09-10 20:04:03,051 - app - INFO - [f05cef31-662f-40f9-bda6-0146f914e0f0] POST /auth/login/ completed with status 302 in 0.1076s
+2025-09-10 20:04:03,053 - app - INFO - [80de2722-14bd-4f43-b8bb-49a24cc82359] GET /auth/login/ started
+2025-09-10 20:04:03,054 - app - INFO - Login page accessed
+2025-09-10 20:04:03,054 - app - INFO - [80de2722-14bd-4f43-b8bb-49a24cc82359] GET /auth/login/ completed with status 200 in 0.0006s
+2025-09-10 20:04:03,060 - app - INFO - [7b32725c-75a3-444d-ab80-931bf8804ae1] GET /static/style.css started
+2025-09-10 20:04:03,060 - app - INFO - [e919e8fd-f81b-44db-8a42-8aff1bc117a7] GET /static/images/icon.png started
+2025-09-10 20:04:03,061 - app - INFO - [83b48086-387e-4e2d-97f2-0eb841923cab] GET /static/site.js started
+2025-09-10 20:04:03,061 - app - INFO - [7b32725c-75a3-444d-ab80-931bf8804ae1] GET /static/style.css completed with status 304 in 0.0016s
+2025-09-10 20:04:03,062 - app - INFO - [e919e8fd-f81b-44db-8a42-8aff1bc117a7] GET /static/images/icon.png completed with status 304 in 0.0015s
+2025-09-10 20:04:03,062 - app - INFO - [83b48086-387e-4e2d-97f2-0eb841923cab] GET /static/site.js completed with status 304 in 0.0011s
+2025-09-10 20:04:16,185 - app - INFO - [3ca23483-d9d1-4f9e-850b-ca78f9b118d9] POST /auth/login/ started
+2025-09-10 20:04:16,186 - app - INFO - Login page accessed
+2025-09-10 20:04:16,293 - app - WARNING - Login attempt Failed!
+2025-09-10 20:04:16,293 - app - INFO - [3ca23483-d9d1-4f9e-850b-ca78f9b118d9] POST /auth/login/ completed with status 302 in 0.1086s
+2025-09-10 20:04:16,296 - app - INFO - [1677f946-19d1-4a8f-a78c-35e191729619] GET /auth/login/ started
+2025-09-10 20:04:16,296 - app - INFO - Login page accessed
+2025-09-10 20:04:16,296 - app - INFO - [1677f946-19d1-4a8f-a78c-35e191729619] GET /auth/login/ completed with status 200 in 0.0006s
+2025-09-10 20:04:16,302 - app - INFO - [02314b35-4ae1-423c-a8e6-49660a46edad] GET /static/style.css started
+2025-09-10 20:04:16,303 - app - INFO - [9e6cfedc-be1d-4c63-a048-82b256a91902] GET /static/images/icon.png started
+2025-09-10 20:04:16,304 - app - INFO - [4d4aca86-c4df-4e8b-83fc-1303b7edd30c] GET /static/site.js started
+2025-09-10 20:04:16,304 - app - INFO - [9e6cfedc-be1d-4c63-a048-82b256a91902] GET /static/images/icon.png completed with status 304 in 0.0012s
+2025-09-10 20:04:16,304 - app - INFO - [02314b35-4ae1-423c-a8e6-49660a46edad] GET /static/style.css completed with status 304 in 0.0020s
+2025-09-10 20:04:16,304 - app - INFO - [4d4aca86-c4df-4e8b-83fc-1303b7edd30c] GET /static/site.js completed with status 304 in 0.0008s
+2025-09-10 20:04:35,783 - app - INFO - [d9d46225-dd59-4f40-b1cb-821775bb652f] POST /auth/login/ started
+2025-09-10 20:04:35,784 - app - INFO - Login page accessed
+2025-09-10 20:04:35,862 - app - INFO - guestuser login successful
+2025-09-10 20:04:35,862 - app - INFO - [d9d46225-dd59-4f40-b1cb-821775bb652f] POST /auth/login/ completed with status 302 in 0.0790s
+2025-09-10 20:04:35,865 - app - INFO - [e87b26d9-fa20-4da3-a49b-bafa91600203] GET /app/dashboard/ started
+2025-09-10 20:04:35,867 - app - INFO - [e87b26d9-fa20-4da3-a49b-bafa91600203] GET /app/dashboard/ completed with status 200 in 0.0024s
+2025-09-10 20:04:35,874 - app - INFO - [f8ef6947-c943-480f-938d-d96aa66dea31] GET /static/style.css started
+2025-09-10 20:04:35,875 - app - INFO - [c86c151d-d226-4b2d-9df5-3fb911207fa3] GET /static/images/icon.png started
+2025-09-10 20:04:35,877 - app - INFO - [45ffa99f-bbf3-492c-bac9-5d8c26e9e265] GET /static/site.js started
+2025-09-10 20:04:35,877 - app - INFO - [45ffa99f-bbf3-492c-bac9-5d8c26e9e265] GET /static/site.js completed with status 304 in 0.0007s
+2025-09-10 20:04:35,878 - app - INFO - [f8ef6947-c943-480f-938d-d96aa66dea31] GET /static/style.css completed with status 304 in 0.0033s
+2025-09-10 20:04:35,878 - app - INFO - [c86c151d-d226-4b2d-9df5-3fb911207fa3] GET /static/images/icon.png completed with status 304 in 0.0030s
+2025-09-10 20:04:41,619 - app - INFO - [cd4908a0-e77a-4a10-ae78-3ff4196d1ef1] GET /transactions/index/ started
+2025-09-10 20:04:41,636 - app - INFO - [cd4908a0-e77a-4a10-ae78-3ff4196d1ef1] GET /transactions/index/ completed with status 200 in 0.0177s
+2025-09-10 20:04:41,646 - app - INFO - [6a377ced-dff0-4dbe-b387-31224f9bd764] GET /static/style.css started
+2025-09-10 20:04:41,647 - app - INFO - [6a377ced-dff0-4dbe-b387-31224f9bd764] GET /static/style.css completed with status 304 in 0.0007s
+2025-09-10 20:04:41,648 - app - INFO - [80d4129c-6976-4ffd-a103-ed03bac04884] GET /static/images/icon.png started
+2025-09-10 20:04:41,649 - app - INFO - [46b33e4d-f31f-4030-8e73-fc27786e601c] GET /static/site.js started
+2025-09-10 20:04:41,650 - app - INFO - [80d4129c-6976-4ffd-a103-ed03bac04884] GET /static/images/icon.png completed with status 304 in 0.0021s
+2025-09-10 20:04:41,652 - app - INFO - [46b33e4d-f31f-4030-8e73-fc27786e601c] GET /static/site.js completed with status 304 in 0.0022s
+2025-09-10 20:04:43,762 - app - INFO - [e6ad2820-e292-408e-86d3-8d1833cda132] GET /categories/index/ started
+2025-09-10 20:04:43,777 - app - INFO - [e6ad2820-e292-408e-86d3-8d1833cda132] GET /categories/index/ completed with status 200 in 0.0147s
+2025-09-10 20:04:43,790 - app - INFO - [50640238-ee1a-47b0-93fd-3271a4c12526] GET /static/style.css started
+2025-09-10 20:04:43,792 - app - INFO - [81cf1f58-2a97-48d0-b832-e95333666072] GET /static/images/icon.png started
+2025-09-10 20:04:43,793 - app - INFO - [3c54d43f-e248-4462-a611-dbf031a9569a] GET /static/site.js started
+2025-09-10 20:04:43,794 - app - INFO - [81cf1f58-2a97-48d0-b832-e95333666072] GET /static/images/icon.png completed with status 304 in 0.0024s
+2025-09-10 20:04:43,794 - app - INFO - [50640238-ee1a-47b0-93fd-3271a4c12526] GET /static/style.css completed with status 304 in 0.0043s
+2025-09-10 20:04:43,796 - app - INFO - [3c54d43f-e248-4462-a611-dbf031a9569a] GET /static/site.js completed with status 304 in 0.0024s
+2025-09-10 20:04:46,717 - app - INFO - [5f016393-f35e-46c7-a10b-69ea1adff82d] GET /app/dashboard/ started
+2025-09-10 20:04:46,729 - app - INFO - [5f016393-f35e-46c7-a10b-69ea1adff82d] GET /app/dashboard/ completed with status 200 in 0.0121s
+2025-09-10 20:04:46,741 - app - INFO - [298ae8e7-793a-4aff-973d-4eb4b35982ac] GET /static/style.css started
+2025-09-10 20:04:46,742 - app - INFO - [2c17f430-b85c-4199-80d5-9d05a9cf056e] GET /static/images/icon.png started
+2025-09-10 20:04:46,743 - app - INFO - [298ae8e7-793a-4aff-973d-4eb4b35982ac] GET /static/style.css completed with status 304 in 0.0026s
+2025-09-10 20:04:46,744 - app - INFO - [2c17f430-b85c-4199-80d5-9d05a9cf056e] GET /static/images/icon.png completed with status 304 in 0.0016s
+2025-09-10 20:04:46,745 - app - INFO - [8178d4e1-e4a5-4da1-a5f7-c9413357c149] GET /static/site.js started
+2025-09-10 20:04:46,747 - app - INFO - [8178d4e1-e4a5-4da1-a5f7-c9413357c149] GET /static/site.js completed with status 304 in 0.0018s
+2025-09-10 20:04:47,843 - app - INFO - [5ed1d1e3-e0d8-4687-b2b1-e35314b430fd] GET / started
+2025-09-10 20:04:47,846 - app - INFO - User accessed Index page
+2025-09-10 20:04:47,849 - app - INFO - [5ed1d1e3-e0d8-4687-b2b1-e35314b430fd] GET / completed with status 200 in 0.0059s
+2025-09-10 20:04:47,859 - app - INFO - [68ae5f49-ebc9-48c3-ba6f-7f0427c8a6d3] GET /static/style.css started
+2025-09-10 20:04:47,860 - app - INFO - [3ea0b8b4-12d5-4d44-a8d0-32687fe6a53a] GET /static/images/icon.png started
+2025-09-10 20:04:47,861 - app - INFO - [68ae5f49-ebc9-48c3-ba6f-7f0427c8a6d3] GET /static/style.css completed with status 304 in 0.0023s
+2025-09-10 20:04:47,862 - app - INFO - [61f08040-b72a-463d-8b3d-243d9d01aba6] GET /static/site.js started
+2025-09-10 20:04:47,863 - app - INFO - [3ea0b8b4-12d5-4d44-a8d0-32687fe6a53a] GET /static/images/icon.png completed with status 304 in 0.0023s
+2025-09-10 20:04:47,864 - app - INFO - [61f08040-b72a-463d-8b3d-243d9d01aba6] GET /static/site.js completed with status 304 in 0.0015s
+2025-09-10 20:04:51,369 - app - INFO - [97d23e34-b52b-448e-beb3-9323587d069f] GET / started
+2025-09-10 20:04:51,373 - app - INFO - User accessed Index page
+2025-09-10 20:04:51,375 - app - INFO - [97d23e34-b52b-448e-beb3-9323587d069f] GET / completed with status 200 in 0.0062s
+2025-09-10 20:04:51,391 - app - INFO - [1a2191f0-4222-47e6-a895-92b47cd8049d] GET /static/site.js started
+2025-09-10 20:04:51,391 - app - INFO - [61cef113-c4a1-4fc4-9c5e-74d87edf5cc6] GET /static/style.css started
+2025-09-10 20:04:51,392 - app - INFO - [ce7922a5-c268-4dd9-9777-703e10d1eaad] GET /static/images/icon.png started
+2025-09-10 20:04:51,393 - app - INFO - [1a2191f0-4222-47e6-a895-92b47cd8049d] GET /static/site.js completed with status 304 in 0.0020s
+2025-09-10 20:04:51,393 - app - INFO - [61cef113-c4a1-4fc4-9c5e-74d87edf5cc6] GET /static/style.css completed with status 304 in 0.0022s
+2025-09-10 20:04:51,395 - app - INFO - [ce7922a5-c268-4dd9-9777-703e10d1eaad] GET /static/images/icon.png completed with status 304 in 0.0028s
+2025-09-10 20:04:52,145 - app - INFO - [a29cae77-f75e-47c8-860d-ce6398616313] GET /app/dashboard/ started
+2025-09-10 20:04:52,159 - app - INFO - [a29cae77-f75e-47c8-860d-ce6398616313] GET /app/dashboard/ completed with status 200 in 0.0150s
+2025-09-10 20:04:52,171 - app - INFO - [3ef9505c-9107-4719-ac60-9a17353f92da] GET /static/style.css started
+2025-09-10 20:04:52,172 - app - INFO - [db41602b-e9f4-46b2-b0a0-5c8380426139] GET /static/images/icon.png started
+2025-09-10 20:04:52,173 - app - INFO - [5fa563db-df91-4bec-8a4d-0605d2c2897d] GET /static/site.js started
+2025-09-10 20:04:52,174 - app - INFO - [3ef9505c-9107-4719-ac60-9a17353f92da] GET /static/style.css completed with status 304 in 0.0030s
+2025-09-10 20:04:52,175 - app - INFO - [db41602b-e9f4-46b2-b0a0-5c8380426139] GET /static/images/icon.png completed with status 304 in 0.0028s
+2025-09-10 20:04:52,175 - app - INFO - [5fa563db-df91-4bec-8a4d-0605d2c2897d] GET /static/site.js completed with status 304 in 0.0016s
+2025-09-10 20:04:53,909 - app - INFO - [3d9ce184-d37e-4c6f-8e1f-3d7b1547c2a8] GET /categories/index/ started
+2025-09-10 20:04:53,922 - app - INFO - [3d9ce184-d37e-4c6f-8e1f-3d7b1547c2a8] GET /categories/index/ completed with status 200 in 0.0136s
+2025-09-10 20:04:53,936 - app - INFO - [e7470366-1773-455f-9987-348c0ad1498e] GET /static/style.css started
+2025-09-10 20:04:53,937 - app - INFO - [38272a6b-c03e-4e00-9333-589fe58f0944] GET /static/images/icon.png started
+2025-09-10 20:04:53,938 - app - INFO - [e7470366-1773-455f-9987-348c0ad1498e] GET /static/style.css completed with status 304 in 0.0021s
+2025-09-10 20:04:53,940 - app - INFO - [a9a26bb1-7a1c-41ca-8845-080c6530fe30] GET /static/site.js started
+2025-09-10 20:04:53,941 - app - INFO - [38272a6b-c03e-4e00-9333-589fe58f0944] GET /static/images/icon.png completed with status 304 in 0.0035s
+2025-09-10 20:04:53,942 - app - INFO - [a9a26bb1-7a1c-41ca-8845-080c6530fe30] GET /static/site.js completed with status 304 in 0.0027s
+2025-09-10 20:04:54,700 - app - INFO - [1593b957-d0a0-4e2b-a202-f53dd322cc52] GET /transactions/index/ started
+2025-09-10 20:04:54,716 - app - INFO - [1593b957-d0a0-4e2b-a202-f53dd322cc52] GET /transactions/index/ completed with status 200 in 0.0160s
+2025-09-10 20:04:54,732 - app - INFO - [7a362a0e-30d2-420a-9722-ff1114d59b22] GET /static/style.css started
+2025-09-10 20:04:54,734 - app - INFO - [5680bcf6-3f8e-4aa4-a99e-3c1ecf529289] GET /static/images/icon.png started
+2025-09-10 20:04:54,736 - app - INFO - [a8a244ef-1c58-4efa-aa0a-778b1a6e701f] GET /static/site.js started
+2025-09-10 20:04:54,737 - app - INFO - [7a362a0e-30d2-420a-9722-ff1114d59b22] GET /static/style.css completed with status 304 in 0.0049s
+2025-09-10 20:04:54,738 - app - INFO - [5680bcf6-3f8e-4aa4-a99e-3c1ecf529289] GET /static/images/icon.png completed with status 304 in 0.0039s
+2025-09-10 20:04:54,739 - app - INFO - [a8a244ef-1c58-4efa-aa0a-778b1a6e701f] GET /static/site.js completed with status 304 in 0.0030s
+2025-09-10 20:04:56,195 - app - INFO - [14113410-4def-4f0d-8047-a98ce96baa5d] GET /app/dashboard/ started
+2025-09-10 20:04:56,207 - app - INFO - [14113410-4def-4f0d-8047-a98ce96baa5d] GET /app/dashboard/ completed with status 200 in 0.0122s
+2025-09-10 20:04:56,223 - app - INFO - [219da011-dd1d-4a99-bda5-5a0262c18f2f] GET /static/style.css started
+2025-09-10 20:04:56,224 - app - INFO - [219da011-dd1d-4a99-bda5-5a0262c18f2f] GET /static/style.css completed with status 304 in 0.0009s
+2025-09-10 20:04:56,225 - app - INFO - [b7521a46-bfb5-4054-829c-73a4722dbe6e] GET /static/images/icon.png started
+2025-09-10 20:04:56,227 - app - INFO - [e8d6b95c-d829-474e-84b0-b45afadc457b] GET /static/site.js started
+2025-09-10 20:04:56,228 - app - INFO - [b7521a46-bfb5-4054-829c-73a4722dbe6e] GET /static/images/icon.png completed with status 304 in 0.0031s
+2025-09-10 20:04:56,229 - app - INFO - [e8d6b95c-d829-474e-84b0-b45afadc457b] GET /static/site.js completed with status 304 in 0.0017s
+2025-09-10 20:04:58,628 - app - INFO - [4b89fb92-1703-413c-884b-6f775836d3e0] GET /categories/index/ started
+2025-09-10 20:04:58,639 - app - INFO - [4b89fb92-1703-413c-884b-6f775836d3e0] GET /categories/index/ completed with status 200 in 0.0108s
+2025-09-10 20:04:58,652 - app - INFO - [8b1dda00-9475-4d2f-ad53-359606410712] GET /static/style.css started
+2025-09-10 20:04:58,653 - app - INFO - [8b1dda00-9475-4d2f-ad53-359606410712] GET /static/style.css completed with status 304 in 0.0008s
+2025-09-10 20:04:58,655 - app - INFO - [decd15e7-842c-40ac-84e2-2f7a20c2d935] GET /static/site.js started
+2025-09-10 20:04:58,655 - app - INFO - [5a04c3eb-1712-4d92-aef6-11985647b893] GET /static/images/icon.png started
+2025-09-10 20:04:58,656 - app - INFO - [decd15e7-842c-40ac-84e2-2f7a20c2d935] GET /static/site.js completed with status 304 in 0.0015s
+2025-09-10 20:04:58,657 - app - INFO - [5a04c3eb-1712-4d92-aef6-11985647b893] GET /static/images/icon.png completed with status 304 in 0.0020s
+2025-09-10 20:04:59,481 - app - INFO - [649bba49-afea-4f74-b187-7c873c875bd2] GET /transactions/index/ started
+2025-09-10 20:04:59,500 - app - INFO - [649bba49-afea-4f74-b187-7c873c875bd2] GET /transactions/index/ completed with status 200 in 0.0191s
+2025-09-10 20:04:59,514 - app - INFO - [eb119108-9a8f-4007-8a80-e295fc65d642] GET /static/style.css started
+2025-09-10 20:04:59,515 - app - INFO - [82209b5c-ffdb-4f67-8266-6ce06dfb9533] GET /static/images/icon.png started
+2025-09-10 20:04:59,516 - app - INFO - [d53c65d0-25d5-4cb2-a844-e70900a0aafc] GET /static/site.js started
+2025-09-10 20:04:59,517 - app - INFO - [eb119108-9a8f-4007-8a80-e295fc65d642] GET /static/style.css completed with status 304 in 0.0034s
+2025-09-10 20:04:59,518 - app - INFO - [d53c65d0-25d5-4cb2-a844-e70900a0aafc] GET /static/site.js completed with status 304 in 0.0021s
+2025-09-10 20:04:59,520 - app - INFO - [82209b5c-ffdb-4f67-8266-6ce06dfb9533] GET /static/images/icon.png completed with status 304 in 0.0047s
+2025-09-10 20:05:33,178 - app - INFO - [9114d60c-b3bd-4d6a-a20c-a09adcc466f6] GET /app/dashboard/ started
+2025-09-10 20:05:33,191 - app - INFO - [9114d60c-b3bd-4d6a-a20c-a09adcc466f6] GET /app/dashboard/ completed with status 200 in 0.0126s
+2025-09-10 20:05:33,203 - app - INFO - [53378f58-6c3c-4bc0-9615-4f916196d71b] GET /static/style.css started
+2025-09-10 20:05:33,204 - app - INFO - [1f3698fd-583e-4b0f-a712-268c2156b9c6] GET /static/images/icon.png started
+2025-09-10 20:05:33,206 - app - INFO - [1564ad7b-e56c-4345-b4b4-f07477e8605f] GET /static/site.js started
+2025-09-10 20:05:33,207 - app - INFO - [53378f58-6c3c-4bc0-9615-4f916196d71b] GET /static/style.css completed with status 304 in 0.0043s
+2025-09-10 20:05:33,209 - app - INFO - [1f3698fd-583e-4b0f-a712-268c2156b9c6] GET /static/images/icon.png completed with status 304 in 0.0044s
+2025-09-10 20:05:33,210 - app - INFO - [1564ad7b-e56c-4345-b4b4-f07477e8605f] GET /static/site.js completed with status 304 in 0.0037s
+2025-09-10 20:07:45,626 - app - INFO - [c4064451-927a-40b7-8790-e24164d66770] GET /categories/index/ started
+2025-09-10 20:07:45,638 - app - INFO - [c4064451-927a-40b7-8790-e24164d66770] GET /categories/index/ completed with status 200 in 0.0123s
+2025-09-10 20:07:45,651 - app - INFO - [dce5e8c3-d85a-456d-8a0a-d4ebdbf778cf] GET /static/site.js started
+2025-09-10 20:07:45,651 - app - INFO - [063be68b-c9ed-4fe4-82bc-bc1a927b145f] GET /static/style.css started
+2025-09-10 20:07:45,651 - app - INFO - [a9edb9ea-9ab4-4f14-8f78-0a6ef30b7507] GET /static/images/icon.png started
+2025-09-10 20:07:45,652 - app - INFO - [063be68b-c9ed-4fe4-82bc-bc1a927b145f] GET /static/style.css completed with status 304 in 0.0012s
+2025-09-10 20:07:45,653 - app - INFO - [dce5e8c3-d85a-456d-8a0a-d4ebdbf778cf] GET /static/site.js completed with status 304 in 0.0018s
+2025-09-10 20:07:45,654 - app - INFO - [a9edb9ea-9ab4-4f14-8f78-0a6ef30b7507] GET /static/images/icon.png completed with status 304 in 0.0027s
+2025-09-10 20:07:51,470 - app - INFO - [083267b6-b62f-46f2-afeb-b8fa63c1350f] GET /transactions/index/ started
+2025-09-10 20:07:51,483 - app - INFO - [083267b6-b62f-46f2-afeb-b8fa63c1350f] GET /transactions/index/ completed with status 200 in 0.0134s
+2025-09-10 20:07:51,493 - app - INFO - [00876ca0-9bc3-4e09-9958-ca3684090aed] GET /static/images/icon.png started
+2025-09-10 20:07:51,494 - app - INFO - [ff37782b-b3b8-40d1-961c-c82293c72f52] GET /static/style.css started
+2025-09-10 20:07:51,495 - app - INFO - [8116fc13-bddf-495a-aa02-55491d16da93] GET /static/site.js started
+2025-09-10 20:07:51,496 - app - INFO - [8116fc13-bddf-495a-aa02-55491d16da93] GET /static/site.js completed with status 304 in 0.0011s
+2025-09-10 20:07:51,497 - app - INFO - [00876ca0-9bc3-4e09-9958-ca3684090aed] GET /static/images/icon.png completed with status 304 in 0.0040s
+2025-09-10 20:07:51,498 - app - INFO - [ff37782b-b3b8-40d1-961c-c82293c72f52] GET /static/style.css completed with status 304 in 0.0036s
+2025-09-10 20:07:56,307 - app - INFO - [d308902f-91fc-4343-81b4-7108cb990b24] GET /auth/logout/ started
+2025-09-10 20:07:56,311 - app - INFO - guestuser logged out successfully!
+2025-09-10 20:07:56,313 - app - INFO - [d308902f-91fc-4343-81b4-7108cb990b24] GET /auth/logout/ completed with status 200 in 0.0059s
+2025-09-10 20:07:56,329 - app - INFO - [c6dafb2d-5c56-409a-8536-a237e41bc199] GET /static/images/icon.png started
+2025-09-10 20:07:56,330 - app - INFO - [f89cdab7-5cf8-4cae-96c5-349dbf70b231] GET /static/style.css started
+2025-09-10 20:07:56,332 - app - INFO - [006cb580-c335-467a-822c-c4824b59d9a1] GET /static/site.js started
+2025-09-10 20:07:56,332 - app - INFO - [c6dafb2d-5c56-409a-8536-a237e41bc199] GET /static/images/icon.png completed with status 304 in 0.0030s
+2025-09-10 20:07:56,333 - app - INFO - [f89cdab7-5cf8-4cae-96c5-349dbf70b231] GET /static/style.css completed with status 304 in 0.0029s
+2025-09-10 20:07:56,334 - app - INFO - [006cb580-c335-467a-822c-c4824b59d9a1] GET /static/site.js completed with status 304 in 0.0022s
+2025-09-10 20:08:06,358 - app - INFO - [4cb61ddb-09d6-4e84-b0d2-b3d68dbad8cb] GET / started
+2025-09-10 20:08:06,361 - app - INFO - [4cb61ddb-09d6-4e84-b0d2-b3d68dbad8cb] GET / completed with status 200 in 0.0028s
+2025-09-10 20:08:06,379 - app - INFO - [c232432d-41e8-4308-971d-5b4034f99caf] GET /static/style.css started
+2025-09-10 20:08:06,380 - app - INFO - [a5da9c76-c790-4358-88f7-fca411641f69] GET /static/images/icon.png started
+2025-09-10 20:08:06,382 - app - INFO - [dcc3737c-1a73-406a-b992-b39e5083e869] GET /static/site.js started
+2025-09-10 20:08:06,382 - app - INFO - [c232432d-41e8-4308-971d-5b4034f99caf] GET /static/style.css completed with status 304 in 0.0030s
+2025-09-10 20:08:06,383 - app - INFO - [a5da9c76-c790-4358-88f7-fca411641f69] GET /static/images/icon.png completed with status 304 in 0.0027s
+2025-09-10 20:08:06,384 - app - INFO - [dcc3737c-1a73-406a-b992-b39e5083e869] GET /static/site.js completed with status 304 in 0.0022s
+2025-09-10 20:09:08,373 - app - INFO - [df53ca72-1464-40d7-b5e8-94b71c532215] GET /app/dashboard/ started
+2025-09-10 20:09:08,375 - app - INFO - [df53ca72-1464-40d7-b5e8-94b71c532215] GET /app/dashboard/ completed with status 302 in 0.0022s
+2025-09-10 20:09:08,390 - app - INFO - [fb51497f-1fe8-4110-b0b5-9aa4d6be1aee] GET /auth/login/ started
+2025-09-10 20:09:08,390 - app - INFO - Login page accessed
+2025-09-10 20:09:08,392 - app - INFO - [fb51497f-1fe8-4110-b0b5-9aa4d6be1aee] GET /auth/login/ completed with status 200 in 0.0021s
+2025-09-10 20:09:08,405 - app - INFO - [b184f66f-1971-4ca0-aadb-4bf89e643138] GET /static/style.css started
+2025-09-10 20:09:08,406 - app - INFO - [b184f66f-1971-4ca0-aadb-4bf89e643138] GET /static/style.css completed with status 304 in 0.0013s
+2025-09-10 20:09:08,410 - app - INFO - [e979ffa9-95e6-4971-9919-dba835ab9e72] GET /static/images/icon.png started
+2025-09-10 20:09:08,411 - app - INFO - [e979ffa9-95e6-4971-9919-dba835ab9e72] GET /static/images/icon.png completed with status 304 in 0.0011s
+2025-09-10 20:09:08,416 - app - INFO - [fadca24a-e162-48bf-b347-2a87d5e6cb89] GET /static/site.js started
+2025-09-10 20:09:08,417 - app - INFO - [fadca24a-e162-48bf-b347-2a87d5e6cb89] GET /static/site.js completed with status 304 in 0.0006s
+2025-09-10 20:09:29,561 - app - INFO - [46391845-3fc4-4db0-9a75-7fd916abc7f8] GET /rolepermissions/index/ started
+2025-09-10 20:09:29,561 - app - ERROR - [46391845-3fc4-4db0-9a75-7fd916abc7f8] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-09-10 20:09:42,866 - app - INFO - [55a5bd2a-4f91-4847-82ed-0dab9c88417d] GET / started
+2025-09-10 20:09:42,870 - app - INFO - [55a5bd2a-4f91-4847-82ed-0dab9c88417d] GET / completed with status 200 in 0.0035s
+2025-09-10 20:09:42,884 - app - INFO - [18d3bb77-1257-4049-bdd3-21ec874d5bb9] GET /static/style.css started
+2025-09-10 20:09:42,885 - app - INFO - [a84b0745-214e-4ff5-a596-cd91c388b0a8] GET /static/images/icon.png started
+2025-09-10 20:09:42,886 - app - INFO - [ea24c139-b82c-4843-8641-fe9072fd4abd] GET /static/site.js started
+2025-09-10 20:09:42,887 - app - INFO - [a84b0745-214e-4ff5-a596-cd91c388b0a8] GET /static/images/icon.png completed with status 304 in 0.0021s
+2025-09-10 20:09:42,887 - app - INFO - [18d3bb77-1257-4049-bdd3-21ec874d5bb9] GET /static/style.css completed with status 304 in 0.0036s
+2025-09-10 20:09:42,889 - app - INFO - [ea24c139-b82c-4843-8641-fe9072fd4abd] GET /static/site.js completed with status 304 in 0.0026s
+2025-09-10 20:09:42,900 - app - INFO - [f4c521eb-358d-4d87-82de-1f36a2b8112e] GET /static/images/headerwall.jpg started
+2025-09-10 20:09:42,900 - app - INFO - [f4c521eb-358d-4d87-82de-1f36a2b8112e] GET /static/images/headerwall.jpg completed with status 304 in 0.0005s
+2025-09-10 20:09:42,911 - app - INFO - [f4673163-8afd-41b3-89c5-650343d9f633] GET /static/images/favicon.ico started
+2025-09-10 20:09:42,911 - app - INFO - [f4673163-8afd-41b3-89c5-650343d9f633] GET /static/images/favicon.ico completed with status 200 in 0.0006s
+2025-09-10 20:10:00,509 - app - INFO - [e8a8ee62-368c-4c90-96b5-b60d4d32eb39] GET /contact/ started
+2025-09-10 20:10:00,515 - app - INFO - [e8a8ee62-368c-4c90-96b5-b60d4d32eb39] GET /contact/ completed with status 200 in 0.0054s
+2025-09-10 20:10:00,529 - app - INFO - [4828d635-d666-4349-ba6c-775c38b13951] GET /static/style.css started
+2025-09-10 20:10:00,530 - app - INFO - [4828d635-d666-4349-ba6c-775c38b13951] GET /static/style.css completed with status 304 in 0.0011s
+2025-09-10 20:10:00,533 - app - INFO - [92618af5-5c06-44b9-abbd-ff31996d9fb0] GET /static/images/icon.png started
+2025-09-10 20:10:00,535 - app - INFO - [63805fdd-f2fc-482d-a61a-2c8a6009e54d] GET /static/site.js started
+2025-09-10 20:10:00,536 - app - INFO - [92618af5-5c06-44b9-abbd-ff31996d9fb0] GET /static/images/icon.png completed with status 304 in 0.0031s
+2025-09-10 20:10:00,537 - app - INFO - [63805fdd-f2fc-482d-a61a-2c8a6009e54d] GET /static/site.js completed with status 304 in 0.0019s
+2025-09-10 20:10:00,549 - app - INFO - [9cb28f45-b624-4018-be0a-159ea415bd64] GET /static/images/contact.jpg started
+2025-09-10 20:10:00,549 - app - INFO - [9cb28f45-b624-4018-be0a-159ea415bd64] GET /static/images/contact.jpg completed with status 200 in 0.0006s
+2025-09-10 20:10:11,615 - app - INFO - [b7908502-de30-41c6-bb61-b48df7720aa4] GET / started
+2025-09-10 20:10:11,617 - app - INFO - [b7908502-de30-41c6-bb61-b48df7720aa4] GET / completed with status 200 in 0.0018s
+2025-09-10 20:10:11,638 - app - INFO - [7c717b93-039e-458f-a258-75bcd19c7ec7] GET /static/style.css started
+2025-09-10 20:10:11,639 - app - INFO - [5f3aa798-0795-4c7e-8b3c-bae777fbc2d5] GET /static/images/icon.png started
+2025-09-10 20:10:11,640 - app - INFO - [08503d6d-9688-4f5c-bb37-df1da7610517] GET /static/site.js started
+2025-09-10 20:10:11,641 - app - INFO - [7c717b93-039e-458f-a258-75bcd19c7ec7] GET /static/style.css completed with status 304 in 0.0038s
+2025-09-10 20:10:11,642 - app - INFO - [5f3aa798-0795-4c7e-8b3c-bae777fbc2d5] GET /static/images/icon.png completed with status 304 in 0.0035s
+2025-09-10 20:10:11,643 - app - INFO - [08503d6d-9688-4f5c-bb37-df1da7610517] GET /static/site.js completed with status 304 in 0.0027s
+2025-09-10 20:10:13,425 - app - INFO - [14217a9c-d2b6-4ab5-9ee7-701e5b3e8b5a] GET /contact/ started
+2025-09-10 20:10:13,427 - app - INFO - [14217a9c-d2b6-4ab5-9ee7-701e5b3e8b5a] GET /contact/ completed with status 200 in 0.0017s
+2025-09-10 20:10:13,445 - app - INFO - [9857de62-31ad-4038-b176-446d8e83aab0] GET /static/style.css started
+2025-09-10 20:10:13,446 - app - INFO - [bb948101-a797-4201-b9bf-e173bce66233] GET /static/images/icon.png started
+2025-09-10 20:10:13,448 - app - INFO - [0ee010a4-23d9-4c2a-b758-3112f0bb0ed5] GET /static/site.js started
+2025-09-10 20:10:13,449 - app - INFO - [9857de62-31ad-4038-b176-446d8e83aab0] GET /static/style.css completed with status 304 in 0.0039s
+2025-09-10 20:10:13,449 - app - INFO - [bb948101-a797-4201-b9bf-e173bce66233] GET /static/images/icon.png completed with status 304 in 0.0036s
+2025-09-10 20:10:13,451 - app - INFO - [0ee010a4-23d9-4c2a-b758-3112f0bb0ed5] GET /static/site.js completed with status 304 in 0.0035s
+2025-09-10 20:10:21,254 - app - INFO - [3014a90e-dd72-47d8-ae12-4c627f92d420] GET / started
+2025-09-10 20:10:21,255 - app - INFO - [3014a90e-dd72-47d8-ae12-4c627f92d420] GET / completed with status 200 in 0.0018s
+2025-09-10 20:10:21,289 - app - INFO - [6c63de10-b6e4-4952-b0ff-e185a3b7c9c4] GET /static/style.css started
+2025-09-10 20:10:21,292 - app - INFO - [6c63de10-b6e4-4952-b0ff-e185a3b7c9c4] GET /static/style.css completed with status 304 in 0.0027s
+2025-09-10 20:10:21,294 - app - INFO - [63108d5a-2230-415c-8b5e-938935f5a811] GET /static/images/icon.png started
+2025-09-10 20:10:21,297 - app - INFO - [edd9947c-a896-48d0-bd01-e4d6a6452476] GET /static/site.js started
+2025-09-10 20:10:21,299 - app - INFO - [63108d5a-2230-415c-8b5e-938935f5a811] GET /static/images/icon.png completed with status 304 in 0.0052s
+2025-09-10 20:10:21,300 - app - INFO - [edd9947c-a896-48d0-bd01-e4d6a6452476] GET /static/site.js completed with status 304 in 0.0031s
+2025-10-07 16:53:06,082 - app - INFO - [60418f11-863d-46e0-9352-84b67af08d47] GET / started
+2025-10-07 16:53:06,109 - app - INFO - [60418f11-863d-46e0-9352-84b67af08d47] GET / completed with status 200 in 0.0274s
+2025-10-07 16:53:06,119 - app - INFO - [a4081061-ed62-47b7-a694-75593b3e8d10] GET /static/style.css started
+2025-10-07 16:53:06,124 - app - INFO - [a682f391-4236-4c06-be38-f3d5c3fd6c72] GET /static/images/icon.png started
+2025-10-07 16:53:06,125 - app - INFO - [a4081061-ed62-47b7-a694-75593b3e8d10] GET /static/style.css completed with status 200 in 0.0063s
+2025-10-07 16:53:06,125 - app - INFO - [a682f391-4236-4c06-be38-f3d5c3fd6c72] GET /static/images/icon.png completed with status 200 in 0.0013s
+2025-10-07 16:53:06,129 - app - INFO - [f59dd53b-5110-49e7-bb54-8c60c4ce987a] GET /static/site.js started
+2025-10-07 16:53:06,130 - app - INFO - [f59dd53b-5110-49e7-bb54-8c60c4ce987a] GET /static/site.js completed with status 200 in 0.0009s
+2025-10-07 16:53:06,675 - app - INFO - [846f58ce-4722-429a-b98e-8d770b8a71aa] GET /static/images/headerwall.jpg started
+2025-10-07 16:53:06,676 - app - INFO - [846f58ce-4722-429a-b98e-8d770b8a71aa] GET /static/images/headerwall.jpg completed with status 200 in 0.0010s
+2025-10-07 16:53:06,882 - app - INFO - [eda61487-24a7-4baf-9556-2622ca254e0d] GET /static/images/favicon.ico started
+2025-10-07 16:53:06,883 - app - INFO - [eda61487-24a7-4baf-9556-2622ca254e0d] GET /static/images/favicon.ico completed with status 200 in 0.0009s
+2025-10-07 16:53:30,143 - app - INFO - [012dc4a9-1dd3-48c1-b8ea-49b0ccbc23d9] GET /auth/login/ started
+2025-10-07 16:53:30,144 - app - INFO - Login page accessed
+2025-10-07 16:53:30,158 - app - INFO - [012dc4a9-1dd3-48c1-b8ea-49b0ccbc23d9] GET /auth/login/ completed with status 200 in 0.0150s
+2025-10-07 16:53:30,171 - app - INFO - [e6c2a276-c1e9-475b-882e-1e2908503c39] GET /static/style.css started
+2025-10-07 16:53:30,173 - app - INFO - [bc1426a5-9edb-4955-bbc3-21d304752464] GET /static/images/icon.png started
+2025-10-07 16:53:30,174 - app - INFO - [e6c2a276-c1e9-475b-882e-1e2908503c39] GET /static/style.css completed with status 304 in 0.0034s
+2025-10-07 16:53:30,175 - app - INFO - [2b30b4d1-c913-48b3-9d52-ad1b8f16fdc5] GET /static/site.js started
+2025-10-07 16:53:30,177 - app - INFO - [bc1426a5-9edb-4955-bbc3-21d304752464] GET /static/images/icon.png completed with status 304 in 0.0042s
+2025-10-07 16:53:30,179 - app - INFO - [2b30b4d1-c913-48b3-9d52-ad1b8f16fdc5] GET /static/site.js completed with status 304 in 0.0032s
+2025-10-07 16:54:40,118 - app - INFO - [1b3f856c-ab70-49d9-aca0-03cee4b70288] POST /auth/login/ started
+2025-10-07 16:54:40,118 - app - INFO - Login page accessed
+2025-10-07 16:54:40,273 - app - INFO - superadmin login successful
+2025-10-07 16:54:40,273 - app - INFO - [1b3f856c-ab70-49d9-aca0-03cee4b70288] POST /auth/login/ completed with status 302 in 0.1556s
+2025-10-07 16:54:40,277 - app - INFO - [25be3866-9e1a-4e97-9ff1-5beb10cba46a] GET /app/dashboard/ started
+2025-10-07 16:54:40,288 - app - INFO - [25be3866-9e1a-4e97-9ff1-5beb10cba46a] GET /app/dashboard/ completed with status 200 in 0.0118s
+2025-10-07 16:54:40,299 - app - INFO - [bd40aba8-930a-4aa1-8663-1aede50218ca] GET /static/images/icon.png started
+2025-10-07 16:54:40,299 - app - INFO - [0f23474e-4cd6-4ecc-95d3-9309d7e162ef] GET /static/style.css started
+2025-10-07 16:54:40,300 - app - INFO - [05c79ace-1a96-4e98-a4bd-a231fd8a2efc] GET /static/site.js started
+2025-10-07 16:54:40,301 - app - INFO - [bd40aba8-930a-4aa1-8663-1aede50218ca] GET /static/images/icon.png completed with status 304 in 0.0021s
+2025-10-07 16:54:40,301 - app - INFO - [0f23474e-4cd6-4ecc-95d3-9309d7e162ef] GET /static/style.css completed with status 304 in 0.0022s
+2025-10-07 16:54:40,302 - app - INFO - [05c79ace-1a96-4e98-a4bd-a231fd8a2efc] GET /static/site.js completed with status 304 in 0.0018s
+2025-10-07 16:54:50,531 - app - INFO - [90f8f75e-8f06-4ac1-afed-5b6cf0dfc3f3] GET /transactions/create/ started
+2025-10-07 16:54:50,565 - app - ERROR - [90f8f75e-8f06-4ac1-afed-5b6cf0dfc3f3] Unhandled exception: 'transactions' is undefined
+Traceback (most recent call last):
+  File "/home/pdev/Projects/moneytracker/env/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pdev/Projects/moneytracker/env/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pdev/Projects/moneytracker/env/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pdev/Projects/moneytracker/app/views/transaction.py", line 115, in create
+    return render_template('transaction/index.html',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pdev/Projects/moneytracker/env/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pdev/Projects/moneytracker/env/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pdev/Projects/moneytracker/env/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/pdev/Projects/moneytracker/env/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pdev/Projects/moneytracker/app/templates/transaction/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pdev/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/pdev/Projects/moneytracker/app/templates/transaction/index.html", line 70, in block 'content'
+    {% if transactions.has_prev %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pdev/Projects/moneytracker/env/lib/python3.12/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'transactions' is undefined
+2025-10-07 16:54:55,115 - app - INFO - [d65a6b19-41ea-4e91-8a97-eb2beda45be4] GET /categories/index/ started
+2025-10-07 16:54:55,150 - app - INFO - [d65a6b19-41ea-4e91-8a97-eb2beda45be4] GET /categories/index/ completed with status 200 in 0.0351s
+2025-10-07 16:54:55,163 - app - INFO - [2ca494d8-3f52-4e38-b7f7-687036ac59d2] GET /static/style.css started
+2025-10-07 16:54:55,165 - app - INFO - [f30b69fb-5bc7-4f0a-b752-df5d1817a076] GET /static/images/icon.png started
+2025-10-07 16:54:55,167 - app - INFO - [579eafe7-c0cd-4cc0-8b69-c3d75ad86158] GET /static/site.js started
+2025-10-07 16:54:55,168 - app - INFO - [f30b69fb-5bc7-4f0a-b752-df5d1817a076] GET /static/images/icon.png completed with status 304 in 0.0037s
+2025-10-07 16:54:55,169 - app - INFO - [2ca494d8-3f52-4e38-b7f7-687036ac59d2] GET /static/style.css completed with status 304 in 0.0060s
+2025-10-07 16:54:55,170 - app - INFO - [579eafe7-c0cd-4cc0-8b69-c3d75ad86158] GET /static/site.js completed with status 304 in 0.0033s
+2025-10-07 16:54:57,042 - app - INFO - [e9d4654d-db5e-4d14-ad38-1a0cc4420a3b] GET /transactions/index/ started
+2025-10-07 16:54:57,063 - app - INFO - [e9d4654d-db5e-4d14-ad38-1a0cc4420a3b] GET /transactions/index/ completed with status 200 in 0.0202s
+2025-10-07 16:54:57,078 - app - INFO - [37318c9d-f4f4-45d4-a721-4f7b5c100a4e] GET /static/style.css started
+2025-10-07 16:54:57,080 - app - INFO - [9d393832-b756-48c6-80f4-950c5dfd8cc9] GET /static/images/icon.png started
+2025-10-07 16:54:57,084 - app - INFO - [37318c9d-f4f4-45d4-a721-4f7b5c100a4e] GET /static/style.css completed with status 304 in 0.0056s
+2025-10-07 16:54:57,084 - app - INFO - [b4e869ac-4803-42a2-b116-3d01291ce843] GET /static/site.js started
+2025-10-07 16:54:57,086 - app - INFO - [9d393832-b756-48c6-80f4-950c5dfd8cc9] GET /static/images/icon.png completed with status 304 in 0.0059s
+2025-10-07 16:54:57,087 - app - INFO - [b4e869ac-4803-42a2-b116-3d01291ce843] GET /static/site.js completed with status 304 in 0.0027s
+2025-10-07 16:54:59,897 - app - INFO - [da43c4a7-6e49-4faf-9380-7dcbdbe48add] GET /auth/logout/ started
+2025-10-07 16:54:59,899 - app - INFO - superadmin logged out successfully!
+2025-10-07 16:54:59,905 - app - INFO - [da43c4a7-6e49-4faf-9380-7dcbdbe48add] GET /auth/logout/ completed with status 200 in 0.0080s
+2025-10-07 16:54:59,919 - app - INFO - [9d03e439-a447-43dd-8530-fc0a9d8bfc58] GET /static/style.css started
+2025-10-07 16:54:59,921 - app - INFO - [0f922c21-d36b-4078-9e19-5210658f146a] GET /static/images/icon.png started
+2025-10-07 16:54:59,923 - app - INFO - [63ac6241-983e-4aaa-8f88-f2a7466c3b3a] GET /static/site.js started
+2025-10-07 16:54:59,924 - app - INFO - [9d03e439-a447-43dd-8530-fc0a9d8bfc58] GET /static/style.css completed with status 304 in 0.0043s
+2025-10-07 16:54:59,925 - app - INFO - [0f922c21-d36b-4078-9e19-5210658f146a] GET /static/images/icon.png completed with status 304 in 0.0043s
+2025-10-07 16:54:59,926 - app - INFO - [63ac6241-983e-4aaa-8f88-f2a7466c3b3a] GET /static/site.js completed with status 304 in 0.0033s
+2025-10-07 16:55:01,519 - app - INFO - [be71aa59-9e9f-458e-929d-7e6294a848ad] GET /auth/login/ started
+2025-10-07 16:55:01,519 - app - INFO - Login page accessed
+2025-10-07 16:55:01,521 - app - INFO - [be71aa59-9e9f-458e-929d-7e6294a848ad] GET /auth/login/ completed with status 200 in 0.0019s
+2025-10-07 16:55:01,535 - app - INFO - [c926715c-a67d-4b77-bfdd-2a1acf2df174] GET /static/style.css started
+2025-10-07 16:55:01,536 - app - INFO - [a7cf7044-a423-49aa-9abe-fd8d6558b575] GET /static/images/icon.png started
+2025-10-07 16:55:01,538 - app - INFO - [40cd63ae-5978-46cc-9004-3e8c3e53153c] GET /static/site.js started
+2025-10-07 16:55:01,540 - app - INFO - [c926715c-a67d-4b77-bfdd-2a1acf2df174] GET /static/style.css completed with status 304 in 0.0048s
+2025-10-07 16:55:01,540 - app - INFO - [a7cf7044-a423-49aa-9abe-fd8d6558b575] GET /static/images/icon.png completed with status 304 in 0.0041s
+2025-10-07 16:55:01,541 - app - INFO - [40cd63ae-5978-46cc-9004-3e8c3e53153c] GET /static/site.js completed with status 304 in 0.0031s
+2025-10-07 16:55:08,895 - app - INFO - [b2e52580-20ce-43d6-965e-354a231ca46d] POST /auth/login/ started
+2025-10-07 16:55:08,895 - app - INFO - Login page accessed
+2025-10-07 16:55:09,053 - app - INFO - superadmin login successful
+2025-10-07 16:55:09,053 - app - INFO - [b2e52580-20ce-43d6-965e-354a231ca46d] POST /auth/login/ completed with status 302 in 0.1581s
+2025-10-07 16:55:09,056 - app - INFO - [646b6d8c-10c0-4685-b01d-1db308cdb2fd] GET /app/dashboard/ started
+2025-10-07 16:55:09,060 - app - INFO - [646b6d8c-10c0-4685-b01d-1db308cdb2fd] GET /app/dashboard/ completed with status 200 in 0.0041s
+2025-10-07 16:55:09,072 - app - INFO - [b55a4a59-2bbe-4812-a3a8-7cc16f482f79] GET /static/style.css started
+2025-10-07 16:55:09,073 - app - INFO - [0e59cf5e-e1d7-4300-8d88-7b76b56be73c] GET /static/images/icon.png started
+2025-10-07 16:55:09,075 - app - INFO - [401dd61d-02f4-4f70-b31f-3439c8ad4d96] GET /static/site.js started
+2025-10-07 16:55:09,076 - app - INFO - [b55a4a59-2bbe-4812-a3a8-7cc16f482f79] GET /static/style.css completed with status 304 in 0.0040s
+2025-10-07 16:55:09,076 - app - INFO - [0e59cf5e-e1d7-4300-8d88-7b76b56be73c] GET /static/images/icon.png completed with status 304 in 0.0033s
+2025-10-07 16:55:09,078 - app - INFO - [401dd61d-02f4-4f70-b31f-3439c8ad4d96] GET /static/site.js completed with status 304 in 0.0027s
+2025-10-07 16:55:32,041 - app - INFO - [74257ca2-ae3e-417e-9cc0-ed7e1143f2ff] GET /categories/index/ started
+2025-10-07 16:55:32,050 - app - INFO - [74257ca2-ae3e-417e-9cc0-ed7e1143f2ff] GET /categories/index/ completed with status 200 in 0.0091s
+2025-10-07 16:55:32,064 - app - INFO - [74279096-00bf-43b6-93e7-05d789c172c6] GET /static/style.css started
+2025-10-07 16:55:32,065 - app - INFO - [57bccf5c-6588-441c-b398-4910e8cc6a7c] GET /static/images/icon.png started
+2025-10-07 16:55:32,067 - app - INFO - [11e05194-17d1-4367-b336-44303cc61308] GET /static/site.js started
+2025-10-07 16:55:32,068 - app - INFO - [74279096-00bf-43b6-93e7-05d789c172c6] GET /static/style.css completed with status 304 in 0.0048s
+2025-10-07 16:55:32,069 - app - INFO - [57bccf5c-6588-441c-b398-4910e8cc6a7c] GET /static/images/icon.png completed with status 304 in 0.0039s
+2025-10-07 16:55:32,070 - app - INFO - [11e05194-17d1-4367-b336-44303cc61308] GET /static/site.js completed with status 304 in 0.0030s
+2025-10-07 16:55:37,779 - app - INFO - [c5232efe-4369-4d27-9481-b6d908fef856] GET /transactions/index/ started
+2025-10-07 16:55:37,788 - app - INFO - [c5232efe-4369-4d27-9481-b6d908fef856] GET /transactions/index/ completed with status 200 in 0.0092s
+2025-10-07 16:55:37,800 - app - INFO - [431acda6-479c-4bb9-8336-aa4faf6f503f] GET /static/style.css started
+2025-10-07 16:55:37,801 - app - INFO - [5bb3663f-6e70-4417-b523-de2fbf8634c4] GET /static/site.js started
+2025-10-07 16:55:37,802 - app - INFO - [c6a65437-8dcb-4e03-aa08-f346a1527086] GET /static/images/icon.png started
+2025-10-07 16:55:37,802 - app - INFO - [431acda6-479c-4bb9-8336-aa4faf6f503f] GET /static/style.css completed with status 304 in 0.0027s
+2025-10-07 16:55:37,803 - app - INFO - [5bb3663f-6e70-4417-b523-de2fbf8634c4] GET /static/site.js completed with status 304 in 0.0013s
+2025-10-07 16:55:37,803 - app - INFO - [c6a65437-8dcb-4e03-aa08-f346a1527086] GET /static/images/icon.png completed with status 304 in 0.0014s
+2025-10-07 16:56:05,741 - app - INFO - [170c8fa5-18c5-4934-bf30-916ddd6a0ffb] GET /categories/index/ started
+2025-10-07 16:56:05,749 - app - INFO - [170c8fa5-18c5-4934-bf30-916ddd6a0ffb] GET /categories/index/ completed with status 200 in 0.0079s
+2025-10-07 16:56:05,763 - app - INFO - [a08f0c13-bac8-408a-a336-00314b1b4d32] GET /static/style.css started
+2025-10-07 16:56:05,766 - app - INFO - [a08f0c13-bac8-408a-a336-00314b1b4d32] GET /static/style.css completed with status 304 in 0.0033s
+2025-10-07 16:56:05,767 - app - INFO - [56292a0c-a63b-4536-8807-b54da52cfe40] GET /static/images/icon.png started
+2025-10-07 16:56:05,767 - app - INFO - [90da62e5-d76e-4881-ab79-73ca86283731] GET /static/site.js started
+2025-10-07 16:56:05,770 - app - INFO - [56292a0c-a63b-4536-8807-b54da52cfe40] GET /static/images/icon.png completed with status 304 in 0.0029s
+2025-10-07 16:56:05,771 - app - INFO - [90da62e5-d76e-4881-ab79-73ca86283731] GET /static/site.js completed with status 304 in 0.0031s
+2025-10-07 16:56:44,605 - app - INFO - [be61ceb6-c6e7-4d58-b849-2e2b87f0ea5b] POST /categories/create/ started
+2025-10-07 16:56:44,612 - app - INFO - [be61ceb6-c6e7-4d58-b849-2e2b87f0ea5b] POST /categories/create/ completed with status 302 in 0.0065s
+2025-10-07 16:56:44,618 - app - INFO - [b2dee851-f747-49dd-976a-bdd2e09854d4] GET /categories/index/ started
+2025-10-07 16:56:44,626 - app - INFO - [b2dee851-f747-49dd-976a-bdd2e09854d4] GET /categories/index/ completed with status 200 in 0.0082s
+2025-10-07 16:56:44,641 - app - INFO - [967cb739-9c87-4282-ad81-7f46696e66dd] GET /static/style.css started
+2025-10-07 16:56:44,643 - app - INFO - [712bd811-7b09-407f-946d-897686ffbe4b] GET /static/images/icon.png started
+2025-10-07 16:56:44,645 - app - INFO - [be1ff58f-0ec9-4670-96b2-22a90d03a302] GET /static/site.js started
+2025-10-07 16:56:44,645 - app - INFO - [967cb739-9c87-4282-ad81-7f46696e66dd] GET /static/style.css completed with status 304 in 0.0040s
+2025-10-07 16:56:44,646 - app - INFO - [712bd811-7b09-407f-946d-897686ffbe4b] GET /static/images/icon.png completed with status 304 in 0.0034s
+2025-10-07 16:56:44,648 - app - INFO - [be1ff58f-0ec9-4670-96b2-22a90d03a302] GET /static/site.js completed with status 304 in 0.0031s
+2025-10-07 16:56:54,109 - app - INFO - [aeb5d78d-1cfa-4233-b541-00612ff219c0] GET /transactions/index/ started
+2025-10-07 16:56:54,122 - app - INFO - [aeb5d78d-1cfa-4233-b541-00612ff219c0] GET /transactions/index/ completed with status 200 in 0.0125s
+2025-10-07 16:56:54,136 - app - INFO - [563535a2-b041-4b3a-b57e-802f99f36dbc] GET /static/style.css started
+2025-10-07 16:56:54,139 - app - INFO - [76fdebc3-e2a2-4c24-a08a-8a79d869185d] GET /static/site.js started
+2025-10-07 16:56:54,140 - app - INFO - [5b585888-0a20-4ffb-ab9c-325ecf2bd054] GET /static/images/icon.png started
+2025-10-07 16:56:54,141 - app - INFO - [563535a2-b041-4b3a-b57e-802f99f36dbc] GET /static/style.css completed with status 304 in 0.0055s
+2025-10-07 16:56:54,142 - app - INFO - [76fdebc3-e2a2-4c24-a08a-8a79d869185d] GET /static/site.js completed with status 304 in 0.0031s
+2025-10-07 16:56:54,144 - app - INFO - [5b585888-0a20-4ffb-ab9c-325ecf2bd054] GET /static/images/icon.png completed with status 304 in 0.0045s
+2025-10-07 16:57:27,130 - app - INFO - [cfd305fc-12fe-4a0a-9d26-8e8134684af1] POST /transactions/create/ started
+2025-10-07 16:57:27,143 - app - INFO - [cfd305fc-12fe-4a0a-9d26-8e8134684af1] POST /transactions/create/ completed with status 302 in 0.0126s
+2025-10-07 16:57:27,146 - app - INFO - [bb4127c5-a037-4620-a0c1-f9af413e2bad] GET /transactions/index/ started
+2025-10-07 16:57:27,152 - app - INFO - [bb4127c5-a037-4620-a0c1-f9af413e2bad] GET /transactions/index/ completed with status 200 in 0.0054s
+2025-10-07 16:57:27,161 - app - INFO - [5ce37012-1e73-4201-9000-88a34f7419d6] GET /static/style.css started
+2025-10-07 16:57:27,162 - app - INFO - [6f6664a1-640c-4390-80e1-c4a7641fd32a] GET /static/images/icon.png started
+2025-10-07 16:57:27,163 - app - INFO - [fe284c4f-4026-4556-9aca-8634db3d4fe5] GET /static/site.js started
+2025-10-07 16:57:27,164 - app - INFO - [5ce37012-1e73-4201-9000-88a34f7419d6] GET /static/style.css completed with status 304 in 0.0025s
+2025-10-07 16:57:27,164 - app - INFO - [6f6664a1-640c-4390-80e1-c4a7641fd32a] GET /static/images/icon.png completed with status 304 in 0.0019s
+2025-10-07 16:57:27,165 - app - INFO - [fe284c4f-4026-4556-9aca-8634db3d4fe5] GET /static/site.js completed with status 304 in 0.0015s
+2025-10-07 16:57:33,579 - app - INFO - [8a7d4499-572c-4cf3-8e98-a44af8279755] GET /app/dashboard/ started
+2025-10-07 16:57:33,589 - app - INFO - [8a7d4499-572c-4cf3-8e98-a44af8279755] GET /app/dashboard/ completed with status 200 in 0.0104s
+2025-10-07 16:57:33,603 - app - INFO - [c8507cee-2565-4009-8673-2c024e4d88da] GET /static/style.css started
+2025-10-07 16:57:33,604 - app - INFO - [ec4bcb30-4661-4a9d-a7b3-35ddaa232507] GET /static/images/icon.png started
+2025-10-07 16:57:33,606 - app - INFO - [3e094db3-0a6e-41f1-9379-04d958071453] GET /static/site.js started
+2025-10-07 16:57:33,607 - app - INFO - [ec4bcb30-4661-4a9d-a7b3-35ddaa232507] GET /static/images/icon.png completed with status 304 in 0.0034s
+2025-10-07 16:57:33,608 - app - INFO - [3e094db3-0a6e-41f1-9379-04d958071453] GET /static/site.js completed with status 304 in 0.0027s
+2025-10-07 16:57:33,609 - app - INFO - [c8507cee-2565-4009-8673-2c024e4d88da] GET /static/style.css completed with status 304 in 0.0065s
+2025-10-07 16:57:36,030 - app - INFO - [0f02df2d-4d8f-4af5-ae43-72673917741b] GET /transactions/index/ started
+2025-10-07 16:57:36,042 - app - INFO - [0f02df2d-4d8f-4af5-ae43-72673917741b] GET /transactions/index/ completed with status 200 in 0.0117s
+2025-10-07 16:57:36,055 - app - INFO - [7be3866a-00fb-42ef-a14f-303e5075e5c4] GET /static/images/icon.png started
+2025-10-07 16:57:36,059 - app - INFO - [2098b25c-65f8-48ba-8a60-8b2def5af225] GET /static/style.css started
+2025-10-07 16:57:36,059 - app - INFO - [02d1d06f-bcad-4959-8a83-83c3ebce2765] GET /static/site.js started
+2025-10-07 16:57:36,060 - app - INFO - [7be3866a-00fb-42ef-a14f-303e5075e5c4] GET /static/images/icon.png completed with status 304 in 0.0049s
+2025-10-07 16:57:36,061 - app - INFO - [2098b25c-65f8-48ba-8a60-8b2def5af225] GET /static/style.css completed with status 304 in 0.0027s
+2025-10-07 16:57:36,062 - app - INFO - [02d1d06f-bcad-4959-8a83-83c3ebce2765] GET /static/site.js completed with status 304 in 0.0030s
+2025-10-07 16:57:36,811 - app - INFO - [1d7c9018-033a-471d-bdb5-857ff8425d8c] GET /categories/index/ started
+2025-10-07 16:57:36,819 - app - INFO - [1d7c9018-033a-471d-bdb5-857ff8425d8c] GET /categories/index/ completed with status 200 in 0.0081s
+2025-10-07 16:57:36,831 - app - INFO - [15adbd7d-31d4-4094-b46c-7acdd075b2b9] GET /static/style.css started
+2025-10-07 16:57:36,833 - app - INFO - [a402b906-053e-4af2-94f0-4924b30caa2c] GET /static/images/icon.png started
+2025-10-07 16:57:36,835 - app - INFO - [2d9cca7d-0831-4f58-85de-55ae781441f1] GET /static/site.js started
+2025-10-07 16:57:36,836 - app - INFO - [15adbd7d-31d4-4094-b46c-7acdd075b2b9] GET /static/style.css completed with status 304 in 0.0052s
+2025-10-07 16:57:36,838 - app - INFO - [a402b906-053e-4af2-94f0-4924b30caa2c] GET /static/images/icon.png completed with status 304 in 0.0048s
+2025-10-07 16:57:36,839 - app - INFO - [2d9cca7d-0831-4f58-85de-55ae781441f1] GET /static/site.js completed with status 304 in 0.0037s
+2025-10-07 16:57:46,566 - app - INFO - [6cf997fb-1293-4dbc-bbf3-f205ee88e3c0] GET /transactions/index/ started
+2025-10-07 16:57:46,578 - app - INFO - [6cf997fb-1293-4dbc-bbf3-f205ee88e3c0] GET /transactions/index/ completed with status 200 in 0.0128s
+2025-10-07 16:57:46,592 - app - INFO - [072ed131-fee4-496c-9c23-54a9fb13214e] GET /static/style.css started
+2025-10-07 16:57:46,596 - app - INFO - [4343739e-e580-4040-9ba8-a4c0fe0c822b] GET /static/site.js started
+2025-10-07 16:57:46,596 - app - INFO - [e91f5cac-c650-4225-879a-a6918dc85e81] GET /static/images/icon.png started
+2025-10-07 16:57:46,598 - app - INFO - [072ed131-fee4-496c-9c23-54a9fb13214e] GET /static/style.css completed with status 304 in 0.0058s
+2025-10-07 16:57:46,599 - app - INFO - [4343739e-e580-4040-9ba8-a4c0fe0c822b] GET /static/site.js completed with status 304 in 0.0031s
+2025-10-07 16:57:46,601 - app - INFO - [e91f5cac-c650-4225-879a-a6918dc85e81] GET /static/images/icon.png completed with status 304 in 0.0042s
+2025-10-07 16:58:56,437 - app - INFO - [0b5139c3-c3df-444e-8e5b-cd8c68a0ceed] POST /transactions/create/ started
+2025-10-07 16:58:56,452 - app - INFO - [0b5139c3-c3df-444e-8e5b-cd8c68a0ceed] POST /transactions/create/ completed with status 302 in 0.0150s
+2025-10-07 16:58:56,458 - app - INFO - [b6198915-0f3d-47d3-b412-7ccb29f8fc72] GET /transactions/index/ started
+2025-10-07 16:58:56,469 - app - INFO - [b6198915-0f3d-47d3-b412-7ccb29f8fc72] GET /transactions/index/ completed with status 200 in 0.0113s
+2025-10-07 16:58:56,487 - app - INFO - [fbb3ae0b-aa88-4aa8-bdec-4a2bdc9615b6] GET /static/style.css started
+2025-10-07 16:58:56,489 - app - INFO - [97129200-f7c3-4a4c-bea5-f8b873e5b0c0] GET /static/images/icon.png started
+2025-10-07 16:58:56,491 - app - INFO - [43e50e7f-7a30-40a3-baff-cb90a5d6d45a] GET /static/site.js started
+2025-10-07 16:58:56,492 - app - INFO - [fbb3ae0b-aa88-4aa8-bdec-4a2bdc9615b6] GET /static/style.css completed with status 304 in 0.0048s
+2025-10-07 16:58:56,493 - app - INFO - [97129200-f7c3-4a4c-bea5-f8b873e5b0c0] GET /static/images/icon.png completed with status 304 in 0.0037s
+2025-10-07 16:58:56,494 - app - INFO - [43e50e7f-7a30-40a3-baff-cb90a5d6d45a] GET /static/site.js completed with status 304 in 0.0029s
+2025-10-07 16:59:08,917 - app - INFO - [54d78197-b573-42cf-87b9-97b1cd8fc082] GET /app/dashboard/ started
+2025-10-07 16:59:08,929 - app - INFO - [54d78197-b573-42cf-87b9-97b1cd8fc082] GET /app/dashboard/ completed with status 200 in 0.0114s
+2025-10-07 16:59:08,944 - app - INFO - [b092d9eb-3d43-4b5c-9cf5-1e810856bb53] GET /static/images/icon.png started
+2025-10-07 16:59:08,944 - app - INFO - [0cf39ecd-510e-4d11-8c36-e1aa2e674bcd] GET /static/style.css started
+2025-10-07 16:59:08,946 - app - INFO - [40bf739e-699d-4ada-b75d-cf0caa03f032] GET /static/site.js started
+2025-10-07 16:59:08,947 - app - INFO - [b092d9eb-3d43-4b5c-9cf5-1e810856bb53] GET /static/images/icon.png completed with status 304 in 0.0034s
+2025-10-07 16:59:08,948 - app - INFO - [0cf39ecd-510e-4d11-8c36-e1aa2e674bcd] GET /static/style.css completed with status 304 in 0.0044s
+2025-10-07 16:59:08,949 - app - INFO - [40bf739e-699d-4ada-b75d-cf0caa03f032] GET /static/site.js completed with status 304 in 0.0034s
+2025-10-07 16:59:13,198 - app - INFO - [b1da71b1-d6e4-4db8-9444-37748b7bfddb] GET /transactions/index/ started
+2025-10-07 16:59:13,211 - app - INFO - [b1da71b1-d6e4-4db8-9444-37748b7bfddb] GET /transactions/index/ completed with status 200 in 0.0136s
+2025-10-07 16:59:13,227 - app - INFO - [592d4cb3-1ea1-4b8e-aeae-f86dcef59272] GET /static/style.css started
+2025-10-07 16:59:13,227 - app - INFO - [3534afe7-e685-45ac-8168-3486314f5f51] GET /static/images/icon.png started
+2025-10-07 16:59:13,229 - app - INFO - [587cf50d-1db6-459c-8c4a-2d46a5aad8b6] GET /static/site.js started
+2025-10-07 16:59:13,231 - app - INFO - [592d4cb3-1ea1-4b8e-aeae-f86dcef59272] GET /static/style.css completed with status 304 in 0.0041s
+2025-10-07 16:59:13,231 - app - INFO - [3534afe7-e685-45ac-8168-3486314f5f51] GET /static/images/icon.png completed with status 304 in 0.0043s
+2025-10-07 16:59:13,232 - app - INFO - [587cf50d-1db6-459c-8c4a-2d46a5aad8b6] GET /static/site.js completed with status 304 in 0.0033s
+2025-10-07 16:59:18,749 - app - INFO - [8dfc05eb-8e15-40a9-b7e8-627bcfb6b258] GET /roles/index/ started
+2025-10-07 16:59:18,777 - app - INFO - [8dfc05eb-8e15-40a9-b7e8-627bcfb6b258] GET /roles/index/ completed with status 200 in 0.0280s
+2025-10-07 16:59:18,791 - app - INFO - [ad31019e-aeb9-4bb5-8c68-362befb03793] GET /static/style.css started
+2025-10-07 16:59:18,793 - app - INFO - [86f7177d-9889-4836-abf6-0c5a43ad3803] GET /static/images/icon.png started
+2025-10-07 16:59:18,795 - app - INFO - [9fe1a1ad-1658-46d4-98cf-f4233a8a1bfd] GET /static/site.js started
+2025-10-07 16:59:18,795 - app - INFO - [ad31019e-aeb9-4bb5-8c68-362befb03793] GET /static/style.css completed with status 304 in 0.0045s
+2025-10-07 16:59:18,797 - app - INFO - [86f7177d-9889-4836-abf6-0c5a43ad3803] GET /static/images/icon.png completed with status 304 in 0.0045s
+2025-10-07 16:59:18,798 - app - INFO - [9fe1a1ad-1658-46d4-98cf-f4233a8a1bfd] GET /static/site.js completed with status 304 in 0.0030s
+2025-10-07 16:59:22,421 - app - INFO - [11a41000-28c1-4df6-b252-516cb530baad] GET /categories/index/ started
+2025-10-07 16:59:22,430 - app - INFO - [11a41000-28c1-4df6-b252-516cb530baad] GET /categories/index/ completed with status 200 in 0.0092s
+2025-10-07 16:59:22,445 - app - INFO - [25276e7c-512f-49ec-b4b7-a830674fd7d5] GET /static/images/icon.png started
+2025-10-07 16:59:22,446 - app - INFO - [7c6ad12e-3805-4066-84f2-4c5cec8edb05] GET /static/style.css started
+2025-10-07 16:59:22,448 - app - INFO - [5a014c07-9cf3-4525-a7de-9c958df4bea6] GET /static/site.js started
+2025-10-07 16:59:22,449 - app - INFO - [25276e7c-512f-49ec-b4b7-a830674fd7d5] GET /static/images/icon.png completed with status 304 in 0.0040s
+2025-10-07 16:59:22,451 - app - INFO - [5a014c07-9cf3-4525-a7de-9c958df4bea6] GET /static/site.js completed with status 304 in 0.0030s
+2025-10-07 16:59:22,452 - app - INFO - [7c6ad12e-3805-4066-84f2-4c5cec8edb05] GET /static/style.css completed with status 304 in 0.0061s
+2025-10-07 17:01:05,837 - app - INFO - [0904f29c-f09d-448c-b53b-c22ed464dda0] GET / started
+2025-10-07 17:01:05,839 - app - INFO - User accessed Index page
+2025-10-07 17:01:05,841 - app - INFO - [0904f29c-f09d-448c-b53b-c22ed464dda0] GET / completed with status 200 in 0.0044s
+2025-10-07 17:01:05,857 - app - INFO - [74e0e2f7-e8e3-4a9c-afea-54fd8ce9d99a] GET /static/style.css started
+2025-10-07 17:01:05,858 - app - INFO - [1ba071af-0d73-4f79-a62a-b75a154d8ed2] GET /static/images/icon.png started
+2025-10-07 17:01:05,860 - app - INFO - [9f2358a8-3174-43ec-b8ce-802d9bfb3a28] GET /static/site.js started
+2025-10-07 17:01:05,862 - app - INFO - [74e0e2f7-e8e3-4a9c-afea-54fd8ce9d99a] GET /static/style.css completed with status 304 in 0.0050s
+2025-10-07 17:01:05,862 - app - INFO - [1ba071af-0d73-4f79-a62a-b75a154d8ed2] GET /static/images/icon.png completed with status 304 in 0.0039s
+2025-10-07 17:01:05,864 - app - INFO - [9f2358a8-3174-43ec-b8ce-802d9bfb3a28] GET /static/site.js completed with status 304 in 0.0038s
+2025-10-07 17:01:11,026 - app - INFO - [dc286df3-6861-4778-8780-56843165d03f] GET /app/dashboard/ started
+2025-10-07 17:01:11,037 - app - INFO - [dc286df3-6861-4778-8780-56843165d03f] GET /app/dashboard/ completed with status 200 in 0.0113s
+2025-10-07 17:01:11,050 - app - INFO - [fdb03bf7-54b8-44c9-ae49-318fc633c986] GET /static/images/icon.png started
+2025-10-07 17:01:11,053 - app - INFO - [4d80f2be-9639-4d60-a742-035afd9bb07c] GET /static/site.js started
+2025-10-07 17:01:11,054 - app - INFO - [650ffbdd-4512-4785-be49-c3f30d4f3faa] GET /static/style.css started
+2025-10-07 17:01:11,056 - app - INFO - [fdb03bf7-54b8-44c9-ae49-318fc633c986] GET /static/images/icon.png completed with status 304 in 0.0055s
+2025-10-07 17:01:11,056 - app - INFO - [4d80f2be-9639-4d60-a742-035afd9bb07c] GET /static/site.js completed with status 304 in 0.0031s
+2025-10-07 17:01:11,058 - app - INFO - [650ffbdd-4512-4785-be49-c3f30d4f3faa] GET /static/style.css completed with status 304 in 0.0038s
+2025-10-07 17:02:45,109 - app - INFO - [2e5ebde6-9018-4b5d-81cd-491338b809cb] GET /transactions/index/ started
+2025-10-07 17:02:45,122 - app - INFO - [2e5ebde6-9018-4b5d-81cd-491338b809cb] GET /transactions/index/ completed with status 200 in 0.0131s
+2025-10-07 17:02:45,138 - app - INFO - [7c43f5fe-b03f-4de1-a954-5fd4de987243] GET /static/images/icon.png started
+2025-10-07 17:02:45,141 - app - INFO - [e12c0a17-6954-403f-8696-45efcfd91d85] GET /static/style.css started
+2025-10-07 17:02:45,141 - app - INFO - [980674c4-2fad-4433-b2e8-c1c80e1abeae] GET /static/site.js started
+2025-10-07 17:02:45,143 - app - INFO - [7c43f5fe-b03f-4de1-a954-5fd4de987243] GET /static/images/icon.png completed with status 304 in 0.0048s
+2025-10-07 17:02:45,143 - app - INFO - [e12c0a17-6954-403f-8696-45efcfd91d85] GET /static/style.css completed with status 304 in 0.0030s
+2025-10-07 17:02:45,145 - app - INFO - [980674c4-2fad-4433-b2e8-c1c80e1abeae] GET /static/site.js completed with status 304 in 0.0037s
+2025-10-07 17:02:47,587 - app - INFO - [0ceb1b55-50a5-4ba1-8624-1d744a529cea] GET /app/dashboard/ started
+2025-10-07 17:02:47,598 - app - INFO - [0ceb1b55-50a5-4ba1-8624-1d744a529cea] GET /app/dashboard/ completed with status 200 in 0.0105s
+2025-10-07 17:02:47,612 - app - INFO - [907ba60b-12b2-4f3b-abed-ac2b70699767] GET /static/style.css started
+2025-10-07 17:02:47,613 - app - INFO - [fcce55f8-46f9-4e46-8c77-29b3a90f5d97] GET /static/images/icon.png started
+2025-10-07 17:02:47,615 - app - INFO - [1171cd05-3c12-4df9-b627-e67981428372] GET /static/site.js started
+2025-10-07 17:02:47,616 - app - INFO - [907ba60b-12b2-4f3b-abed-ac2b70699767] GET /static/style.css completed with status 304 in 0.0045s
+2025-10-07 17:02:47,617 - app - INFO - [fcce55f8-46f9-4e46-8c77-29b3a90f5d97] GET /static/images/icon.png completed with status 304 in 0.0037s
+2025-10-07 17:02:47,618 - app - INFO - [1171cd05-3c12-4df9-b627-e67981428372] GET /static/site.js completed with status 304 in 0.0028s
+2025-10-07 17:06:40,542 - app - INFO - [bf1d3f20-4131-4ae9-be4b-a8868918354e] GET /auth/logout/ started
+2025-10-07 17:06:40,544 - app - INFO - superadmin logged out successfully!
+2025-10-07 17:06:40,544 - app - INFO - [bf1d3f20-4131-4ae9-be4b-a8868918354e] GET /auth/logout/ completed with status 200 in 0.0028s
+2025-10-07 17:06:40,560 - app - INFO - [07bcbe3d-7e67-443e-8e9f-105d5ce6df30] GET /static/style.css started
+2025-10-07 17:06:40,561 - app - INFO - [ace1d072-a941-414a-aa8d-a57a8d092c26] GET /static/images/icon.png started
+2025-10-07 17:06:40,564 - app - INFO - [5834324e-ebfc-4dbd-87b2-47604dd3db81] GET /static/site.js started
+2025-10-07 17:06:40,565 - app - INFO - [07bcbe3d-7e67-443e-8e9f-105d5ce6df30] GET /static/style.css completed with status 304 in 0.0057s
+2025-10-07 17:06:40,566 - app - INFO - [ace1d072-a941-414a-aa8d-a57a8d092c26] GET /static/images/icon.png completed with status 304 in 0.0051s
+2025-10-07 17:06:40,568 - app - INFO - [5834324e-ebfc-4dbd-87b2-47604dd3db81] GET /static/site.js completed with status 304 in 0.0035s
+2025-10-07 17:06:50,584 - app - INFO - [1f7554f8-ef37-4e98-9b46-43e01d6638f0] GET / started
+2025-10-07 17:06:50,585 - app - INFO - [1f7554f8-ef37-4e98-9b46-43e01d6638f0] GET / completed with status 200 in 0.0011s
+2025-10-07 17:06:50,600 - app - INFO - [65c472e4-12bc-4bc3-901b-45956aa57552] GET /static/style.css started
+2025-10-07 17:06:50,601 - app - INFO - [e2695cbc-04c2-43c6-8f8a-8ac4d8e29cd1] GET /static/images/icon.png started
+2025-10-07 17:06:50,602 - app - INFO - [2d6b7020-2ae5-4fa1-a0f4-61f2d38403d5] GET /static/site.js started
+2025-10-07 17:06:50,604 - app - INFO - [65c472e4-12bc-4bc3-901b-45956aa57552] GET /static/style.css completed with status 304 in 0.0042s
+2025-10-07 17:06:50,605 - app - INFO - [e2695cbc-04c2-43c6-8f8a-8ac4d8e29cd1] GET /static/images/icon.png completed with status 304 in 0.0041s
+2025-10-07 17:06:50,606 - app - INFO - [2d6b7020-2ae5-4fa1-a0f4-61f2d38403d5] GET /static/site.js completed with status 304 in 0.0039s

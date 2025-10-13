@@ -2683,3 +2683,124 @@ Traceback (most recent call last):
   File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'app.forms.user.UserDetailsForm object' has no attribute 'password'
+2025-09-10 20:02:48,160 - app - ERROR - [3a2f2c34-fbe2-43e2-8b17-9240ab1af3da] Unhandled exception: 'transactions' is undefined
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/transaction.py", line 115, in create
+    return render_template('transaction/index.html',
+                           title='New Transaction',
+                           form=form,
+                           TRANSACTION=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/transaction/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/transaction/index.html", line 70, in block 'content'
+    {% if transactions.has_prev %}
+    ^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'transactions' is undefined
+2025-09-10 20:02:51,561 - app - ERROR - [ed445041-a07f-439b-a777-4cba1427515e] Unhandled exception: 'transactions' is undefined
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/views/transaction.py", line 115, in create
+    return render_template('transaction/index.html',
+                           title='New Transaction',
+                           form=form,
+                           TRANSACTION=True)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/thunder/Projects/moneytracker/app/templates/transaction/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/thunder/Projects/moneytracker/app/templates/transaction/index.html", line 70, in block 'content'
+    {% if transactions.has_prev %}
+    ^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'transactions' is undefined
+2025-09-10 20:09:29,561 - app - ERROR - [46391845-3fc4-4db0-9a75-7fd916abc7f8] Unhandled exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 891, in dispatch_request
+    self.raise_routing_exception(req)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/app.py", line 500, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/thunder/Projects/moneytracker/env/lib/python3.13/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-10-07 16:54:50,565 - app - ERROR - [90f8f75e-8f06-4ac1-afed-5b6cf0dfc3f3] Unhandled exception: 'transactions' is undefined
+Traceback (most recent call last):
+  File "/home/pdev/Projects/moneytracker/env/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pdev/Projects/moneytracker/env/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pdev/Projects/moneytracker/env/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pdev/Projects/moneytracker/app/views/transaction.py", line 115, in create
+    return render_template('transaction/index.html',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pdev/Projects/moneytracker/env/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pdev/Projects/moneytracker/env/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pdev/Projects/moneytracker/env/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/pdev/Projects/moneytracker/env/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pdev/Projects/moneytracker/app/templates/transaction/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pdev/Projects/moneytracker/app/templates/shared/layout.html", line 88, in top-level template code
+    {% block content %}
+  File "/home/pdev/Projects/moneytracker/app/templates/transaction/index.html", line 70, in block 'content'
+    {% if transactions.has_prev %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pdev/Projects/moneytracker/env/lib/python3.12/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'transactions' is undefined
