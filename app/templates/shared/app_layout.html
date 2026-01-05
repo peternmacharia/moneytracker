@@ -7,14 +7,14 @@
     <title>Money Tracker - {% block title %}{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
   </head>
   <body>
     <header class="sticky-top">
       <nav class="navbar navbar-expand-lg shadow navbar-light bg-body-tertiary">
         <div class="container">
-          <a class="navbar-brand p-3" href="{{ url_for ('index') }}"><img src="{{url_for('static', filename='images/icon.png')}}" class="img-fluid" style="max-width: 50px; max-height: 50px;"></a>
+          <a class="navbar-brand" href="{{ url_for ('base.dashboard') }}"><img src="{{url_for('static', filename='images/icon.png')}}" class="img-fluid" style="max-width: 50px; max-height: 50px;"></a>
           <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -67,29 +67,34 @@
       </nav>
     </header>
 
-    <div class="main mb-3">
-      <div class="container">
-      {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-          {% for category, message in messages %}
-          <div class="row justify-content-end align-content-center">
-            <div class="col-md-4">
-              <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
-                <strong>{{ message }}</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <div class="main">
+      <div class="container mb-5">
+        <div class="mb-3">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                {% for category, message in messages %}
+                  <div id="liveToast" class="toast text-bg-{{ category }} border-0 position-static" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="7000" autohide="true">
+                    <div class="toast-header">
+                      <strong class="me-auto">{{ category }}</strong>
+                      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                      {{ message }}
+                    </div>
+                  </div>
+                {% endfor %}
               </div>
-            </div>
-          </div>
-          {% endfor %}
-        {% endif %}
-      {% endwith %}
-      </div>
+            {% endif %}
+          {% endwith %}
+        </div>
 
       {% block content %}
       {% endblock %}
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='site.js') }}"></script>
   </body>
 </html>

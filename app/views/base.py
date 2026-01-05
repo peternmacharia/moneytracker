@@ -25,8 +25,9 @@ def dashboard():
         .order_by(Transaction.date.desc()).limit(5).all()
 
     # Calculate current month totals
+    current_date = datetime.now()
     current_month = datetime.now().month
-    current_year = datetime.now().year
+    current_year = current_date.year
 
     monthly_income = db.session.query(func.sum(Transaction.amount)).filter(
         Transaction.transaction_type == TType.INCOME,
@@ -44,9 +45,9 @@ def dashboard():
 
     balance = monthly_income - monthly_expenses
 
-
     return render_template('dashboard.html',
                            title='Dashboard',
+                           current_year=current_year,
                            recent_transactions=recent_transactions,
                            monthly_income=monthly_income,
                            monthly_expenses=monthly_expenses,
