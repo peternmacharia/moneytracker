@@ -14503,3 +14503,190 @@ jinja2.exceptions.TemplateNotFound: shared/layout.html
 2026-01-06 00:27:29,585 - app - INFO - [23d215b2-4eef-499a-b6a7-30cbed5fb19b] GET /static/style.css completed with status 304 in 0.0052s
 2026-01-06 00:27:29,587 - app - INFO - [95d28e1d-0e0c-409f-860f-4abda394f19b] GET /static/site.js completed with status 304 in 0.0032s
 2026-01-06 00:27:29,587 - app - INFO - [a967345c-7fd4-40dd-a2e7-a5612c64aebd] GET /static/images/icon.png completed with status 304 in 0.0057s
+2026-07-20 20:08:02,591 - app - INFO - [f9b2b297-3d97-411b-8dd0-769268979414] GET / started
+2026-07-20 20:08:02,603 - app - INFO - [f9b2b297-3d97-411b-8dd0-769268979414] GET / completed with status 200 in 0.0126s
+2026-07-20 20:08:02,613 - app - INFO - [1e016d39-344b-4cfd-b8cf-40383d9b3a24] GET /static/style.css started
+2026-07-20 20:08:02,614 - app - INFO - [6ae1db42-e1c9-44d7-a56b-e4b4ecee718b] GET /static/images/icon.png started
+2026-07-20 20:08:02,618 - app - INFO - [a03b776f-ce93-45ca-b577-022788cbb129] GET /static/site.js started
+2026-07-20 20:08:02,619 - app - INFO - [1e016d39-344b-4cfd-b8cf-40383d9b3a24] GET /static/style.css completed with status 200 in 0.0064s
+2026-07-20 20:08:02,623 - app - INFO - [a03b776f-ce93-45ca-b577-022788cbb129] GET /static/site.js completed with status 200 in 0.0045s
+2026-07-20 20:08:02,623 - app - INFO - [6ae1db42-e1c9-44d7-a56b-e4b4ecee718b] GET /static/images/icon.png completed with status 200 in 0.0096s
+2026-07-20 20:08:03,420 - app - INFO - [df25af28-b883-4cce-be62-1b9a569146b2] GET /static/images/headerwall.jpg started
+2026-07-20 20:08:03,421 - app - INFO - [df25af28-b883-4cce-be62-1b9a569146b2] GET /static/images/headerwall.jpg completed with status 200 in 0.0010s
+2026-07-20 20:08:09,058 - app - INFO - [6c4271de-790e-412a-8ed5-86cc27f3049f] GET /contact/ started
+2026-07-20 20:08:09,064 - app - INFO - [6c4271de-790e-412a-8ed5-86cc27f3049f] GET /contact/ completed with status 200 in 0.0056s
+2026-07-20 20:08:09,078 - app - INFO - [161f46a1-d359-4606-a806-483806af520e] GET /static/style.css started
+2026-07-20 20:08:09,079 - app - INFO - [5e953489-6a09-4b11-94a6-d0b0028fa295] GET /static/images/icon.png started
+2026-07-20 20:08:09,081 - app - INFO - [5e953489-6a09-4b11-94a6-d0b0028fa295] GET /static/images/icon.png completed with status 304 in 0.0019s
+2026-07-20 20:08:09,082 - app - INFO - [161f46a1-d359-4606-a806-483806af520e] GET /static/style.css completed with status 304 in 0.0046s
+2026-07-20 20:08:09,084 - app - INFO - [63e89e3b-765c-4420-99a6-4b81b1b1c636] GET /static/site.js started
+2026-07-20 20:08:09,087 - app - INFO - [63e89e3b-765c-4420-99a6-4b81b1b1c636] GET /static/site.js completed with status 304 in 0.0030s
+2026-07-20 20:08:17,305 - app - INFO - [ce94f427-c87f-497e-8a08-4fb75bd42849] GET /auth/login/ started
+2026-07-20 20:08:17,306 - app - INFO - Login page accessed
+2026-07-20 20:08:17,320 - app - INFO - [ce94f427-c87f-497e-8a08-4fb75bd42849] GET /auth/login/ completed with status 200 in 0.0149s
+2026-07-20 20:08:17,332 - app - INFO - [ad5cf0db-40ae-4458-a9b0-ed78035c9ff2] GET /static/style.css started
+2026-07-20 20:08:17,333 - app - INFO - [36f6d54e-6c86-43e5-9026-92dea6349388] GET /static/images/icon.png started
+2026-07-20 20:08:17,334 - app - INFO - [bc77cd42-249c-4bc0-b7bb-856404cb5ec7] GET /static/site.js started
+2026-07-20 20:08:17,335 - app - INFO - [36f6d54e-6c86-43e5-9026-92dea6349388] GET /static/images/icon.png completed with status 304 in 0.0016s
+2026-07-20 20:08:17,335 - app - INFO - [ad5cf0db-40ae-4458-a9b0-ed78035c9ff2] GET /static/style.css completed with status 304 in 0.0031s
+2026-07-20 20:08:17,336 - app - INFO - [bc77cd42-249c-4bc0-b7bb-856404cb5ec7] GET /static/site.js completed with status 304 in 0.0017s
+2026-07-20 20:09:50,003 - app - INFO - [a9e33d0e-c15d-4492-8220-2dcf29b58224] POST /auth/login/ started
+2026-07-20 20:09:50,004 - app - INFO - Login page accessed
+2026-07-20 20:09:50,176 - app - INFO - superadmin login successful
+2026-07-20 20:09:50,177 - app - INFO - [a9e33d0e-c15d-4492-8220-2dcf29b58224] POST /auth/login/ completed with status 302 in 0.1742s
+2026-07-20 20:09:50,181 - app - INFO - [e664e900-e27f-4a2b-8067-28ae8b1eba16] GET /app/dashboard/ started
+2026-07-20 20:09:50,225 - app - INFO - [e664e900-e27f-4a2b-8067-28ae8b1eba16] GET /app/dashboard/ completed with status 200 in 0.0438s
+2026-07-20 20:09:50,242 - app - INFO - [42b06c52-cf25-4ba1-9621-e5a46bf77749] GET /static/style.css started
+2026-07-20 20:09:50,244 - app - INFO - [84c36c61-50ec-44aa-b565-783c741ef0bf] GET /static/images/icon.png started
+2026-07-20 20:09:50,246 - app - INFO - [edbdd654-1319-47a2-ac50-eccf18b12077] GET /static/site.js started
+2026-07-20 20:09:50,248 - app - INFO - [84c36c61-50ec-44aa-b565-783c741ef0bf] GET /static/images/icon.png completed with status 304 in 0.0034s
+2026-07-20 20:09:50,248 - app - INFO - [edbdd654-1319-47a2-ac50-eccf18b12077] GET /static/site.js completed with status 304 in 0.0018s
+2026-07-20 20:09:50,249 - app - INFO - [42b06c52-cf25-4ba1-9621-e5a46bf77749] GET /static/style.css completed with status 304 in 0.0067s
+2026-07-20 20:09:57,410 - app - INFO - [b536cfbc-d3c3-4ccf-8d9f-6b65d51da516] GET /categories/index/ started
+2026-07-20 20:09:57,451 - app - INFO - [b536cfbc-d3c3-4ccf-8d9f-6b65d51da516] GET /categories/index/ completed with status 200 in 0.0407s
+2026-07-20 20:09:57,462 - app - INFO - [f61402f2-13c4-4d56-a24a-e16b9bda3a3c] GET /static/style.css started
+2026-07-20 20:09:57,464 - app - INFO - [0b9e3880-05f0-4f58-a724-6dcba42df3d1] GET /static/images/icon.png started
+2026-07-20 20:09:57,466 - app - INFO - [f61402f2-13c4-4d56-a24a-e16b9bda3a3c] GET /static/style.css completed with status 304 in 0.0034s
+2026-07-20 20:09:57,467 - app - INFO - [0b9e3880-05f0-4f58-a724-6dcba42df3d1] GET /static/images/icon.png completed with status 304 in 0.0024s
+2026-07-20 20:09:57,475 - app - INFO - [a8b75d88-c7b6-436c-af18-5e22d06e6785] GET /static/site.js started
+2026-07-20 20:09:57,477 - app - INFO - [a8b75d88-c7b6-436c-af18-5e22d06e6785] GET /static/site.js completed with status 304 in 0.0015s
+2026-07-20 20:10:02,169 - app - INFO - [1a66dd66-7a4a-4059-a2aa-c568e37dac53] GET /categories/index/ started
+2026-07-20 20:10:02,178 - app - INFO - [1a66dd66-7a4a-4059-a2aa-c568e37dac53] GET /categories/index/ completed with status 200 in 0.0093s
+2026-07-20 20:10:02,191 - app - INFO - [6e4f1a8d-61e5-4c7c-91b5-fae3c6953e8c] GET /static/style.css started
+2026-07-20 20:10:02,193 - app - INFO - [d55e398b-398b-4a7c-935e-d7b5ed06eb99] GET /static/images/icon.png started
+2026-07-20 20:10:02,195 - app - INFO - [6e4f1a8d-61e5-4c7c-91b5-fae3c6953e8c] GET /static/style.css completed with status 304 in 0.0033s
+2026-07-20 20:10:02,195 - app - INFO - [d55e398b-398b-4a7c-935e-d7b5ed06eb99] GET /static/images/icon.png completed with status 304 in 0.0022s
+2026-07-20 20:10:02,203 - app - INFO - [dc6a7aa4-27e2-40b1-ad9d-f7f591ac682b] GET /static/site.js started
+2026-07-20 20:10:02,204 - app - INFO - [dc6a7aa4-27e2-40b1-ad9d-f7f591ac682b] GET /static/site.js completed with status 304 in 0.0011s
+2026-07-20 20:10:08,658 - app - INFO - [aa19523b-94db-46f9-9699-ca8a5ae8bd30] GET /categories/index/ started
+2026-07-20 20:10:08,674 - app - INFO - [aa19523b-94db-46f9-9699-ca8a5ae8bd30] GET /categories/index/ completed with status 200 in 0.0158s
+2026-07-20 20:10:08,689 - app - INFO - [4adc7d1f-00ea-4cdb-9fa2-6ed080c17d75] GET /static/images/icon.png started
+2026-07-20 20:10:08,689 - app - INFO - [4f646fed-7173-4422-915c-cefdacc48e68] GET /static/style.css started
+2026-07-20 20:10:08,692 - app - INFO - [422ca9e5-54ba-4033-b007-7249319e4599] GET /static/site.js started
+2026-07-20 20:10:08,693 - app - INFO - [4adc7d1f-00ea-4cdb-9fa2-6ed080c17d75] GET /static/images/icon.png completed with status 304 in 0.0043s
+2026-07-20 20:10:08,694 - app - INFO - [4f646fed-7173-4422-915c-cefdacc48e68] GET /static/style.css completed with status 304 in 0.0048s
+2026-07-20 20:10:08,696 - app - INFO - [422ca9e5-54ba-4033-b007-7249319e4599] GET /static/site.js completed with status 304 in 0.0044s
+2026-07-20 20:10:23,285 - app - INFO - [cccb03ee-9cd9-48d2-85b0-9f06ebdd5634] GET /transactions/index/ started
+2026-07-20 20:10:23,330 - app - INFO - [cccb03ee-9cd9-48d2-85b0-9f06ebdd5634] GET /transactions/index/ completed with status 200 in 0.0449s
+2026-07-20 20:10:23,341 - app - INFO - [e0400b75-ff5c-47c5-bd01-6a8f7df2b630] GET /static/style.css started
+2026-07-20 20:10:23,343 - app - INFO - [48f7acf8-7795-41ba-994e-aac85d101ceb] GET /static/images/icon.png started
+2026-07-20 20:10:23,343 - app - INFO - [e0400b75-ff5c-47c5-bd01-6a8f7df2b630] GET /static/style.css completed with status 304 in 0.0017s
+2026-07-20 20:10:23,344 - app - INFO - [48f7acf8-7795-41ba-994e-aac85d101ceb] GET /static/images/icon.png completed with status 304 in 0.0013s
+2026-07-20 20:10:23,351 - app - INFO - [cb6bbf7a-4e3d-43d8-9176-1ce5e90493d6] GET /static/site.js started
+2026-07-20 20:10:23,351 - app - INFO - [cb6bbf7a-4e3d-43d8-9176-1ce5e90493d6] GET /static/site.js completed with status 304 in 0.0006s
+2026-07-20 20:10:32,404 - app - INFO - [c628f334-7810-4c23-8049-ad3de4b9a4d1] GET /roles/index/ started
+2026-07-20 20:10:32,436 - app - ERROR - [c628f334-7810-4c23-8049-ad3de4b9a4d1] Unhandled exception: shared/layout.html
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/views/role.py", line 67, in index
+    return render_template('role/index.html',
+                           title='Roles',
+    ...<6 lines>...
+                           SETTINGS=True,
+                           ROLES=True)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/role/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: shared/layout.html
+2026-07-20 20:10:36,288 - app - INFO - [e2485af8-f13c-4c42-91ad-7a83976a8848] GET /users/index/ started
+2026-07-20 20:10:36,324 - app - ERROR - [e2485af8-f13c-4c42-91ad-7a83976a8848] Unhandled exception: shared/layout.html
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/views/user.py", line 66, in index
+    return render_template('user/index.html',
+                           title='Users',
+    ...<6 lines>...
+                           SETTINGS=True,
+                           USERS=True)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/user/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: shared/layout.html
+2026-07-20 20:10:39,467 - app - INFO - [cd41a5b1-0019-4f04-871f-8a42210013c9] GET /app/dashboard/ started
+2026-07-20 20:10:39,479 - app - INFO - [cd41a5b1-0019-4f04-871f-8a42210013c9] GET /app/dashboard/ completed with status 200 in 0.0112s
+2026-07-20 20:10:39,491 - app - INFO - [13a2dc8a-d1b4-42b5-8448-83d9155398cf] GET /static/style.css started
+2026-07-20 20:10:39,492 - app - INFO - [f54e3fbf-a3d4-4e86-ac39-0bb1c9b5a023] GET /static/images/icon.png started
+2026-07-20 20:10:39,493 - app - INFO - [13a2dc8a-d1b4-42b5-8448-83d9155398cf] GET /static/style.css completed with status 304 in 0.0019s
+2026-07-20 20:10:39,494 - app - INFO - [f54e3fbf-a3d4-4e86-ac39-0bb1c9b5a023] GET /static/images/icon.png completed with status 304 in 0.0021s
+2026-07-20 20:10:39,504 - app - INFO - [df4e283d-10e1-4495-b319-66f11bfefc40] GET /static/site.js started
+2026-07-20 20:10:39,505 - app - INFO - [df4e283d-10e1-4495-b319-66f11bfefc40] GET /static/site.js completed with status 304 in 0.0013s
+2026-07-20 20:14:17,804 - app - INFO - [7fc20bd2-8367-4c44-993a-bb3aa2a6a311] GET /auth/logout/ started
+2026-07-20 20:14:17,806 - app - INFO - superadmin logged out successfully!
+2026-07-20 20:14:17,813 - app - INFO - [7fc20bd2-8367-4c44-993a-bb3aa2a6a311] GET /auth/logout/ completed with status 200 in 0.0093s
+2026-07-20 20:14:17,828 - app - INFO - [b7e0e0af-592c-4173-8b6a-e2ee150b162a] GET /static/style.css started
+2026-07-20 20:14:17,830 - app - INFO - [e11b4227-c077-4af0-83e0-f1ab6bfe83fb] GET /static/images/icon.png started
+2026-07-20 20:14:17,831 - app - INFO - [b7e0e0af-592c-4173-8b6a-e2ee150b162a] GET /static/style.css completed with status 304 in 0.0029s
+2026-07-20 20:14:17,833 - app - INFO - [d1e21d11-a24b-4666-a17b-a864f5bf6638] GET /static/site.js started
+2026-07-20 20:14:17,833 - app - INFO - [e11b4227-c077-4af0-83e0-f1ab6bfe83fb] GET /static/images/icon.png completed with status 304 in 0.0032s
+2026-07-20 20:14:17,835 - app - INFO - [d1e21d11-a24b-4666-a17b-a864f5bf6638] GET /static/site.js completed with status 304 in 0.0025s
+2026-08-20 18:17:54,193 - app - INFO - [b19678e4-6c7a-4e3d-b35d-38f73b369c32] GET / started
+2026-08-20 18:17:54,204 - app - INFO - [b19678e4-6c7a-4e3d-b35d-38f73b369c32] GET / completed with status 200 in 0.0103s
+2026-08-20 18:17:54,224 - app - INFO - [5960c66e-77ea-416c-b5a6-34e55b5248e5] GET /static/style.css started
+2026-08-20 18:17:54,229 - app - INFO - [87b62b92-373f-41a0-8ffa-48cb398d2274] GET /static/images/icon.png started
+2026-08-20 18:17:54,230 - app - INFO - [5b685fee-e7d2-40a8-8dc9-653e9d01a087] GET /static/site.js started
+2026-08-20 18:17:54,236 - app - INFO - [5960c66e-77ea-416c-b5a6-34e55b5248e5] GET /static/style.css completed with status 304 in 0.0120s
+2026-08-20 18:17:54,237 - app - INFO - [87b62b92-373f-41a0-8ffa-48cb398d2274] GET /static/images/icon.png completed with status 200 in 0.0081s
+2026-08-20 18:17:54,237 - app - INFO - [5b685fee-e7d2-40a8-8dc9-653e9d01a087] GET /static/site.js completed with status 304 in 0.0072s
+2026-08-20 18:17:54,247 - app - INFO - [8de21f87-ebb5-4d3c-b8f9-a96c7374365b] GET /static/images/headerwall.jpg started
+2026-08-20 18:17:54,247 - app - INFO - [8de21f87-ebb5-4d3c-b8f9-a96c7374365b] GET /static/images/headerwall.jpg completed with status 200 in 0.0007s
+2026-08-20 18:18:07,612 - app - INFO - [21312de0-8e4e-4b64-a105-ae771037f0d8] GET /auth/login/ started
+2026-08-20 18:18:07,612 - app - INFO - Login page accessed
+2026-08-20 18:18:07,627 - app - INFO - [21312de0-8e4e-4b64-a105-ae771037f0d8] GET /auth/login/ completed with status 200 in 0.0159s
+2026-08-20 18:18:07,640 - app - INFO - [f461b88e-4526-4b78-9c2b-7b510e8bcece] GET /static/style.css started
+2026-08-20 18:18:07,641 - app - INFO - [f13f5b6f-8c6f-4e71-bf12-e3436d4fbb98] GET /static/images/icon.png started
+2026-08-20 18:18:07,642 - app - INFO - [b8f5d8cd-866f-4796-b73f-e43857e8e59c] GET /static/site.js started
+2026-08-20 18:18:07,643 - app - INFO - [f461b88e-4526-4b78-9c2b-7b510e8bcece] GET /static/style.css completed with status 304 in 0.0028s
+2026-08-20 18:18:07,644 - app - INFO - [f13f5b6f-8c6f-4e71-bf12-e3436d4fbb98] GET /static/images/icon.png completed with status 304 in 0.0023s
+2026-08-20 18:18:07,644 - app - INFO - [b8f5d8cd-866f-4796-b73f-e43857e8e59c] GET /static/site.js completed with status 304 in 0.0019s
+2026-08-20 18:18:38,062 - app - INFO - [5d5b8df8-83bc-4a39-a7ac-53d18dc57c94] GET / started
+2026-08-20 18:18:38,063 - app - INFO - [5d5b8df8-83bc-4a39-a7ac-53d18dc57c94] GET / completed with status 200 in 0.0011s
+2026-08-20 18:18:38,077 - app - INFO - [6b50b240-0b1f-42fc-b819-f2428123bbdf] GET /static/style.css started
+2026-08-20 18:18:38,078 - app - INFO - [bb2ae4e0-f197-4b27-ad65-a2f0cf96b02d] GET /static/images/icon.png started
+2026-08-20 18:18:38,079 - app - INFO - [c129e748-eb5c-49fc-8d88-a0efa62ab2af] GET /static/site.js started
+2026-08-20 18:18:38,080 - app - INFO - [6b50b240-0b1f-42fc-b819-f2428123bbdf] GET /static/style.css completed with status 304 in 0.0028s
+2026-08-20 18:18:38,081 - app - INFO - [c129e748-eb5c-49fc-8d88-a0efa62ab2af] GET /static/site.js completed with status 304 in 0.0016s
+2026-08-20 18:18:38,080 - app - INFO - [bb2ae4e0-f197-4b27-ad65-a2f0cf96b02d] GET /static/images/icon.png completed with status 304 in 0.0023s
+2026-08-20 18:18:38,093 - app - INFO - [78f305e2-8d00-43a5-8c9d-d3ba3911d609] GET /static/images/favicon.ico started
+2026-08-20 18:18:38,093 - app - INFO - [78f305e2-8d00-43a5-8c9d-d3ba3911d609] GET /static/images/favicon.ico completed with status 200 in 0.0006s

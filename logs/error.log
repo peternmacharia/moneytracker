@@ -3143,3 +3143,71 @@ Traceback (most recent call last):
   File "/home/pdev/Projects/moneytracker/env/lib/python3.13/site-packages/flask/templating.py", line 99, in _get_source_fast
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: shared/layout.html
+2026-07-20 20:10:32,436 - app - ERROR - [c628f334-7810-4c23-8049-ad3de4b9a4d1] Unhandled exception: shared/layout.html
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/views/role.py", line 67, in index
+    return render_template('role/index.html',
+                           title='Roles',
+    ...<6 lines>...
+                           SETTINGS=True,
+                           ROLES=True)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/role/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: shared/layout.html
+2026-07-20 20:10:36,324 - app - ERROR - [e2485af8-f13c-4c42-91ad-7a83976a8848] Unhandled exception: shared/layout.html
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/views/user.py", line 66, in index
+    return render_template('user/index.html',
+                           title='Users',
+    ...<6 lines>...
+                           SETTINGS=True,
+                           USERS=True)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/user/index.html", line 1, in top-level template code
+    {% extends "shared/layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: shared/layout.html
