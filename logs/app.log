@@ -14690,3 +14690,385 @@ jinja2.exceptions.TemplateNotFound: shared/layout.html
 2026-08-20 18:18:38,080 - app - INFO - [bb2ae4e0-f197-4b27-ad65-a2f0cf96b02d] GET /static/images/icon.png completed with status 304 in 0.0023s
 2026-08-20 18:18:38,093 - app - INFO - [78f305e2-8d00-43a5-8c9d-d3ba3911d609] GET /static/images/favicon.ico started
 2026-08-20 18:18:38,093 - app - INFO - [78f305e2-8d00-43a5-8c9d-d3ba3911d609] GET /static/images/favicon.ico completed with status 200 in 0.0006s
+2026-08-20 19:24:02,824 - app - INFO - [65f7914e-63b4-48d9-89eb-370ed6fd2864] GET / started
+2026-08-20 19:24:02,829 - app - ERROR - [65f7914e-63b4-48d9-89eb-370ed6fd2864] Unhandled exception: block 'title' defined twice
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/__init__.py", line 66, in index
+    return render_template('index.html',
+                           title='Home')
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/index.html", line 23, in template
+    {% block title %} {{ title }} {% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateAssertionError: block 'title' defined twice
+2026-08-20 19:24:40,087 - app - INFO - [6313c951-eca6-4657-a302-cdd809b21046] GET / started
+2026-08-20 19:24:40,100 - app - INFO - [6313c951-eca6-4657-a302-cdd809b21046] GET / completed with status 200 in 0.0132s
+2026-08-20 19:24:40,115 - app - INFO - [58341c80-3790-45a5-b0bb-7d5543444ce4] GET /static/style.css started
+2026-08-20 19:24:40,116 - app - INFO - [58341c80-3790-45a5-b0bb-7d5543444ce4] GET /static/style.css completed with status 200 in 0.0012s
+2026-08-20 19:24:40,122 - app - INFO - [c20cee56-9d9e-4f2f-9b97-58d6ce521046] GET /static/site.js started
+2026-08-20 19:24:40,124 - app - INFO - [d136ef7c-906b-49f9-a013-3d39f1b9e991] GET /static/images/icon.png started
+2026-08-20 19:24:40,125 - app - INFO - [c20cee56-9d9e-4f2f-9b97-58d6ce521046] GET /static/site.js completed with status 304 in 0.0034s
+2026-08-20 19:24:40,127 - app - INFO - [d136ef7c-906b-49f9-a013-3d39f1b9e991] GET /static/images/icon.png completed with status 304 in 0.0033s
+2026-08-20 19:24:40,181 - app - INFO - [9ac36229-19d8-49ab-8728-5d679b8bbddb] GET /static/images/favicon.ico started
+2026-08-20 19:24:40,182 - app - INFO - [9ac36229-19d8-49ab-8728-5d679b8bbddb] GET /static/images/favicon.ico completed with status 304 in 0.0012s
+2026-08-20 19:30:07,046 - app - INFO - [1369acb0-12b0-49fe-9b2b-418fe572f305] GET / started
+2026-08-20 19:30:07,053 - app - ERROR - [1369acb0-12b0-49fe-9b2b-418fe572f305] Unhandled exception: Could not build url for endpoint 'auth.register'. Did you mean 'auth.login' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/__init__.py", line 66, in index
+    return render_template('index.html',
+                           title='Home')
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/index.html", line 36, in top-level template code
+    {% extends "shared/web_layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/shared/web_layout.html", line 49, in top-level template code
+    {% block content %}
+  File "/home/pthunder/Projects/moneytracker/app/templates/index.html", line 47, in block 'content'
+    <a href="{{ url_for('auth.register') }}" class="btn btn-hero-primary">Get Started</a>
+    ^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'auth.register'. Did you mean 'auth.login' instead?
+2026-08-20 19:30:36,039 - app - INFO - [4959bcd3-af46-4cb6-8c9a-311fdf67298e] GET / started
+2026-08-20 19:30:36,046 - app - INFO - [4959bcd3-af46-4cb6-8c9a-311fdf67298e] GET / completed with status 200 in 0.0069s
+2026-08-20 19:30:36,059 - app - INFO - [b82effcf-caba-4c71-a088-0870c2c9f97c] GET /static/style.css started
+2026-08-20 19:30:36,060 - app - INFO - [b82effcf-caba-4c71-a088-0870c2c9f97c] GET /static/style.css completed with status 200 in 0.0012s
+2026-08-20 19:30:36,063 - app - INFO - [ee486423-b2af-4f65-93a6-0ed0f1910a60] GET /static/images/icon.png started
+2026-08-20 19:30:36,063 - app - INFO - [ee486423-b2af-4f65-93a6-0ed0f1910a60] GET /static/images/icon.png completed with status 304 in 0.0007s
+2026-08-20 19:30:36,064 - app - INFO - [6809e19e-da9d-4afd-bf2c-8070e852ffdd] GET /static/site.js started
+2026-08-20 19:30:36,065 - app - INFO - [6809e19e-da9d-4afd-bf2c-8070e852ffdd] GET /static/site.js completed with status 304 in 0.0010s
+2026-08-20 19:30:36,825 - app - INFO - [db09d5ae-1ff1-48fc-9d44-833c2525dc88] GET /static/images/favicon.ico started
+2026-08-20 19:30:36,826 - app - INFO - [db09d5ae-1ff1-48fc-9d44-833c2525dc88] GET /static/images/favicon.ico completed with status 304 in 0.0011s
+2026-08-20 19:31:08,103 - app - INFO - [79099de0-8eae-4301-ad40-3ccfbba8d121] GET / started
+2026-08-20 19:31:08,109 - app - INFO - [79099de0-8eae-4301-ad40-3ccfbba8d121] GET / completed with status 200 in 0.0064s
+2026-08-20 19:31:08,128 - app - INFO - [1e15ebe0-fd8a-44df-8e9f-a2c18751badb] GET /static/style.css started
+2026-08-20 19:31:08,130 - app - INFO - [1e15ebe0-fd8a-44df-8e9f-a2c18751badb] GET /static/style.css completed with status 304 in 0.0021s
+2026-08-20 19:31:08,132 - app - INFO - [eef8f118-6502-444c-ac05-87363db343aa] GET /static/images/icon.png started
+2026-08-20 19:31:08,134 - app - INFO - [eef8f118-6502-444c-ac05-87363db343aa] GET /static/images/icon.png completed with status 304 in 0.0017s
+2026-08-20 19:31:08,136 - app - INFO - [f00b5929-52ea-4681-afbe-e0866fc4094f] GET /static/site.js started
+2026-08-20 19:31:08,138 - app - INFO - [f00b5929-52ea-4681-afbe-e0866fc4094f] GET /static/site.js completed with status 304 in 0.0014s
+2026-08-20 19:31:08,170 - app - INFO - [5ffad90e-06df-450e-95e4-44a4c51c91a5] GET /static/images/favicon.ico started
+2026-08-20 19:31:08,171 - app - INFO - [5ffad90e-06df-450e-95e4-44a4c51c91a5] GET /static/images/favicon.ico completed with status 304 in 0.0010s
+2026-08-20 19:31:11,030 - app - INFO - [b3206fee-94f4-4302-a9cd-392e4ec16c9f] GET /auth/login/ started
+2026-08-20 19:31:11,031 - app - INFO - Login page accessed
+2026-08-20 19:31:11,045 - app - INFO - [b3206fee-94f4-4302-a9cd-392e4ec16c9f] GET /auth/login/ completed with status 200 in 0.0149s
+2026-08-20 19:31:11,058 - app - INFO - [30b1808c-d2fe-44a6-beaa-5bd36daf070a] GET /static/style.css started
+2026-08-20 19:31:11,061 - app - INFO - [7a7c819e-3d7f-465a-9b1d-6d1bc2c1386d] GET /static/images/icon.png started
+2026-08-20 19:31:11,061 - app - INFO - [30b1808c-d2fe-44a6-beaa-5bd36daf070a] GET /static/style.css completed with status 304 in 0.0032s
+2026-08-20 19:31:11,064 - app - INFO - [e4fc9bb2-745b-4adb-961a-adaf02cb96d6] GET /static/site.js started
+2026-08-20 19:31:11,065 - app - INFO - [7a7c819e-3d7f-465a-9b1d-6d1bc2c1386d] GET /static/images/icon.png completed with status 304 in 0.0047s
+2026-08-20 19:31:11,067 - app - INFO - [e4fc9bb2-745b-4adb-961a-adaf02cb96d6] GET /static/site.js completed with status 304 in 0.0037s
+2026-08-20 19:31:14,558 - app - INFO - [65a00c4e-1bca-415f-ab0f-2a805c9812b4] GET /auth/login/ started
+2026-08-20 19:31:14,560 - app - INFO - Login page accessed
+2026-08-20 19:31:14,562 - app - INFO - [65a00c4e-1bca-415f-ab0f-2a805c9812b4] GET /auth/login/ completed with status 200 in 0.0037s
+2026-08-20 19:31:14,581 - app - INFO - [39493cfd-e321-4933-b267-4d22715b9e9f] GET /static/style.css started
+2026-08-20 19:31:14,583 - app - INFO - [39493cfd-e321-4933-b267-4d22715b9e9f] GET /static/style.css completed with status 304 in 0.0015s
+2026-08-20 19:31:14,586 - app - INFO - [e24c8051-632b-4619-a945-e8f3b3a6cbab] GET /static/images/icon.png started
+2026-08-20 19:31:14,587 - app - INFO - [e58b7cb2-614d-4093-9d99-c8a0305c6e60] GET /static/site.js started
+2026-08-20 19:31:14,590 - app - INFO - [e58b7cb2-614d-4093-9d99-c8a0305c6e60] GET /static/site.js completed with status 304 in 0.0028s
+2026-08-20 19:31:14,589 - app - INFO - [e24c8051-632b-4619-a945-e8f3b3a6cbab] GET /static/images/icon.png completed with status 304 in 0.0034s
+2026-08-20 21:05:25,153 - app - INFO - [f1a89bc9-11b5-49d6-8d24-6fe50a2d7ffe] GET / started
+2026-08-20 21:05:25,165 - app - ERROR - [f1a89bc9-11b5-49d6-8d24-6fe50a2d7ffe] Unhandled exception: Could not build url for endpoint 'auth.register'. Did you mean 'auth.login' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/__init__.py", line 66, in index
+    return render_template('index.html',
+                           title='Home')
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/index.html", line 86, in top-level template code
+    {% extends "shared/web_layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/shared/web_layout.html", line 49, in top-level template code
+    {% block content %}
+  File "/home/pthunder/Projects/moneytracker/app/templates/index.html", line 97, in block 'content'
+    <a href="{{ url_for('auth.register') }}" class="btn btn-hero-primary">Get Started</a>
+    ^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'auth.register'. Did you mean 'auth.login' instead?
+2026-08-20 21:05:48,064 - app - INFO - [88ddd5fb-87dc-4202-aed4-99790030f1d2] GET / started
+2026-08-20 21:05:48,075 - app - ERROR - [88ddd5fb-87dc-4202-aed4-99790030f1d2] Unhandled exception: Could not build url for endpoint 'auth.register'. Did you mean 'auth.login' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/__init__.py", line 66, in index
+    return render_template('index.html',
+                           title='Home')
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/index.html", line 86, in top-level template code
+    {% extends "shared/web_layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/shared/web_layout.html", line 49, in top-level template code
+    {% block content %}
+  File "/home/pthunder/Projects/moneytracker/app/templates/index.html", line 290, in block 'content'
+    <a href="{{ url_for('auth.register') }}" class="btn btn-hero-primary">Get Started — It's Free</a>
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'auth.register'. Did you mean 'auth.login' instead?
+2026-08-20 21:06:18,889 - app - INFO - [8cbc952b-117b-4d85-8661-ea596b0e6e37] GET / started
+2026-08-20 21:06:18,897 - app - INFO - [8cbc952b-117b-4d85-8661-ea596b0e6e37] GET / completed with status 200 in 0.0079s
+2026-08-20 21:06:18,912 - app - INFO - [15989bd4-0e1e-43a2-a0e8-965113c3e4d4] GET /static/style.css started
+2026-08-20 21:06:18,913 - app - INFO - [15989bd4-0e1e-43a2-a0e8-965113c3e4d4] GET /static/style.css completed with status 200 in 0.0013s
+2026-08-20 21:06:18,927 - app - INFO - [bfea896f-7838-41da-94fb-363a9cbd53d7] GET /static/images/icon.png started
+2026-08-20 21:06:18,929 - app - INFO - [7efc705f-3692-4e14-96fe-ad2d2eddfe79] GET /static/site.js started
+2026-08-20 21:06:18,930 - app - INFO - [bfea896f-7838-41da-94fb-363a9cbd53d7] GET /static/images/icon.png completed with status 304 in 0.0031s
+2026-08-20 21:06:18,931 - app - INFO - [7efc705f-3692-4e14-96fe-ad2d2eddfe79] GET /static/site.js completed with status 304 in 0.0020s
+2026-08-20 21:06:18,973 - app - INFO - [a02205fa-358f-4993-9e04-664f906028bc] GET /static/images/favicon.ico started
+2026-08-20 21:06:18,973 - app - INFO - [a02205fa-358f-4993-9e04-664f906028bc] GET /static/images/favicon.ico completed with status 304 in 0.0006s
+2026-08-20 21:06:34,008 - app - INFO - [3ecfad1e-4213-42ba-83d1-bea091835d33] GET /auth/login/ started
+2026-08-20 21:06:34,009 - app - INFO - Login page accessed
+2026-08-20 21:06:34,011 - app - INFO - [3ecfad1e-4213-42ba-83d1-bea091835d33] GET /auth/login/ completed with status 200 in 0.0025s
+2026-08-20 21:06:34,023 - app - INFO - [e219d0fc-e7a3-469c-aee0-66bd081a250d] GET /static/style.css started
+2026-08-20 21:06:34,024 - app - INFO - [de7d7d76-3c76-4e7a-83fc-36ec8e3e5b67] GET /static/images/icon.png started
+2026-08-20 21:06:34,025 - app - INFO - [de7d7d76-3c76-4e7a-83fc-36ec8e3e5b67] GET /static/images/icon.png completed with status 304 in 0.0006s
+2026-08-20 21:06:34,025 - app - INFO - [e219d0fc-e7a3-469c-aee0-66bd081a250d] GET /static/style.css completed with status 304 in 0.0021s
+2026-08-20 21:06:34,026 - app - INFO - [9fb75519-dcb4-4f0a-aee8-8efabdccbf7b] GET /static/site.js started
+2026-08-20 21:06:34,027 - app - INFO - [9fb75519-dcb4-4f0a-aee8-8efabdccbf7b] GET /static/site.js completed with status 304 in 0.0014s
+2026-08-21 00:36:43,934 - app - INFO - [1adf34cf-b835-44c9-87de-1e470a6e88bf] GET /auth/login/ started
+2026-08-21 00:36:43,939 - app - INFO - Login page accessed
+2026-08-21 00:36:43,942 - app - INFO - [1adf34cf-b835-44c9-87de-1e470a6e88bf] GET /auth/login/ completed with status 200 in 0.0076s
+2026-08-21 00:36:43,959 - app - INFO - [e3ea7767-796f-49be-8693-18e61d6b48df] GET /static/style.css started
+2026-08-21 00:36:43,961 - app - INFO - [e3ea7767-796f-49be-8693-18e61d6b48df] GET /static/style.css completed with status 304 in 0.0019s
+2026-08-21 00:36:43,962 - app - INFO - [ed8e2805-67fe-493d-898e-01b60425665a] GET /static/images/icon.png started
+2026-08-21 00:36:43,966 - app - INFO - [ed8e2805-67fe-493d-898e-01b60425665a] GET /static/images/icon.png completed with status 304 in 0.0034s
+2026-08-21 00:36:43,968 - app - INFO - [39b6d567-1653-45e5-891b-14f210714d14] GET /static/site.js started
+2026-08-21 00:36:43,970 - app - INFO - [39b6d567-1653-45e5-891b-14f210714d14] GET /static/site.js completed with status 304 in 0.0014s
+2026-08-21 00:36:52,043 - app - INFO - [fce82006-d41b-4516-bf84-439f13abcbee] GET /contact/ started
+2026-08-21 00:36:52,048 - app - INFO - [fce82006-d41b-4516-bf84-439f13abcbee] GET /contact/ completed with status 200 in 0.0048s
+2026-08-21 00:36:52,061 - app - INFO - [552f0f0a-e501-4976-96da-4ebbb70aa484] GET /static/style.css started
+2026-08-21 00:36:52,063 - app - INFO - [552f0f0a-e501-4976-96da-4ebbb70aa484] GET /static/style.css completed with status 304 in 0.0019s
+2026-08-21 00:36:52,065 - app - INFO - [ca29de8e-013d-41a4-862f-b837d8fc4e21] GET /static/images/icon.png started
+2026-08-21 00:36:52,068 - app - INFO - [97888dfb-da71-45f8-9978-2795334f09aa] GET /static/site.js started
+2026-08-21 00:36:52,069 - app - INFO - [ca29de8e-013d-41a4-862f-b837d8fc4e21] GET /static/images/icon.png completed with status 304 in 0.0040s
+2026-08-21 00:36:52,070 - app - INFO - [97888dfb-da71-45f8-9978-2795334f09aa] GET /static/site.js completed with status 304 in 0.0019s
+2026-08-21 00:36:54,418 - app - INFO - [392ae218-f41d-4042-8f84-594969631cdd] GET / started
+2026-08-21 00:36:54,419 - app - INFO - [392ae218-f41d-4042-8f84-594969631cdd] GET / completed with status 200 in 0.0017s
+2026-08-21 00:36:54,431 - app - INFO - [01e95175-2d19-4eab-a1fe-4a3ca5ffb5ba] GET /static/style.css started
+2026-08-21 00:36:54,432 - app - INFO - [01e95175-2d19-4eab-a1fe-4a3ca5ffb5ba] GET /static/style.css completed with status 304 in 0.0014s
+2026-08-21 00:36:54,443 - app - INFO - [2f35094a-9a0c-4d18-82b8-1ef6e34db4b1] GET /static/images/icon.png started
+2026-08-21 00:36:54,445 - app - INFO - [43252416-972d-40f1-a389-cbe34c5a2dcd] GET /static/site.js started
+2026-08-21 00:36:54,446 - app - INFO - [43252416-972d-40f1-a389-cbe34c5a2dcd] GET /static/site.js completed with status 304 in 0.0013s
+2026-08-21 00:36:54,447 - app - INFO - [2f35094a-9a0c-4d18-82b8-1ef6e34db4b1] GET /static/images/icon.png completed with status 304 in 0.0037s
+2026-08-25 00:37:29,039 - app - INFO - [7d2c44c5-aa5e-411c-8e7a-12f847970964] GET / started
+2026-08-25 00:37:29,054 - app - INFO - [7d2c44c5-aa5e-411c-8e7a-12f847970964] GET / completed with status 200 in 0.0144s
+2026-08-25 00:37:29,076 - app - INFO - [5acb4496-f83d-4405-93f2-0454a6fc4a07] GET /static/style.css started
+2026-08-25 00:37:29,081 - app - INFO - [3fb638ad-c176-4130-9672-88cf18e70700] GET /static/site.js started
+2026-08-25 00:37:29,083 - app - INFO - [5acb4496-f83d-4405-93f2-0454a6fc4a07] GET /static/style.css completed with status 304 in 0.0073s
+2026-08-25 00:37:29,084 - app - INFO - [3fb638ad-c176-4130-9672-88cf18e70700] GET /static/site.js completed with status 304 in 0.0032s
+2026-08-25 00:37:29,082 - app - INFO - [13ee16d2-248f-46d5-a239-2f14961de117] GET /static/images/icon.png started
+2026-08-25 00:37:29,085 - app - INFO - [13ee16d2-248f-46d5-a239-2f14961de117] GET /static/images/icon.png completed with status 304 in 0.0035s
+2026-08-25 00:42:41,355 - app - INFO - [7fbabc66-c4fe-4a47-ac9f-ddb4d067cb1c] GET / started
+2026-08-25 00:42:41,387 - app - INFO - [7fbabc66-c4fe-4a47-ac9f-ddb4d067cb1c] GET / completed with status 200 in 0.0315s
+2026-08-25 00:42:41,402 - app - INFO - [fae42926-a1d7-4970-8fa0-7723ae3a64ba] GET /static/style.css started
+2026-08-25 00:42:41,404 - app - INFO - [fae42926-a1d7-4970-8fa0-7723ae3a64ba] GET /static/style.css completed with status 304 in 0.0020s
+2026-08-25 00:42:41,409 - app - INFO - [c0379522-3304-43f5-a02a-d3dfdb03066c] GET /static/images/icon.png started
+2026-08-25 00:42:41,410 - app - INFO - [c0379522-3304-43f5-a02a-d3dfdb03066c] GET /static/images/icon.png completed with status 304 in 0.0015s
+2026-08-25 00:42:41,412 - app - INFO - [b5fac07d-7ddc-43ac-820e-5cc9c3f222da] GET /static/site.js started
+2026-08-25 00:42:41,414 - app - INFO - [b5fac07d-7ddc-43ac-820e-5cc9c3f222da] GET /static/site.js completed with status 304 in 0.0013s
+2026-08-25 00:42:41,503 - app - INFO - [ccafd007-8122-4b55-b4ff-a9b54d20aac8] GET /static/images/favicon.ico started
+2026-08-25 00:42:41,504 - app - INFO - [ccafd007-8122-4b55-b4ff-a9b54d20aac8] GET /static/images/favicon.ico completed with status 200 in 0.0008s
+2026-08-25 00:43:20,074 - app - INFO - [3f0715b1-d6b8-4ba9-9daf-2c71d7a50cae] GET /auth/login/ started
+2026-08-25 00:43:20,075 - app - INFO - Login page accessed
+2026-08-25 00:43:20,090 - app - INFO - [3f0715b1-d6b8-4ba9-9daf-2c71d7a50cae] GET /auth/login/ completed with status 200 in 0.0157s
+2026-08-25 00:43:20,108 - app - INFO - [672e4472-0cf0-4e83-b547-f19d2b55c5cd] GET /static/style.css started
+2026-08-25 00:43:20,110 - app - INFO - [672e4472-0cf0-4e83-b547-f19d2b55c5cd] GET /static/style.css completed with status 304 in 0.0023s
+2026-08-25 00:43:20,113 - app - INFO - [36b564fc-fea3-4c7b-9eea-043a492a3e2a] GET /static/images/icon.png started
+2026-08-25 00:43:20,116 - app - INFO - [e6ca68f5-b084-4972-a44a-1dcd9922f345] GET /static/site.js started
+2026-08-25 00:43:20,117 - app - INFO - [36b564fc-fea3-4c7b-9eea-043a492a3e2a] GET /static/images/icon.png completed with status 304 in 0.0032s
+2026-08-25 00:43:20,118 - app - INFO - [e6ca68f5-b084-4972-a44a-1dcd9922f345] GET /static/site.js completed with status 304 in 0.0023s
+2026-08-25 00:47:43,981 - app - INFO - [47d05366-3f33-491d-b299-bf97cc7fec64] GET /auth/login/ started
+2026-08-25 00:47:43,982 - app - INFO - Login page accessed
+2026-08-25 00:47:43,983 - app - INFO - [47d05366-3f33-491d-b299-bf97cc7fec64] GET /auth/login/ completed with status 200 in 0.0020s
+2026-08-25 00:47:43,991 - app - INFO - [bf1617aa-200d-4c40-873b-96a9e0441293] GET /static/style.css started
+2026-08-25 00:47:43,992 - app - INFO - [bf1617aa-200d-4c40-873b-96a9e0441293] GET /static/style.css completed with status 304 in 0.0008s
+2026-08-25 00:47:43,994 - app - INFO - [93b75f82-422e-4d62-b3bb-9a5598d963f0] GET /static/images/icon.png started
+2026-08-25 00:47:43,995 - app - INFO - [93b75f82-422e-4d62-b3bb-9a5598d963f0] GET /static/images/icon.png completed with status 304 in 0.0009s
+2026-08-25 00:47:43,996 - app - INFO - [8ba6cbb4-c33b-4810-b045-19166cd47a26] GET /static/site.js started
+2026-08-25 00:47:43,997 - app - INFO - [8ba6cbb4-c33b-4810-b045-19166cd47a26] GET /static/site.js completed with status 304 in 0.0010s
+2026-08-25 00:48:20,495 - app - INFO - [e6227dca-3ba9-443d-a947-bb002940b95e] GET /auth/login/ started
+2026-08-25 00:48:20,496 - app - INFO - Login page accessed
+2026-08-25 00:48:20,498 - app - INFO - [e6227dca-3ba9-443d-a947-bb002940b95e] GET /auth/login/ completed with status 200 in 0.0024s
+2026-08-25 00:48:20,518 - app - INFO - [0208b9cc-d345-4aec-8c1a-7cc0a44e3eb0] GET /static/style.css started
+2026-08-25 00:48:20,520 - app - INFO - [8882992b-a3ce-4b8d-906e-12183b926fb8] GET /static/images/icon.png started
+2026-08-25 00:48:20,522 - app - INFO - [20031225-9889-41b4-b53a-a8cebf998832] GET /static/site.js started
+2026-08-25 00:48:20,524 - app - INFO - [0208b9cc-d345-4aec-8c1a-7cc0a44e3eb0] GET /static/style.css completed with status 304 in 0.0059s
+2026-08-25 00:48:20,524 - app - INFO - [20031225-9889-41b4-b53a-a8cebf998832] GET /static/site.js completed with status 304 in 0.0029s
+2026-08-25 00:48:20,526 - app - INFO - [8882992b-a3ce-4b8d-906e-12183b926fb8] GET /static/images/icon.png completed with status 304 in 0.0067s
+2026-08-25 00:48:20,550 - app - INFO - [253d78a4-6785-4a26-b148-aa1a367c6781] GET /static/images/favicon.ico started
+2026-08-25 00:48:20,551 - app - INFO - [253d78a4-6785-4a26-b148-aa1a367c6781] GET /static/images/favicon.ico completed with status 304 in 0.0013s
+2026-08-25 00:49:12,586 - app - INFO - [9f7fe9f4-8a5e-4af2-927f-edbb2bb76af5] GET / started
+2026-08-25 00:49:12,588 - app - INFO - [9f7fe9f4-8a5e-4af2-927f-edbb2bb76af5] GET / completed with status 200 in 0.0016s
+2026-08-25 00:49:12,604 - app - INFO - [a7cf8d6a-6582-48c8-bea1-f0024f53a429] GET /static/style.css started
+2026-08-25 00:49:12,607 - app - INFO - [ff20c48e-5fe3-428a-9849-15faa73acccc] GET /static/images/icon.png started
+2026-08-25 00:49:12,617 - app - INFO - [a7cf8d6a-6582-48c8-bea1-f0024f53a429] GET /static/style.css completed with status 304 in 0.0127s
+2026-08-25 00:49:12,618 - app - INFO - [ff20c48e-5fe3-428a-9849-15faa73acccc] GET /static/images/icon.png completed with status 304 in 0.0112s
+2026-08-25 00:49:12,616 - app - INFO - [d8e30a28-1d60-4afb-ba72-0bbed1786da5] GET /static/site.js started
+2026-08-25 00:49:12,621 - app - INFO - [d8e30a28-1d60-4afb-ba72-0bbed1786da5] GET /static/site.js completed with status 304 in 0.0051s
+2026-08-25 00:49:12,653 - app - INFO - [971c935c-0f8f-4715-bb20-9c5f71e4f891] GET /static/images/favicon.ico started
+2026-08-25 00:49:12,654 - app - INFO - [971c935c-0f8f-4715-bb20-9c5f71e4f891] GET /static/images/favicon.ico completed with status 304 in 0.0009s
+2026-08-25 00:49:14,407 - app - INFO - [7f371001-c9f4-4980-a90b-340d39871891] GET /auth/login/ started
+2026-08-25 00:49:14,408 - app - INFO - Login page accessed
+2026-08-25 00:49:14,420 - app - INFO - [7f371001-c9f4-4980-a90b-340d39871891] GET /auth/login/ completed with status 200 in 0.0124s
+2026-08-25 00:49:14,430 - app - INFO - [b9ecc3bf-a358-41d3-99a6-eee3744af076] GET /static/style.css started
+2026-08-25 00:49:14,431 - app - INFO - [aba2d43c-5458-4f7b-9f6a-fd6531710952] GET /static/site.js started
+2026-08-25 00:49:14,431 - app - INFO - [b9ecc3bf-a358-41d3-99a6-eee3744af076] GET /static/style.css completed with status 304 in 0.0018s
+2026-08-25 00:49:14,432 - app - INFO - [aba2d43c-5458-4f7b-9f6a-fd6531710952] GET /static/site.js completed with status 304 in 0.0014s
+2026-08-25 00:49:44,593 - app - INFO - [c7e8fb11-9db9-4feb-a549-7eebeee1f226] GET /auth/login/ started
+2026-08-25 00:49:44,593 - app - INFO - Login page accessed
+2026-08-25 00:49:44,612 - app - INFO - [c7e8fb11-9db9-4feb-a549-7eebeee1f226] GET /auth/login/ completed with status 200 in 0.0188s
+2026-08-25 00:49:44,624 - app - INFO - [6311422e-224c-477b-be37-3e5398931f91] GET /static/style.css started
+2026-08-25 00:49:44,625 - app - INFO - [6311422e-224c-477b-be37-3e5398931f91] GET /static/style.css completed with status 304 in 0.0010s
+2026-08-25 00:49:44,626 - app - INFO - [9ead3ee9-bcc9-4d5a-b9a6-1c0512f03cd1] GET /static/site.js started
+2026-08-25 00:49:44,627 - app - INFO - [9ead3ee9-bcc9-4d5a-b9a6-1c0512f03cd1] GET /static/site.js completed with status 304 in 0.0008s
+2026-08-25 00:49:44,642 - app - INFO - [e57516a1-c1a2-43cb-99b8-b77897eb649d] GET /static/images/favicon.ico started
+2026-08-25 00:49:44,642 - app - INFO - [e57516a1-c1a2-43cb-99b8-b77897eb649d] GET /static/images/favicon.ico completed with status 304 in 0.0005s
+2026-08-25 00:49:45,883 - app - INFO - [59551760-e998-4caf-8d63-82b5388b833c] GET /auth/login/ started
+2026-08-25 00:49:45,883 - app - INFO - Login page accessed
+2026-08-25 00:49:45,884 - app - INFO - [59551760-e998-4caf-8d63-82b5388b833c] GET /auth/login/ completed with status 200 in 0.0020s
+2026-08-25 00:49:45,897 - app - INFO - [7025cfc5-43ae-47ff-941c-f8b521b94783] GET /static/style.css started
+2026-08-25 00:49:45,899 - app - INFO - [a5421dd0-2394-4c25-838f-e849b4803513] GET /static/site.js started
+2026-08-25 00:49:45,899 - app - INFO - [7025cfc5-43ae-47ff-941c-f8b521b94783] GET /static/style.css completed with status 304 in 0.0016s
+2026-08-25 00:49:45,900 - app - INFO - [a5421dd0-2394-4c25-838f-e849b4803513] GET /static/site.js completed with status 304 in 0.0013s
+2026-08-25 00:49:45,916 - app - INFO - [97ac541c-f0e4-41d4-a36f-b4186fc8a6f0] GET /static/images/favicon.ico started
+2026-08-25 00:49:45,916 - app - INFO - [97ac541c-f0e4-41d4-a36f-b4186fc8a6f0] GET /static/images/favicon.ico completed with status 304 in 0.0006s
+2026-08-25 00:49:57,404 - app - INFO - [366eec8d-7058-4bcc-bd2b-14d54e529497] GET / started
+2026-08-25 00:49:57,406 - app - INFO - [366eec8d-7058-4bcc-bd2b-14d54e529497] GET / completed with status 200 in 0.0020s
+2026-08-25 00:49:57,421 - app - INFO - [b1e90bfa-ded5-46c4-997d-bf2f521abdda] GET /static/style.css started
+2026-08-25 00:49:57,421 - app - INFO - [b1e90bfa-ded5-46c4-997d-bf2f521abdda] GET /static/style.css completed with status 304 in 0.0005s
+2026-08-25 00:49:57,424 - app - INFO - [9846fe8e-dfbd-41ff-9d06-bb5d6b5c9ecd] GET /static/images/icon.png started
+2026-08-25 00:49:57,425 - app - INFO - [9846fe8e-dfbd-41ff-9d06-bb5d6b5c9ecd] GET /static/images/icon.png completed with status 304 in 0.0005s
+2026-08-25 00:49:57,427 - app - INFO - [da04a272-e4af-4635-b551-1c172eda901b] GET /static/site.js started
+2026-08-25 00:49:57,427 - app - INFO - [da04a272-e4af-4635-b551-1c172eda901b] GET /static/site.js completed with status 304 in 0.0005s
+2026-08-25 00:49:59,295 - app - INFO - [68a89142-f907-4187-b01f-ba7d882a48b9] GET /auth/login/ started
+2026-08-25 00:49:59,295 - app - INFO - Login page accessed
+2026-08-25 00:49:59,297 - app - INFO - [68a89142-f907-4187-b01f-ba7d882a48b9] GET /auth/login/ completed with status 200 in 0.0026s
+2026-08-25 00:49:59,310 - app - INFO - [514a6169-d502-4e87-8d4d-9bf00150a915] GET /static/style.css started
+2026-08-25 00:49:59,312 - app - INFO - [0dffc3ae-d542-4b3f-b9ae-70b6b24e193d] GET /static/site.js started
+2026-08-25 00:49:59,314 - app - INFO - [0dffc3ae-d542-4b3f-b9ae-70b6b24e193d] GET /static/site.js completed with status 304 in 0.0020s
+2026-08-25 00:49:59,313 - app - INFO - [514a6169-d502-4e87-8d4d-9bf00150a915] GET /static/style.css completed with status 304 in 0.0028s
+2026-08-25 00:52:14,821 - app - INFO - [20065c83-98ea-48c5-b683-de774afc6912] GET /auth/login/ started
+2026-08-25 00:52:14,821 - app - INFO - Login page accessed
+2026-08-25 00:52:14,831 - app - INFO - [20065c83-98ea-48c5-b683-de774afc6912] GET /auth/login/ completed with status 200 in 0.0108s
+2026-08-25 00:52:14,845 - app - INFO - [56ecf5c2-fb53-4efd-95eb-622654fadf21] GET /static/style.css started
+2026-08-25 00:52:14,846 - app - INFO - [56ecf5c2-fb53-4efd-95eb-622654fadf21] GET /static/style.css completed with status 304 in 0.0017s
+2026-08-25 00:52:14,846 - app - INFO - [d958589b-cbfe-4e2a-9945-7efd3515eb3e] GET /static/site.js started
+2026-08-25 00:52:14,847 - app - INFO - [d958589b-cbfe-4e2a-9945-7efd3515eb3e] GET /static/site.js completed with status 304 in 0.0013s
+2026-08-25 00:52:14,860 - app - INFO - [998a646d-ee79-4c14-a19b-2db2409a4430] GET /static/images/favicon.ico started
+2026-08-25 00:52:14,861 - app - INFO - [998a646d-ee79-4c14-a19b-2db2409a4430] GET /static/images/favicon.ico completed with status 304 in 0.0006s
+2026-08-25 00:53:09,320 - app - INFO - [3a64f2a1-776b-4ecf-93fc-53404203400c] GET /contact/ started
+2026-08-25 00:53:09,324 - app - INFO - [3a64f2a1-776b-4ecf-93fc-53404203400c] GET /contact/ completed with status 200 in 0.0047s
+2026-08-25 00:53:09,337 - app - INFO - [e6e8546e-a137-47e4-98c5-b6983227adc3] GET /static/style.css started
+2026-08-25 00:53:09,338 - app - INFO - [3b174daa-d96d-4f1d-ac6a-3152f4850f0e] GET /static/images/icon.png started
+2026-08-25 00:53:09,339 - app - INFO - [e6e8546e-a137-47e4-98c5-b6983227adc3] GET /static/style.css completed with status 304 in 0.0020s
+2026-08-25 00:53:09,340 - app - INFO - [c4ec68c8-15ec-4fbd-a29c-6bd35e6f5c40] GET /static/site.js started
+2026-08-25 00:53:09,341 - app - INFO - [3b174daa-d96d-4f1d-ac6a-3152f4850f0e] GET /static/images/icon.png completed with status 304 in 0.0026s
+2026-08-25 00:53:09,341 - app - INFO - [c4ec68c8-15ec-4fbd-a29c-6bd35e6f5c40] GET /static/site.js completed with status 304 in 0.0016s
+2026-08-25 00:53:17,519 - app - INFO - [b9953cf9-ef8e-4ac4-bc08-c0675b4d6880] GET / started
+2026-08-25 00:53:17,520 - app - INFO - [b9953cf9-ef8e-4ac4-bc08-c0675b4d6880] GET / completed with status 200 in 0.0016s
+2026-08-25 00:53:17,540 - app - INFO - [dcbaa00e-d353-46e7-8dfc-d05236243790] GET /static/style.css started
+2026-08-25 00:53:17,541 - app - INFO - [dcbaa00e-d353-46e7-8dfc-d05236243790] GET /static/style.css completed with status 304 in 0.0007s
+2026-08-25 00:53:17,544 - app - INFO - [a62df3f2-c807-436a-848f-952b43c822eb] GET /static/images/icon.png started
+2026-08-25 00:53:17,545 - app - INFO - [a62df3f2-c807-436a-848f-952b43c822eb] GET /static/images/icon.png completed with status 304 in 0.0005s
+2026-08-25 00:53:17,547 - app - INFO - [80bfb3d0-5fd7-4ea1-967b-c41180817229] GET /static/site.js started
+2026-08-25 00:53:17,548 - app - INFO - [80bfb3d0-5fd7-4ea1-967b-c41180817229] GET /static/site.js completed with status 304 in 0.0008s
+2026-08-25 00:53:20,604 - app - INFO - [9fa8fda7-98d3-47be-bd46-60516120ddfd] GET /contact/ started
+2026-08-25 00:53:20,605 - app - INFO - [9fa8fda7-98d3-47be-bd46-60516120ddfd] GET /contact/ completed with status 200 in 0.0012s
+2026-08-25 00:53:20,618 - app - INFO - [45890976-44b2-46ad-a15e-ab0af2ffef2f] GET /static/style.css started
+2026-08-25 00:53:20,619 - app - INFO - [66a960e9-b247-4739-862b-ac1113188d86] GET /static/images/icon.png started
+2026-08-25 00:53:20,621 - app - INFO - [70cc25c3-851f-4370-92da-eadb4ce27c2c] GET /static/site.js started
+2026-08-25 00:53:20,622 - app - INFO - [45890976-44b2-46ad-a15e-ab0af2ffef2f] GET /static/style.css completed with status 304 in 0.0046s
+2026-08-25 00:53:20,624 - app - INFO - [70cc25c3-851f-4370-92da-eadb4ce27c2c] GET /static/site.js completed with status 304 in 0.0037s
+2026-08-25 00:53:20,625 - app - INFO - [66a960e9-b247-4739-862b-ac1113188d86] GET /static/images/icon.png completed with status 304 in 0.0058s
+2026-08-25 00:53:22,527 - app - INFO - [fd5b65e2-d731-4fed-8324-15b9904662cc] GET / started
+2026-08-25 00:53:22,528 - app - INFO - [fd5b65e2-d731-4fed-8324-15b9904662cc] GET / completed with status 200 in 0.0017s
+2026-08-25 00:53:22,544 - app - INFO - [713417a4-3e3e-489d-8b03-03719a78e859] GET /static/style.css started
+2026-08-25 00:53:22,546 - app - INFO - [713417a4-3e3e-489d-8b03-03719a78e859] GET /static/style.css completed with status 304 in 0.0017s
+2026-08-25 00:53:22,548 - app - INFO - [260aa7e9-3132-4166-a207-28a528621f6c] GET /static/images/icon.png started
+2026-08-25 00:53:22,550 - app - INFO - [260aa7e9-3132-4166-a207-28a528621f6c] GET /static/images/icon.png completed with status 304 in 0.0025s
+2026-08-25 00:53:22,557 - app - INFO - [30a8dc0a-69dc-4870-ae1e-e3d18750618a] GET /static/site.js started
+2026-08-25 00:53:22,558 - app - INFO - [30a8dc0a-69dc-4870-ae1e-e3d18750618a] GET /static/site.js completed with status 304 in 0.0012s

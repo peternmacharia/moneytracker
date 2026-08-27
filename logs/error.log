@@ -3211,3 +3211,151 @@ Traceback (most recent call last):
   File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 99, in _get_source_fast
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: shared/layout.html
+2026-08-20 19:24:02,829 - app - ERROR - [65f7914e-63b4-48d9-89eb-370ed6fd2864] Unhandled exception: block 'title' defined twice
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/__init__.py", line 66, in index
+    return render_template('index.html',
+                           title='Home')
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/index.html", line 23, in template
+    {% block title %} {{ title }} {% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.TemplateAssertionError: block 'title' defined twice
+2026-08-20 19:30:07,053 - app - ERROR - [1369acb0-12b0-49fe-9b2b-418fe572f305] Unhandled exception: Could not build url for endpoint 'auth.register'. Did you mean 'auth.login' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/__init__.py", line 66, in index
+    return render_template('index.html',
+                           title='Home')
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/index.html", line 36, in top-level template code
+    {% extends "shared/web_layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/shared/web_layout.html", line 49, in top-level template code
+    {% block content %}
+  File "/home/pthunder/Projects/moneytracker/app/templates/index.html", line 47, in block 'content'
+    <a href="{{ url_for('auth.register') }}" class="btn btn-hero-primary">Get Started</a>
+    ^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'auth.register'. Did you mean 'auth.login' instead?
+2026-08-20 21:05:25,165 - app - ERROR - [f1a89bc9-11b5-49d6-8d24-6fe50a2d7ffe] Unhandled exception: Could not build url for endpoint 'auth.register'. Did you mean 'auth.login' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/__init__.py", line 66, in index
+    return render_template('index.html',
+                           title='Home')
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/index.html", line 86, in top-level template code
+    {% extends "shared/web_layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/shared/web_layout.html", line 49, in top-level template code
+    {% block content %}
+  File "/home/pthunder/Projects/moneytracker/app/templates/index.html", line 97, in block 'content'
+    <a href="{{ url_for('auth.register') }}" class="btn btn-hero-primary">Get Started</a>
+    ^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'auth.register'. Did you mean 'auth.login' instead?
+2026-08-20 21:05:48,075 - app - ERROR - [88ddd5fb-87dc-4202-aed4-99790030f1d2] Unhandled exception: Could not build url for endpoint 'auth.register'. Did you mean 'auth.login' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/__init__.py", line 66, in index
+    return render_template('index.html',
+                           title='Home')
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/index.html", line 86, in top-level template code
+    {% extends "shared/web_layout.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/shared/web_layout.html", line 49, in top-level template code
+    {% block content %}
+  File "/home/pthunder/Projects/moneytracker/app/templates/index.html", line 290, in block 'content'
+    <a href="{{ url_for('auth.register') }}" class="btn btn-hero-primary">Get Started — It's Free</a>
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'auth.register'. Did you mean 'auth.login' instead?

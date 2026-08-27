@@ -1,7 +1,5 @@
-{% extends "shared/login_layout.html" %}
-{% block title %} {{ title }} {% endblock %}
-{% block content %}
-<div class="container text-center">
+
+<!-- <div class="container text-center">
 
     <div class="row justify-content-center align-content-center">
 
@@ -39,6 +37,530 @@
 
     </div>
     
+</div> -->
+
+
+{% extends "shared/login_layout.html" %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<style>
+  :root {
+    --login-primary: #0f3d5e;
+    --login-primary-dark: #0a2d46;
+    --login-accent: #16a085;
+    --login-bg: #f8fafc;
+    --login-surface: #ffffff;
+    --login-text: #0f172a;
+    --login-muted: #64748b;
+    --login-border: #dfe7ee;
+    --login-radius: 18px;
+  }
+
+  .money-login {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 85% 15%, rgba(22, 160, 133, .08), transparent 30%),
+      radial-gradient(circle at 10% 90%, rgba(15, 61, 94, .07), transparent 30%),
+      var(--login-bg);
+    color: var(--login-text);
+    display: flex;
+    align-items: center;
+    padding: 35px 20px;
+  }
+
+  .money-login * {
+    box-sizing: border-box;
+  }
+
+  .login-shell {
+    width: min(1050px, 100%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 620px;
+    background: var(--login-surface);
+    border: 1px solid rgba(226, 232, 240, .9);
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(15, 23, 42, .10);
+  }
+
+  /* Brand panel */
+  .login-brand-panel {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 55px;
+    color: white;
+    background: linear-gradient(
+      145deg,
+      #0f3d5e 0%,
+      #0d4969 55%,
+      #106b72 100%
+    );
+  }
+
+  .login-brand-panel::before,
+  .login-brand-panel::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, .10);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .login-brand-panel::before {
+    width: 420px;
+    height: 420px;
+    top: -250px;
+    right: -170px;
+  }
+
+  .login-brand-panel::after {
+    width: 330px;
+    height: 330px;
+    bottom: -230px;
+    left: -160px;
+  }
+
+  .login-brand-content,
+  .login-brand-footer {
+    position: relative;
+    z-index: 1;
+  }
+
+  .login-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-size: 1.08rem;
+    font-weight: 850;
+    letter-spacing: -.03em;
+  }
+
+  .login-brand-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    color: var(--login-primary);
+    background: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
+  }
+
+  .login-brand-copy {
+    max-width: 420px;
+    margin-top: 105px;
+  }
+
+  .login-brand-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    color: #a9ded2;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+  }
+
+  .login-brand-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #6bd2be;
+  }
+
+  .login-brand-copy h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    line-height: 1.04;
+    letter-spacing: -.05em;
+    font-weight: 850;
+  }
+
+  .login-brand-copy p {
+    margin: 22px 0 0;
+    max-width: 390px;
+    color: #c3d5de;
+    line-height: 1.75;
+    font-size: .96rem;
+  }
+
+  .login-brand-footer {
+    color: #8fb0be;
+    font-size: .75rem;
+  }
+
+  /* Login panel */
+  .login-form-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 55px;
+    background: white;
+  }
+
+  .login-form-wrapper {
+    width: min(390px, 100%);
+  }
+
+  .login-logo-mobile {
+    display: none;
+    width: 52px;
+    height: 52px;
+    place-items: center;
+    border-radius: 15px;
+    color: white;
+    background: var(--login-primary);
+    margin-bottom: 24px;
+  }
+
+  .login-heading {
+    margin-bottom: 32px;
+  }
+
+  .login-heading h2 {
+    margin: 0;
+    color: var(--login-text);
+    font-size: 2rem;
+    line-height: 1.15;
+    letter-spacing: -.04em;
+    font-weight: 850;
+  }
+
+  .login-heading p {
+    margin: 10px 0 0;
+    color: var(--login-muted);
+    font-size: .9rem;
+    line-height: 1.6;
+  }
+
+  /* Flask-WTF fields */
+  .money-login .form-floating {
+    position: relative;
+    margin-bottom: 16px;
+  }
+
+  .money-login .form-floating input {
+    width: 100%;
+    min-height: 56px;
+    border: 1px solid var(--login-border);
+    border-radius: 12px;
+    background: #fbfdff;
+    color: var(--login-text);
+    padding-left: 17px;
+    padding-right: 17px;
+    box-shadow: none;
+    outline: none;
+    font-size: .92rem;
+    transition:
+      border-color .2s ease,
+      box-shadow .2s ease,
+      background .2s ease;
+  }
+
+  .money-login .form-floating input:focus {
+    border-color: var(--login-primary);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(15, 61, 94, .08);
+  }
+
+  .money-login .form-floating label {
+    color: #7c8b99;
+    padding-left: 17px;
+  }
+
+  .money-login .form-floating input:focus ~ label,
+  .money-login .form-floating input:not(:placeholder-shown) ~ label {
+    color: var(--login-primary);
+  }
+
+  .login-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 4px 0 24px;
+  }
+
+  .login-remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--login-muted);
+    font-size: .8rem;
+  }
+
+  .login-remember input {
+    width: 15px;
+    height: 15px;
+    accent-color: var(--login-primary);
+  }
+
+  .login-forgot {
+    color: var(--login-primary);
+    font-size: .8rem;
+    font-weight: 700;
+  }
+
+  .login-forgot:hover {
+    color: var(--login-accent);
+  }
+
+  .login-submit {
+    width: 100%;
+    min-height: 54px;
+    border: 0;
+    border-radius: 12px;
+    color: white;
+    background: var(--login-primary);
+    font-weight: 750;
+    font-size: .92rem;
+    box-shadow: 0 10px 25px rgba(15, 61, 94, .18);
+    transition:
+      transform .2s ease,
+      background .2s ease,
+      box-shadow .2s ease;
+  }
+
+  .login-submit:hover {
+    color: white;
+    background: var(--login-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(15, 61, 94, .24);
+  }
+
+  .login-divider {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 25px 0;
+    color: #a0acb8;
+    font-size: .72rem;
+  }
+
+  .login-divider::before,
+  .login-divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: var(--login-border);
+  }
+
+  .login-register {
+    text-align: center;
+    color: var(--login-muted);
+    font-size: .82rem;
+  }
+
+  .login-register a {
+    color: var(--login-primary);
+    font-weight: 750;
+  }
+
+  .login-register a:hover {
+    color: var(--login-accent);
+  }
+
+  .login-security-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 24px;
+    color: #94a3b8;
+    font-size: .72rem;
+  }
+
+  .login-security-note i {
+    color: var(--login-accent);
+  }
+
+  /* Validation */
+  .money-login .invalid-feedback {
+    font-size: .75rem;
+    margin-top: 6px;
+  }
+
+  /* Mobile */
+  @media (max-width: 850px) {
+    .login-shell {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      min-height: auto;
+    }
+
+    .login-brand-panel {
+      display: none;
+    }
+
+    .login-form-panel {
+      padding: 45px 30px;
+    }
+
+    .login-logo-mobile {
+      display: grid;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .money-login {
+      padding: 15px;
+      align-items: flex-start;
+      padding-top: 30px;
+    }
+
+    .login-shell {
+      border-radius: 20px;
+    }
+
+    .login-form-panel {
+      padding: 35px 22px;
+    }
+
+    .login-heading h2 {
+      font-size: 1.75rem;
+    }
+
+    .login-options {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .login-submit,
+    .money-login .form-floating input {
+      transition: none;
+    }
+  }
+</style>
+
+<div class="money-login">
+
+  <div class="login-shell">
+
+```
+<!-- Brand / welcome panel -->
+<aside class="login-brand-panel">
+
+  <div class="login-brand-content">
+
+    <a href="/" class="login-brand">
+      <span class="login-brand-icon">
+        <i class="bi bi-wallet2"></i>
+      </span>
+      <span>Money Tracker</span>
+    </a>
+
+    <div class="login-brand-copy">
+
+      <div class="login-brand-kicker">
+        <span class="login-brand-dot"></span>
+        Personal finance, simplified
+      </div>
+
+      <h1>
+        Your money.
+        <br>
+        Clearly understood.
+      </h1>
+
+      <p>
+        Track your income, expenses and financial goals in one
+        simple place. Sign in to continue managing your money
+        with clarity.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="login-brand-footer">
+    Simple tools for better financial decisions.
+  </div>
+
+</aside>
+
+<!-- Login form -->
+<main class="login-form-panel">
+
+  <div class="login-form-wrapper">
+
+    <div class="login-logo-mobile">
+      <i class="bi bi-wallet2 fs-4"></i>
+    </div>
+
+    <div class="login-heading">
+      <h2>Welcome back</h2>
+      <p>
+        Sign in to your Money Tracker account.
+      </p>
+    </div>
+
+    <section class="loginform" name="loginform">
+
+      <form id="account" method="POST">
+
+        <div class="form-floating">
+          {{ form.email }}
+          {{ form.email.label }}
+        </div>
+
+        <div class="form-floating">
+          {{ form.password }}
+          {{ form.password.label }}
+        </div>
+
+        <div class="login-options">
+
+          <label class="login-remember">
+            <input type="checkbox" name="remember">
+            <span>Remember me</span>
+          </label>
+
+          <a href="#" class="login-forgot">
+            Forgot password?
+          </a>
+
+        </div>
+
+        <input type="hidden" name="next" value="/" />
+
+        <button type="submit" class="login-submit">
+          Sign in
+          <i class="bi bi-arrow-right"></i>
+        </button>
+
+      </form>
+
+    </section>
+
+    <div class="login-divider">
+      <span>SECURE ACCESS</span>
+    </div>
+
+    <div class="login-security-note">
+      <i class="bi bi-shield-lock"></i>
+      <span>Your account information is protected.</span>
+    </div>
+
+  </div>
+
+</main>
+
+  </div>
+
 </div>
 
-{% endblock%}
+{% endblock %}
+
