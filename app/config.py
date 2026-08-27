@@ -8,6 +8,7 @@ class AppConfig:
     """
     App Base Configuration
     """
+    APP_NAME = 'Money Tracker'
     SECRET_KEY = os.urandom(32)
     BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -77,5 +78,13 @@ config = {
     'production': ProductionConfig,
     'default': DevelopmentConfig
 }
+
+def get_config(config_name=None):
+    """
+    Get configuration based on environment
+    """
+    if config_name is None:
+        config_name = os.environ.get("FLASK_ENV", "development")
+    return config.get(config_name, DevelopmentConfig)
 
 # End of file

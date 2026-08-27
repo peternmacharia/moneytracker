@@ -2,8 +2,10 @@
 Initial system launch configuration file
 """
 
+import os
 from flask import Flask, render_template
 from flask_login import current_user
+from app.config import get_config
 from app.extensions import db, login_manager, migrate
 from app.utils.logging import setup_logger, setup_audit_logger
 from app.models.user import User
@@ -16,18 +18,25 @@ from app.views.auth import auth_bp
 from app.views.base import base_bp
 from app.views.category import category_bp
 from app.views.transaction import transaction_bp
-from config import config
+# from app.config import config
 # from views.errors import register_error_handlers
 
 # Application factory function that created the app
-def create_app(config_class='default'):
+# def create_app(config_class='default'):
+def create_app(config_name=None):
     """
     Application factory function that creates and configures the app
     """
-    app = Flask(__name__, instance_relative_config=True)
-    # application = app
-    app.config.from_object(config[config_class])
-    app.config.from_pyfile('config.py', silent=True)
+    # app = Flask(__name__, instance_relative_config=True)
+    # # application = app
+    # app.config.from_object(config[config_class])
+    # app.config.from_pyfile('config.py', silent=True)
+
+    app = Flask(__name__)
+
+    if config_name is None:
+        config_name = os.environ.get("FLASK_ENV", "development")
+    app.config.from_object(get_config(config_name))
 
     # Set up logging
     setup_logger(app)
