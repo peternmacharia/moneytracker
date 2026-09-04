@@ -142,7 +142,7 @@ from app.extensions import init_extensions, db, login_manager, mail
 # from app.seed_data import init_data
 from app.utils.errors import register_error_handlers
 from app.utils.filters import register_filters, register_context_processors
-from app.models.seed_data import *
+from app.seed_data import *
 from app.navigation import SIDEBAR_GROUPS
 # from app.forms import ContactForm
 
