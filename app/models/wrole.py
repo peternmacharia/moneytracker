@@ -1,5 +1,5 @@
 """
-app/models/role.py - Role model representing user roles in the system
+app/models/wrole.py - Role model representing user roles in the system
 """
 
 from typing import TYPE_CHECKING
@@ -8,25 +8,25 @@ from sqlalchemy import String, Text, Boolean
 from .base import BaseModel, ModelRegistry
 
 if TYPE_CHECKING:
-    from .user import User
-    from .rpermission import RolePermission
+    from .wmember import WorkspaceMember
+    from .wrpermission import WorkspaceRolePermission
 
 
 @ModelRegistry.register
-class Role(BaseModel):
+class WorkspaceRole(BaseModel):
     """
     Role model representing user roles in the system
     """
-    __tablename__ = "roles"
+    __tablename__ = "workspace_roles"
 
     name: Mapped[str]                   = mapped_column(String(100), unique=True, index=True)
     description: Mapped[str | None]     = mapped_column(Text)
     is_active: Mapped[bool]             = mapped_column(Boolean, default=True)
 
     # Relationships
-    users: Mapped[list["User"]]                         = relationship(back_populates="role")
-    role_permissions: Mapped[list["RolePermission"]]    = relationship(back_populates="role",
-                                                                       cascade="all, delete-orphan")
+    members: Mapped[list["WorkspaceMember"]]            = relationship(back_populates="wrole")
+    wrole_permissions: Mapped[list["WorkspaceRolePermission"]]  = relationship(back_populates="wrole",
+                                                                               cascade="all, delete-orphan")
 
     def __repr__(self):
         return f'<Role {self.name!r}>'

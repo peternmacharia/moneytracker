@@ -1,8 +1,0 @@
-2026-08-27 11:33:54,472 - app - INFO - [266031d9-49d2-46e8-9f4e-52a1e61034ea] GET / started
-2026-08-27 11:33:54,495 - app - INFO - [266031d9-49d2-46e8-9f4e-52a1e61034ea] GET / completed with status 200 in 0.0240s
-2026-08-27 11:33:54,504 - app - INFO - [c2945747-e8f2-465f-bbd9-60e3b4a9bce4] GET /static/style.css started
-2026-08-27 11:33:54,510 - app - INFO - [c21f3ee3-6fe9-4e49-bb25-0f691d76aafe] GET /static/images/icon.png started
-2026-08-27 11:33:54,511 - app - INFO - [ecdcf650-2193-4679-bc46-fc81333defd3] GET /static/site.js started
-2026-08-27 11:33:54,517 - app - INFO - [c2945747-e8f2-465f-bbd9-60e3b4a9bce4] GET /static/style.css completed with status 304 in 0.0125s
-2026-08-27 11:33:54,518 - app - INFO - [ecdcf650-2193-4679-bc46-fc81333defd3] GET /static/site.js completed with status 304 in 0.0070s
-2026-08-27 11:33:54,518 - app - INFO - [c21f3ee3-6fe9-4e49-bb25-0f691d76aafe] GET /static/images/icon.png completed with status 304 in 0.0080s

@@ -1,75 +1,131 @@
 """
-Config file that stores secret keys and db connections
+Money Tracker - Configuration Classes
+app/config.py
 """
 
 import os
+import logging
+from logging import StreamHandler, FileHandler
+from urllib.parse import quote_plus
+from datetime import timedelta
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 class AppConfig:
     """
-    App Base Configuration
+    Base Configuration
     """
+
+    # Application
     APP_NAME = 'Money Tracker'
-    SECRET_KEY = os.urandom(32)
+    SECRET_KEY = os.environ.get("SECRET_KEY")
+    SECURITY_PASSWORD_SALT = os.environ.get("SECURITY_PASSWORD_SALT")
     BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+    PROJECT_ROOT = os.path.dirname(BASE_DIR)
 
-    SESSION_TIMEOUT_MINUTES = 30
-    MAX_LOGIN_ATTEMPTS = 5
+    # Database
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    # Logging Configuration
-    LOG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'logs')
-    LOG_LEVEL = 'INFO'
-    LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    LOG_FILE_MAX_BYTES = 10485760  # 10MB
-    LOG_BACKUP_COUNT = 10
+    # Logging
+    LOG_LEVEL = os.environ.get("LOG_LEVEL", "INFO")
+    LOG_DIR = os.path.join(PROJECT_ROOT, "logs")
+    LOG_FILE = os.path.join(LOG_DIR, "app.log")
+    ERROR_LOG_FILE = os.path.join(LOG_DIR, "error.log")
+    os.makedirs(LOG_DIR, exist_ok=True) 
 
-    # Asset Image and Invoice Document upload directory configuration folders
-    UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads')
+    # File Upload Configuration
     MAX_CONTENT_SIZE = 5 * 1024 * 1024  # 5MB maximum size
+    ALLOWED_ATTACHMENT_EXTENSIONS = {
+    ".png", ".jpg", ".jpeg", ".pdf", ".doc", ".docx", ".xls", ".xlsx", ".txt", ".csv",}
+    UPLOADS_FOLDER = os.path.join(BASE_DIR, "uploads")
 
-    # File upload restrictions
-    # Image restrictions
-    ALLOWED_IMAGE_EXTENSIONS = {'png'}  # Only allow PNG files
-    # Document restrictions
-    ALLOWED_DOCUMENT_EXTENSIONS = {'pdf'}  # Only allow PDF files
+    # Asset Image and Invoice Document upload directories
+    IMAGES_FOLDER = os.path.join(UPLOADS_FOLDER, "images")
+    DOCUMENTS_FOLDER = os.path.join(UPLOADS_FOLDER, "documents")
 
-    # Make sure the upload directory exists
-    os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-    os.makedirs(os.path.join(UPLOAD_FOLDER, 'assets', 'images'), exist_ok=True)
-    os.makedirs(os.path.join(UPLOAD_FOLDER, 'assets', 'documents'), exist_ok=True)
+    # Create upload directories
+    os.makedirs(UPLOADS_FOLDER, exist_ok=True)
+    os.makedirs(IMAGES_FOLDER, exist_ok=True)
+    os.makedirs(DOCUMENTS_FOLDER, exist_ok=True)
 
+    # Consider adding SMTP handler settings for error notifications
+    # Email Configuration (using SendGrid as example)
+    MAIL_SERVER = os.environ.get("MAIL_SERVER")
+    MAIL_PORT = os.environ.get("MAIL_PORT")
+    MAIL_USE_TLS = os.environ.get("MAIL_USE_TLS", "true").lower() in ["true", "on", "1"]
+    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+    MAIL_DEFAULT_SENDER = os.environ.get("MAIL_DEFAULT_SENDER")
+
+    # Session settings (base — overridden per environment below)
+    # PERMANENT_SESSION_LIFETIME = timedelta(hours=8)
+    # REMEMBER_COOKIE_DURATION   = timedelta(days=1)
+
+    @classmethod
+    def init_app(cls, app):
+        """Shared logging setup — runs for every environment."""
+        fmt = logging.Formatter(
+            "[%(asctime)s] %(levelname)s in %(module)s: %(message)s"
+        )
+
+        console = StreamHandler()
+        console.setFormatter(fmt)
+
+        app_fh = FileHandler(cls.LOG_FILE)
+        app_fh.setLevel(logging.INFO)
+        app_fh.setFormatter(fmt)
+
+        error_fh = FileHandler(cls.ERROR_LOG_FILE)
+        error_fh.setLevel(logging.ERROR)
+        error_fh.setFormatter(fmt)
+
+        app.logger.setLevel(cls.LOG_LEVEL)
+        app.logger.addHandler(console)
+        app.logger.addHandler(app_fh)
+        app.logger.addHandler(error_fh)
 
 class TestingConfig(AppConfig):
     """
     Testing Configuration
     """
     TESTING = True
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///MTDB.db'
+    DEBUG = True
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL_DEV")
+    # DB_DEV_PASSWORD = quote_plus(os.environ.get("DB_DEV_PASSWORD"))
+
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+
 
 class DevelopmentConfig(AppConfig):
     """
     Development configuration
     """
-    # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///MtracketDB.db'
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///MTDevDB.db'
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
     DEBUG = True
-    LOG_LEVEL = 'DEBUG'
+    LOG_LEVEL = logging.DEBUG
+    TESTING = False
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL_DEV")
+    # DB_DEV_PASSWORD = quote_plus(os.environ.get("DB_DEV_PASSWORD"))
+
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+    SESSION_COOKIE_SECURE = False
+
 
 class ProductionConfig(AppConfig):
     """
     Production configuration
     """
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL',
-                                             'postgresql://user:password@localhost/mtprodb')
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL_PRO")
+    # DB_PRO_PASSWORD = quote_plus(os.environ.get("DB_PRO_PASSWORD"))
 
-    # Consider adding SMTP handler settings for error notifications
-    MAIL_SERVER = 'smtp.example.com'
-    MAIL_PORT = 587
-    MAIL_USE_TLS = True
-    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
-    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-    ADMINS = ['itsupport@mtracker.com']
+    SESSION_COOKIE_SECURE = True
+    SESSION_COOKIE_HTTPONLY = True
+    # SESSION_COOKIE_SAMESITE = 'Lax'
+    PERMANENT_SESSION_LIFETIME = timedelta(hours=8)
+    REMEMBER_COOKIE_DURATION   = timedelta(days=1)
 
 
 config = {
@@ -79,6 +135,7 @@ config = {
     'default': DevelopmentConfig
 }
 
+
 def get_config(config_name=None):
     """
     Get configuration based on environment
@@ -86,5 +143,6 @@ def get_config(config_name=None):
     if config_name is None:
         config_name = os.environ.get("FLASK_ENV", "development")
     return config.get(config_name, DevelopmentConfig)
+
 
 # End of file
