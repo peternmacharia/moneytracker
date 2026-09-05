@@ -150,6 +150,7 @@ body {
 }
 
 .step-icon {
+  position: relative; /* contain the ::after connector line */
   width: 60px;
   height: 60px;
   display: flex;
