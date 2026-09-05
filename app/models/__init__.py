@@ -10,6 +10,9 @@ from .user import User
 from .notification import Notification
 from .workspace import Workspace
 from .wmember import WorkspaceMember
+from .wrole import WorkspaceRole
+from .wpermission import WorkspacePermission
+from .wrpermission import WorkspaceRolePermission
 
 
 
@@ -21,6 +24,7 @@ __all__ = [
     "Notification",
     # Workspace Models
     "Workspace", "WorkspaceMember",
+    "WorkspaceRole", "WorkspacePermission", "WorkspaceRolePermission",
 ]
 
 # End of file

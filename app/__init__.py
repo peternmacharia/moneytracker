@@ -138,20 +138,21 @@ from sqlalchemy import inspect
 from sqlalchemy.exc import SQLAlchemyError
 
 from app.config import get_config
-from app.extensions import init_extensions, db, login_manager, mail
+from app.extensions import init_extensions, db, login_manager
 # from app.seed_data import init_data
 from app.utils.errors import register_error_handlers
 from app.utils.filters import register_filters, register_context_processors
-from app.seed_data import *
-from app.navigation import SIDEBAR_GROUPS
+from app.models import User
+# from app.seed_data import *
+# from app.navigation import SIDEBAR_GROUPS
 # from app.forms import ContactForm
 
 # # Blueprints
-from app.routes.auth        import auth_bp
-from app.routes.main        import main_bp
-from app.routes.user        import user_bp
-from app.routes.permission  import permission_bp
-from app.routes.role        import role_bp
+# from app.routes.auth        import auth_bp
+# from app.routes.main        import main_bp
+# from app.routes.user        import user_bp
+# from app.routes.permission  import permission_bp
+# from app.routes.role        import role_bp
 
 
 def create_app(config_name=None):
@@ -178,11 +179,11 @@ def create_app(config_name=None):
 
     # # Registration of the App Blueprint View Routes
     # # app.register_blueprint(auditlog_bp)
-    app.register_blueprint(auth_bp)
-    app.register_blueprint(main_bp)
-    app.register_blueprint(user_bp)
-    app.register_blueprint(permission_bp)
-    app.register_blueprint(role_bp)
+    # app.register_blueprint(auth_bp)
+    # app.register_blueprint(main_bp)
+    # app.register_blueprint(user_bp)
+    # app.register_blueprint(permission_bp)
+    # app.register_blueprint(role_bp)
 
     @app.context_processor
     def inject_current_year():
@@ -196,18 +197,54 @@ def create_app(config_name=None):
         """
         return db.session.get(User, user_id)
 
-    @app.context_processor
-    def inject_sidebar():
-        return dict(sidebar_groups=SIDEBAR_GROUPS)
+    # @app.context_processor
+    # def inject_sidebar():
+    #     return dict(sidebar_groups=SIDEBAR_GROUPS)
 
     # Default app route redirect to app login page
     @app.route('/')
     def index():
         """
-        Loading default landing page
+        The app landing page
         """
-        current_app.logger.info("Loading default landing page | ip=%s", request.remote_addr)
-        return redirect(url_for('main.index'))
+        return render_template("index.html", title="Home")
+        # current_app.logger.info("Loading default landing page | ip=%s", request.remote_addr)
+        # return redirect(url_for('main.index'))
+    
+    @app.route('/features')
+    def features():
+        """
+        The app features page
+        """
+        return render_template("features.html", title="Features")
+
+    @app.route('/how-it-works')
+    def howitworks():
+        """
+        The app how it works page
+        """
+        return render_template("howitworks.html", title="How It Works")
+
+    @app.route('/about')
+    def about():
+        """
+        The app about page
+        """
+        return render_template("about.html", title="About Us")
+
+    @app.route('/faq')
+    def faq():
+        """
+        The app faq page
+        """
+        return render_template("faq.html", title="FAQ")
+
+    @app.route('/contact')
+    def contact():
+        """
+        The app contact page
+        """
+        return render_template("contact.html", title="Contact")
 
 
     with app.app_context():
@@ -223,7 +260,7 @@ def register_commands(app):
     @app.cli.command("seed-db")
     def seed_db():
         """Seed the database with initial data."""
-        init_data()
+        # init_data()
         print("✔ Database seeded.\n")
 
     @app.cli.command("create-tables")

@@ -6,7 +6,7 @@ app/config.py
 import os
 import logging
 from logging import StreamHandler, FileHandler
-from urllib.parse import quote_plus
+# from urllib.parse import quote_plus
 from datetime import timedelta
 from dotenv import load_dotenv
 

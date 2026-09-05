@@ -79,10 +79,6 @@ def register_filters(app):
     def active_badge(is_active):
         return "badge bg-success" if is_active else "badge bg-secondary"
 
-    @app.template_filter("maintenance_badge")
-    def maintenance_badge(is_active):
-        return "badge bg-primary" if is_active else "badge bg-success"
-
 
     # ------------------------------------------------------------------
     # Asset status and condition badge filters
