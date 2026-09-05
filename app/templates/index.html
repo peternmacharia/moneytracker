@@ -3,7 +3,7 @@
 {% block content %}
 
 <section class="headerSection" id="home">
-  <div class="container pb-5 pt-5">
+  <div class="container pt-5 pb-5 reveal">
     <div class="text-success mb-2 pt-5">
       <i class="bi bi-lightbulb text-warning"></i> 
       <span class="small text-success fw-bold">PERSONAL FINANCE, SIMPLIFIED</span>
@@ -35,8 +35,8 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-4 stat-item g-4 pt-3 pb-3 text-center">
+  <div class="container pb-3 reveal">
+    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-4 stat-item g-4 text-center">
       <div class="col">
         <h3 class="stat">10,000+</h3>
         <p class="text-muted">Active users</p>
@@ -57,23 +57,46 @@
   </div>
 </section>
 
-<section class="testimonySection" id="testimonials">
-  <div class="container pt-5 pb-5">
-    <div class="text-center">
-      <div class="small text-success fw-bold">A CLEARER PICTURE</div>
-      <div class="display-6 fw-bold">Managing money shouldn't feel complicated.</div>
+<section class="aboutSection" id="about">
+  <div class="container pt-5 pb-5 reveal">
+    <div class="text-center reveal">
+      <div class="small text-success fw-bold">WHAT WE DO</div>
+      <div class="display-6 fw-bold mb-3">Managing money shouldn't feel complicated.</div>
       <p class="text-muted">
         Replace guesswork with a simple view of what comes in,
-        what goes out and what you're working toward.
+        what goes out and what you're working towards.
+      </p>
+      <p class="text-muted">
+        We built Money Tracker because most people don't need another
+        complicated finance app — they need a clear, honest view of
+        their own money, without the clutter.
       </p>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 pt-3 pb-3">
+    <div class="row text-center g-4 pt-4 pb-4 reveal">
+      <div class="col-md-4">
+        <i class="bi bi-shield-lock fs-2 mb-2 d-block about-trust-icon"></i>
+        <h6 class="fw-bold mb-1">Private by default</h6>
+        <p class="text-muted small mb-0">Your financial data stays yours — nothing is shared.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-sliders fs-2 mb-2 d-block about-trust-icon"></i>
+        <h6 class="fw-bold mb-1">Simple by design</h6>
+        <p class="text-muted small mb-0">No clutter, no jargon — just the numbers that matter to you.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="bi bi-geo-alt fs-2 mb-2 d-block about-trust-icon"></i>
+        <h6 class="fw-bold mb-1">Built for Everyone</h6>
+        <p class="text-muted small mb-0">Made with everyone's financial needs in mind.</p>
+      </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 pt-3 pb-3 reveal">
       <div class="col">
         <div class="card h-100 styledcard before">
           <div class="card-body p-4">
             <h6 class="card-title text-muted mb-3">WITHOUT MONEY TRACKER</h6>
-            <h5 class="fw-bold mb-3">“I think I spent around KES 30,000 this month.”</h5>
+            <h5 class="fw-bold mb-3">"I think I spent around KES 30,000 this month."</h5>
             <p class="text-muted">
               Receipts, notes and different accounts make it difficult
               to see the full picture.
@@ -86,7 +109,7 @@
         <div class="card h-100 styledcard after">
           <div class="card-body p-4">
             <h6 class="card-title label fw-bold mb-3">WITH MONEY TRACKER</h6>
-            <h5 class="fw-bold mb-3">“I spent KES 27,450 — and I know exactly where it went.”</h5>
+            <h5 class="fw-bold mb-3">"I spent KES 27,450 — and I know exactly where it went."</h5>
             <p class="text-muted">
               Your financial activity is organized in one place,
               making everyday decisions easier.
@@ -100,7 +123,7 @@
 
 <section class="featureSection" id="features">
   <div class="container pt-5 pb-5">
-    <div class="text-center">
+    <div class="text-center reveal">
       <div class="small text-success fw-bold">EVERYTHING IN ONE PLACE</div>
       <div class="display-6 fw-bold">Simple tools for better decisions.</div>
       <p class="text-muted">
@@ -109,7 +132,7 @@
       </p>
     </div>
 
-    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 g-4 pt-3 pb-3">
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 g-4 pt-3 pb-3 reveal">
       <div class="col">
         <div class="card h-100 styledcard rounded-4">
           <div class="card-body p-4">
@@ -187,7 +210,7 @@
 
 <section class="howitworksSection" id="howitworks">
   <div class="container pt-5 pb-5">
-    <div class="text-center">
+    <div class="text-center reveal">
       <div class="small text-success fw-bold">HOW IT WORKS</div>
       <div class="display-6 fw-bold">Get started in three simple steps.</div>
       <p class="text-muted">
@@ -196,7 +219,7 @@
       </p>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4 pt-3 pb-3">
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4 pt-3 pb-3 reveal">
       <div class="col">
         <div class="card-body p-4">
           <div class="step-icon">01</div>
@@ -231,7 +254,7 @@
 </section>
 
 <section class="overviewSection" id="overviewSection">
-  <div class="container pt-5 pb-5">
+  <div class="container pt-5 pb-5 reveal">
     <div class="text-center">
       <div class="small text-success fw-bold">See it in action</div>
       <div class="display-6 fw-bold">Your money. Clearly understood.</div>
@@ -247,7 +270,7 @@
 </section>
 
 <section class="yourdataSection" id="yourdataSection">
-  <div class="container pt-5 pb-5">
+  <div class="container pt-5 pb-5 reveal">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 justify-content-center">
       <div class="col align-content-center">
         <div class="small text-success fw-bold">BUILT WITH TRUST IN MIND</div>
@@ -260,7 +283,7 @@
       </div>
 
       <div class="col">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-3 justify-content-center">
+        <div class="row row-cols-2 row-cols-md-2 row-cols-lg-2 g-3 justify-content-center">
           <div class="col">
             <div class="card h-100 rounded-4">
               <div class="card-body">
@@ -312,7 +335,7 @@
 
 <section class="faqSection" id="faq">
   <div class="container pt-5 pb-5">
-    <div class="text-center">
+    <div class="text-center reveal">
       <div class="small text-success fw-bold">FREQUENTLY ASKED QUESTIONS</div>
       <div class="display-6 fw-bold">Have questions? We've got answers.</div>
       <p class="text-muted">
@@ -321,7 +344,7 @@
       </p>
     </div>
 
-    <div class="accordion pt-3 pb-5" id="faqAccordion">
+    <div class="accordion pt-3 pb-5 reveal" id="faqAccordion">
       <div class="accordion accordion-flush" id="faqaccordion">
         <div class="accordion-item">
           <h2 class="accordion-header">
@@ -380,12 +403,11 @@
       </div>
     </div>
 
-    <div class="ctacard card shadow rounded-4 p-4 pt-5 pb-5">
-      <div class="card-body p-4 text-center">
+    <div class="ctacard card shadow rounded-4 p-4 pt-5 pb-5 reveal" style="background-color: #0f3d5e;">
+      <div class="card-body p-4 text-center text-light">
         <div class="display-6 fw-bold mb-3">Your money deserves clarity.</div>
-        <p class="text-muted mb-3">
-          <!-- Money Tracker - the SMART way to Track your Money,<br> -->
-          You only know what you track!
+        <p class="mb-3">
+          Money Tracker - the SMART way to Track your Money
         </p>
         <div class="mb-4">
           <a class="btn btn-signup" style="background-color:#ffffff; color: #0f3d5e;" href="#"><span class="fw-bold">Start tracking — It's free</span></a>
@@ -395,9 +417,85 @@
   </div>
 </section>
 
-<section class="footer" id="footer">
-  <div class="container-fluid">
-    
+<section id="contact" name="contactSection">
+  <div class="container pt-5 pb-5 reveal">
+    <div class="text-center">
+      <h2 class="section-title-dark">Get in touch</h2>
+      <p class="section-subtitle-dark mb-4">Questions, feedback, or ideas — we'd love to hear from you.</p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card shadow rounded-4 p-4" style="background-color: #0f3d5e;">
+            <div class="card-body p-4 text-center text-light">
+              <form method="POST" action="#" class="contact-form text-start">
+                {# If you're using Flask-WTF, replace the line below with {{ form.hidden_tag() }} #}
+                {#<input type="hidden" name="csrf_token" value="{{ csrf_token() }}"> #}
+
+                <div class="mb-3">
+                  <label for="name" class="form-label-dark">Name</label>
+                  <input type="text" class="form-control contact-input" id="name" name="name" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label-dark">Email</label>
+                  <input type="email" class="form-control contact-input" id="email" name="email" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="subject" class="form-label-dark">Subject</label>
+                  <input type="text" class="form-control contact-input" id="subject" name="subject" required>
+                </div>
+
+                <div class="mb-4">
+                  <label for="message" class="form-label-dark">Message</label>
+                  <textarea class="form-control contact-input" id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <div class="text-center">
+                  <button type="submit" class="btn btn-signup" style="background-color:#ffffff; color: #0f3d5e;">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="footerSection" id="footer">
+  <div class="container pt-3 pb-3 text-center reveal">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-3 justify-content-center align-items-center pt-3 pb-3">
+      <div class="col">
+        <h4 class="fw-bold text-white">Money Tracker</h4>
+        <p>You only know what you track!</p>
+      </div>
+
+      <div class="col">
+        <div class="row row-cols-2 row-cols-md-2 row-cols-lg-2 g-3 justify-content-center align-items-center pt-3 pb-3">
+          <div class="col">
+            <h6 class="fw-bold text-white">Contact</h6>
+            <ul class="list-unstyled footer-links">
+              <li>info@techrimsolutions.com</li>
+              <li>+254 142 016 569</li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <h6 class="fw-bold text-white">Account</h6>
+            <ul class="list-unstyled footer-links">
+              <li class=""><a href="#">Log in</a></li>
+              <li class="text-light"><a href="#" class="">Get Started</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-white border-top pt-3">
+      © 2026 Money Tracker. All rights reserved.<br>
+      Built by <a href="https://techrimsolutions.com" target="_blank" rel="noopener" class="text-success fw-bold">Techrim Solutions</a>.
+    </div>
   </div>
 </section>
 

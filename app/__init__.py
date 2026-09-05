@@ -210,41 +210,6 @@ def create_app(config_name=None):
         return render_template("index.html", title="Home")
         # current_app.logger.info("Loading default landing page | ip=%s", request.remote_addr)
         # return redirect(url_for('main.index'))
-    
-    @app.route('/features')
-    def features():
-        """
-        The app features page
-        """
-        return render_template("features.html", title="Features")
-
-    @app.route('/how-it-works')
-    def howitworks():
-        """
-        The app how it works page
-        """
-        return render_template("howitworks.html", title="How It Works")
-
-    @app.route('/about')
-    def about():
-        """
-        The app about page
-        """
-        return render_template("about.html", title="About Us")
-
-    @app.route('/faq')
-    def faq():
-        """
-        The app faq page
-        """
-        return render_template("faq.html", title="FAQ")
-
-    @app.route('/contact')
-    def contact():
-        """
-        The app contact page
-        """
-        return render_template("contact.html", title="Contact")
 
 
     with app.app_context():
