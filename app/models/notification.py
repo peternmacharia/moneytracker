@@ -28,7 +28,6 @@ class Notification(db.Model):
                                                             index=True)
     title: Mapped[str]                      = mapped_column(String(100))
     message: Mapped[str]                    = mapped_column(Text)
-    channel: Mapped[str]                    = mapped_column(String(50))
     type: Mapped[str]                       = mapped_column(String(50))
     is_urgent: Mapped[bool]                 = mapped_column(Boolean, default=False)
     is_read: Mapped[bool]                   = mapped_column(Boolean, index=True)
@@ -36,7 +35,7 @@ class Notification(db.Model):
     read_at: Mapped[datetime | None]        = mapped_column(DateTime)
 
 
-    # Relationships
+     # Relationships
     user: Mapped["User"]                    = relationship(back_populates="notifications")
 
     def mark_read(self):

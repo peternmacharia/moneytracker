@@ -4,19 +4,179 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Money Tracker - {% block title %}{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
   </head>
   <body>
 
-    <div class="main">
-      {% block content %}
-      {% endblock %}
+    <div class="sidebar offcanvas-md offcanvas-end bg-body-tertiary border-end mb-5"  tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+      <div class="offcanvas-header">
+      <!-- <h5 class="offcanvas-title" id="sidebarMenuLabel"><strong style="color: #006064;">Asset Management</strong></h5> -->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
+      </div>
+      <div class="logo text-center p-3 mb-3">
+          <img src="{{url_for('static', filename='images/vertical_black.png')}}" class="img-fluid" style="max-width: 10em; max-height: 10em;" alt="AMS Logo">
+      </div>
+      <hr>
+      {% if current_user.is_authenticated %}
+        {% from "macros/_sidebar.html" import nav_item, nav_group with context %}
+
+        {% if current_user.is_authenticated %}
+        <nav class="nav flex-column gap-1 mb-5">
+          {{ nav_item('Dashboard', 'main.dashboard', 'bi-speedometer2') }}
+          {% for group in sidebar_groups %}
+            {{ nav_group(group.label, group.icon, group.collapse_id, group.links) }}
+          {% endfor %}
+          {{ nav_item('Notifications', 'notifications.index', 'bi-bell') }}
+        </nav>
+        {% endif %}
+      {% endif %}
+
+      {% if current_user.is_authenticated %}
+      <div class="mt-auto p-3 border-top">
+        <div class="text-center">
+          <div class="dropdown">
+            <button class="btn btn-outline-primary border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person-circle"></i><span class="fw-bold">{{ current_user.fullname }}</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="btn btn-sm dropdown-item" href="{{ url_for ('user.profile') }}">Profile</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {% endif %}
     </div>
+
+    <main class="main-content">
+      <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top border-body border-bottom">
+          <div class="container-fluid">
+            <span class="text-uppercase fw-bold" style="color: #006064;"><i class="bi bi-columns-gap"></i>&nbsp;{{ title }}{% if counter %}: &nbsp;<span class="fst-italic">{{ counter }}</span> {% endif %}</span>
+            <ul class="navbar-nav justify-content-end ms-auto align-items-center">
+              {% if current_user.is_authenticated %}
+              <!-- CSRF token for JS fetch calls -->
+
+              <!-- Hidden modal container for notification detail pop-ups -->
+              <div id="notifModalContainer" class="modal fade" tabindex="-1" aria-hidden="true"></div>
+
+              <!-- ... inside your navbar ... -->
+              <li class="nav-item dropdown">
+                  <!-- Bell toggle: NO href here, just dropdown -->
+                  <a class="btn btn-outline-dark position-relative border-0"
+                    href="#"
+                    id="notifBell"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                      <i class="bi bi-bell"></i>
+                      <span id="notifBadge"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none"
+                            style="font-size: 0.6rem;">
+                          0
+                      </span>
+                  </a>
+
+                  <!-- Dropdown panel -->
+                  <ul class="dropdown-menu dropdown-menu-end p-0 shadow-sm"
+                      id="notifList"
+                      style="width: 320px; max-height: 400px; overflow-y: auto;"
+                      aria-labelledby="notifBell">
+                      <li class="px-3 py-2 border-bottom fw-semibold small text-uppercase text-muted d-flex justify-content-between align-items-center">
+                          <span>Notifications</span>
+                          <a href="{{ url_for('notifications.index') }}" class="small text-decoration-none">View all</a>
+                      </li>
+                      <li id="notifEmpty" class="px-3 py-3 text-muted small text-center">No notifications</li>
+                  </ul>
+
+                  &nbsp;&nbsp;
+                  <a class="btn btn-sm btn-outline-danger border-0" href="{{ url_for('auth.logout') }}">
+                    <i class="bi bi-power"></i>&nbsp;Sign Out
+                  </a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a class="btn btn-outline-dark position-relative border-0" href="{{ url_for('notifications.index') }}" id="notifBell" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-bell"></i>
+                  <span id="notifBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none" style="font-size: 0.6rem;">
+                    0
+                  </span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end p-0 shadow-sm" id="notifList"
+                    style="width: 320px; max-height: 400px; overflow-y: auto;" aria-labelledby="notifBell">
+                  <li class="px-3 py-2 border-bottom fw-semibold small text-uppercase text-muted">Notifications</li>
+                  <li id="notifEmpty" class="px-3 py-3 text-muted small text-center">No notifications</li>
+                </ul>
+                &nbsp;&nbsp;
+                <a class="btn btn-sm btn-outline-danger border-0" href="{{ url_for('auth.logout') }}"><i class="bi bi-power"></i>&nbsp;Sign Out</a>
+              </li> -->
+              {% endif %}
+            </ul>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon border-0"></span>
+            </button>
+          </div>
+        </nav>
+      </header>
+      <!-- <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top border-body border-bottom">
+          <div class="container-fluid">
+            <span class="text-uppercase fw-bold" style="color: #006064;"><i class="bi bi-columns-gap"></i>&nbsp;{{ title }}{% if counter %}: &nbsp;<span class="fst-italic">{{ counter }}</span> {% endif %}</span>
+            <ul class="navbar-nav justify-content-end ms-auto align-items-center">
+              {% if current_user.is_authenticated %}
+              <li>
+                <a class="btn btn-sm btn-outline-primary border-0" href=""><i class="bi bi-bell fs-5"></i></a>&nbsp;&nbsp;
+                <a class="btn btn-sm btn-outline-danger border-0" href="{{ url_for ('auth.logout') }}"><i class="bi bi-power"></i>&nbsp;Sign Out</a>
+              </li>
+              {% endif %}
+            </ul>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon border-0"></span>
+            </button>
+          </div>
+        </nav>
+      </header> -->
+
+      <div class="mt-3 mb-5">
+        <div class="container-fluid">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                {% for category, message in messages %}
+                  <div id="liveToast" class="toast text-bg-{{ category }} border-0 position-static" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="7000" autohide="true">
+                    <div class="toast-header">
+                      <strong class="me-auto">{{ category }}</strong>
+                      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                      {{ message }}
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+          {% endwith %}
+
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+
+      <div class="modal fade" id="Modal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="ModalLabel" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <!-- Content will be loaded here dynamically -->
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </body>
 </html>
