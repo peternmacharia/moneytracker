@@ -88,7 +88,7 @@ def index():
     )
 
 
-@role_bp.route("/details/<int:role_id>", methods=["GET"])
+@role_bp.route("/details/<role_id>", methods=["GET"])
 @login_required
 @permission_required("role:view")
 def details(role_id):
@@ -152,7 +152,7 @@ def create():
     )
 
 
-@role_bp.route("/update/<int:role_id>", methods=["GET", "POST"])
+@role_bp.route("/update/<role_id>", methods=["GET", "POST"])
 @login_required
 @permission_required("role:update")
 def update(role_id):
@@ -217,7 +217,7 @@ def update(role_id):
     )
 
 
-@role_bp.route("/delete/<int:role_id>", methods=["GET", "POST"])
+@role_bp.route("/delete/<role_id>", methods=["GET", "POST"])
 @login_required
 @permission_required("role:delete")
 def delete(role_id):

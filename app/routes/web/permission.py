@@ -121,7 +121,7 @@ def create():
                            title="Create Permission")
 
 
-@permission_bp.route("/update/<int:permission_id>", methods=["GET", "POST"])
+@permission_bp.route("/update/<permission_id>", methods=["GET", "POST"])
 @login_required
 @permission_required("permission:update")
 def update(permission_id):
@@ -160,7 +160,7 @@ def update(permission_id):
                            title=f"Update Permission: {permission.name}")
 
 
-@permission_bp.route("/delete/<int:permission_id>", methods=["GET", "POST"])
+@permission_bp.route("/delete/<permission_id>", methods=["GET", "POST"])
 @login_required
 @permission_required("permission:delete")
 def delete(permission_id):

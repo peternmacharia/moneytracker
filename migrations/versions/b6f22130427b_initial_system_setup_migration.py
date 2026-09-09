@@ -1,8 +1,8 @@
 """Initial system setup migration
 
-Revision ID: 6dea73d57ec4
+Revision ID: b6f22130427b
 Revises: 
-Create Date: 2026-09-09 07:01:39.492994
+Create Date: 2026-09-09 11:49:55.503906
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '6dea73d57ec4'
+revision = 'b6f22130427b'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -155,10 +155,10 @@ def upgrade():
     op.create_table('notifications',
     sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
     sa.Column('user_id', sa.String(length=36), nullable=False),
-    sa.Column('workspace_id', sa.String(length=36), nullable=False),
+    sa.Column('workspace_id', sa.String(length=36), nullable=True),
     sa.Column('title', sa.String(length=100), nullable=False),
     sa.Column('message', sa.Text(), nullable=False),
-    sa.Column('type', sa.String(length=50), nullable=False),
+    sa.Column('category', sa.Enum('INFO', 'SUCCESS', 'WARNING', 'ERROR', name='notificationcategory'), nullable=False),
     sa.Column('is_urgent', sa.Boolean(), nullable=False),
     sa.Column('is_read', sa.Boolean(), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=False),

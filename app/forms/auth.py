@@ -6,7 +6,7 @@ app/forms/auth.py - Defines form classes related to authentication and user mana
 # from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed, FileSize
 from wtforms import (StringField, PasswordField, EmailField, SubmitField)
-from wtforms.validators import (DataRequired, Email, Length, EqualTo)
+from wtforms.validators import DataRequired, Email, Length, EqualTo
 from .base import BaseForm
 
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png"}
@@ -35,9 +35,9 @@ class SignupForm(BaseForm):
                        render_kw={"placeholder": "Email", "class": "form-control"})
     country = StringField("Country", validators=[DataRequired(message="Country is required.")],
                            render_kw={"placeholder": "Country", "class": "form-control"})
-    currency = EmailField("Currency", validators=[DataRequired(message="Currency is required.")],
+    currency = StringField("Currency", validators=[DataRequired(message="Currency is required.")],
                        render_kw={"placeholder": "Currency", "class": "form-control"})
-    timezone = EmailField("Timezone", validators=[DataRequired(message="Timezone is required.")],
+    timezone = StringField("Timezone", validators=[DataRequired(message="Timezone is required.")],
                        render_kw={"placeholder": "Timezone", "class": "form-control"})
     avatar = FileField("Avatar", validators=[FileAllowed([ext.lstrip(".") for ext in IMAGE_EXTENSIONS],
                                                          "That file type isn't allowed.",),

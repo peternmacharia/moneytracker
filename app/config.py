@@ -41,12 +41,14 @@ class AppConfig:
     ".png", ".jpg", ".jpeg", ".pdf", ".doc", ".docx", ".xls", ".xlsx", ".txt", ".csv",}
     UPLOADS_FOLDER = os.path.join(BASE_DIR, "uploads")
 
-    # Asset Image and Invoice Document upload directories
+    # Avatars, Image and Document upload directories
+    AVATAR_UPLOAD_FOLDER = os.path.join(UPLOADS_FOLDER, "avatars")
     IMAGES_FOLDER = os.path.join(UPLOADS_FOLDER, "images")
     DOCUMENTS_FOLDER = os.path.join(UPLOADS_FOLDER, "documents")
 
     # Create upload directories
     os.makedirs(UPLOADS_FOLDER, exist_ok=True)
+    os.makedirs(AVATAR_UPLOAD_FOLDER, exist_ok=True)
     os.makedirs(IMAGES_FOLDER, exist_ok=True)
     os.makedirs(DOCUMENTS_FOLDER, exist_ok=True)
 

@@ -5,9 +5,10 @@ app/models/notification.py - Notification model
 from datetime import datetime
 from typing import TYPE_CHECKING
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from sqlalchemy import Integer, String, Text, Boolean, DateTime, Enum, ForeignKey
+from sqlalchemy import Integer, String, Text, Boolean, Enum, DateTime, ForeignKey
 from app.extensions import db
 from .base import ModelRegistry, utc_now
+from .enums import NotificationCategory
 
 if TYPE_CHECKING:
     from .user import User
@@ -22,13 +23,14 @@ class Notification(db.Model):
 
     id: Mapped[int]                         = mapped_column(Integer, primary_key=True,
                                                             autoincrement=True, index=True)
-    user_id: Mapped[int]                    = mapped_column(ForeignKey("users.id"),
+    user_id: Mapped[str]                    = mapped_column(ForeignKey("users.id"),
                                                             index=True)
-    workspace_id: Mapped[int]               = mapped_column(ForeignKey("workspaces.id"),
+    workspace_id: Mapped[str | None]        = mapped_column(ForeignKey("workspaces.id"),
                                                             index=True)
     title: Mapped[str]                      = mapped_column(String(100))
     message: Mapped[str]                    = mapped_column(Text)
-    type: Mapped[str]                       = mapped_column(String(50))
+    category: Mapped[NotificationCategory]  = mapped_column(Enum(NotificationCategory),
+                                                            default=NotificationCategory.INFO)
     is_urgent: Mapped[bool]                 = mapped_column(Boolean, default=False)
     is_read: Mapped[bool]                   = mapped_column(Boolean, index=True)
     created_at: Mapped[datetime]            = mapped_column(DateTime, default=utc_now)

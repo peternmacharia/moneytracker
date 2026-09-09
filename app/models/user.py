@@ -34,7 +34,7 @@ class User(UserMixin, BaseModel):
     currency: Mapped[str]                           = mapped_column(String(3))
     timezone: Mapped[str]                           = mapped_column(String(50), default="UTC")
     avatar_url: Mapped[str | None]                  = mapped_column(Text)
-    role_id: Mapped[int]                            = mapped_column(ForeignKey("roles.id"))
+    role_id: Mapped[str]                            = mapped_column(ForeignKey("roles.id"))
     last_login: Mapped[DateTime | None]             = mapped_column(DateTime(timezone=True))
     login_count: Mapped[int | None]                 = mapped_column(Integer, default=0)
     password_changed_at: Mapped[DateTime | None]    = mapped_column(DateTime(timezone=True))

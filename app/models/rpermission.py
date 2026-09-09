@@ -21,9 +21,9 @@ class RolePermission(db.Model):
     """
     __tablename__ = "role_permissions"
 
-    role_id: Mapped[int]                        = mapped_column(ForeignKey("roles.id"),
+    role_id: Mapped[str]                        = mapped_column(ForeignKey("roles.id"),
                                                                 primary_key=True, index=True)
-    permission_id: Mapped[int]                  = mapped_column(ForeignKey("permissions.id"),
+    permission_id: Mapped[str]                  = mapped_column(ForeignKey("permissions.id"),
                                                                 primary_key=True, index=True)
 
     # Relationships

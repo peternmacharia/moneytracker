@@ -3,11 +3,12 @@ app/models/__init__.py - This module imports all the models and enums used in th
 """
 
 from .base import *
+from .enums import *
 from .role import Role
 from .permission import Permission
 from .rpermission import RolePermission
 from .user import User
-from .notification import Notification
+from .notification import Notification, NotificationCategory
 from .workspace import Workspace
 from .wmember import WorkspaceMember
 from .wrole import WorkspaceRole
@@ -21,7 +22,7 @@ __all__ = [
     "User", "Role", "Permission",
     "RolePermission",
     # Notification Models
-    "Notification",
+    "Notification", "NotificationCategory",
     # Workspace Models
     "Workspace", "WorkspaceMember",
     "WorkspaceRole", "WorkspacePermission", "WorkspaceRolePermission",

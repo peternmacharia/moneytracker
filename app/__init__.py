@@ -12,7 +12,7 @@ from sqlalchemy.exc import SQLAlchemyError
 
 from app.config import get_config
 from app.extensions import init_extensions, db, login_manager
-# from app.seed_data import init_data
+from app.seed_data import init_data
 from app.utils.errors import register_error_handlers
 from app.utils.filters import register_filters, register_context_processors
 from app.models import User
@@ -102,7 +102,7 @@ def register_commands(app):
     @app.cli.command("seed-db")
     def seed_db():
         """Seed the database with initial data."""
-        # init_data()
+        init_data()
         print("✔ Database seeded.\n")
 
     @app.cli.command("create-tables")

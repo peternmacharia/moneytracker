@@ -34,11 +34,11 @@ class AuditLog(db.Model):
     # Primary columns
     id: Mapped[int]                     = mapped_column(Integer, primary_key=True,
                                                         autoincrement=True, index=True)
-    user_id: Mapped[int | None]         = mapped_column(ForeignKey("users.id", ondelete="SET NULL"))
+    user_id: Mapped[str | None]         = mapped_column(ForeignKey("users.id", ondelete="SET NULL"))
     actor_type: Mapped[ActorType]       = mapped_column(SAEnum(ActorType), index=True)
     action: Mapped[str]                 = mapped_column(String(100), index=True)
     resource_type: Mapped[str]          = mapped_column(String(50), index=True)
-    resource_id: Mapped[int | None]     = mapped_column(Integer, index=True)
+    resource_id: Mapped[str | None]     = mapped_column(String(36), index=True)
     resource_name: Mapped[str | None]   = mapped_column(String(200))
     details: Mapped[dict | None]        = mapped_column(JSON, default=dict)
 

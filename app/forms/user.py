@@ -2,7 +2,7 @@
 app/forms/user.py - Forms for user management (create, update).
 """
 
-from wtforms import StringField, PasswordField, SubmitField, SelectField, BooleanField
+from wtforms import StringField, PasswordField, SubmitField, EmailField
 from wtforms.validators import (DataRequired, Email, Length, Regexp, EqualTo)
 from app.forms.base import BaseForm
 
@@ -18,7 +18,7 @@ class ProfileForm(BaseForm):
                             render_kw={"placeholder": "First Name", "class": "form-control"})
     lastname = StringField("Last Name", validators=[DataRequired(message="Last name is required.")],
                             render_kw={"placeholder": "Last Name", "class": "form-control"})
-    email = StringField("Email", validators=[DataRequired(message="Email is required."), Email()],
+    email = EmailField("Email", validators=[DataRequired(message="Email is required."), Email()],
                         render_kw={"placeholder": "Email", "class": "form-control"})
     submit = SubmitField("Save Changes", render_kw={"class": "btn btn-success"})
 

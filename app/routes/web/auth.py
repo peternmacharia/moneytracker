@@ -3,13 +3,16 @@ app/routes/auth.py - Defines routes related to authentication, including login, 
                     password reset, and 2FA management.
 """
 
+import os
+import uuid
 from datetime import datetime
 import logging
 import pyotp
 from flask import (Blueprint, render_template, redirect, url_for,
-                   flash, request, session, current_app)
+                   flash, request, session, current_app, abort, send_from_directory, send_file)
 # from flask_mail import Message
 from flask_login import login_required, current_user, login_user, logout_user
+from werkzeug.utils import secure_filename
 # from sqlalchemy.exc import SQLAlchemyError
 from app.services.mailer import (send_verification_email, send_password_reset_email,
                                  send_verified_confirmation_email, send_password_changed_email)
@@ -38,6 +41,48 @@ PASSWORD_CHANGE_EXEMPT_ENDPOINTS = {
     "auth.logout",
     "static",
 }
+
+def save_avatar(file_storage):
+    """
+    Save an uploaded avatar to the configured avatar upload folder.
+    Returns the stored filename (to be saved as user.avatar_url).
+    """
+    if not file_storage or not file_storage.filename:
+        return None
+
+    ext = os.path.splitext(secure_filename(file_storage.filename))[1].lower()
+    filename = f"{uuid.uuid4().hex}{ext}"
+
+    upload_dir = current_app.config["AVATAR_UPLOAD_FOLDER"]
+    os.makedirs(upload_dir, exist_ok=True)
+    file_storage.save(os.path.join(upload_dir, filename))
+
+    return filename
+
+
+def delete_avatar(avatar_url):
+    """
+    Remove a previously stored image file from disk, if present.
+    """
+    if not avatar_url:
+        return
+
+    upload_dir = current_app.config["AVATAR_UPLOAD_FOLDER"]
+    path = os.path.join(upload_dir, avatar_url)
+    if os.path.isfile(path):
+        try:
+            os.remove(path)
+        except OSError:
+            logger.warning("Could not delete image file: %s", path, exc_info=True)
+
+
+@auth_bp.route("/avatar-images/<path:filename>")
+@login_required
+def serve_avatar_image(filename):
+    upload_dir = current_app.config["AVATAR_UPLOAD_FOLDER"]
+    if not os.path.isfile(os.path.join(upload_dir, filename)):
+        abort(404)
+    return send_from_directory(upload_dir, filename)
 
 
 # @auth_bp.before_app_request
@@ -117,11 +162,11 @@ def signup():
         country = form.country.data.strip()
         currency = form.currency.data.strip()
         timezone = form.timezone.data.strip()
-        avatar = form.avatar.data or None
+        avatar_file = form.avatar.data or None
         password = form.password.data
 
         # Check if role already exists
-        existing_role = Role.query.filter_by(name="user").first()
+        existing_role = Role.query.filter_by(name="User").first()
         if not existing_role:
             current_app.logger.error("Role 'user' not found | ip=%s", request.remote_addr)
             flash("An error occurred while creating your account.", "danger")
@@ -143,8 +188,11 @@ def signup():
             country=country,
             currency=currency,
             timezone=timezone,
-            avatar=avatar,
-            role_id=role
+            avatar_url=save_avatar(avatar_file),
+            role_id=role,
+            is_active=True,
+            is_locked=False,
+            mfa_enabled=False,
         )
         user.set_password(password)
         db.session.add(user)
@@ -152,11 +200,21 @@ def signup():
 
         # Generate and send verification token
         token = user.generate_email_verification_token()
-        send_verification_email(user, token)
+        email_sent = send_verification_email(user, token)
 
-        current_app.logger.info("New user created and verification email sent | user_id=%s | ip=%s", user.id, request.remote_addr)
-        flash("Your account has been created. Please check your email for a verification link.", "success")
+        if email_sent:
+            current_app.logger.info("New user created and verification email sent | user_id=%s | ip=%s", user.id, request.remote_addr)
+            flash("Your account has been created. Please check your email for a verification link.", "success")
+            # return redirect(url_for("auth.login"))
+        else:
+            current_app.logger.error("Failed to send verification email | user_id=%s | ip=%s", user.id, request.remote_addr)
+            flash("Your account was created, but we couldn't send a verification email. Please contact support.", "danger")
+
         return redirect(url_for("auth.login"))
+
+        # current_app.logger.info("New user created and verification email sent | user_id=%s | ip=%s", user.id, request.remote_addr)
+        # flash("Your account has been created. Please check your email for a verification link.", "success")
+        # return redirect(url_for("auth.login"))
 
     return render_template("auth/signup.html", form=form, title="Sign Up")
 
@@ -242,7 +300,7 @@ def login():
             return render_template("auth/login.html", form=form, title="Sign In")
 
         # --- 2FA CHECK ---
-        if user.is_2fa_enabled:
+        if user.mfa_enabled:
             session["pre_2fa_user_id"] = user.id
             current_app.logger.info("Password verified, awaiting 2FA verification | user_id=%s | ip=%s", user.id, request.remote_addr)
             return redirect(url_for("auth.verify_2fa"))

@@ -1,27 +1,35 @@
 """
-app/utils/mailer.py - Centralized email-sending helpers, shared by the
+app/services/mailer.py - Centralized email-sending helpers, shared by the
 auth and admin_users blueprints so email copy/formatting lives in one
 place. Token generation and db.session.commit() stay in the calling
 route - these functions only format and send.
 """
 
-from flask import url_for
+from flask import url_for, current_app
 from flask_mail import Message
 
 from app.extensions import mail
 
 
-def send_email(subject: str, recipient: str, body: str) -> None:
+def send_email(subject: str, recipient: str, body: str) -> bool:
     """
     Send a plain-text email via Flask-Mail.
-    Requires MAIL_SERVER / MAIL_USERNAME / MAIL_PASSWORD / MAIL_DEFAULT_SENDER
-    to be set in your app config.
+    Returns True if delivery succeeded, False otherwise — never raises.
     """
     msg = Message(subject=subject, recipients=[recipient], body=body)
-    mail.send(msg)
+    try:
+        mail.send(msg)
+        current_app.logger.info("Email sent successfully | subject=%r recipient=%s", subject, recipient)
+        return True
+    except Exception:
+        current_app.logger.error(
+            "Failed to send email | subject=%r recipient=%s", subject, recipient,
+            exc_info=True
+        )
+        return False
 
 
-def send_account_invite_email(user, token: str, password: str) -> None:
+def send_account_invite_email(user, token: str, password: str) -> bool:
     """
     Sent once, when an admin creates a new system-user account.
     Contains the email-verification link and the temporary password.
@@ -32,7 +40,7 @@ def send_account_invite_email(user, token: str, password: str) -> None:
         recipient=user.email,
         body=(
             f"Hi {user.firstname},\n\n"
-            "An account has been created for you. Please verify your email "
+            "Your account has been created successfully. Please verify your email "
             "using the link below, then log in with your password.\n\n"
             f"Verify your account: {verify_url}\n"
             f"Your password: {password}\n\n"
@@ -41,22 +49,24 @@ def send_account_invite_email(user, token: str, password: str) -> None:
     )
 
 
-def send_verification_email(user, token: str) -> None:
+def send_verification_email(user, token: str) -> bool:
     """
     Sent when a user (or admin) requests a fresh verification link.
     """
     verify_url = url_for("auth.verify_email", token=token, _external=True)
-    send_email(
+    return send_email(
         subject="Verify your account",
         recipient=user.email,
         body=(
             f"Hi {user.firstname},\n\n"
-            f"Please verify your account using the link below:\n{verify_url}"
+            "Please verify your account using the link below:\n"
+            f"{verify_url}\n\n"
+            "If you did not request this, you can safely ignore this email."
         ),
     )
 
 
-def send_password_reset_email(user, token: str) -> None:
+def send_password_reset_email(user, token: str) -> bool:
     """
     Sent for the forgot-password flow.
     """
@@ -73,7 +83,7 @@ def send_password_reset_email(user, token: str) -> None:
     )
 
 
-def send_verified_confirmation_email(user) -> None:
+def send_verified_confirmation_email(user) -> bool:
     """
     Sent once, immediately after a user successfully verifies their email.
     """
@@ -88,7 +98,7 @@ def send_verified_confirmation_email(user) -> None:
     )
 
 
-def send_password_changed_email(user) -> None:
+def send_password_changed_email(user) -> bool:
     """
     Sent immediately after a user's password is successfully changed or reset.
     """

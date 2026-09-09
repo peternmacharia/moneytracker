@@ -47,7 +47,9 @@ def _populate_role_choices(form):
 @user_bp.route("/profile")
 @login_required
 def profile():
-    """General Information tab."""
+    """
+    General Information tab.
+    """
     form = ProfileForm(obj=current_user)
     return render_template(
         "user/profile.html",
@@ -255,7 +257,7 @@ def index():
     )
 
 
-@user_bp.route("/details/<int:user_id>", methods=["GET"])
+@user_bp.route("/details/<user_id>", methods=["GET"])
 @login_required
 @permission_required("user:view")
 def details(user_id):
@@ -268,80 +270,80 @@ def details(user_id):
                            title=f"User Details: {user.fullname}")
 
 
-@user_bp.route("/create", methods=["GET", "POST"])
-@login_required
-@permission_required("user:create")
-def create():
-    """
-    View for creating a new user.
-    """
-    form = AddUserForm()
-    _populate_role_choices(form)
+# @user_bp.route("/create", methods=["GET", "POST"])
+# @login_required
+# @permission_required("user:create")
+# def create():
+#     """
+#     View for creating a new user.
+#     """
+#     form = AddUserForm()
+#     _populate_role_choices(form)
 
-    if form.validate_on_submit():
-        role = form.role.data
+#     if form.validate_on_submit():
+#         role = form.role.data
 
-        existing = User.query.filter_by(email=form.email.data.strip(), role_id=role).first()
-        if existing is not None:
-            flash(f"User '{existing.name}' already exists.", "warning")
-            return redirect(url_for("user.index"))
+#         existing = User.query.filter_by(email=form.email.data.strip(), role_id=role).first()
+#         if existing is not None:
+#             flash(f"User '{existing.name}' already exists.", "warning")
+#             return redirect(url_for("user.index"))
 
-        user = User(
-            firstname=form.firstname.data.strip(),
-            lastname=form.lastname.data.strip(),
-            email=form.email.data.strip(),
-            phone=form.phone.data.strip(),
-            role_id=role,
-        )
-        user.set_password(form.password.data.strip())
-        db.session.add(user)
+#         user = User(
+#             firstname=form.firstname.data.strip(),
+#             lastname=form.lastname.data.strip(),
+#             email=form.email.data.strip(),
+#             phone=form.phone.data.strip(),
+#             role_id=role,
+#         )
+#         user.set_password(form.password.data.strip())
+#         db.session.add(user)
 
-        try:
-            db.session.commit()
-            flash(f"User '{user.fullname}' created successfully.", "success")
-            logger.info("User created: id=%s name=%s", user.id, user.fullname)
-            return redirect(url_for("user.index"))
-        except IntegrityError:
-            db.session.rollback()
-            flash("A User with that email already exists.", "danger")
-        except SQLAlchemyError:
-            db.session.rollback()
-            logger.exception("Error creating user")
-            flash("An error occurred while adding a user. Please try again.", "danger")
+#         try:
+#             db.session.commit()
+#             flash(f"User '{user.fullname}' created successfully.", "success")
+#             logger.info("User created: id=%s name=%s", user.id, user.fullname)
+#             return redirect(url_for("user.index"))
+#         except IntegrityError:
+#             db.session.rollback()
+#             flash("A User with that email already exists.", "danger")
+#         except SQLAlchemyError:
+#             db.session.rollback()
+#             logger.exception("Error creating user")
+#             flash("An error occurred while adding a user. Please try again.", "danger")
 
-    return render_template("user/create.html", form=form,
-                           title="Add New User")
-
-
-@user_bp.route("/change_role/<int:user_id>", methods=["GET", "POST"])
-@login_required
-@permission_required("user:update")
-def change_role(user_id):
-    """
-    View for changing a user's role.
-    """
-    user = User.query.get_or_404(user_id)
-    form = ChangeUserRoleForm(obj=user)
-    _populate_role_choices(form)
-
-    if form.validate_on_submit():
-        user.role_id = form.role.data
-
-        try:
-            db.session.commit()
-            flash(f"User '{user.fullname}' role changed successfully.", "success")
-            logger.info("User role changed: id=%s new_role_id=%s", user.id, user.role_id)
-            return redirect(url_for("user.index"))
-        except SQLAlchemyError:
-            db.session.rollback()
-            logger.exception("Error changing role for user id=%s", user_id)
-            flash("An error occurred while changing the user's role. Please try again.", "danger")
-
-    return render_template("user/change_role.html", form=form, user=user,
-                           title=f"Change Role: {user.fullname}")
+#     return render_template("user/create.html", form=form,
+#                            title="Add New User")
 
 
-@user_bp.route("/delete/<int:user_id>", methods=["GET", "POST"])
+# @user_bp.route("/change_role/<int:user_id>", methods=["GET", "POST"])
+# @login_required
+# @permission_required("user:update")
+# def change_role(user_id):
+#     """
+#     View for changing a user's role.
+#     """
+#     user = User.query.get_or_404(user_id)
+#     form = ChangeUserRoleForm(obj=user)
+#     _populate_role_choices(form)
+
+#     if form.validate_on_submit():
+#         user.role_id = form.role.data
+
+#         try:
+#             db.session.commit()
+#             flash(f"User '{user.fullname}' role changed successfully.", "success")
+#             logger.info("User role changed: id=%s new_role_id=%s", user.id, user.role_id)
+#             return redirect(url_for("user.index"))
+#         except SQLAlchemyError:
+#             db.session.rollback()
+#             logger.exception("Error changing role for user id=%s", user_id)
+#             flash("An error occurred while changing the user's role. Please try again.", "danger")
+
+#     return render_template("user/change_role.html", form=form, user=user,
+#                            title=f"Change Role: {user.fullname}")
+
+
+@user_bp.route("/delete/<user_id>", methods=["GET", "POST"])
 @login_required
 @permission_required("user:delete")
 def delete(user_id):

@@ -2,7 +2,7 @@
 app/forms/wmember.py - Forms for workspace member management.
 """
 
-from wtforms import StringField, TextAreaField, SubmitField, BooleanField, SelectField
+from wtforms import SubmitField, EmailField, SelectField
 from wtforms.validators import DataRequired, Email
 from app.forms.base import BaseForm
 
@@ -13,7 +13,7 @@ class CreateWMemberForm(BaseForm):
     """
     workspace = SelectField("Workspace", coerce=str, validators=[DataRequired(message="Workspace is required")],
                        render_kw={"placeholder":"Select Workspace", "class": "form-select"})
-    member_email = StringField("New Member Email", validators=[DataRequired(message="Email is required."), Email()],
+    member_email = EmailField("New Member Email", validators=[DataRequired(message="Email is required."), Email()],
                         render_kw={"placeholder": "New Member Email", "class": "form-control"})
     role = SelectField("Role", coerce=str, validators=[DataRequired(message="Role is required")],
                        render_kw={"placeholder":"Select Role", "class": "form-select"})

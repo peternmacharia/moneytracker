@@ -55,6 +55,12 @@
                                 </div>
                             </div>
 
+                            <div class="form-floating mb-4">
+                                {{ form.email(class="form-control" + (" is-invalid" if form.email.errors else "")) }}
+                                {{ form.email.label(class="form-label") }}
+                                {% for error in form.email.errors %}<div class="invalid-feedback">{{ error }}</div>{% endfor %}
+                            </div>
+
                             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 stat-item g-2">
                                 <div class="col">
                                     <div class="form-floating mb-4">
@@ -72,13 +78,13 @@
                                     </div>
                                 </div>
 
-                                <!-- <div class="col">
+                                <div class="col">
                                     <div class="form-floating mb-4">
                                         {{ form.timezone(class="form-control" + (" is-invalid" if form.timezone.errors else "")) }}
                                         {{ form.timezone.label(class="form-label") }}
                                         {% for error in form.timezone.errors %}<div class="invalid-feedback">{{ error }}</div>{% endfor %}
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
 
                             <div class="mb-3">

@@ -66,7 +66,7 @@ def index():
     )
 
 
-@workspace_bp.route("/details/<int:workspace_id>", methods=["GET"])
+@workspace_bp.route("/details/<workspace_id>", methods=["GET"])
 @login_required
 @permission_required("workspace:view")
 def details(workspace_id):
@@ -115,7 +115,7 @@ def create():
     return render_template("workspace/create.html", form=form, title="Create Workspace",)
 
 
-@workspace_bp.route("/update/<int:workspace_id>", methods=["GET", "POST"])
+@workspace_bp.route("/update/<workspace_id>", methods=["GET", "POST"])
 @login_required
 @permission_required("workspace:update")
 def update(workspace_id):
@@ -161,7 +161,7 @@ def update(workspace_id):
     )
 
 
-@workspace_bp.route("/delete/<int:workspace_id>", methods=["GET", "POST"])
+@workspace_bp.route("/delete/<workspace_id>", methods=["GET", "POST"])
 @login_required
 @permission_required("workspace:delete")
 def delete(workspace_id):
