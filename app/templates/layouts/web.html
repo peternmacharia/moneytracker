@@ -44,16 +44,16 @@
                 <span class="nav-link fw-bold">Welcome, {{ current_user.username }} &nbsp;</span>
               </li>
               <li class="nav-item">
-                <a class="btn btn-outline-danger border-0" href="#"><i class="bi bi-power"></i>&nbsp; Logout</a>
+                <a class="btn btn-outline-danger border-0" href="{{ url_for('auth.logout') }}"><i class="bi bi-power"></i>&nbsp; Logout</a>
               </li>
             </ul>
             {% else %}
             <ul class="navbar-nav ms-auto gap-2">
               <li class="nav-item">
-                <a class="btn btn-outline-success border-0" href="#">Login</a>
+                <a class="btn btn-outline-success border-0" href="{{ url_for('auth.login') }}">Login</a>
               </li>
               <li class="nav-item">
-                <a class="btn btn-signup text-light" style="background-color: #0f3d5e;" href="#"><span class="fw-bold">Get Started</span></a>
+                <a class="btn btn-signup text-light" style="background-color: #0f3d5e;" href="{{ url_for('auth.signup') }}"><span class="fw-bold">Get Started</span></a>
               </li>
             </ul>
             {% endif %}

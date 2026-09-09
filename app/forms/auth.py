@@ -4,9 +4,12 @@ app/forms/auth.py - Defines form classes related to authentication and user mana
 """
 
 # from flask_wtf import FlaskForm
+from flask_wtf.file import FileField, FileAllowed, FileSize
 from wtforms import (StringField, PasswordField, EmailField, SubmitField)
 from wtforms.validators import (DataRequired, Email, Length, EqualTo)
 from .base import BaseForm
+
+IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png"}
 
 
 class LoginForm(BaseForm):
@@ -36,7 +39,10 @@ class SignupForm(BaseForm):
                        render_kw={"placeholder": "Currency", "class": "form-control"})
     timezone = EmailField("Timezone", validators=[DataRequired(message="Timezone is required.")],
                        render_kw={"placeholder": "Timezone", "class": "form-control"})
-    avatar = EmailField("Avatar", render_kw={"placeholder": "Avatar", "class": "form-control"})
+    avatar = FileField("Avatar", validators=[FileAllowed([ext.lstrip(".") for ext in IMAGE_EXTENSIONS],
+                                                         "That file type isn't allowed.",),
+                                            FileSize(max_size=5 * 1024 * 1024, message="File must be under 5MB."),],
+                        render_kw={"type":"file", "class":"form-control", "accept":",".join(IMAGE_EXTENSIONS)})
     password = PasswordField("Password", validators=[DataRequired(message="Password is required."),
                                                      Length(min=8, message="Password must be at least 8 characters.")],
                              render_kw={"placeholder": "Password", "class": "form-control"})

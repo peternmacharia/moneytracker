@@ -15,7 +15,7 @@ from app.services.mailer import (send_verification_email, send_password_reset_em
                                  send_verified_confirmation_email, send_password_changed_email)
 
 from app.extensions import db
-from app.models import User
+from app.models import User, Role
 from app.models.base import utc_now
 from app.forms import (
     LoginForm,
@@ -120,6 +120,14 @@ def signup():
         avatar = form.avatar.data or None
         password = form.password.data
 
+        # Check if role already exists
+        existing_role = Role.query.filter_by(name="user").first()
+        if not existing_role:
+            current_app.logger.error("Role 'user' not found | ip=%s", request.remote_addr)
+            flash("An error occurred while creating your account.", "danger")
+            return render_template("auth/signup.html", form=form, title="Sign Up")
+        role = existing_role.id
+
         # Check if user already exists
         existing_user = User.query.filter_by(email=email).first()
         if existing_user:
@@ -128,7 +136,16 @@ def signup():
             return render_template("auth/signup.html", form=form, title="Sign Up")
 
         # Create new user
-        user = User(email=email)
+        user = User(
+            email=email,
+            firstname=firstname,
+            lastname=lastname,
+            country=country,
+            currency=currency,
+            timezone=timezone,
+            avatar=avatar,
+            role_id=role
+        )
         user.set_password(password)
         db.session.add(user)
         db.session.commit()

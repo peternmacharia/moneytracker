@@ -1,8 +1,8 @@
 """Initial system setup migration
 
-Revision ID: c3d74994ac8c
+Revision ID: 6dea73d57ec4
 Revises: 
-Create Date: 2026-09-08 21:41:52.144633
+Create Date: 2026-09-09 07:01:39.492994
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'c3d74994ac8c'
+revision = '6dea73d57ec4'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -104,6 +104,11 @@ def upgrade():
     sa.Column('email_verification_token', sa.String(length=256), nullable=True),
     sa.Column('email_verified_at', sa.DateTime(timezone=True), nullable=True),
     sa.Column('is_active', sa.Boolean(), nullable=False),
+    sa.Column('is_locked', sa.Boolean(), nullable=False),
+    sa.Column('locked_until', sa.DateTime(timezone=True), nullable=True),
+    sa.Column('lock_reason', sa.String(length=255), nullable=True),
+    sa.Column('locked_by', sa.String(length=36), nullable=True),
+    sa.Column('locked_at', sa.DateTime(timezone=True), nullable=True),
     sa.Column('failed_login_attempts', sa.Integer(), nullable=True),
     sa.Column('last_failed_login_at', sa.DateTime(timezone=True), nullable=True),
     sa.Column('mfa_enabled', sa.Boolean(), nullable=False),
@@ -111,6 +116,7 @@ def upgrade():
     sa.Column('id', sa.String(length=36), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=True),
     sa.Column('updated_at', sa.DateTime(), nullable=True),
+    sa.ForeignKeyConstraint(['locked_by'], ['users.id'], ),
     sa.ForeignKeyConstraint(['role_id'], ['roles.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
@@ -134,7 +140,7 @@ def upgrade():
     sa.Column('name', sa.String(length=100), nullable=False),
     sa.Column('description', sa.Text(), nullable=True),
     sa.Column('is_active', sa.Boolean(), nullable=False),
-    sa.Column('is_shareable', sa.Boolean(), nullable=False),
+    sa.Column('is_shared', sa.Boolean(), nullable=False),
     sa.Column('id', sa.String(length=36), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=True),
     sa.Column('updated_at', sa.DateTime(), nullable=True),

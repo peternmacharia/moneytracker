@@ -21,11 +21,13 @@ from app.models import User
 # from app.forms import ContactForm
 
 # # Blueprints
-# from app.routes.auth        import auth_bp
-# from app.routes.main        import main_bp
-# from app.routes.user        import user_bp
-# from app.routes.permission  import permission_bp
-# from app.routes.role        import role_bp
+# from app.routes.auditlog    import auditlog_bp
+from app.routes.web.auth        import auth_bp
+# from app.routes.web.main        import main_bp
+from app.routes.web.user        import user_bp
+from app.routes.web.permission  import permission_bp
+from app.routes.web.role        import role_bp
+from app.routes.web.workspace   import workspace_bp
 
 
 def create_app(config_name=None):
@@ -51,12 +53,14 @@ def create_app(config_name=None):
 
 
     # # Registration of the App Blueprint View Routes
-    # # app.register_blueprint(auditlog_bp)
-    # app.register_blueprint(auth_bp)
+    # app.register_blueprint(auditlog_bp)
+    app.register_blueprint(auth_bp)
     # app.register_blueprint(main_bp)
-    # app.register_blueprint(user_bp)
-    # app.register_blueprint(permission_bp)
-    # app.register_blueprint(role_bp)
+    app.register_blueprint(user_bp)
+    app.register_blueprint(permission_bp)
+    app.register_blueprint(role_bp)
+    app.register_blueprint(workspace_bp)
+
 
     @app.context_processor
     def inject_current_year():

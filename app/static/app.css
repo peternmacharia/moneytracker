@@ -1,0 +1,51 @@
+:root {
+    --primary: #0f3d5e;
+    --primary-dark: #0a2d46;
+    --accent: #16a085;
+    --accent-soft: #e9f8f4;
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --footer-bg: #071e2f;
+    --radius: 20px;
+    --shadow: 0 18px 50px rgba(15, 23, 42, .08);
+
+    --auth-bg-gradient: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+    /* --bg-gradient: linear-gradient(135deg, var(--cyan-50) 0%, var(--cyan-100) 100%); */
+    /* --dashboard-card-gradient: linear-gradient(135deg, var(--cyan-400) 0%, var(--cyan-700) 100%); */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.authSection{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--auth-bg-gradient);
+}
+
+.card {
+    border-radius: var(--radius);
+    /* box-shadow: var(--shadow); */
+}
+
+
+/* .loginbody {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #EC4D37;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
