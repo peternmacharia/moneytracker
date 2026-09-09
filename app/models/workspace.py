@@ -24,7 +24,7 @@ class Workspace(BaseModel):
     name: Mapped[str]                   = mapped_column(String(100), unique=True, index=True)
     description: Mapped[str | None]     = mapped_column(Text)
     is_active: Mapped[bool]             = mapped_column(Boolean, default=True)
-    is_shareable: Mapped[bool]          = mapped_column(Boolean, default=False)
+    is_shared: Mapped[bool]             = mapped_column(Boolean, default=False)
 
     # Relationships
     owner: Mapped["User"]               = relationship(back_populates="workspaces")

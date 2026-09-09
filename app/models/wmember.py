@@ -24,7 +24,7 @@ class WorkspaceMember(BaseModel):
                                                         index=True)
     user_id: Mapped[str]                = mapped_column(ForeignKey("users.id", ondelete="CASCADE"),
                                                         index=True)
-    role_id: Mapped[int]                = mapped_column(ForeignKey("wroles.id"))
+    role_id: Mapped[int]                = mapped_column(ForeignKey("workspace_roles.id"))
 
     # Relationships
     workspace: Mapped["Workspace"]      = relationship(back_populates="members")

@@ -44,6 +44,11 @@ class User(UserMixin, BaseModel):
     email_verification_token: Mapped[str | None]    = mapped_column(String(256))
     email_verified_at: Mapped[DateTime | None]      = mapped_column(DateTime(timezone=True))
     is_active: Mapped[bool]                         = mapped_column(Boolean, default=True)
+    is_locked: Mapped[bool]                         = mapped_column(Boolean)
+    locked_until: Mapped[DateTime | None]           = mapped_column(DateTime(timezone=True))
+    lock_reason: Mapped[str | None]                 = mapped_column(String(255))
+    locked_by: Mapped[int | None]                   = mapped_column(ForeignKey("users.id"))
+    locked_at: Mapped[DateTime | None]              = mapped_column(DateTime(timezone=True))
     failed_login_attempts: Mapped[int | None]       = mapped_column(Integer, default=0)
     last_failed_login_at: Mapped[DateTime | None]   = mapped_column(DateTime(timezone=True))
     mfa_enabled: Mapped[bool]                       = mapped_column(Boolean, default=False)
@@ -78,6 +83,54 @@ class User(UserMixin, BaseModel):
         Get the number of logs for the user.
         """
         return len(self.auditlogs)
+
+    @property
+    def is_account_locked(self) -> bool:
+        """
+        Check if the account is currently locked.
+        Returns True if locked and lock period hasn't expired.
+        """
+        if not self.is_locked:
+            return False
+
+        # If locked_until is None, account is permanently locked
+        if self.locked_until is None:
+            return True
+
+        # Convert locked_until to timezone-aware if it's naive
+        now = utc_now()
+        if self.locked_until.tzinfo is None:
+            # Make locked_until timezone-aware
+            locked_until_aware = self.locked_until.replace(tzinfo=timezone.utc)
+        else:
+            locked_until_aware = self.locked_until
+
+        if now < locked_until_aware:
+            return True
+
+        # Auto-unlock if lock period has expired
+        self.unlock_account()
+        # Note: Need to commit in the calling function
+        return False
+
+    @property
+    def lock_time_remaining(self) -> int | None:
+        """
+        Get remaining lock time in minutes.
+        Returns None if account is not locked or no expiration.
+        """
+        if not self.is_locked or self.locked_until is None:
+            return None
+
+        now = utc_now()
+        if self.locked_until.tzinfo is None:
+            locked_until_aware = self.locked_until.replace(tzinfo=timezone.utc)
+        else:
+            locked_until_aware = self.locked_until
+
+        if now >= locked_until_aware:
+            return 0
+        return (locked_until_aware - now).seconds // 60
 
 
     # ------------------------------------------------------------------
@@ -139,6 +192,51 @@ class User(UserMixin, BaseModel):
     # ------------------------------------------------------------------
     # Account lock/unlock methods
     # ------------------------------------------------------------------
+    def lock_account(self, reason: str = None, locked_by_user_id: int = None,
+                     duration_minutes: int = 10) -> None:
+        """
+        Lock the user account with an optional reason and duration.
+        
+        Args:
+            reason: Reason for locking the account (optional)
+            locked_by_user_id: ID of the user who locked the account (optional)
+            duration_minutes: Duration to lock the account in minutes (default: 10)
+        """
+        self.is_locked = True
+        self.locked_until = utc_now() + timedelta(minutes=duration_minutes)
+        self.lock_reason = reason
+        self.locked_by = locked_by_user_id
+        self.locked_at = utc_now()
+
+    def lock_account_permanently(self, reason: str = None, locked_by_user_id: int = None) -> None:
+        """
+        Permanently lock the user account until manually unlocked.
+        
+        Args:
+            reason: Reason for locking the account (optional)
+            locked_by_user_id: ID of the user who locked the account (optional)
+        """
+        self.is_locked = True
+        self.locked_until = None  # No expiration for permanent lock
+        self.lock_reason = reason or "Account permanently locked by administrator"
+        self.locked_by = locked_by_user_id
+        self.locked_at = utc_now()
+
+    def unlock_account(self, unlocked_by_user_id: int = None) -> None:
+        """
+        Unlock the account by resetting the lock status and failed login attempts.
+        
+        Args:
+            unlocked_by_user_id: ID of the user who unlocked the account (optional)
+        """
+        self.is_locked = False
+        self.locked_until = None
+        self.lock_reason = None
+        self.locked_by = None
+        self.locked_at = None
+        self.failed_login_attempts = 0
+        self.last_failed_login_at = None
+
     def record_failed_login(self) -> None:
         """
         Record a failed login attempt by incrementing the failed login attempts
@@ -147,6 +245,12 @@ class User(UserMixin, BaseModel):
         self.failed_login_attempts = (self.failed_login_attempts or 0) + 1
         self.last_failed_login_at = utc_now()
 
+        # Lock account after 5 failed attempts
+        if self.failed_login_attempts >= 5:
+            self.lock_account(
+                reason=f"Account locked due to {self.failed_login_attempts} failed login attempts",
+                duration_minutes=10
+            )
 
     def record_login(self) -> None:
         """
