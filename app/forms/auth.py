@@ -43,14 +43,22 @@ class SignupForm(BaseForm):
                                                          "That file type isn't allowed.",),
                                             FileSize(max_size=5 * 1024 * 1024, message="File must be under 5MB."),],
                         render_kw={"type":"file", "class":"form-control", "accept":",".join(IMAGE_EXTENSIONS)})
-    password = PasswordField("Password", validators=[DataRequired(message="Password is required."),
-                                                     Length(min=8, message="Password must be at least 8 characters.")],
-                             render_kw={"placeholder": "Password", "class": "form-control"})
-    confirm_password = PasswordField("Confirm Password",
-                                     validators=[DataRequired(message="Please confirm your password."),
+    submit = SubmitField("Sign up", render_kw={"class": "btn btn-success w-100"})
+
+
+class SetPasswordForm(BaseForm):
+    """
+    Set a new password for the user, typically used after email verification or password reset.
+    """
+    password = PasswordField("New Password", validators=[DataRequired(message="New password is required."),
+                                                         Length(min=8, message="Password must be at least 8 characters.")],
+                             render_kw={"placeholder": "New password", "class": "form-control"})
+    confirm_password = PasswordField("Confirm New Password",
+                                     validators=[DataRequired(message="Please confirm your new password."),
                                                  EqualTo("password", message="Passwords must match.")],
                                      render_kw={"placeholder": "Repeat password", "class": "form-control"})
-    submit = SubmitField("Sign up", render_kw={"class": "btn btn-success w-100"})
+    submit = SubmitField("Set Password", render_kw={"class":"btn btn-success w-100"})
+
 
 
 class TwoFactorForm(BaseForm):

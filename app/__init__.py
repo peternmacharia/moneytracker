@@ -13,6 +13,7 @@ from sqlalchemy.exc import SQLAlchemyError
 from app.config import get_config
 from app.extensions import init_extensions, db, login_manager
 from app.seed_data import init_data
+from app.navigation import PUBLIC_SIDEBAR_ITEMS, ADMIN_SIDEBAR_ITEMS
 from app.utils.errors import register_error_handlers
 from app.utils.filters import register_filters, register_context_processors
 from app.models import User
@@ -20,14 +21,24 @@ from app.models import User
 # from app.navigation import SIDEBAR_GROUPS
 # from app.forms import ContactForm
 
-# # Blueprints
+# Blueprints import
+# System routes
 # from app.routes.auditlog    import auditlog_bp
-from app.routes.web.auth        import auth_bp
-# from app.routes.web.main        import main_bp
-from app.routes.web.user        import user_bp
-from app.routes.web.permission  import permission_bp
-from app.routes.web.role        import role_bp
-from app.routes.web.workspace   import workspace_bp
+
+# Auth routes
+from app.routes.web.auth.auth        import auth_bp
+from app.routes.web.auth.permission  import permission_bp
+from app.routes.web.auth.role        import role_bp
+from app.routes.web.auth.user        import user_bp
+
+# User routes
+from app.routes.web.public.main      import public_main_bp
+from app.routes.web.public.workspace import workspace_bp
+
+# Admin routes
+from app.routes.web.admin.main       import admin_main_bp
+
+
 
 
 def create_app(config_name=None):
@@ -52,20 +63,37 @@ def create_app(config_name=None):
 
 
 
-    # # Registration of the App Blueprint View Routes
+    # Registration of the App Blueprint View Routes
+    # System routes
     # app.register_blueprint(auditlog_bp)
+
+    # Auth routes
     app.register_blueprint(auth_bp)
-    # app.register_blueprint(main_bp)
-    app.register_blueprint(user_bp)
     app.register_blueprint(permission_bp)
     app.register_blueprint(role_bp)
+    app.register_blueprint(user_bp)
+
+    # User routes
+    app.register_blueprint(public_main_bp)
     app.register_blueprint(workspace_bp)
+
+    # Admin routes
+    app.register_blueprint(admin_main_bp)
+
+
+    @app.context_processor
+    def inject_sidebars():
+        return dict(
+            public_sidebar_items=PUBLIC_SIDEBAR_ITEMS,
+            admin_sidebar_items=ADMIN_SIDEBAR_ITEMS,
+        )
 
 
     @app.context_processor
     def inject_current_year():
         """Inject current year into all templates"""
         return {'current_year': datetime.now().year}
+
 
     @login_manager.user_loader
     def load_user(user_id):
@@ -74,9 +102,6 @@ def create_app(config_name=None):
         """
         return db.session.get(User, user_id)
 
-    # @app.context_processor
-    # def inject_sidebar():
-    #     return dict(sidebar_groups=SIDEBAR_GROUPS)
 
     # Default app route redirect to app login page
     @app.route('/')
@@ -85,8 +110,6 @@ def create_app(config_name=None):
         The app landing page
         """
         return render_template("index.html", title="Home")
-        # current_app.logger.info("Loading default landing page | ip=%s", request.remote_addr)
-        # return redirect(url_for('main.index'))
 
 
     with app.app_context():

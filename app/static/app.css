@@ -37,15 +37,83 @@
 }
 
 
-/* .loginbody {
-    display: flex;
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    overflow-y: auto;
+    z-index: 1;
     height: 100vh;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #EC4D37;
-    background-attachment: fixed;
-    background-position: center;
+    max-width: 20%;
+    min-width: 20%;
+    background-color: #EAEAEA;
+  }
+
+.logo {
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    padding: 15px;
+    padding-left: 30px;
+    color:#000;
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    /* background-color: #ee2737; */
+    background-color: var(--primary-dark);
+    color: #fff;
+    transition: background 0.3s;
+}
+
+.sidebar a.active {
+    background-color: var(--primary-dark);
+    color:#fff;
+}
+
+.sidebar i {
+    margin-right: 10px;
+}
+/* End of Sidebar Styles */
+
+
+/* Main Content Styles */
+main {
+    margin-left: 20%;
+    flex-direction: column;
+    height: 100vh;
+    height: -webkit-fill-available;
+    min-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
     background-repeat: no-repeat;
-    background-size: cover;
-} */
+    background-position: center;
+    background-size: cover; 
+    background-color: rgba(234, 234, 234, 1.0); 
+    background-blend-mode: overlay; 
+}
+/* End of Main Content Styles */
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* Dashboard header Card */
+.dashboardHeader {
+    background:var(--primary);
+    color: white;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}

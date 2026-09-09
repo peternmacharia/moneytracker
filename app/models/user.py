@@ -42,6 +42,7 @@ class User(UserMixin, BaseModel):
     password_reset_expires_at: Mapped[DateTime | None]= mapped_column(DateTime(timezone=True))
     is_email_verified: Mapped[bool]                 = mapped_column(Boolean, default=False)
     email_verification_token: Mapped[str | None]    = mapped_column(String(256))
+    email_verification_expires_at: Mapped[DateTime | None] = mapped_column(DateTime(timezone=True))
     email_verified_at: Mapped[DateTime | None]      = mapped_column(DateTime(timezone=True))
     is_active: Mapped[bool]                         = mapped_column(Boolean, default=True)
     is_locked: Mapped[bool]                         = mapped_column(Boolean)
@@ -335,6 +336,7 @@ class User(UserMixin, BaseModel):
         Generates a token to be used for email verification
         """
         self.email_verification_token = secrets.token_urlsafe(32)
+        self.email_verification_expires_at = utc_now() + timedelta(hours=24)
         return self.email_verification_token
 
     def verify_email_verification_token(self, token: str) -> bool:
@@ -344,9 +346,16 @@ class User(UserMixin, BaseModel):
         if self.email_verification_token == token:
             self.is_email_verified = True
             self.email_verified_at = utc_now()
-            self.email_verification_token = None  # Clear the token after successful verification
+            self.email_verification_token = None
+            self.email_verification_expires_at = None  # Clear the expiration time after successful verification
             return True
         return False
+
+    # def clear_email_verification_token(self) -> None:
+    #     """
+    #     Clear the email verification token.
+    #     """
+    #     self.email_verification_token = None
 
 
 # End of file

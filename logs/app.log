@@ -1495,3 +1495,1475 @@ smtplib.SMTPServerDisconnected: Connection unexpectedly closed
 [2026-09-09 13:09:43,118] INFO in auth: New user created and verification email sent | user_id=c8facc0d1bd948f5803c364c5ecdd403 | ip=127.0.0.1
 [2026-09-09 13:10:46,045] WARNING in auth: Login attempt on unverified email | user_id=c8facc0d1bd948f5803c364c5ecdd403 | ip=127.0.0.1
 [2026-09-09 13:11:01,816] WARNING in auth: Failed login attempt | user_id=c8facc0d1bd948f5803c364c5ecdd403 | ip=127.0.0.1
+[2026-09-09 16:01:37,781] INFO in auth: User logged in successfully | user_id=d9f6b7c1039b4daeb9eddd5de8f477c2 | ip=127.0.0.1
+[2026-09-09 16:01:37,783] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,787] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,787] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,790] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,790] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,792] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,793] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,794] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,795] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,797] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,797] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,799] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,799] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,802] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,802] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,804] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,805] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,806] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,807] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,809] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,809] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,811] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,811] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,813] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,813] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,815] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,815] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,817] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,818] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,820] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,820] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,822] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,823] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,825] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,825] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,827] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,827] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:37,829] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:37,829] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,852] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,853] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,856] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,856] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,859] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,859] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,862] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,862] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,865] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,865] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,867] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,867] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,870] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,870] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,872] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,872] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,874] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,875] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,877] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,878] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,879] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,880] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,881] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,882] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,884] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,884] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,886] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,886] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,889] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,889] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,891] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,892] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,894] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,894] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,896] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,896] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,898] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,898] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:38,900] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:38,900] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,918] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,919] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,924] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,925] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,928] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,929] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,932] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,932] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,935] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,935] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,938] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,938] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,940] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,941] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,943] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,943] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,945] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,946] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,948] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,948] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,951] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,951] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,953] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,953] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,955] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,956] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,958] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,958] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,960] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,961] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,963] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,964] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,966] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,966] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,969] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,969] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,971] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,971] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:01:43,973] INFO in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 16:01:43,974] WARNING in auth: User id=d9f6b7c1039b4daeb9eddd5de8f477c2 authenticated with no recognized role
+[2026-09-09 16:09:04,796] WARNING in auth: Failed login attempt | user_id=6d7c07d565444b3fb2bf51649ea536bb | ip=127.0.0.1
+[2026-09-09 16:09:18,034] INFO in auth: User logged in successfully | user_id=6d7c07d565444b3fb2bf51649ea536bb | ip=127.0.0.1
+[2026-09-09 16:09:18,034] INFO in auth: Login redirected to force password change | user_id=6d7c07d565444b3fb2bf51649ea536bb | ip=127.0.0.1
+[2026-09-09 16:09:38,183] INFO in mailer: Email sent successfully | subject='Your password has been changed' recipient=admin@techcorp.co.ke
+[2026-09-09 16:09:38,183] INFO in auth: Password changed successfully | user_id=6d7c07d565444b3fb2bf51649ea536bb | ip=127.0.0.1
+[2026-09-09 16:09:38,205] ERROR in errors: Unhandled exception: user/dashboard.html
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/public/main.py", line 29, in dashboard
+    return render_template("user/dashboard.html", title="Dashboard", today=datetime.now(timezone.utc))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: user/dashboard.html
+[2026-09-09 16:11:35,728] ERROR in errors: Unhandled exception: user/dashboard.html
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/public/main.py", line 29, in dashboard
+    return render_template("user/dashboard.html", title="Dashboard", today=datetime.now(timezone.utc))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: user/dashboard.html
+[2026-09-09 16:11:58,073] ERROR in errors: Unhandled exception: user/dashboard.html
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/public/main.py", line 29, in dashboard
+    return render_template("user/dashboard.html", title="Dashboard", today=datetime.now(timezone.utc))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: user/dashboard.html
+[2026-09-09 16:14:26,904] ERROR in errors: Unhandled exception: user/dashboard.html
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/public/main.py", line 29, in dashboard
+    return render_template("user/dashboard.html", title="Dashboard", today=datetime.now(timezone.utc))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: user/dashboard.html
+[2026-09-09 16:14:28,225] ERROR in errors: Unhandled exception: user/dashboard.html
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/public/main.py", line 29, in dashboard
+    return render_template("user/dashboard.html", title="Dashboard", today=datetime.now(timezone.utc))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: user/dashboard.html
+[2026-09-09 16:14:28,855] ERROR in errors: Unhandled exception: user/dashboard.html
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/public/main.py", line 29, in dashboard
+    return render_template("user/dashboard.html", title="Dashboard", today=datetime.now(timezone.utc))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: user/dashboard.html
+[2026-09-09 16:14:31,822] ERROR in errors: Unhandled exception: user/dashboard.html
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/public/main.py", line 29, in dashboard
+    return render_template("user/dashboard.html", title="Dashboard", today=datetime.now(timezone.utc))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: user/dashboard.html
+[2026-09-09 16:16:26,887] ERROR in errors: Unhandled exception: Could not build url for endpoint 'main.dashboard'. Did you mean 'user_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 404, in change_password
+    return render_template("auth/change_password.html", form=form, forced=forced,
+                           title="Change Password")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 53, in block 'content'
+    <a href="{{ url_for('main.dashboard') }}">Cancel</a>
+    
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.dashboard'. Did you mean 'user_main.dashboard' instead?
+[2026-09-09 16:24:01,746] ERROR in errors: Unhandled exception: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 404, in change_password
+    return render_template("auth/change_password.html", form=form, forced=forced,
+                           title="Change Password")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 53, in block 'content'
+    <a href="{{ url_for('main.dashboard') }}">Cancel</a>
+    
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+[2026-09-09 16:24:06,219] ERROR in errors: Unhandled exception: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 404, in change_password
+    return render_template("auth/change_password.html", form=form, forced=forced,
+                           title="Change Password")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 53, in block 'content'
+    <a href="{{ url_for('main.dashboard') }}">Cancel</a>
+    
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+[2026-09-09 16:24:06,985] ERROR in errors: Unhandled exception: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 404, in change_password
+    return render_template("auth/change_password.html", form=form, forced=forced,
+                           title="Change Password")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 53, in block 'content'
+    <a href="{{ url_for('main.dashboard') }}">Cancel</a>
+    
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+[2026-09-09 16:24:08,170] ERROR in errors: Unhandled exception: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 404, in change_password
+    return render_template("auth/change_password.html", form=form, forced=forced,
+                           title="Change Password")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 53, in block 'content'
+    <a href="{{ url_for('main.dashboard') }}">Cancel</a>
+    
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+[2026-09-09 16:24:08,650] ERROR in errors: Unhandled exception: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 404, in change_password
+    return render_template("auth/change_password.html", form=form, forced=forced,
+                           title="Change Password")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 53, in block 'content'
+    <a href="{{ url_for('main.dashboard') }}">Cancel</a>
+    
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+[2026-09-09 16:24:08,892] ERROR in errors: Unhandled exception: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 404, in change_password
+    return render_template("auth/change_password.html", form=form, forced=forced,
+                           title="Change Password")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 53, in block 'content'
+    <a href="{{ url_for('main.dashboard') }}">Cancel</a>
+    
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+[2026-09-09 16:24:09,114] ERROR in errors: Unhandled exception: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 404, in change_password
+    return render_template("auth/change_password.html", form=form, forced=forced,
+                           title="Change Password")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 53, in block 'content'
+    <a href="{{ url_for('main.dashboard') }}">Cancel</a>
+    
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+[2026-09-09 16:24:09,348] ERROR in errors: Unhandled exception: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 404, in change_password
+    return render_template("auth/change_password.html", form=form, forced=forced,
+                           title="Change Password")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 53, in block 'content'
+    <a href="{{ url_for('main.dashboard') }}">Cancel</a>
+    
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+[2026-09-09 16:28:14,895] ERROR in errors: Unhandled exception: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 417, in change_password
+    return render_template("auth/change_password.html", form=form, forced=forced,
+                           title="Change Password")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 53, in block 'content'
+    <a href="{{ url_for('main.dashboard') }}">Cancel</a>
+    
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+[2026-09-09 16:28:15,652] ERROR in errors: Unhandled exception: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 417, in change_password
+    return render_template("auth/change_password.html", form=form, forced=forced,
+                           title="Change Password")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 53, in block 'content'
+    <a href="{{ url_for('main.dashboard') }}">Cancel</a>
+    
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+[2026-09-09 16:28:16,114] ERROR in errors: Unhandled exception: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 417, in change_password
+    return render_template("auth/change_password.html", form=form, forced=forced,
+                           title="Change Password")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 53, in block 'content'
+    <a href="{{ url_for('main.dashboard') }}">Cancel</a>
+    
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+[2026-09-09 16:28:16,316] ERROR in errors: Unhandled exception: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 417, in change_password
+    return render_template("auth/change_password.html", form=form, forced=forced,
+                           title="Change Password")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 53, in block 'content'
+    <a href="{{ url_for('main.dashboard') }}">Cancel</a>
+    
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+[2026-09-09 16:28:20,523] ERROR in errors: Unhandled exception: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 417, in change_password
+    return render_template("auth/change_password.html", form=form, forced=forced,
+                           title="Change Password")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 53, in block 'content'
+    <a href="{{ url_for('main.dashboard') }}">Cancel</a>
+    
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+[2026-09-09 16:28:21,275] ERROR in errors: Unhandled exception: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 417, in change_password
+    return render_template("auth/change_password.html", form=form, forced=forced,
+                           title="Change Password")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 53, in block 'content'
+    <a href="{{ url_for('main.dashboard') }}">Cancel</a>
+    
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+[2026-09-09 16:28:21,738] ERROR in errors: Unhandled exception: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 417, in change_password
+    return render_template("auth/change_password.html", form=form, forced=forced,
+                           title="Change Password")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/change_password.html", line 53, in block 'content'
+    <a href="{{ url_for('main.dashboard') }}">Cancel</a>
+    
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.dashboard'. Did you mean 'admin_main.dashboard' instead?
+[2026-09-09 16:28:22,905] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-09 16:28:33,696] INFO in auth: User logged in successfully | user_id=6d7c07d565444b3fb2bf51649ea536bb | ip=127.0.0.1
+[2026-09-09 16:28:48,643] INFO in auth: User id=6d7c07d565444b3fb2bf51649ea536bb already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 17:13:14,460] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-09 17:23:25,675] INFO in mailer: Email sent successfully | subject='Verify your account' recipient=devpthunder@gmail.com
+[2026-09-09 17:23:25,675] INFO in auth: New user created and verification email sent | user_id=b2e01f801feb417a8106960f4884056c | ip=127.0.0.1
+[2026-09-09 17:24:01,835] WARNING in auth: Invalid or expired email verification token used | token=VHSJKcHEjmG99rVnd-_3_BVZ9uLhGN2AVflPhD4WsXQ | ip=127.0.0.1
+[2026-09-09 17:24:14,889] INFO in auth: Resending email verification | user_id=b2e01f801feb417a8106960f4884056c | ip=127.0.0.1
+[2026-09-09 17:24:20,152] INFO in mailer: Email sent successfully | subject='Verify your account' recipient=devpthunder@gmail.com
+[2026-09-09 17:24:20,153] INFO in auth: Verification email sent | user_id=b2e01f801feb417a8106960f4884056c | ip=127.0.0.1
+[2026-09-09 17:24:27,276] ERROR in errors: Unhandled exception: 'app.forms.auth.SetPasswordForm object' has no attribute 'new_password'
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 151, in verify_email
+    return render_template("auth/set_password.html", form=form,
+                           title="Set your Password")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/set_password.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/set_password.html", line 31, in block 'content'
+    {{ form.new_password(class="form-control" + (" is-invalid" if form.new_password.errors else "")) }}
+    
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.auth.SetPasswordForm object' has no attribute 'new_password'
+[2026-09-09 17:27:34,324] ERROR in errors: Unhandled exception: 'User' object has no attribute 'clear_email_verification_token'
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 142, in verify_email
+    user.clear_email_verification_token()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'clear_email_verification_token'. Did you mean: 'email_verification_token'?
+[2026-09-09 17:30:05,138] INFO in mailer: Email sent successfully | subject='Your email has been verified' recipient=devpthunder@gmail.com
+[2026-09-09 17:30:05,138] INFO in auth: Email verified and password set successfully | user_id=b2e01f801feb417a8106960f4884056c | ip=127.0.0.1
+[2026-09-09 17:44:25,496] ERROR in errors: Database error: (sqlite3.OperationalError) no such column: users.email_verification_expires_at
+[SQL: SELECT users.email AS users_email, users.password_hash AS users_password_hash, users.firstname AS users_firstname, users.lastname AS users_lastname, users.country AS users_country, users.currency AS users_currency, users.timezone AS users_timezone, users.avatar_url AS users_avatar_url, users.role_id AS users_role_id, users.last_login AS users_last_login, users.login_count AS users_login_count, users.password_changed_at AS users_password_changed_at, users.password_reset_token AS users_password_reset_token, users.password_reset_expires_at AS users_password_reset_expires_at, users.is_email_verified AS users_is_email_verified, users.email_verification_token AS users_email_verification_token, users.email_verification_expires_at AS users_email_verification_expires_at, users.email_verified_at AS users_email_verified_at, users.is_active AS users_is_active, users.is_locked AS users_is_locked, users.locked_until AS users_locked_until, users.lock_reason AS users_lock_reason, users.locked_by AS users_locked_by, users.locked_at AS users_locked_at, users.failed_login_attempts AS users_failed_login_attempts, users.last_failed_login_at AS users_last_failed_login_at, users.mfa_enabled AS users_mfa_enabled, users.mfa_secret AS users_mfa_secret, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.email = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('devpthunder@gmail.com', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-09-09 17:47:34,739] INFO in mailer: Email sent successfully | subject='Verify your account' recipient=devpthunder@gmail.com
+[2026-09-09 17:47:34,739] INFO in auth: New user created and verification email sent | user_id=d8c5f383e2254351829df9897b835d98 | ip=127.0.0.1
+[2026-09-09 17:47:48,686] WARNING in auth: Invalid or expired email verification token used | token=Z6t8oBx1ZnLWtMwyQHwStyhyul4oGYZEJmPOKycE43s | ip=127.0.0.1
+[2026-09-09 17:47:55,909] WARNING in auth: Invalid or expired email verification token used | token=Z6t8oBx1ZnLWtMwyQHwStyhyul4oGYZEJmPOKycE43s | ip=127.0.0.1
+[2026-09-09 17:48:08,790] INFO in auth: Resending email verification | user_id=d8c5f383e2254351829df9897b835d98 | ip=127.0.0.1
+[2026-09-09 17:48:14,470] INFO in mailer: Email sent successfully | subject='Verify your account' recipient=devpthunder@gmail.com
+[2026-09-09 17:48:14,471] INFO in auth: Verification email sent | user_id=d8c5f383e2254351829df9897b835d98 | ip=127.0.0.1
+[2026-09-09 17:48:43,654] INFO in mailer: Email sent successfully | subject='Your email has been verified' recipient=devpthunder@gmail.com
+[2026-09-09 17:48:43,655] INFO in auth: Email verified and password set successfully | user_id=d8c5f383e2254351829df9897b835d98 | ip=127.0.0.1
+[2026-09-09 17:56:06,055] ERROR in errors: Database error: (sqlite3.OperationalError) no such table: roles
+[SQL: SELECT roles.name AS roles_name, roles.description AS roles_description, roles.is_active AS roles_is_active, roles.id AS roles_id, roles.created_at AS roles_created_at, roles.updated_at AS roles_updated_at 
+FROM roles 
+WHERE roles.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('user', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-09-09 17:59:06,651] INFO in mailer: Email sent successfully | subject='Verify your account' recipient=devpthunder@gmail.com
+[2026-09-09 17:59:06,687] INFO in auth: New user created and verification email sent | user_id=b720b323815b4472b5245e6502b410df | ip=127.0.0.1
+[2026-09-09 17:59:37,034] INFO in mailer: Email sent successfully | subject='Your email has been verified' recipient=devpthunder@gmail.com
+[2026-09-09 17:59:37,034] INFO in auth: Email verified and password set successfully | user_id=b720b323815b4472b5245e6502b410df | ip=127.0.0.1
+[2026-09-09 17:59:49,031] INFO in auth: User logged in successfully | user_id=b720b323815b4472b5245e6502b410df | ip=127.0.0.1
+[2026-09-09 17:59:49,035] ERROR in errors: Unhandled exception: Could not build url for endpoint 'user_main.dashboard'. Did you mean 'public_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 363, in login
+    return redirect(next_page or get_post_login_redirect(user))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 65, in get_post_login_redirect
+    return url_for("user_main.dashboard")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/helpers.py", line 232, in url_for
+    return current_app.url_for(
+           ~~~~~~~~~~~~~~~~~~~^
+        endpoint,
+        ^^^^^^^^^
+    ...<4 lines>...
+        **values,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'user_main.dashboard'. Did you mean 'public_main.dashboard' instead?
+[2026-09-09 18:00:24,417] INFO in auth: User id=b720b323815b4472b5245e6502b410df already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 18:00:24,423] ERROR in errors: Unhandled exception: Could not build url for endpoint 'user_main.dashboard'. Did you mean 'public_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 273, in login
+    return redirect(get_post_login_redirect(current_user))
+                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 65, in get_post_login_redirect
+    return url_for("user_main.dashboard")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/helpers.py", line 232, in url_for
+    return current_app.url_for(
+           ~~~~~~~~~~~~~~~~~~~^
+        endpoint,
+        ^^^^^^^^^
+    ...<4 lines>...
+        **values,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'user_main.dashboard'. Did you mean 'public_main.dashboard' instead?
+[2026-09-09 18:00:27,708] INFO in auth: User id=b720b323815b4472b5245e6502b410df already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 18:00:27,712] ERROR in errors: Unhandled exception: Could not build url for endpoint 'user_main.dashboard'. Did you mean 'public_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 273, in login
+    return redirect(get_post_login_redirect(current_user))
+                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 65, in get_post_login_redirect
+    return url_for("user_main.dashboard")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/helpers.py", line 232, in url_for
+    return current_app.url_for(
+           ~~~~~~~~~~~~~~~~~~~^
+        endpoint,
+        ^^^^^^^^^
+    ...<4 lines>...
+        **values,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'user_main.dashboard'. Did you mean 'public_main.dashboard' instead?
+[2026-09-09 18:01:12,902] INFO in auth: User id=b720b323815b4472b5245e6502b410df already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 18:01:12,905] ERROR in errors: Unhandled exception: Could not build url for endpoint 'user_main.dashboard'. Did you mean 'public_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 273, in login
+    return redirect(get_post_login_redirect(current_user))
+                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 65, in get_post_login_redirect
+    return url_for("user_main.dashboard")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/helpers.py", line 232, in url_for
+    return current_app.url_for(
+           ~~~~~~~~~~~~~~~~~~~^
+        endpoint,
+        ^^^^^^^^^
+    ...<4 lines>...
+        **values,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'user_main.dashboard'. Did you mean 'public_main.dashboard' instead?
+[2026-09-09 18:01:40,771] INFO in auth: User id=b720b323815b4472b5245e6502b410df already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 18:01:40,775] ERROR in errors: Unhandled exception: Could not build url for endpoint 'user_main.dashboard'. Did you mean 'public_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 273, in login
+    return redirect(get_post_login_redirect(current_user))
+                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 65, in get_post_login_redirect
+    return url_for("user_main.dashboard")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/helpers.py", line 232, in url_for
+    return current_app.url_for(
+           ~~~~~~~~~~~~~~~~~~~^
+        endpoint,
+        ^^^^^^^^^
+    ...<4 lines>...
+        **values,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'user_main.dashboard'. Did you mean 'public_main.dashboard' instead?
+[2026-09-09 18:03:07,664] INFO in auth: User id=b720b323815b4472b5245e6502b410df already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 18:03:07,668] ERROR in errors: Unhandled exception: Could not build url for endpoint 'user_main.dashboard'. Did you mean 'public_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 273, in login
+    return redirect(get_post_login_redirect(current_user))
+                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 65, in get_post_login_redirect
+    return url_for("user_main.dashboard")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/helpers.py", line 232, in url_for
+    return current_app.url_for(
+           ~~~~~~~~~~~~~~~~~~~^
+        endpoint,
+        ^^^^^^^^^
+    ...<4 lines>...
+        **values,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'user_main.dashboard'. Did you mean 'public_main.dashboard' instead?
+[2026-09-09 18:03:14,301] INFO in auth: User id=b720b323815b4472b5245e6502b410df already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 18:03:14,304] ERROR in errors: Unhandled exception: Could not build url for endpoint 'user_main.dashboard'. Did you mean 'public_main.dashboard' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 273, in login
+    return redirect(get_post_login_redirect(current_user))
+                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 65, in get_post_login_redirect
+    return url_for("user_main.dashboard")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/helpers.py", line 232, in url_for
+    return current_app.url_for(
+           ~~~~~~~~~~~~~~~~~~~^
+        endpoint,
+        ^^^^^^^^^
+    ...<4 lines>...
+        **values,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'user_main.dashboard'. Did you mean 'public_main.dashboard' instead?
+[2026-09-09 18:04:40,346] INFO in auth: User id=b720b323815b4472b5245e6502b410df already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-09 18:05:43,245] ERROR in errors: Unhandled exception: user/profile.html
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/user.py", line 54, in profile
+    return render_template(
+        "user/profile.html",
+        title="My Profile",
+        active_tab="general",
+        form=form)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: user/profile.html
+[2026-09-09 18:05:52,643] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-09 18:05:59,068] INFO in auth: User logged in successfully | user_id=116b98f7d326411c83c42a443c7fb8dd | ip=127.0.0.1
+[2026-09-09 18:05:59,068] INFO in auth: Login redirected to force password change | user_id=116b98f7d326411c83c42a443c7fb8dd | ip=127.0.0.1
+[2026-09-09 18:06:18,923] INFO in mailer: Email sent successfully | subject='Your password has been changed' recipient=admin@techcorp.co.ke
+[2026-09-09 18:06:18,923] INFO in auth: Password changed successfully | user_id=116b98f7d326411c83c42a443c7fb8dd | ip=127.0.0.1
+[2026-09-09 18:06:27,346] ERROR in errors: Unhandled exception: user/list.html
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/utils/decorators.py", line 41, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/user.py", line 249, in index
+    return render_template(
+        "user/list.html",
+    ...<5 lines>...
+        title="Users",
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: user/list.html
+[2026-09-09 18:06:31,728] ERROR in errors: Unhandled exception: user/profile.html
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/user.py", line 54, in profile
+    return render_template(
+        "user/profile.html",
+        title="My Profile",
+        active_tab="general",
+        form=form)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: user/profile.html
+[2026-09-09 18:06:34,650] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-09 18:06:41,780] INFO in auth: User logged in successfully | user_id=b720b323815b4472b5245e6502b410df | ip=127.0.0.1
+[2026-09-09 18:23:37,401] INFO in auth: User logged out | ip=127.0.0.1

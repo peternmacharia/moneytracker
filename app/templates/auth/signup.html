@@ -93,24 +93,6 @@
                                 {% for error in form.avatar.errors %}<div class="invalid-feedback">{{ error }}</div>{% endfor %}
                             </div>
 
-                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 stat-item g-2">
-                                <div class="col">
-                                    <div class="form-floating mb-4">
-                                        {{ form.password(class="form-control" + (" is-invalid" if form.password.errors else "")) }}
-                                        {{ form.password.label(class="form-label") }}
-                                        {% for error in form.password.errors %}<div class="invalid-feedback">{{ error }}</div>{% endfor %}
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <div class="form-floating mb-4">
-                                        {{ form.confirm_password(class="form-control" + (" is-invalid" if form.confirm_password.errors else "")) }}
-                                        {{ form.confirm_password.label(class="form-label") }}
-                                        {% for error in form.confirm_password.errors %}<div class="invalid-feedback">{{ error }}</div>{% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-
                             <div class="from-group mb-3">
                                 {{ form.submit }}
                             </div>

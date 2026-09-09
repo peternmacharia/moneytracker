@@ -13,7 +13,6 @@
 
     <div class="sidebar offcanvas-md offcanvas-end bg-body-tertiary border-end mb-5"  tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
       <div class="offcanvas-header">
-      <!-- <h5 class="offcanvas-title" id="sidebarMenuLabel"><strong style="color: #006064;">Asset Management</strong></h5> -->
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
       </div>
       <div class="logo text-center p-3 mb-3">
@@ -23,14 +22,26 @@
       {% if current_user.is_authenticated %}
         {% from "macros/_sidebar.html" import nav_item, nav_group with context %}
 
-        {% if current_user.is_authenticated %}
-        <nav class="nav flex-column gap-1 mb-5">
-          {{ nav_item('Dashboard', 'main.dashboard', 'bi-speedometer2') }}
-          {% for group in sidebar_groups %}
-            {{ nav_group(group.label, group.icon, group.collapse_id, group.links) }}
-          {% endfor %}
-          {{ nav_item('Notifications', 'notifications.index', 'bi-bell') }}
-        </nav>
+        {% if current_user.has_role('super') %}
+          <nav class="nav flex-column gap-1 mb-5">
+            {% for item in admin_sidebar_items %}
+              {% if item.type == 'link' %}
+                {{ nav_item(item.label, item.endpoint, item.icon, item.get('perm')) }}
+              {% elif item.type == 'group' %}
+                {{ nav_group(item.label, item.icon, item.collapse_id, item.links) }}
+              {% endif %}
+            {% endfor %}
+          </nav>
+        {% elif current_user.has_role('user') %}
+          <nav class="nav flex-column gap-1 mb-5">
+            {% for item in public_sidebar_items %}
+              {% if item.type == 'link' %}
+                {{ nav_item(item.label, item.endpoint, item.icon, item.get('perm')) }}
+              {% elif item.type == 'group' %}
+                {{ nav_group(item.label, item.icon, item.collapse_id, item.links) }}
+              {% endif %}
+            {% endfor %}
+          </nav>
         {% endif %}
       {% endif %}
 
@@ -54,7 +65,7 @@
       <header class="sticky-top">
         <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top border-body border-bottom">
           <div class="container-fluid">
-            <span class="text-uppercase fw-bold" style="color: #16a085;"><i class="bi bi-columns-gap"></i>&nbsp;{{ title }}{% if counter %}: &nbsp;<span class="fst-italic">{{ counter }}</span> {% endif %}</span>
+            <span class="text-uppercase fw-bold" style="color: #0a2d46"><i class="bi bi-columns-gap"></i>&nbsp;{{ title }}{% if counter %}: &nbsp;<span class="fst-italic">{{ counter }}</span> {% endif %}</span>
             <ul class="navbar-nav justify-content-end ms-auto align-items-center">
               {% if current_user.is_authenticated %}
               <!-- CSRF token for JS fetch calls -->
@@ -86,7 +97,7 @@
                       aria-labelledby="notifBell">
                       <li class="px-3 py-2 border-bottom fw-semibold small text-uppercase text-muted d-flex justify-content-between align-items-center">
                           <span>Notifications</span>
-                          <a href="{{ url_for('notifications.index') }}" class="small text-decoration-none">View all</a>
+                          <a href="#" class="small text-decoration-none">View all</a>
                       </li>
                       <li id="notifEmpty" class="px-3 py-3 text-muted small text-center">No notifications</li>
                   </ul>
@@ -97,7 +108,7 @@
                   </a>
               </li>
               <!-- <li class="nav-item dropdown">
-                <a class="btn btn-outline-dark position-relative border-0" href="{{ url_for('notifications.index') }}" id="notifBell" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="btn btn-outline-dark position-relative border-0" href="#" id="notifBell" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <i class="bi bi-bell"></i>
                   <span id="notifBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none" style="font-size: 0.6rem;">
                     0

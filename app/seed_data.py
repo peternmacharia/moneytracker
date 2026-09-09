@@ -29,8 +29,9 @@ def init_data():
         # ──────────────────────────────────────────────────────────────────────
         print("\n📋 Creating Roles...")
         role_defs = [
-            ("Super Admin", "Full system access with all permissions"),
-            ("User", "System user with basic access"),
+            ("super", "Full system access with all permissions"),
+            ("admin", "Permission to manage the system"),
+            ("user", "System user with basic access"),
         ]
 
         created_roles = 0
@@ -52,8 +53,8 @@ def init_data():
         print(f"  ✔ Created {created_roles} role(s).")
 
         # Role references for easy access
-        super_admin = role_objects.get("Super Admin")
-        system_user = role_objects.get("User")
+        super_admin = role_objects.get("super")
+        system_user = role_objects.get("user")
 
         # ──────────────────────────────────────────────────────────────────────
         # 2. PERMISSIONS
@@ -228,7 +229,7 @@ def init_data():
         created_notifications = 0
         for user, title, message, n_category, is_urgent, is_read in notification_defs:
             if not user:
-                print(f"  ⚠️ User not found for notification '{title}' — skipping.")
+                print(f"⚠️ User not found for notification '{title}' — skipping.")
                 continue
 
             notify = Notification(

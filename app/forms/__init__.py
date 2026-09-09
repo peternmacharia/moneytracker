@@ -3,8 +3,9 @@ app/forms/__init__.py - This module imports all form classes from the submodules
                         defines the __all__ variable for easy imports.
 """
 
-from .auth import (LoginForm, SignupForm, TwoFactorForm, ResendVerificationForm,
-                   RequestResetForm, ResetPasswordForm, ChangePasswordForm)
+from .auth import (LoginForm, SignupForm, SetPasswordForm, TwoFactorForm,
+                   ResendVerificationForm, RequestResetForm,
+                   ResetPasswordForm, ChangePasswordForm)
 from .shared import ConfirmForm, DeleteForm
 from .user import (ProfileForm, Enable2FAForm, Disable2FAForm)
 from .role import CreateRoleForm, UpdateRoleForm
@@ -14,7 +15,7 @@ from .wmember import CreateWMemberForm, UpdateWMemberForm
 
 __all__ = [
     # Auth
-    "LoginForm", "SignupForm", "TwoFactorForm", "ResendVerificationForm",
+    "LoginForm", "SignupForm", "SetPasswordForm", "TwoFactorForm", "ResendVerificationForm",
     "RequestResetForm", "ResetPasswordForm", "ChangePasswordForm",
     # Shared
     "ConfirmForm", "DeleteForm",

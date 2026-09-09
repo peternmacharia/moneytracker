@@ -1,0 +1,148 @@
+{# =============================================================
+   macros/table.html
+   Reusable macros for sortable table headers, pagination,
+   and page size selector.
+
+   Usage:
+     {% from "macros/table.html" import sort_header, pagination, page_size_selector %}
+   ============================================================= #}
+
+
+{# -------------------------------------------------------------
+   MACRO: sort_header
+   Strips 'sort' and 'dir' from url_args before passing to url_for
+   to avoid duplicate keyword argument clashes.
+   ------------------------------------------------------------- #}
+{% macro sort_header(label, field, current_sort, current_dir, endpoint, url_args={}) %}
+    {% set next_dir = 'desc' if current_sort == field and current_dir == 'asc' else 'asc' %}
+    {% set is_active = current_sort == field %}
+    {% set icon = 'bi-sort-up' if is_active and current_dir == 'asc' else
+                  'bi-sort-down' if is_active and current_dir == 'desc' else
+                  'bi-arrow-down-up' %}
+
+    {% set clean_args = {} %}
+    {% for k, v in url_args.items() %}
+        {% if k not in ('sort', 'dir') %}
+            {% set _ = clean_args.update({k: v}) %}
+        {% endif %}
+    {% endfor %}
+
+    <th scope="col">
+        <a href="{{ url_for(endpoint, sort=field, dir=next_dir, **clean_args) }}"
+           class="text-decoration-none {{ 'text-success fw-semibold' if is_active else 'text-dark' }}">
+            {{ label }}
+            <i class="bi {{ icon }} small {{ 'text-success' if is_active else 'text-muted' }}"></i>
+        </a>
+    </th>
+{% endmacro %}
+
+
+{# -------------------------------------------------------------
+   MACRO: pagination
+   Strips 'page' from url_args before passing to url_for
+   to avoid duplicate keyword argument clashes.
+   ------------------------------------------------------------- #}
+{% macro pagination(paged, endpoint, url_args={}, item_label='Records') %}
+
+    {% set clean_args = {} %}
+    {% for k, v in url_args.items() %}
+        {% if k != 'page' %}
+            {% set _ = clean_args.update({k: v}) %}
+        {% endif %}
+    {% endfor %}
+
+    {% if paged.pages > 1 %}
+
+        <div class="text-end text-muted small mt-2">
+            Page {{ paged.page }} of {{ paged.pages }}
+            &nbsp;|&nbsp;
+            Total {{ item_label }}: <span class="fw-bold text-dark">{{ paged.total }}</span>
+        </div>
+
+        <div class="row justify-content-center mb-3 mt-2">
+            <div class="col">
+                <div class="text-center" id="pagination_section">
+
+                    {% if paged.has_prev %}
+                        <a class="btn btn-dark btn-sm"
+                           href="{{ url_for(endpoint, page=paged.prev_num, **clean_args) }}">
+                            <i class="bi bi-arrow-left"></i> Previous
+                        </a>
+                    {% else %}
+                        <button class="btn btn-secondary btn-sm" disabled>
+                            <i class="bi bi-arrow-left"></i> Previous
+                        </button>
+                    {% endif %}
+
+                    {% for number in paged.iter_pages(left_edge=1, right_edge=1, left_current=2, right_current=2) %}
+                        {% if number %}
+                            {% if paged.page == number %}
+                                <span class="btn btn-primary btn-sm disabled current-page-number">{{ number }}</span>
+                            {% else %}
+                                <a class="btn btn-outline-secondary btn-sm page-number"
+                                   href="{{ url_for(endpoint, page=number, **clean_args) }}">{{ number }}</a>
+                            {% endif %}
+                        {% else %}
+                            <span class="btn btn-sm disabled">…</span>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if paged.has_next %}
+                        <a class="btn btn-dark btn-sm"
+                           href="{{ url_for(endpoint, page=paged.next_num, **clean_args) }}">
+                            Next <i class="bi bi-arrow-right"></i>
+                        </a>
+                    {% else %}
+                        <button class="btn btn-secondary btn-sm" disabled>
+                            Next <i class="bi bi-arrow-right"></i>
+                        </button>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+
+    {% else %}
+        <div class="card-footer text-end text-muted small">
+            Total {{ item_label }}: <span class="fw-bold text-dark">{{ paged.total }}</span>
+        </div>
+    {% endif %}
+
+{% endmacro %}
+
+
+{# -------------------------------------------------------------
+   MACRO: page_size_selector
+   Strips 'per_page' and 'page' from url_args before passing to url_for
+   to avoid duplicate keyword argument clashes.
+   ------------------------------------------------------------- #}
+{% macro page_size_selector(current_size, endpoint, url_args={}, sizes=[25, 35, 50], total_items=none) %}
+    {% if total_items is none or total_items > sizes|min %}
+
+        {% set clean_args = {} %}
+        {% for k, v in url_args.items() %}
+            {% if k not in ('per_page', 'page') %}
+                {% set _ = clean_args.update({k: v}) %}
+            {% endif %}
+        {% endfor %}
+
+        <div class="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                {{ current_size }} per page
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                {% for size in sizes %}
+                    <li>
+                        <a class="dropdown-item {% if current_size == size %}active{% endif %}"
+                        href="{{ url_for(endpoint, per_page=size, page=1, **clean_args) }}">
+                            {{ size }} per page
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+{% endmacro %}
