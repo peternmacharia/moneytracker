@@ -40,7 +40,7 @@ def init_data():
             role = Role.query.filter_by(name=name).first()
             if role:
                 role_objects[name] = role
-                print(f"  ⏭ Role '{name}' already exists — skipped.")
+                print(f"⏭ Role '{name}' already exists — skipped.")
                 continue
             role = Role(name=name, description=desc, is_active=True)
             db.session.add(role)
@@ -111,7 +111,7 @@ def init_data():
             created_perms += 1
 
         db.session.commit()
-        print(f"  ✔ Created {created_perms} permission(s).")
+        print(f"✔ Created {created_perms} permission(s).")
 
         # ──────────────────────────────────────────────────────────────────────
         # 3. ROLE PERMISSIONS

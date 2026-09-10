@@ -10,15 +10,18 @@ from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy import func
 from app.models import (User)
 from app.models.enums import ActorType
+from app.utils.decorators import role_required
 
-# main_bp = Blueprint("main", __name__,)
-public_main_bp = Blueprint("public_main", __name__, template_folder="../templates/public/")
+# ── User Main application routes ─────────────────────────────────────────
+public_main_bp = Blueprint("public_main", __name__,url_prefix="/user",
+                           template_folder="../templates/public/")
 
 
 # ── Public routes ────────────────────────────────────────────────────────
 @public_main_bp.route("/dashboard")
 @login_required
-def dashboard() -> str:
+@role_required("user")
+def dashboard():
     """
     The user dashboard page.
     Displays key metrics and recent activity.

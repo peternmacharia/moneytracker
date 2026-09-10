@@ -68,10 +68,10 @@ def get_post_login_redirect(user):
         return url_for("auth.login")  # fallback — adjust to whatever's safe
 
 
-def is_safe_url(target):
-    ref_url = urlparse(request.host_url)
-    test_url = urlparse(urljoin(request.host_url, target))
-    return test_url.scheme in ("http", "https") and ref_url.netloc == test_url.netloc
+# def is_safe_url(target):
+#     ref_url = urlparse(request.host_url)
+#     test_url = urlparse(urljoin(request.host_url, target))
+#     return test_url.scheme in ("http", "https") and ref_url.netloc == test_url.netloc
 
 
 def save_avatar(file_storage):
@@ -357,10 +357,10 @@ def login():
             flash("Please change your password.", "info")
             return redirect(url_for("auth.change_password"))
 
-        # Redirect
-        next_page = request.args.get("next")
+        # # Redirect
+        # next_page = request.args.get("next")
         flash(f"Welcome back, {user.fullname}!", "success")
-        return redirect(next_page or get_post_login_redirect(user))
+        return redirect(get_post_login_redirect(user))
 
     return render_template("auth/login.html", form=form, title="Sign In")
 

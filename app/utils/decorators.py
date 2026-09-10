@@ -44,4 +44,37 @@ def permission_required(permission_name: str):
 
     return decorator
 
+
+def role_required(*role_names: str):
+    """
+    Restrict access to users who have at least one of the given roles.
+    Works with Flask-Login (session-based auth).
+    """
+
+    def decorator(fn):
+
+        @wraps(fn)
+        def wrapper(*args, **kwargs):
+
+            # Ensure user is authenticated
+            if not current_user.is_authenticated:
+                abort(401, description="Authentication required")
+
+            # Ensure user has role
+            if not current_user.role:
+                abort(403, description="No role assigned")
+
+            # Role check (any-of) — has_role already handles multiple names
+            if not current_user.has_role(*role_names):
+                abort(
+                    403,
+                    description=f"Missing required role: one of {', '.join(role_names)}"
+                )
+
+            return fn(*args, **kwargs)
+
+        return wrapper
+
+    return decorator
+
 # End of file

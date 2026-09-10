@@ -3,12 +3,12 @@
 {% block content %}
 
 <div class="container">
-    <section id="pageHeader" class="dashboard-header card shadow-sm border-0 mt-3 p-5 mb-4 rounded-5">
+    <section id="pageHeader" class="dashboardHeader card shadow-sm border-0 mt-3 p-5 mb-4 rounded-5">
         <h1 class="display-4">
-            <i class="bi bi-opencollective text-primary"></i> Welcome to the Dashboard
+            <i class="bi bi-opencollective text-primary"></i> Welcome to the Admin Dashboard
         </h1>
         <hr>
-        <div class="row row-cols-1 row-cols-md-4 row-cols-lg-4 g-2">
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-2">
             <div class="col">
                 <p class="mb-0">
                     Welcome back, <strong>{{ current_user.fullname }}</strong>
@@ -22,11 +22,6 @@
             <div class="col">
                 <p class="mb-0">
                     <i class="bi bi-clock"></i> Last Login: <strong>{{ current_user.last_login | fmt_dt if current_user.last_login else 'N/A' }}</strong>
-                </p>
-            </div>
-            <div class="col">
-                <p class="mb-0">
-                    <i class="bi bi-shield-check"></i> Role: <strong>{{ current_user.role.name }}</strong>
                 </p>
             </div>
         </div>

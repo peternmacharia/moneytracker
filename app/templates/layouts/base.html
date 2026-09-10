@@ -21,9 +21,8 @@
       <hr>
       {% if current_user.is_authenticated %}
         {% from "macros/_sidebar.html" import nav_item, nav_group with context %}
-
-        {% if current_user.has_role('super') %}
-          <nav class="nav flex-column gap-1 mb-5">
+        <nav class="nav flex-column gap-1 mb-5">
+          {% if current_user.has_role("super", "admin") %}
             {% for item in admin_sidebar_items %}
               {% if item.type == 'link' %}
                 {{ nav_item(item.label, item.endpoint, item.icon, item.get('perm')) }}
@@ -31,9 +30,7 @@
                 {{ nav_group(item.label, item.icon, item.collapse_id, item.links) }}
               {% endif %}
             {% endfor %}
-          </nav>
-        {% elif current_user.has_role('user') %}
-          <nav class="nav flex-column gap-1 mb-5">
+          {% elif current_user.has_role("user") %}
             {% for item in public_sidebar_items %}
               {% if item.type == 'link' %}
                 {{ nav_item(item.label, item.endpoint, item.icon, item.get('perm')) }}
@@ -41,8 +38,8 @@
                 {{ nav_group(item.label, item.icon, item.collapse_id, item.links) }}
               {% endif %}
             {% endfor %}
-          </nav>
-        {% endif %}
+          {% endif %}
+        </nav>
       {% endif %}
 
       {% if current_user.is_authenticated %}
@@ -75,37 +72,37 @@
 
               <!-- ... inside your navbar ... -->
               <li class="nav-item dropdown">
-                  <!-- Bell toggle: NO href here, just dropdown -->
-                  <a class="btn btn-outline-dark position-relative border-0"
-                    href="#"
-                    id="notifBell"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                      <i class="bi bi-bell"></i>
-                      <span id="notifBadge"
-                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none"
-                            style="font-size: 0.6rem;">
-                          0
-                      </span>
-                  </a>
+                <!-- Bell toggle: NO href here, just dropdown -->
+                <a class="btn btn-outline-dark position-relative border-0"
+                  href="#"
+                  id="notifBell"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                    <i class="bi bi-bell"></i>
+                    <span id="notifBadge"
+                          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none"
+                          style="font-size: 0.6rem;">
+                        0
+                    </span>
+                </a>
 
-                  <!-- Dropdown panel -->
-                  <ul class="dropdown-menu dropdown-menu-end p-0 shadow-sm"
-                      id="notifList"
-                      style="width: 320px; max-height: 400px; overflow-y: auto;"
-                      aria-labelledby="notifBell">
-                      <li class="px-3 py-2 border-bottom fw-semibold small text-uppercase text-muted d-flex justify-content-between align-items-center">
-                          <span>Notifications</span>
-                          <a href="#" class="small text-decoration-none">View all</a>
-                      </li>
-                      <li id="notifEmpty" class="px-3 py-3 text-muted small text-center">No notifications</li>
-                  </ul>
+                <!-- Dropdown panel -->
+                <ul class="dropdown-menu dropdown-menu-end p-0 shadow-sm"
+                    id="notifList"
+                    style="width: 320px; max-height: 400px; overflow-y: auto;"
+                    aria-labelledby="notifBell">
+                    <li class="px-3 py-2 border-bottom fw-semibold small text-uppercase text-muted d-flex justify-content-between align-items-center">
+                        <span>Notifications</span>
+                        <a href="#" class="small text-decoration-none">View all</a>
+                    </li>
+                    <li id="notifEmpty" class="px-3 py-3 text-muted small text-center">No notifications</li>
+                </ul>
 
-                  &nbsp;&nbsp;
-                  <a class="btn btn-sm btn-outline-danger border-0" href="{{ url_for('auth.logout') }}">
-                    <i class="bi bi-power"></i>&nbsp;Sign Out
-                  </a>
+                &nbsp;&nbsp;
+                <a class="btn btn-sm btn-outline-danger border-0" href="{{ url_for('auth.logout') }}">
+                  <i class="bi bi-power"></i>&nbsp;Sign Out
+                </a>
               </li>
               <!-- <li class="nav-item dropdown">
                 <a class="btn btn-outline-dark position-relative border-0" href="#" id="notifBell" role="button" data-bs-toggle="dropdown" aria-expanded="false">

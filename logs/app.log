@@ -3005,3 +3005,102 @@ Traceback (most recent call last):
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: user/profile.html
 [2026-09-10 13:04:30,676] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-10 16:07:12,925] WARNING in auth: Failed login attempt | user_id=b720b323815b4472b5245e6502b410df | ip=127.0.0.1
+[2026-09-10 16:07:20,233] INFO in auth: User logged in successfully | user_id=b720b323815b4472b5245e6502b410df | ip=127.0.0.1
+[2026-09-10 16:09:16,351] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-10 16:33:10,290] INFO in auth: User logged in successfully | user_id=116b98f7d326411c83c42a443c7fb8dd | ip=127.0.0.1
+[2026-09-10 16:33:28,519] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-10 16:33:37,440] INFO in auth: User logged in successfully | user_id=b720b323815b4472b5245e6502b410df | ip=127.0.0.1
+[2026-09-10 16:33:50,113] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-10 16:35:49,923] INFO in auth: User logged in successfully | user_id=116b98f7d326411c83c42a443c7fb8dd | ip=127.0.0.1
+[2026-09-10 16:35:57,205] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-10 16:36:13,360] INFO in auth: User logged in successfully | user_id=b720b323815b4472b5245e6502b410df | ip=127.0.0.1
+[2026-09-10 16:36:15,619] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-10 17:05:54,392] INFO in auth: User logged in successfully | user_id=116b98f7d326411c83c42a443c7fb8dd | ip=127.0.0.1
+[2026-09-10 17:07:01,647] INFO in auth: User id=116b98f7d326411c83c42a443c7fb8dd already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-10 17:07:06,690] INFO in auth: User id=116b98f7d326411c83c42a443c7fb8dd already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-10 17:15:45,370] INFO in auth: User id=116b98f7d326411c83c42a443c7fb8dd already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-10 17:20:22,764] ERROR in errors: Unhandled exception: user/profile.html
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/user.py", line 54, in profile
+    return render_template(
+        "user/profile.html",
+        title="My Profile",
+        active_tab="general",
+        form=form)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: user/profile.html
+[2026-09-10 17:20:29,326] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-10 17:20:43,627] INFO in auth: User logged in successfully | user_id=b720b323815b4472b5245e6502b410df | ip=127.0.0.1
+[2026-09-10 17:20:50,105] ERROR in errors: Unhandled exception: user/profile.html
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/user.py", line 54, in profile
+    return render_template(
+        "user/profile.html",
+        title="My Profile",
+        active_tab="general",
+        form=form)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: user/profile.html
+[2026-09-10 17:20:54,114] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-10 17:26:48,953] INFO in auth: User logged in successfully | user_id=116b98f7d326411c83c42a443c7fb8dd | ip=127.0.0.1
+[2026-09-10 17:28:07,910] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-10 17:28:16,465] INFO in auth: User logged in successfully | user_id=b720b323815b4472b5245e6502b410df | ip=127.0.0.1
+[2026-09-10 17:28:59,002] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-10 17:29:05,408] INFO in auth: User logged in successfully | user_id=116b98f7d326411c83c42a443c7fb8dd | ip=127.0.0.1
+[2026-09-10 17:29:08,164] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-10 17:29:24,237] INFO in auth: User logged in successfully | user_id=b720b323815b4472b5245e6502b410df | ip=127.0.0.1
+[2026-09-10 18:16:17,037] INFO in auth: User id=b720b323815b4472b5245e6502b410df already authenticated, redirecting to dashboard | ip=127.0.0.1
+[2026-09-11 00:45:00,691] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-11 00:45:13,160] INFO in auth: User logged in successfully | user_id=116b98f7d326411c83c42a443c7fb8dd | ip=127.0.0.1
+[2026-09-11 00:45:19,062] INFO in auth: User logged out | ip=127.0.0.1
