@@ -53,11 +53,6 @@ body {
     flex-shrink: 0; /* prevent shrinking when using flexbox */
 }
 
-.logo {
-    /* margin-top: 20px; */
-    margin-bottom: 20px;
-}
-
 .sidebar a {
     padding: 15px;
     padding-left: 30px;
@@ -81,6 +76,10 @@ body {
 }
 /* End of Sidebar Styles */
 
+
+.navTitle {
+    color: var(--primary-dark);
+}
 
 /* Main Content Styles */
  main {
