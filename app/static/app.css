@@ -22,6 +22,11 @@
     padding: 0;
 }
 
+body {
+    display: flex;
+    max-height: 100vh;
+}
+
 .authSection{
     display: flex;
     min-height: 100vh;
@@ -33,22 +38,20 @@
 
 .card {
     border-radius: var(--radius);
-    /* box-shadow: var(--shadow); */
+    box-shadow: var(--shadow);
 }
 
 
 /* Sidebar Styles */
 .sidebar {
-    position: fixed;
     overflow-y: auto;
-    z-index: 1;
-    height: 100vh;
+    z-index: 1045; /* match Bootstrap's offcanvas z-index instead of 1 */
     display: flex;
+    height: 100vh;
     flex-direction: column;
-    max-width: 20%;
-    min-width: 20%;
     background-color: #EAEAEA;
-  }
+    flex-shrink: 0; /* prevent shrinking when using flexbox */
+}
 
 .logo {
     /* margin-top: 20px; */
@@ -63,7 +66,6 @@
 }
 
 .sidebar a:hover {
-    /* background-color: #ee2737; */
     background-color: var(--primary-dark);
     color: #fff;
     transition: background 0.3s;
@@ -81,14 +83,16 @@
 
 
 /* Main Content Styles */
-main {
-    margin-left: 20%;
+ main {
+    flex: 1 1 auto;  /* always fills exactly whatever space is left beside the sidebar */
+    min-width: 0;    /* lets it shrink properly instead of overflowing on smaller screens */
+    display: flex;
     flex-direction: column;
     height: 100vh;
     height: -webkit-fill-available;
     min-height: 100vh;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: auto;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; 
@@ -99,10 +103,13 @@ main {
 
 
 /* Media Queries */
-@media screen and (max-width: 768px) {
-    .main-content {
-        margin-left: 0;
-        width: 100%;
+@media (min-width: 768px) {
+    .sidebar {
+        position: sticky;
+        top: 0;
+        align-self: flex-start;
+        height: 100vh;
+        width: 20%;
     }
 }
 
@@ -129,5 +136,5 @@ main {
   transform: translateY(-5px);
   /* box-shadow: var(--shadow); */
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  /* border-color: #cbd9e4; */
+  border-color: #cbd9e4;
 }
