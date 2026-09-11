@@ -6,6 +6,7 @@ from datetime import datetime, timezone, timedelta
 from typing import TYPE_CHECKING, List
 import secrets
 import pyotp
+from flask import url_for
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import String, Integer, DateTime, Boolean, ForeignKey, Text
 from flask_login import UserMixin

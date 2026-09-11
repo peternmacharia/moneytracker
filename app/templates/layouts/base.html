@@ -47,9 +47,24 @@
       <div class="mt-auto p-3 border-top">
         <div class="text-center">
           <div class="dropdown">
-            <button class="btn btn-outline-primary border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-person-circle"></i><span class="fw-bold">{{ current_user.fullname }}</span>
+            <button class="btn dropdown-toggle" data-bs-toggle="dropdown">
+              {% if current_user.avatar_url %}
+                <img src="{{ url_for('auth.serve_avatar_image', filename=current_user.avatar_url) }}"
+                    alt="avatar" width="32" height="32" class="rounded-circle">
+                <span class="fw-bold">{{ current_user.fullname }}</span>
+              {% else %}
+                <i class="bi bi-person-circle fs-4"></i> <span class="fw-bold">{{ current_user.fullname }}</span>
+              {% endif %}
             </button>
+            <!-- <button class="btn dropdown-toggle" data-bs-toggle="dropdown">
+              {% if current_user.avatar_url %}
+                <img src="{{ url_for('auth.serve_avatar_image', filename=current_user.avatar_url) }}" 
+                      alt="avatar" width="32" height="32" class="rounded-circle">
+                <span class="fw-bold">{{ current_user.fullname }}</span>
+              {% else %}
+                <i class="bi bi-person-circle fs-4"></i> <span class="fw-bold">{{ current_user.fullname }}</span>
+              {% endif %}
+            </button> -->
             <ul class="dropdown-menu">
               <li><a class="btn btn-sm dropdown-item" href="{{ url_for ('user.profile') }}">Profile</a></li>
             </ul>
