@@ -92,8 +92,8 @@ def send_verified_confirmation_email(user) -> bool:
         recipient=user.email,
         body=(
             f"Hi {user.firstname},\n\n"
-            "Your email address has been successfully verified. You can now "
-            "log in to your account."
+            "Your email address has been successfully verified and password has been set.\n"
+            "You can now log in to your account."
         ),
     )
 

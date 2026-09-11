@@ -174,8 +174,8 @@ def init_data():
         # ──────────────────────────────────────────────────────────────────────
         print("\n👤 Creating Users...")
         user_defs = [
-            ("admin@techcorp.co.ke", "John", "Kariuki", "KENYA", "KES", "Africa/Nairobi", super_admin),
-            ("user@techcorp.co.ke", "Mary", "Wanjiru", "KENYA", "KES", "Africa/Nairobi", system_user),
+            ("admin@techcorp.co.ke", "John", "Kariuki", "Kenya", "KES", "Africa/Nairobi", super_admin),
+            ("user@techcorp.co.ke", "Mary", "Wanjiru", "Kenya", "KES", "Africa/Nairobi", system_user),
         ]
 
         created_users = 0
@@ -194,9 +194,7 @@ def init_data():
                 currency=currency,
                 timezone=timezone,
                 role_id=role.id,
-                is_active=True,
                 is_email_verified=True,
-                is_locked=False
             )
             user.set_password("password123")
             db.session.add(user)

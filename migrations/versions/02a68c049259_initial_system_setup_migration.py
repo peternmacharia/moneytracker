@@ -1,8 +1,8 @@
 """Initial system setup migration
 
-Revision ID: 4368d6e6287e
+Revision ID: 02a68c049259
 Revises: 
-Create Date: 2026-09-09 17:56:52.427694
+Create Date: 2026-09-11 15:23:09.642246
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '4368d6e6287e'
+revision = '02a68c049259'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -23,8 +23,8 @@ def upgrade():
     sa.Column('resource', sa.String(length=50), nullable=False),
     sa.Column('action', sa.String(length=50), nullable=False),
     sa.Column('id', sa.String(length=36), nullable=False),
-    sa.Column('created_at', sa.DateTime(), nullable=True),
-    sa.Column('updated_at', sa.DateTime(), nullable=True),
+    sa.Column('created_at', sa.DateTime(), nullable=False),
+    sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
     with op.batch_alter_table('permissions', schema=None) as batch_op:
@@ -38,8 +38,8 @@ def upgrade():
     sa.Column('description', sa.Text(), nullable=True),
     sa.Column('is_active', sa.Boolean(), nullable=False),
     sa.Column('id', sa.String(length=36), nullable=False),
-    sa.Column('created_at', sa.DateTime(), nullable=True),
-    sa.Column('updated_at', sa.DateTime(), nullable=True),
+    sa.Column('created_at', sa.DateTime(), nullable=False),
+    sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
     with op.batch_alter_table('roles', schema=None) as batch_op:
@@ -51,8 +51,8 @@ def upgrade():
     sa.Column('resource', sa.String(length=50), nullable=False),
     sa.Column('action', sa.String(length=50), nullable=False),
     sa.Column('id', sa.String(length=36), nullable=False),
-    sa.Column('created_at', sa.DateTime(), nullable=True),
-    sa.Column('updated_at', sa.DateTime(), nullable=True),
+    sa.Column('created_at', sa.DateTime(), nullable=False),
+    sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
     with op.batch_alter_table('workspace_permissions', schema=None) as batch_op:
@@ -66,8 +66,8 @@ def upgrade():
     sa.Column('description', sa.Text(), nullable=True),
     sa.Column('is_active', sa.Boolean(), nullable=False),
     sa.Column('id', sa.String(length=36), nullable=False),
-    sa.Column('created_at', sa.DateTime(), nullable=True),
-    sa.Column('updated_at', sa.DateTime(), nullable=True),
+    sa.Column('created_at', sa.DateTime(), nullable=False),
+    sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
     with op.batch_alter_table('workspace_roles', schema=None) as batch_op:
@@ -95,28 +95,29 @@ def upgrade():
     sa.Column('timezone', sa.String(length=50), nullable=False),
     sa.Column('avatar_url', sa.Text(), nullable=True),
     sa.Column('role_id', sa.String(length=36), nullable=False),
-    sa.Column('last_login', sa.DateTime(timezone=True), nullable=True),
+    sa.Column('last_login', sa.DateTime(), nullable=True),
+    sa.Column('last_logout', sa.DateTime(), nullable=True),
     sa.Column('login_count', sa.Integer(), nullable=True),
-    sa.Column('password_changed_at', sa.DateTime(timezone=True), nullable=True),
+    sa.Column('password_changed_at', sa.DateTime(), nullable=True),
     sa.Column('password_reset_token', sa.String(length=256), nullable=True),
-    sa.Column('password_reset_expires_at', sa.DateTime(timezone=True), nullable=True),
+    sa.Column('password_reset_expires_at', sa.DateTime(), nullable=True),
     sa.Column('is_email_verified', sa.Boolean(), nullable=False),
     sa.Column('email_verification_token', sa.String(length=256), nullable=True),
-    sa.Column('email_verification_expires_at', sa.DateTime(timezone=True), nullable=True),
-    sa.Column('email_verified_at', sa.DateTime(timezone=True), nullable=True),
+    sa.Column('email_verification_expires_at', sa.DateTime(), nullable=True),
+    sa.Column('email_verified_at', sa.DateTime(), nullable=True),
     sa.Column('is_active', sa.Boolean(), nullable=False),
     sa.Column('is_locked', sa.Boolean(), nullable=False),
-    sa.Column('locked_until', sa.DateTime(timezone=True), nullable=True),
+    sa.Column('locked_until', sa.DateTime(), nullable=True),
     sa.Column('lock_reason', sa.String(length=255), nullable=True),
     sa.Column('locked_by', sa.String(length=36), nullable=True),
-    sa.Column('locked_at', sa.DateTime(timezone=True), nullable=True),
+    sa.Column('locked_at', sa.DateTime(), nullable=True),
     sa.Column('failed_login_attempts', sa.Integer(), nullable=True),
-    sa.Column('last_failed_login_at', sa.DateTime(timezone=True), nullable=True),
+    sa.Column('last_failed_login_at', sa.DateTime(), nullable=True),
     sa.Column('mfa_enabled', sa.Boolean(), nullable=False),
     sa.Column('mfa_secret', sa.String(length=36), nullable=True),
     sa.Column('id', sa.String(length=36), nullable=False),
-    sa.Column('created_at', sa.DateTime(), nullable=True),
-    sa.Column('updated_at', sa.DateTime(), nullable=True),
+    sa.Column('created_at', sa.DateTime(), nullable=False),
+    sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.ForeignKeyConstraint(['locked_by'], ['users.id'], ),
     sa.ForeignKeyConstraint(['role_id'], ['roles.id'], ),
     sa.PrimaryKeyConstraint('id')
@@ -143,8 +144,8 @@ def upgrade():
     sa.Column('is_active', sa.Boolean(), nullable=False),
     sa.Column('is_shared', sa.Boolean(), nullable=False),
     sa.Column('id', sa.String(length=36), nullable=False),
-    sa.Column('created_at', sa.DateTime(), nullable=True),
-    sa.Column('updated_at', sa.DateTime(), nullable=True),
+    sa.Column('created_at', sa.DateTime(), nullable=False),
+    sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.ForeignKeyConstraint(['owner_id'], ['users.id'], ondelete='CASCADE'),
     sa.PrimaryKeyConstraint('id')
     )
@@ -179,8 +180,8 @@ def upgrade():
     sa.Column('user_id', sa.String(length=36), nullable=False),
     sa.Column('role_id', sa.String(length=36), nullable=False),
     sa.Column('id', sa.String(length=36), nullable=False),
-    sa.Column('created_at', sa.DateTime(), nullable=True),
-    sa.Column('updated_at', sa.DateTime(), nullable=True),
+    sa.Column('created_at', sa.DateTime(), nullable=False),
+    sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.ForeignKeyConstraint(['role_id'], ['workspace_roles.id'], ),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ondelete='CASCADE'),
     sa.ForeignKeyConstraint(['workspace_id'], ['workspaces.id'], ondelete='CASCADE'),

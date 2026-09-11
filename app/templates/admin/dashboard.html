@@ -20,7 +20,7 @@
         </div>
         <div class="col">
             <p class="mb-0">
-                <i class="bi bi-clock"></i> Last Login: <strong>{{ current_user.last_login | fmt_dt if current_user.last_login else 'N/A' }}</strong>
+                <i class="bi bi-clock"></i> Login at: <strong>{{ current_user.last_login | fmt_dt if current_user.last_login else 'N/A' }}</strong>
             </p>
         </div>
     </div>

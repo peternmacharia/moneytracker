@@ -3258,3 +3258,258 @@ Traceback (most recent call last):
 jinja2.exceptions.TemplateNotFound: user/list.html
 [2026-09-11 12:26:37,977] INFO in auth: User logged out | ip=127.0.0.1
 [2026-09-11 12:26:47,920] INFO in auth: User logged in successfully | user_id=b720b323815b4472b5245e6502b410df | ip=127.0.0.1
+[2026-09-11 12:28:39,448] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-11 12:28:48,442] INFO in auth: User logged in successfully | user_id=b720b323815b4472b5245e6502b410df | ip=127.0.0.1
+[2026-09-11 12:28:54,667] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-11 12:36:09,104] INFO in auth: User logged in successfully | user_id=b720b323815b4472b5245e6502b410df | ip=127.0.0.1
+[2026-09-11 12:36:13,032] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-11 12:36:46,271] INFO in auth: User logged in successfully | user_id=b720b323815b4472b5245e6502b410df | ip=127.0.0.1
+[2026-09-11 12:40:16,609] ERROR in errors: Database error: (sqlite3.OperationalError) no such column: users.login_at
+[SQL: SELECT users.email AS users_email, users.password_hash AS users_password_hash, users.firstname AS users_firstname, users.lastname AS users_lastname, users.country AS users_country, users.currency AS users_currency, users.timezone AS users_timezone, users.avatar_url AS users_avatar_url, users.role_id AS users_role_id, users.login_at AS users_login_at, users.last_login AS users_last_login, users.login_count AS users_login_count, users.password_changed_at AS users_password_changed_at, users.password_reset_token AS users_password_reset_token, users.password_reset_expires_at AS users_password_reset_expires_at, users.is_email_verified AS users_is_email_verified, users.email_verification_token AS users_email_verification_token, users.email_verification_expires_at AS users_email_verification_expires_at, users.email_verified_at AS users_email_verified_at, users.is_active AS users_is_active, users.is_locked AS users_is_locked, users.locked_until AS users_locked_until, users.lock_reason AS users_lock_reason, users.locked_by AS users_locked_by, users.locked_at AS users_locked_at, users.failed_login_attempts AS users_failed_login_attempts, users.last_failed_login_at AS users_last_failed_login_at, users.mfa_enabled AS users_mfa_enabled, users.mfa_secret AS users_mfa_secret, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?]
+[parameters: ('b720b323815b4472b5245e6502b410df',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-09-11 12:41:10,604] ERROR in errors: Database error: (sqlite3.OperationalError) no such column: users.login_at
+[SQL: SELECT users.email AS users_email, users.password_hash AS users_password_hash, users.firstname AS users_firstname, users.lastname AS users_lastname, users.country AS users_country, users.currency AS users_currency, users.timezone AS users_timezone, users.avatar_url AS users_avatar_url, users.role_id AS users_role_id, users.login_at AS users_login_at, users.logged_out_at AS users_logged_out_at, users.login_count AS users_login_count, users.password_changed_at AS users_password_changed_at, users.password_reset_token AS users_password_reset_token, users.password_reset_expires_at AS users_password_reset_expires_at, users.is_email_verified AS users_is_email_verified, users.email_verification_token AS users_email_verification_token, users.email_verification_expires_at AS users_email_verification_expires_at, users.email_verified_at AS users_email_verified_at, users.is_active AS users_is_active, users.is_locked AS users_is_locked, users.locked_until AS users_locked_until, users.lock_reason AS users_lock_reason, users.locked_by AS users_locked_by, users.locked_at AS users_locked_at, users.failed_login_attempts AS users_failed_login_attempts, users.last_failed_login_at AS users_last_failed_login_at, users.mfa_enabled AS users_mfa_enabled, users.mfa_secret AS users_mfa_secret, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?]
+[parameters: ('b720b323815b4472b5245e6502b410df',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-09-11 12:42:10,610] ERROR in errors: Database error: (sqlite3.OperationalError) no such column: users.login_at
+[SQL: SELECT users.email AS users_email, users.password_hash AS users_password_hash, users.firstname AS users_firstname, users.lastname AS users_lastname, users.country AS users_country, users.currency AS users_currency, users.timezone AS users_timezone, users.avatar_url AS users_avatar_url, users.role_id AS users_role_id, users.login_at AS users_login_at, users.logout_at AS users_logout_at, users.login_count AS users_login_count, users.password_changed_at AS users_password_changed_at, users.password_reset_token AS users_password_reset_token, users.password_reset_expires_at AS users_password_reset_expires_at, users.is_email_verified AS users_is_email_verified, users.email_verification_token AS users_email_verification_token, users.email_verification_expires_at AS users_email_verification_expires_at, users.email_verified_at AS users_email_verified_at, users.is_active AS users_is_active, users.is_locked AS users_is_locked, users.locked_until AS users_locked_until, users.lock_reason AS users_lock_reason, users.locked_by AS users_locked_by, users.locked_at AS users_locked_at, users.failed_login_attempts AS users_failed_login_attempts, users.last_failed_login_at AS users_last_failed_login_at, users.mfa_enabled AS users_mfa_enabled, users.mfa_secret AS users_mfa_secret, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?]
+[parameters: ('b720b323815b4472b5245e6502b410df',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-09-11 12:43:10,604] ERROR in errors: Database error: (sqlite3.OperationalError) no such column: users.login_at
+[SQL: SELECT users.email AS users_email, users.password_hash AS users_password_hash, users.firstname AS users_firstname, users.lastname AS users_lastname, users.country AS users_country, users.currency AS users_currency, users.timezone AS users_timezone, users.avatar_url AS users_avatar_url, users.role_id AS users_role_id, users.login_at AS users_login_at, users.logout_at AS users_logout_at, users.login_count AS users_login_count, users.password_changed_at AS users_password_changed_at, users.password_reset_token AS users_password_reset_token, users.password_reset_expires_at AS users_password_reset_expires_at, users.is_email_verified AS users_is_email_verified, users.email_verification_token AS users_email_verification_token, users.email_verification_expires_at AS users_email_verification_expires_at, users.email_verified_at AS users_email_verified_at, users.is_active AS users_is_active, users.is_locked AS users_is_locked, users.locked_until AS users_locked_until, users.lock_reason AS users_lock_reason, users.locked_by AS users_locked_by, users.locked_at AS users_locked_at, users.failed_login_attempts AS users_failed_login_attempts, users.last_failed_login_at AS users_last_failed_login_at, users.mfa_enabled AS users_mfa_enabled, users.mfa_secret AS users_mfa_secret, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?]
+[parameters: ('b720b323815b4472b5245e6502b410df',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-09-11 12:44:10,608] ERROR in errors: Database error: (sqlite3.OperationalError) no such column: users.login_at
+[SQL: SELECT users.email AS users_email, users.password_hash AS users_password_hash, users.firstname AS users_firstname, users.lastname AS users_lastname, users.country AS users_country, users.currency AS users_currency, users.timezone AS users_timezone, users.avatar_url AS users_avatar_url, users.role_id AS users_role_id, users.login_at AS users_login_at, users.logout_at AS users_logout_at, users.login_count AS users_login_count, users.password_changed_at AS users_password_changed_at, users.password_reset_token AS users_password_reset_token, users.password_reset_expires_at AS users_password_reset_expires_at, users.is_email_verified AS users_is_email_verified, users.email_verification_token AS users_email_verification_token, users.email_verification_expires_at AS users_email_verification_expires_at, users.email_verified_at AS users_email_verified_at, users.is_active AS users_is_active, users.is_locked AS users_is_locked, users.locked_until AS users_locked_until, users.lock_reason AS users_lock_reason, users.locked_by AS users_locked_by, users.locked_at AS users_locked_at, users.failed_login_attempts AS users_failed_login_attempts, users.last_failed_login_at AS users_last_failed_login_at, users.mfa_enabled AS users_mfa_enabled, users.mfa_secret AS users_mfa_secret, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?]
+[parameters: ('b720b323815b4472b5245e6502b410df',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-09-11 12:45:10,605] ERROR in errors: Database error: (sqlite3.OperationalError) no such column: users.last_logout
+[SQL: SELECT users.email AS users_email, users.password_hash AS users_password_hash, users.firstname AS users_firstname, users.lastname AS users_lastname, users.country AS users_country, users.currency AS users_currency, users.timezone AS users_timezone, users.avatar_url AS users_avatar_url, users.role_id AS users_role_id, users.last_login AS users_last_login, users.last_logout AS users_last_logout, users.login_count AS users_login_count, users.password_changed_at AS users_password_changed_at, users.password_reset_token AS users_password_reset_token, users.password_reset_expires_at AS users_password_reset_expires_at, users.is_email_verified AS users_is_email_verified, users.email_verification_token AS users_email_verification_token, users.email_verification_expires_at AS users_email_verification_expires_at, users.email_verified_at AS users_email_verified_at, users.is_active AS users_is_active, users.is_locked AS users_is_locked, users.locked_until AS users_locked_until, users.lock_reason AS users_lock_reason, users.locked_by AS users_locked_by, users.locked_at AS users_locked_at, users.failed_login_attempts AS users_failed_login_attempts, users.last_failed_login_at AS users_last_failed_login_at, users.mfa_enabled AS users_mfa_enabled, users.mfa_secret AS users_mfa_secret, users.id AS users_id, users.created_at AS users_created_at, users.updated_at AS users_updated_at 
+FROM users 
+WHERE users.id = ?]
+[parameters: ('b720b323815b4472b5245e6502b410df',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2026-09-11 12:47:03,526] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-11 12:49:50,782] INFO in auth: User logged in successfully | user_id=b720b323815b4472b5245e6502b410df | ip=127.0.0.1
+[2026-09-11 12:51:17,827] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-11 12:52:55,204] INFO in auth: User logged in successfully | user_id=116b98f7d326411c83c42a443c7fb8dd | ip=127.0.0.1
+[2026-09-11 12:53:09,174] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-11 13:26:33,552] INFO in auth: User logged in successfully | user_id=116b98f7d326411c83c42a443c7fb8dd | ip=127.0.0.1
+[2026-09-11 13:27:02,034] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-11 14:04:26,935] ERROR in errors: Unhandled exception: Could not build url for endpoint 'auth.country_info' with values ['country_code']. Did you mean 'auth.login' instead?
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 271, in signup
+    return render_template("auth/signup.html", form=form, title="Sign Up")
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/signup.html", line 1, in top-level template code
+    {% extends "layouts/auth.html" %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/layouts/auth.html", line 35, in top-level template code
+    {% block content %}
+    ^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/templates/auth/signup.html", line 115, in block 'content'
+    const resp = await fetch("{{ url_for('auth.country_info', country_code='__C__') }}".replace('__C__', code));
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'auth.country_info' with values ['country_code']. Did you mean 'auth.login' instead?
+[2026-09-11 14:23:12,471] INFO in auth: User logged in successfully | user_id=b720b323815b4472b5245e6502b410df | ip=127.0.0.1
+[2026-09-11 14:23:18,856] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-11 14:43:27,243] WARNING in auth: Login attempt on unverified email | user_id=21ba6230b730431097c13d03e96e0eb3 | ip=127.0.0.1
+[2026-09-11 14:44:29,766] INFO in auth: User logged in successfully | user_id=25935d9a4d34411a827fa4c69ec846a0 | ip=127.0.0.1
+[2026-09-11 14:44:29,767] INFO in auth: Login redirected to force password change | user_id=25935d9a4d34411a827fa4c69ec846a0 | ip=127.0.0.1
+[2026-09-11 14:44:48,759] INFO in mailer: Email sent successfully | subject='Your password has been changed' recipient=admin@techcorp.co.ke
+[2026-09-11 14:44:48,759] INFO in auth: Password changed successfully | user_id=25935d9a4d34411a827fa4c69ec846a0 | ip=127.0.0.1
+[2026-09-11 14:44:55,696] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-11 14:45:54,295] INFO in mailer: Email sent successfully | subject='Verify your account' recipient=devpthunder@gmail.com
+[2026-09-11 14:45:54,326] INFO in auth: New user created and verification email sent | user_id=c0909262155c4f3f997535b5f4cef57a | ip=127.0.0.1
+[2026-09-11 14:46:25,405] ERROR in errors: Unhandled exception: can't compare offset-naive and offset-aware datetimes
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 123, in verify_email
+    if user is None or not user.verify_email_verification_token(token):
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/models/user.py", line 330, in verify_email_verification_token
+    utc_now() < self.email_verification_expires_at):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: can't compare offset-naive and offset-aware datetimes
+[2026-09-11 15:17:28,882] ERROR in errors: Unhandled exception: can't compare offset-naive and offset-aware datetimes
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 123, in verify_email
+    if user is None or not user.verify_email_verification_token(token):
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/models/user.py", line 330, in verify_email_verification_token
+TypeError: can't compare offset-naive and offset-aware datetimes
+[2026-09-11 15:17:34,110] ERROR in errors: Unhandled exception: can't compare offset-naive and offset-aware datetimes
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 123, in verify_email
+    if user is None or not user.verify_email_verification_token(token):
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/models/user.py", line 330, in verify_email_verification_token
+TypeError: can't compare offset-naive and offset-aware datetimes
+[2026-09-11 15:17:47,305] ERROR in errors: Unhandled exception: can't compare offset-naive and offset-aware datetimes
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 123, in verify_email
+    if user is None or not user.verify_email_verification_token(token):
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/models/user.py", line 330, in verify_email_verification_token
+TypeError: can't compare offset-naive and offset-aware datetimes
+[2026-09-11 15:17:47,943] ERROR in errors: Unhandled exception: can't compare offset-naive and offset-aware datetimes
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 123, in verify_email
+    if user is None or not user.verify_email_verification_token(token):
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/models/user.py", line 330, in verify_email_verification_token
+TypeError: can't compare offset-naive and offset-aware datetimes
+[2026-09-11 15:17:48,126] ERROR in errors: Unhandled exception: can't compare offset-naive and offset-aware datetimes
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 123, in verify_email
+    if user is None or not user.verify_email_verification_token(token):
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/models/user.py", line 330, in verify_email_verification_token
+TypeError: can't compare offset-naive and offset-aware datetimes
+[2026-09-11 15:17:48,309] ERROR in errors: Unhandled exception: can't compare offset-naive and offset-aware datetimes
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 123, in verify_email
+    if user is None or not user.verify_email_verification_token(token):
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/models/user.py", line 330, in verify_email_verification_token
+TypeError: can't compare offset-naive and offset-aware datetimes
+[2026-09-11 15:17:48,524] ERROR in errors: Unhandled exception: can't compare offset-naive and offset-aware datetimes
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 123, in verify_email
+    if user is None or not user.verify_email_verification_token(token):
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/models/user.py", line 330, in verify_email_verification_token
+TypeError: can't compare offset-naive and offset-aware datetimes
+[2026-09-11 15:17:48,690] ERROR in errors: Unhandled exception: can't compare offset-naive and offset-aware datetimes
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 123, in verify_email
+    if user is None or not user.verify_email_verification_token(token):
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/models/user.py", line 330, in verify_email_verification_token
+TypeError: can't compare offset-naive and offset-aware datetimes
+[2026-09-11 15:17:48,879] ERROR in errors: Unhandled exception: can't compare offset-naive and offset-aware datetimes
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 123, in verify_email
+    if user is None or not user.verify_email_verification_token(token):
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/models/user.py", line 330, in verify_email_verification_token
+TypeError: can't compare offset-naive and offset-aware datetimes
+[2026-09-11 15:17:49,059] ERROR in errors: Unhandled exception: can't compare offset-naive and offset-aware datetimes
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 123, in verify_email
+    if user is None or not user.verify_email_verification_token(token):
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/models/user.py", line 330, in verify_email_verification_token
+TypeError: can't compare offset-naive and offset-aware datetimes
+[2026-09-11 15:18:07,570] ERROR in errors: Unhandled exception: can't compare offset-naive and offset-aware datetimes
+Traceback (most recent call last):
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/pthunder/Projects/moneytracker/venv/lib64/python3.14/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/routes/web/auth/auth.py", line 123, in verify_email
+    if user is None or not user.verify_email_verification_token(token):
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/pthunder/Projects/moneytracker/app/models/user.py", line 330, in verify_email_verification_token
+TypeError: can't compare offset-naive and offset-aware datetimes
+[2026-09-11 15:23:43,586] INFO in auth: User logged in successfully | user_id=684e1d2289ee4c78b8686c8cf248a44e | ip=127.0.0.1
+[2026-09-11 15:23:43,586] INFO in auth: Login redirected to force password change | user_id=684e1d2289ee4c78b8686c8cf248a44e | ip=127.0.0.1
+[2026-09-11 15:24:04,578] INFO in mailer: Email sent successfully | subject='Your password has been changed' recipient=admin@techcorp.co.ke
+[2026-09-11 15:24:04,579] INFO in auth: Password changed successfully | user_id=684e1d2289ee4c78b8686c8cf248a44e | ip=127.0.0.1
+[2026-09-11 15:24:08,217] INFO in auth: User logged out | ip=127.0.0.1
+[2026-09-11 15:24:53,710] INFO in mailer: Email sent successfully | subject='Verify your account' recipient=devpthunder@gmail.com
+[2026-09-11 15:24:53,739] INFO in auth: New user created and verification email sent | user_id=d637b1e3b68e4e0bb9bfc8e1d2ca5869 | ip=127.0.0.1
+[2026-09-11 15:25:26,365] INFO in mailer: Email sent successfully | subject='Your email has been verified' recipient=devpthunder@gmail.com
+[2026-09-11 15:25:26,366] INFO in auth: Email verified and password set successfully | user_id=d637b1e3b68e4e0bb9bfc8e1d2ca5869 | ip=127.0.0.1
+[2026-09-11 15:25:33,855] INFO in auth: User logged in successfully | user_id=d637b1e3b68e4e0bb9bfc8e1d2ca5869 | ip=127.0.0.1
+[2026-09-11 15:28:17,968] INFO in auth: User logged out | ip=127.0.0.1

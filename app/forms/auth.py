@@ -5,9 +5,12 @@ app/forms/auth.py - Defines form classes related to authentication and user mana
 
 # from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed, FileSize
-from wtforms import (StringField, PasswordField, EmailField, SubmitField)
+from wtforms import (StringField, PasswordField, EmailField, SelectField, SubmitField)
 from wtforms.validators import DataRequired, Email, Length, EqualTo
 from .base import BaseForm
+from app.utils.geo import COUNTRIES, CURRENCIES, TIMEZONES
+
+PLACEHOLDER = "-- Select --"
 
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png"}
 
@@ -33,14 +36,17 @@ class SignupForm(BaseForm):
                            render_kw={"placeholder": "Last Name", "class": "form-control"})
     email = EmailField("Email", validators=[DataRequired(message="Email is required."), Email()],
                        render_kw={"placeholder": "Email", "class": "form-control"})
-    country = StringField("Country", validators=[DataRequired(message="Country is required.")],
-                           render_kw={"placeholder": "Country", "class": "form-control"})
-    currency = StringField("Currency", validators=[DataRequired(message="Currency is required.")],
-                       render_kw={"placeholder": "Currency", "class": "form-control"})
-    timezone = StringField("Timezone", validators=[DataRequired(message="Timezone is required.")],
-                       render_kw={"placeholder": "Timezone", "class": "form-control"})
-    avatar = FileField("Avatar", validators=[FileAllowed([ext.lstrip(".") for ext in IMAGE_EXTENSIONS],
-                                                         "That file type isn't allowed.",),
+    country = SelectField("Country", choices=[("", PLACEHOLDER)] + COUNTRIES,
+                          validators=[DataRequired(message="Country is required.")],
+                          render_kw={"placeholder": "Country", "class": "form-select"})
+    currency = SelectField("Currency", choices=[("", PLACEHOLDER)] + CURRENCIES,
+                           validators=[DataRequired(message="Currency is required.")],
+                           render_kw={"placeholder": "Currency", "class": "form-select"})
+    timezone = SelectField("Timezone", choices=[("", PLACEHOLDER)] + TIMEZONES,
+                           validators=[DataRequired(message="Timezone is required.")],
+                           render_kw={"placeholder": "Timezone", "class": "form-select"})
+    avatar = FileField("Choose Avatar", validators=[FileAllowed([ext.lstrip(".") for ext in IMAGE_EXTENSIONS],
+                                                                "That file type isn't allowed.",),
                                             FileSize(max_size=5 * 1024 * 1024, message="File must be under 5MB."),],
                         render_kw={"type":"file", "class":"form-control", "accept":",".join(IMAGE_EXTENSIONS)})
     submit = SubmitField("Sign up", render_kw={"class": "btn btn-success w-100"})

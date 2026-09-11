@@ -24,7 +24,14 @@ def utc_now() -> datetime:
     A function to return the current date and time
     using the utc timezone
     """
-    return datetime.now(timezone.utc)
+    return datetime.now(timezone.utc).replace(tzinfo=None)
+
+
+def to_utc_naive(dt: datetime) -> datetime:
+    """Convert any datetime to naive UTC; pass naive values through unchanged."""
+    if dt.tzinfo is not None:
+        return dt.astimezone(timezone.utc).replace(tzinfo=None)
+    return dt
 
 
 class BaseModel(db.Model):
@@ -35,9 +42,8 @@ class BaseModel(db.Model):
 
     id: Mapped[str]                         = mapped_column(String(36), primary_key=True, default=_uuid,
                                                             index=True)
-    created_at: Mapped[Optional[datetime]]  = mapped_column(DateTime, default=utc_now)
-    updated_at: Mapped[Optional[datetime]]  = mapped_column(DateTime, default=utc_now,
-                                                            onupdate=utc_now)
+    created_at: Mapped[datetime]  = mapped_column(DateTime, default=utc_now)
+    updated_at: Mapped[datetime]  = mapped_column(DateTime, default=utc_now, onupdate=utc_now)
 
 
 class ModelRegistry:

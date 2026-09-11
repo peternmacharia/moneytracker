@@ -10,10 +10,9 @@ from datetime import datetime
 import logging
 import pyotp
 from flask import (Blueprint, render_template, redirect, url_for,
-                   flash, request, session, current_app, abort, send_from_directory, send_file)
+                   flash, request, session, current_app, abort, send_from_directory)
 # from flask_mail import Message
 from flask_login import login_required, current_user, login_user, logout_user
-from urllib.parse import urlparse, urljoin
 from werkzeug.utils import secure_filename
 # from sqlalchemy.exc import SQLAlchemyError
 from app.services.mailer import (send_verification_email, send_password_reset_email,
@@ -66,12 +65,6 @@ def get_post_login_redirect(user):
     else:
         current_app.logger.warning("User id=%s authenticated with no recognized role", user.id)
         return url_for("auth.login")  # fallback — adjust to whatever's safe
-
-
-# def is_safe_url(target):
-#     ref_url = urlparse(request.host_url)
-#     test_url = urlparse(urljoin(request.host_url, target))
-#     return test_url.scheme in ("http", "https") and ref_url.netloc == test_url.netloc
 
 
 def save_avatar(file_storage):
@@ -153,17 +146,6 @@ def verify_email(token):
     return render_template("auth/set_password.html", form=form,
                            title="Set your Password")
 
-    # if user is None or not user.verify_email_verification_token(token):
-    #     current_app.logger.warning("Invalid or expired email verification token used | token=%s | ip=%s", token, request.remote_addr)
-    #     flash("Invalid or expired verification link.", "danger")
-    #     return redirect(url_for("auth.resend_verification"))
-
-    # db.session.commit()
-    # send_verified_confirmation_email(user)
-    # current_app.logger.info("Email verified successfully | user_id=%s | ip=%s", user.id, request.remote_addr)
-    # flash("Your email has been verified. You can now log in.", "success")
-    # return redirect(url_for("auth.login"))
-
 
 @auth_bp.route("/resend-verification", methods=["GET", "POST"])
 def resend_verification():
@@ -199,13 +181,14 @@ def signup():
         return redirect(url_for("dashboard"))
 
     form = SignupForm()
+
     if form.validate_on_submit():
-        firstname = form.firstname.data.strip()
-        lastname = form.lastname.data.strip()
-        email = form.email.data.lower().strip()
-        country = form.country.data.strip()
-        currency = form.currency.data.strip()
-        timezone = form.timezone.data.strip()
+        firstname = form.firstname.data
+        lastname = form.lastname.data
+        email = form.email.data.lower()
+        country = form.country.data
+        currency = form.currency.data
+        timezone = form.timezone.data
         avatar_file = form.avatar.data or None
 
         # Check if role already exists
@@ -400,7 +383,7 @@ def verify_2fa():
                 flash("Please change your password.", "info")
                 return redirect(url_for("auth.change_password"))
 
-            return redirect(url_for(get_post_login_redirect(user)))
+            return redirect(get_post_login_redirect(user))
 
         current_app.logger.warning("Invalid 2FA token submitted | user_id=%s | ip=%s", user.id, request.remote_addr)
         flash("Invalid authentication code.", "danger")
@@ -451,6 +434,8 @@ def logout():
     """
     Log the user out and redirect to the login page.
     """
+    current_user.last_logout = utc_now()
+    db.session.commit()
     logout_user()
     current_app.logger.info("User logged out | ip=%s", request.remote_addr)
     flash("You have been logged out.", "info")

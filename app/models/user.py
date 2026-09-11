@@ -2,7 +2,7 @@
 User model class defination file
 """
 
-from datetime import timezone, timedelta
+from datetime import datetime, timezone, timedelta
 from typing import TYPE_CHECKING, List
 import secrets
 import pyotp
@@ -10,7 +10,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import String, Integer, DateTime, Boolean, ForeignKey, Text
 from flask_login import UserMixin
 from werkzeug.security import check_password_hash, generate_password_hash
-from .base import BaseModel, utc_now
+from .base import BaseModel, utc_now, to_utc_naive
 
 if TYPE_CHECKING:
     from .role import Role
@@ -35,23 +35,24 @@ class User(UserMixin, BaseModel):
     timezone: Mapped[str]                           = mapped_column(String(50), default="UTC")
     avatar_url: Mapped[str | None]                  = mapped_column(Text)
     role_id: Mapped[str]                            = mapped_column(ForeignKey("roles.id"))
-    last_login: Mapped[DateTime | None]             = mapped_column(DateTime(timezone=True))
+    last_login: Mapped[DateTime | None]             = mapped_column(DateTime)
+    last_logout: Mapped[DateTime | None]            = mapped_column(DateTime)
     login_count: Mapped[int | None]                 = mapped_column(Integer, default=0)
-    password_changed_at: Mapped[DateTime | None]    = mapped_column(DateTime(timezone=True))
+    password_changed_at: Mapped[DateTime | None]    = mapped_column(DateTime)
     password_reset_token: Mapped[str | None]        = mapped_column(String(256))
-    password_reset_expires_at: Mapped[DateTime | None]= mapped_column(DateTime(timezone=True))
+    password_reset_expires_at: Mapped[DateTime | None]= mapped_column(DateTime)
     is_email_verified: Mapped[bool]                 = mapped_column(Boolean, default=False)
     email_verification_token: Mapped[str | None]    = mapped_column(String(256))
-    email_verification_expires_at: Mapped[DateTime | None] = mapped_column(DateTime(timezone=True))
-    email_verified_at: Mapped[DateTime | None]      = mapped_column(DateTime(timezone=True))
+    email_verification_expires_at: Mapped[DateTime | None] = mapped_column(DateTime)
+    email_verified_at: Mapped[DateTime | None]      = mapped_column(DateTime)
     is_active: Mapped[bool]                         = mapped_column(Boolean, default=True)
-    is_locked: Mapped[bool]                         = mapped_column(Boolean)
-    locked_until: Mapped[DateTime | None]           = mapped_column(DateTime(timezone=True))
+    is_locked: Mapped[bool]                         = mapped_column(Boolean, default=False)
+    locked_until: Mapped[DateTime | None]           = mapped_column(DateTime)
     lock_reason: Mapped[str | None]                 = mapped_column(String(255))
     locked_by: Mapped[int | None]                   = mapped_column(ForeignKey("users.id"))
-    locked_at: Mapped[DateTime | None]              = mapped_column(DateTime(timezone=True))
+    locked_at: Mapped[DateTime | None]              = mapped_column(DateTime)
     failed_login_attempts: Mapped[int | None]       = mapped_column(Integer, default=0)
-    last_failed_login_at: Mapped[DateTime | None]   = mapped_column(DateTime(timezone=True))
+    last_failed_login_at: Mapped[DateTime | None]   = mapped_column(DateTime)
     mfa_enabled: Mapped[bool]                       = mapped_column(Boolean, default=False)
     mfa_secret: Mapped[str | None]                  = mapped_column(String(36))
 
@@ -91,25 +92,18 @@ class User(UserMixin, BaseModel):
         Check if the account is currently locked.
         Returns True if locked and lock period hasn't expired.
         """
-        if not self.is_locked:
+        if not self.is_locked or self.locked_until is None:
             return False
 
-        # If locked_until is None, account is permanently locked
-        if self.locked_until is None:
-            return True
-
-        # Convert locked_until to timezone-aware if it's naive
         now = utc_now()
-        if self.locked_until.tzinfo is None:
-            # Make locked_until timezone-aware
-            locked_until_aware = self.locked_until.replace(tzinfo=timezone.utc)
-        else:
-            locked_until_aware = self.locked_until
-
+        locked_until_aware = self.locked_until
+        if locked_until_aware.tzinfo is None:
+            locked_until_aware = locked_until_aware.replace(tzinfo=timezone.utc)
+ 
         if now < locked_until_aware:
             return True
-
-        # Auto-unlock if lock period has expired
+ 
+        # Lock period has expired — auto-unlock.
         self.unlock_account()
         # Note: Need to commit in the calling function
         return False
@@ -124,14 +118,14 @@ class User(UserMixin, BaseModel):
             return None
 
         now = utc_now()
-        if self.locked_until.tzinfo is None:
-            locked_until_aware = self.locked_until.replace(tzinfo=timezone.utc)
-        else:
-            locked_until_aware = self.locked_until
-
+        locked_until_aware = self.locked_until
+        if locked_until_aware.tzinfo is None:
+            locked_until_aware = locked_until_aware.replace(tzinfo=timezone.utc)
+ 
         if now >= locked_until_aware:
             return 0
-        return (locked_until_aware - now).seconds // 60
+        # max(1, ...) avoids showing "0 minutes" when under 60s remain.
+        return max(1, (locked_until_aware - now).seconds // 60)
 
 
     # ------------------------------------------------------------------
@@ -157,17 +151,17 @@ class User(UserMixin, BaseModel):
         """
         Generate and store a new TOTP secret for this user.
         """
-        self.totp_secret = pyotp.random_base32()
-        return self.totp_secret
+        self.mfa_secret = pyotp.random_base32()
+        return self.mfa_secret
 
-    def get_totp_uri(self, issuer: str = "AMS") -> str:
+    def get_totp_uri(self, issuer: str = "MoneyTracker") -> str:
         """
         Build the otpauth:// URI used to render the QR code.
         Generates a secret first if one doesn't exist yet.
         """
-        if not self.totp_secret:
+        if not self.mfa_secret:
             self.generate_totp_secret()
-        return pyotp.TOTP(self.totp_secret).provisioning_uri(
+        return pyotp.TOTP(self.mfa_secret).provisioning_uri(
             name=self.email, issuer_name=issuer
         )
 
@@ -175,9 +169,9 @@ class User(UserMixin, BaseModel):
         """
         Verify a 6-digit TOTP code against the stored secret.
         """
-        if not self.totp_secret:
+        if not self.mfa_secret:
             return False
-        return pyotp.TOTP(self.totp_secret).verify(code, valid_window=1)
+        return pyotp.TOTP(self.mfa_secret).verify(code, valid_window=1)
 
 
     # ------------------------------------------------------------------
@@ -206,20 +200,6 @@ class User(UserMixin, BaseModel):
         self.is_locked = True
         self.locked_until = utc_now() + timedelta(minutes=duration_minutes)
         self.lock_reason = reason
-        self.locked_by = locked_by_user_id
-        self.locked_at = utc_now()
-
-    def lock_account_permanently(self, reason: str = None, locked_by_user_id: int = None) -> None:
-        """
-        Permanently lock the user account until manually unlocked.
-        
-        Args:
-            reason: Reason for locking the account (optional)
-            locked_by_user_id: ID of the user who locked the account (optional)
-        """
-        self.is_locked = True
-        self.locked_until = None  # No expiration for permanent lock
-        self.lock_reason = reason or "Account permanently locked by administrator"
         self.locked_by = locked_by_user_id
         self.locked_at = utc_now()
 
@@ -306,6 +286,17 @@ class User(UserMixin, BaseModel):
     # ------------------------------------------------------------------
     # Token management and verification methods
     # ------------------------------------------------------------------
+    def _token_valid(self, token: str, stored_token: str | None,
+                     expires_at: datetime | None) -> bool:
+        """Check token match and expiry. Safe against naive/aware mismatches."""
+        return bool(
+            stored_token and
+            expires_at and
+            secrets.compare_digest(stored_token, token) and
+            utc_now() < to_utc_naive(expires_at)
+        )
+    
+    
     def generate_password_reset_token(self) -> str:
         """
         Generates a token to be used for password reset
@@ -315,14 +306,12 @@ class User(UserMixin, BaseModel):
         return self.password_reset_token
 
     def verify_password_reset_token(self, token: str) -> bool:
-        """
-        Verify a password-reset token and return True if valid, False otherwise.
-        """
-        if (self.password_reset_token == token and
-            self.password_reset_expires_at and
-            utc_now() < self.password_reset_expires_at):
-            return True
-        return False
+        """Verify a password-reset token and return True if valid, False otherwise."""
+        return self._token_valid(
+            token,
+            self.password_reset_token,
+            self.password_reset_expires_at,
+        )
 
     def clear_password_reset_token(self) -> None:
         """
@@ -340,22 +329,19 @@ class User(UserMixin, BaseModel):
         return self.email_verification_token
 
     def verify_email_verification_token(self, token: str) -> bool:
-        """
-        Verify an email-verification token and return True if valid, False otherwise.
-        """
-        if self.email_verification_token == token:
-            self.is_email_verified = True
-            self.email_verified_at = utc_now()
-            self.email_verification_token = None
-            self.email_verification_expires_at = None  # Clear the expiration time after successful verification
-            return True
-        return False
+        """Verify an email-verification token and return True if valid, False otherwise."""
+        if not self._token_valid(
+            token,
+            self.email_verification_token,
+            self.email_verification_expires_at,
+        ):
+            return False
 
-    # def clear_email_verification_token(self) -> None:
-    #     """
-    #     Clear the email verification token.
-    #     """
-    #     self.email_verification_token = None
+        self.is_email_verified = True
+        self.email_verified_at = utc_now()
+        self.email_verification_token = None
+        self.email_verification_expires_at = None
+        return True
 
 
 # End of file
