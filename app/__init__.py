@@ -5,6 +5,7 @@ app/__init__.py  — Application factory and initialization of the app
 import os
 from datetime import datetime
 from flask import Flask, render_template, redirect, request, url_for, flash, current_app
+from flask_login import current_user
 from flask_mail import Message
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import inspect
@@ -16,7 +17,11 @@ from app.seed_data import init_data
 from app.navigation import PUBLIC_SIDEBAR_ITEMS, ADMIN_SIDEBAR_ITEMS
 from app.utils.errors import register_error_handlers
 from app.utils.filters import register_filters, register_context_processors
+# from app.utils.helpers import register_template_helpers
+from app.services.workspace import build_workspace_sidebar_groups
 from app.models import User
+
+from app.navigation import PUBLIC_SIDEBAR_ITEMS, ADMIN_SIDEBAR_ITEMS
 # from app.seed_data import *
 # from app.navigation import SIDEBAR_GROUPS
 # from app.forms import ContactForm
@@ -60,6 +65,7 @@ def create_app(config_name=None):
     register_filters(app)
     register_context_processors(app)
     register_error_handlers(app)
+    # register_template_helpers(app)
 
 
 
@@ -81,12 +87,56 @@ def create_app(config_name=None):
     app.register_blueprint(admin_main_bp)
 
 
+    # @app.context_processor
+    # def inject_sidebars():
+    #     return dict(
+    #         public_sidebar_items=PUBLIC_SIDEBAR_ITEMS,
+    #         admin_sidebar_items=ADMIN_SIDEBAR_ITEMS,
+    #     )
+
+
+    def get_public_sidebar_items(user):
+        if not user.is_authenticated:
+            return []
+
+        expanded = []
+        for item in PUBLIC_SIDEBAR_ITEMS:
+            if item["type"] == "workspace_groups":
+                expanded.extend(build_workspace_sidebar_groups(user))
+            else:
+                expanded.append(item)
+        return expanded
+
+
     @app.context_processor
     def inject_sidebars():
         return dict(
-            public_sidebar_items=PUBLIC_SIDEBAR_ITEMS,
+            public_sidebar_items=get_public_sidebar_items(current_user),
             admin_sidebar_items=ADMIN_SIDEBAR_ITEMS,
         )
+
+
+
+
+
+
+    # def get_public_sidebar_items(user):
+    #     expanded = []
+    #     for item in PUBLIC_SIDEBAR_ITEMS:
+    #         if item["type"] == "workspace_groups":
+    #             expanded.extend(build_workspace_sidebar_groups(user))
+    #         else:
+    #             expanded.append(item)
+    #     return expanded
+
+
+    # @app.context_processor
+    # def inject_sidebar_items():
+    #     if not current_user.is_authenticated:
+    #         return {}
+    #     if current_user.has_role("super", "admin"):
+    #         return {"admin_sidebar_items": ADMIN_SIDEBAR_ITEMS}
+    #     return {"public_sidebar_items": get_public_sidebar_items(current_user)}
 
 
     @app.context_processor

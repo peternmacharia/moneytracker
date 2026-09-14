@@ -1,27 +1,28 @@
-{% macro nav_item(label, endpoint, icon, perm=none) %}
+{% macro nav_item(label, endpoint, icon, perm=none, endpoint_params=none) %}
   {% if perm is none or current_user.has_permission(perm) %}
   <li class="nav-item">
     <a class="nav-link {% if endpoint and request.blueprint == endpoint.split('.')[0] %}active{% endif %}"
-       href="{{ url_for(endpoint) if endpoint else '#' }}">
+       href="{{ url_for(endpoint, **(endpoint_params or {})) if endpoint else '#' }}">
       <i class="bi {{ icon }}"></i>&nbsp;{{ label }}
     </a>
   </li>
   {% endif %}
 {% endmacro %}
 
-{% macro nav_group(label, icon, collapse_id, links) %}
-  {# links: list of dicts -> {label, endpoint, icon, perm} | perm=None means always visible #}
+{% macro nav_group(label, icon, collapse_id, links, force_visible=false) %}
   {% set ns = namespace(any_visible=false, is_active=false) %}
   {% for item in links %}
-    {% if item.perm is none or current_user.has_permission(item.perm) %}
+    {% if item.get('perm') is none or current_user.has_permission(item.get('perm')) %}
       {% set ns.any_visible = true %}
-      {% if item.endpoint and request.blueprint == item.endpoint.split('.')[0] %}
+      {% if item.endpoint and request.blueprint == item.endpoint.split('.')[0]
+            and (item.get('endpoint_params', {}).get('workspace_id') is none
+                 or request.view_args.get('workspace_id') == item.endpoint_params.workspace_id) %}
         {% set ns.is_active = true %}
       {% endif %}
     {% endif %}
   {% endfor %}
 
-  {% if ns.any_visible %}
+  {% if ns.any_visible or force_visible %}
     <li class="nav-item">
       <a class="nav-link dropdown-toggle {% if ns.is_active %}active{% endif %}"
          data-bs-toggle="collapse" href="#{{ collapse_id }}" role="button"
@@ -32,10 +33,10 @@
       <div class="collapse {% if ns.is_active %}show{% endif %}" id="{{ collapse_id }}">
         <ul class="nav flex-column gap-1 pt-1">
           {% for item in links %}
-            {% if item.perm is none or current_user.has_permission(item.perm) %}
+            {% if item.get('perm') is none or current_user.has_permission(item.get('perm')) %}
               <li class="nav-item">
                 <a class="nav-link {% if item.endpoint and request.blueprint == item.endpoint.split('.')[0] %}active{% endif %}"
-                   href="{{ url_for(item.endpoint) if item.endpoint else '#' }}">
+                   href="{{ url_for(item.endpoint, **(item.get('endpoint_params') or {})) if item.endpoint else '#' }}">
                   <span class="ps-4"><i class="bi {{ item.icon }}"></i></span>&nbsp;{{ item.label }}
                 </a>
               </li>

@@ -11,6 +11,7 @@ from sqlalchemy import func
 from app.models import (User)
 from app.models.enums import ActorType
 from app.utils.decorators import role_required
+from app.models import Workspace
 
 # ── User Main application routes ─────────────────────────────────────────
 public_main_bp = Blueprint("public_main", __name__,url_prefix="/user",
@@ -29,7 +30,20 @@ def dashboard():
     Returns:
         str: Rendered dashboard template
     """
-    return render_template("public/dashboard.html", title="Dashboard", today=datetime.now(timezone.utc))
+    # Get recent workspace activities
+    recent_activities = (Workspace.query
+                         .order_by(Workspace.created_at.desc())
+                         .limit(5)
+                         .all())
+
+    stats: Dict[str, int] = {
+        "workspaces": Workspace.query.count(),
+    }
+
+    return render_template("public/dashboard.html", title="Dashboard",
+                           today=datetime.now(timezone.utc),
+                           recent_activities=recent_activities,
+                           stats=stats)
     # # Get recent assets
     # recent_assets = (Asset.query
     #                  .order_by(Asset.created_at.desc())

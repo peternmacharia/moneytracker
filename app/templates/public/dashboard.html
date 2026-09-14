@@ -2,7 +2,7 @@
 {% block title %} {{ title }} {% endblock %}
 {% block content %}
 
-<section id="pageHeader" class="dashboardHeader card shadow-sm border-0 mt-3 p-5 rounded-5">
+<section id="pageHeader" class="dashboardHeader card shadow-sm border-0 p-5 rounded-5">
     <h1 class="display-4">
         <i class="bi bi-opencollective text-info"></i> Welcome back, <strong>{{ current_user.firstname }}</strong>!
     </h1>
@@ -169,7 +169,7 @@
 <section id="recentActivity" class="mb-5">
     <legend><h2><i class="bi bi-clock"></i> Recent Activity in your Workspace</h2></legend>
     <hr>
-    {% if not recent_workspaces %}
+    {% if not recent_activities %}
 
         <div class="card bg-light shadow-sm">
             <div class="card-body">
@@ -179,7 +179,10 @@
                     <p class="text-sm mt-1">Create your first workspace and add content to get started.</p>
                     {% if current_user.is_authenticated %}
                         {% if current_user.has_permission('workspace:create') %}
-                            <a href="#" class="btn btn-success">+ New Workspace</a>
+                            <button type="button" class="btn btn-success ms-2" data-bs-toggle="modal"
+                                    data-bs-target="#Modal" data-url="{{ url_for('workspace.create') }}">
+                                + New Workspace
+                            </button>
                         {% endif %}
                     {% endif %}
                 </div>
@@ -194,44 +197,29 @@
                     <table class="table table-striped table-hover">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Asset Tag</th>
-                                <th scope="col">Asset Name</th>
-                                <th scope="col">Category</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Description</th>
                                 <th scope="col">Status</th>
-                                <th scope="col">Assignment</th>
-                                <th scope="col">Assigned to</th>
+                                <th scope="col">Is Shared</th>
                                 <th scope="col">Date Added</th>
                             </tr>
                         </thead>
                         <tbody class="table-group-divider">
-                            {% for asset in recent_assets %}
+                            {% for activity in recent_activities %}
                             <tr>
-                                <th scope="row">{{ loop.index }}</th>
-                                <td>{{ asset.tag_number }}</td>
-                                <td>{{ asset.name }}</td>
-                                <td>{{ asset.category.name }}</td>
+                                <td>{{ activity.name }}</td>
+                                <td>{{ activity.description }}</td>
                                 <td>
-                                    <span class="{{ asset.is_active | active_badge }}">
-                                        {{ "Active" if asset.is_active else "Inactive" }}
+                                    <span class="{{ activity.is_active | active_badge }}">
+                                        {{ "Active" if activity.is_active else "Not Active" }}
                                     </span>
                                 </td>
                                 <td>
-                                    <span class="{{ asset.is_assigned | active_badge }}">
-                                        {{ "Assigned" if asset.is_assigned else "Not Assigned" }}
+                                    <span class="{{ activity.is_shared | active_badge }}">
+                                        {{ "Shared" if activity.is_shared else "Private" }}
                                     </span>
                                 </td>
-                                <td>
-                                    {% if not asset.active_assignment %}
-                                        <span class="text-muted">-</span>
-                                    {% else %}
-                                        <span class="badge text-bg-success">{{ asset.active_assignment.assigned_to_employee.fullname }}</span>
-                                    {% endif %}
-                                    <!-- <span class="{{ asset.is_assigned | active_badge }}">
-                                        {{ "Assigned" if asset.is_assigned else "Not Assigned" }}
-                                    </span> -->
-                                </td>
-                                <td>{{ asset.created_at.strftime('%-d %b %Y') }}</td>
+                                <td>{{ activity.created_at | fmt_dt }}</td>
                             </tr>
                             {% endfor %}
                         </tbody>

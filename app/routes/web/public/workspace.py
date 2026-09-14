@@ -56,7 +56,7 @@ def index():
     )
 
     return render_template(
-        "workspace/list.html",
+        "public/workspace/list.html",
         workspaces=paged,
         search=search,
         sort=sort,
@@ -75,8 +75,8 @@ def details(workspace_id):
     """
     workspace = Workspace.query.get_or_404(workspace_id)
 
-    return render_template("workspace/details.html", workspace=workspace,
-                           title=f"Workspace Details: {workspace.name}")
+    return render_template("public/workspace/details.html", workspace=workspace,
+                           title=f"Workspace: {workspace.name}")
 
 
 @workspace_bp.route("/create", methods=["GET", "POST"])
@@ -91,7 +91,7 @@ def create():
     if form.validate_on_submit():
         if Workspace.query.filter_by(name=form.name.data, owner_id=current_user.id).first():
             flash('A workspace with that name already exists.', 'danger')
-            return render_template("workspace/create.html", form=form, title="Create Workspace",)
+            return render_template("public/workspace/create.html", form=form, title="Create Workspace",)
 
         workspace = Workspace(
             owner_id=current_user.id,
@@ -106,13 +106,13 @@ def create():
             db.session.commit()
             flash(f"Workspace '{workspace.name}' created successfully.", "success")
             logger.info("Workspace created: id=%s name=%s", workspace.id, workspace.name)
-            return redirect(url_for("workspace.index"))
+            # return redirect(url_for("workspace.index"))
         except SQLAlchemyError:
             db.session.rollback()
             logger.exception("Error creating workspace")
             flash("An error occurred while creating the workspace. Please try again.", "danger")
 
-    return render_template("workspace/create.html", form=form, title="Create Workspace",)
+    return render_template("public/workspace/create.html", form=form, title="Create Workspace",)
 
 
 @workspace_bp.route("/update/<workspace_id>", methods=["GET", "POST"])
@@ -154,7 +154,7 @@ def update(workspace_id):
             flash("An error occurred while updating the workspace. Please try again.", "danger")
 
     return render_template(
-        "workspace/update.html",
+        "public/workspace/update.html",
         form=form,
         workspace=workspace,
         title=f"Update Workspace: {workspace.name}",
@@ -197,7 +197,7 @@ def delete(workspace_id):
             flash("An error occurred while deleting the workspace. Please try again.", "danger")
 
     return render_template(
-        "workspace/delete.html",
+        "public/workspace/delete.html",
         form=form,
         workspace=workspace,
         user_count=user_count,

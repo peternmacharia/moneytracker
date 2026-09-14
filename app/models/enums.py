@@ -24,4 +24,17 @@ class NotificationCategory(str, Enum):
     WARNING = "warning"
     ERROR   = "error"
 
+
+class TransactionLabel(str, Enum):
+    """
+    Transaction labels.
+    """
+    INCOME    = "income"
+    EXPENSE = "expense"
+    SAVING = "saving"
+    TRANSFER = "transfer"
+
+
+# Transfer
+
 # End of file

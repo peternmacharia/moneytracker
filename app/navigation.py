@@ -8,15 +8,7 @@ an endpoint for routing, an icon, and an optional permission requirement.
 PUBLIC_SIDEBAR_ITEMS = [
     {"type": "link", "label": "Dashboard", "endpoint": "public_main.dashboard", "icon": "bi-speedometer2"},
 
-    {
-        "type": "group",
-        "label": "People & Org", "icon": "bi-buildings", "collapse_id": "orgSubmenu",
-        "links": [
-            {"label": "Organization", "endpoint": "",        "icon": "bi-buildings", "perm": "organization:view"},
-            {"label": "Departments",  "endpoint": "", "icon": "bi-building",  "perm": "department:view"},
-            {"label": "Employees",    "endpoint": "",   "icon": "bi-people",    "perm": "employee:view"},
-        ],
-    },
+    {"type": "workspace_groups"},
 
     {
         "type": "group",

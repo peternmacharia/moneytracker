@@ -20,6 +20,7 @@
           <h4 class="navTitle">Money Tracker</h4>
       </div>
       <hr>
+
       {% if current_user.is_authenticated %}
         {% from "macros/_sidebar.html" import nav_item, nav_group with context %}
         <nav class="nav flex-column gap-1 mb-5">
@@ -28,7 +29,7 @@
               {% if item.type == 'link' %}
                 {{ nav_item(item.label, item.endpoint, item.icon, item.get('perm')) }}
               {% elif item.type == 'group' %}
-                {{ nav_group(item.label, item.icon, item.collapse_id, item.links) }}
+                {{ nav_group(item.label, item.icon, item.collapse_id, item.links, item.get('always_visible', False)) }}
               {% endif %}
             {% endfor %}
           {% elif current_user.has_role("user") %}
@@ -36,7 +37,7 @@
               {% if item.type == 'link' %}
                 {{ nav_item(item.label, item.endpoint, item.icon, item.get('perm')) }}
               {% elif item.type == 'group' %}
-                {{ nav_group(item.label, item.icon, item.collapse_id, item.links) }}
+                {{ nav_group(item.label, item.icon, item.collapse_id, item.links, item.get('always_visible', False)) }}
               {% endif %}
             {% endfor %}
           {% endif %}
@@ -56,15 +57,6 @@
                 <i class="bi bi-person-circle fs-4"></i> <span class="fw-bold">{{ current_user.fullname }}</span>
               {% endif %}
             </button>
-            <!-- <button class="btn dropdown-toggle" data-bs-toggle="dropdown">
-              {% if current_user.avatar_url %}
-                <img src="{{ url_for('auth.serve_avatar_image', filename=current_user.avatar_url) }}" 
-                      alt="avatar" width="32" height="32" class="rounded-circle">
-                <span class="fw-bold">{{ current_user.fullname }}</span>
-              {% else %}
-                <i class="bi bi-person-circle fs-4"></i> <span class="fw-bold">{{ current_user.fullname }}</span>
-              {% endif %}
-            </button> -->
             <ul class="dropdown-menu">
               <li><a class="btn btn-sm dropdown-item" href="{{ url_for ('user.profile') }}">Profile</a></li>
             </ul>
@@ -162,7 +154,7 @@
         </nav>
       </header> -->
 
-      <div class="container-fluid mb-3">
+      <div class="container-fluid mt-3 mb-3">
         {% with messages = get_flashed_messages(with_categories=true) %}
           {% if messages %}
             <div class="toast-container position-fixed bottom-0 end-0 p-3">

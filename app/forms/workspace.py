@@ -12,7 +12,7 @@ class CreateWorkspaceForm(BaseForm):
     Form for creating a new workspace.
     """
     name = StringField("Workspace Name", validators=[DataRequired(message="Workspace name is required")],
-                       render_kw={"class": "form-control"})
+                       render_kw={"placeholder": "Workspace name", "class": "form-control"})
     description = TextAreaField("Description",
                                 render_kw={"placeholder": "Enter workspace description", "class": "form-control", "rows": 3})
     is_shared = BooleanField("Is Shared?")
